@@ -18,7 +18,7 @@
 		<spring-web.version>5.0.0.RELEASE</spring-web.version>
 		<alfresco-opencmis-extension.version>1.0</alfresco-opencmis-extension.version>
 		<chemistry-opencmis-client-impl.version>1.0.0</chemistry-opencmis-client-impl.version>
-		<httpclient.version>4.5.2</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		
 		
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
