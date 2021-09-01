@@ -1,0 +1,75 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - collaboration
+description:
+  it:
+    features:
+      - Ricerca degli assistiti sul territorio
+      - Gestione dei percorsi assistenziale
+      - Coordinamento delle varie figure professionali
+      - Integrazione dei dati tra Ospedale e territorio
+      - Reportistiche sugli assistiti
+      - Reportistiche sui flussi di lavoro
+    genericName: Meetpad
+    localisedName: Meetpad
+    longDescription: |
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
+      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad 
+    shortDescription: Meetpad
+developmentStatus: stable
+intendedAudience:
+  countries:
+    - it
+  scope:
+    - local-authorities
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: true
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: true
+  riuso:
+    codiceIPA: r_marche
+landingURL: 'https://meetpad.regione.marche.it/'
+legal:
+  license: GPL-3.0
+  mainCopyrightOwner: Regione Marche
+  repoOwner: Regione Marche
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+maintenance:
+  contacts:
+    - email: andrea.sergiacomi@regione.marche.it
+      name: Andrea Sergiacomi
+  contractors:
+    - email: info@gpi.it
+      name: Engineering
+      until: '2021-07-31'
+  type: contract
+name: Meetpad
+platforms:
+  - web
+releaseDate: '2021-08-05'
+softwareType: standalone/web
+url: 'https://github.com/regione-marche/meetpad-public'
+usedBy:
+  - Regione Marche
