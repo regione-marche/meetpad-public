@@ -8,25 +8,33 @@ categories:
 description:
   it:
     features:
-      - Ricerca degli assistiti sul territorio
-      - Gestione dei percorsi assistenziale
-      - Coordinamento delle varie figure professionali
-      - Integrazione dei dati tra Ospedale e territorio
-      - Reportistiche sugli assistiti
-      - Reportistiche sui flussi di lavoro
+      - Gestione fasei delle Conferenze dei Servizi
+      - Gestione riunioni formali tra enti locali della PA
+      - Integrazione con piattaforma di Videoconferenza OpenSource
+      - Integrazione con Tool di scrittura collaborativa
+      - Gestione processo di firma di un documento
+      - Integrazione con strumenti di firma elettronica qualificata
+      - Integrazione con il Protocollo
+      - Gestione invio PEC mediante integrazione con la casella di posta certificata dell'Ente
+      - Gestione invio di semplici email mediante integrazione con la casella di posta dell'Ente
+      - Gestione degli utenti e dei ruoli
+      - Integrazione con la rubrica IPA
+      - Gestione scadenze tramite un calendario
+      - Gestione delle votazioni e delle calendarizzazioni
+      - Reportistiche sulle Conferenze dei Servizi
     genericName: Meetpad
     localisedName: Meetpad
     longDescription: |
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad
-      Meetpad Meetpad Meetpad Meetpad Meetpad Meetpad 
-    shortDescription: Meetpad
+      Meetpad è un piattaforma di collaborazione e condivisione documentale per gestire interamente 
+      da remoto conferenze di servizi e riunioni formali tra enti locali della PA.              
+      Il Sistema Informativo Meetpad supporta la piena Collaborazione digitale inter-istituzionale 
+      da remoto e viene impiegato, al momento, per gestire i processi di ricostruzione post sisma, 
+      l’avanzamento amministrativo della BUL nei territori e le autorizzazioni ambientali VIA e AIA.
+      Il MeetPAd è un sistema integrato, sviluppato per componenti atomiche e micro-servizi, facilmente riusabili,
+      generalizzabili ed estensibili (SaaS). Avvenuta l'autenticazione Federata tra FrontEnd, WSO2 e Cohesion/SPID, l'applicativo  
+      autenticato (FrontEend) usa l'autorizzazione OATH2 per i servizi restfull esposti dal BackEnd.
+
+    shortDescription: Meetpad è un piattaforma di collaborazione e condivisione documentale per gestire interamente da remoto conferenze di servizi e riunioni formali tra enti locali della PA
 developmentStatus: stable
 intendedAudience:
   countries:
