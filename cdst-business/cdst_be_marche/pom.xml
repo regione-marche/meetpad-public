@@ -22,7 +22,7 @@
 		
 		
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
-        <commons-io-apache.version>2.6</commons-io-apache.version>
+        <commons-io-apache.version>2.7</commons-io-apache.version>
         <commons-configuration.version>1.10</commons-configuration.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang.version>3.7</commons-lang.version>
