@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	  <title>ChatBot Example</title>
+	  <meta charset="utf-8" />	
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link href="../../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+	  <link href="../css/chatbot.css" rel="stylesheet" id="bootstrap-css" />
+	  
+	  <script src="../js/bootstrap.min.js"></script>
+	  <script src="../js/jquery-1.12.3.min.js"></script>
+	  <script src="../js/chatbot.js"></script>
+	  <script src="..//js/postrequest.js"></script>
+      <script src="..//js/getrequest.js"></script>
+	  
+</head>
+<body>
+ 
+<div class="container">
+ 
+	<h3 style="color:blue">CHATBOX Page Example</h3>
+	
+	<div>
+		<form class="form-inline" style="margin:20px 20px 20px 20px">		
+			<div class="form-group">
+				<label style="margin-right:5px">Domanda :</label>
+				<input type="text" class="form-control" id="questionInsert" placeholder="Inserisci la domanda" maxlength="250" width="200px"/>
+			</div>
+			<div class="form-group">
+				<label style="margin-left:20px; margin-right:5px">Risposta:</label>
+				<input type="text" class="form-control" id="answerInsert" placeholder="Inserisci la risposta" width="200px"/>
+			</div>
+			<button type="button" class="btn btn-default insert" style="margin-left:20px; margin-right:5px">Inserisci Domanda</button>
+		</form>
+	</div>
+	<div>
+		<form class="form-inline" style="margin:20px 20px 20px 20px">		
+			<div class="form-group">
+				<label style="margin-right:5px">Domanda :</label>
+				<input type="text" class="form-control" id="questionUpdate" maxlength="250" width="200px"/>
+			</div>
+			<div class="form-group">
+				<label style="margin-left:20px; margin-right:5px">Risposta:</label>
+				<input type="text" class="form-control" id="answerUpdate" width="200px"/>
+			</div>
+			<div class="form-group">
+				<label style="margin-right:5px">ID :</label>
+				<input type="text" class="form-control" id="idUpdate" maxlength="250" width="200px"/>
+			</div>
+			<button type="button" class="btn btn-default update" style="margin-left:20px; margin-right:5px">Aggiorna Domanda</button>
+		</form>
+	</div>
+	
+<!-- 	<div class="col-sm-7" id="postResultDiv">
+	</div> -->
+	
+	<div class="col-sm-7" style="margin:20px 0px 20px 0px">
+		<button id="getAllDomande" type="button" class="btn btn-primary getAllDomande">Get All Domande</button>
+		<select id="selectedAllDomande">
+		</select>
+	</div>
+	<div class="col-sm-7" style="margin:20px 0px 20px 0px">
+		<button id="getAllRichieste" type="button" class="btn btn-primary getAllRichieste">Get All Richieste</button>
+		<select id="selectedAllRichieste"></select>
+	</div>
+	<div class="col-sm-7" style="margin:20px 0px 20px 0px">
+		<button id="deleteRichiesta" type="button" class="btn btn-primary deleteRichiesta">Delete Richiesta</button>
+		<input type="text" id="idRichiestaDelete" width="10px"/>
+	</div>
+	<div class="col-sm-7" style="margin:20px 0px 20px 0px">
+		<button id="deleteDomanda" type="button" class="btn btn-primary deleteDomanda">Delete Domanda</button>
+		<input type="text" id="idDomandaDelete" width="10px"/>
+	</div>
+	<div>
+		Le domande possono essere inserite con parole chiavi esempio se volessi sapere il tempo di oggi (es : tempo oggi)
+	</div>
+	<div>
+		Nelle risposte non debbono essere inseriti ; se non per separare le più risposte (es. oggi è una bella giornata ; non so come sia il tempo);
+	</div>
+	<div class="chatbox chatbox--tray chatbox--empty">
+	    <div class="chatbox__title">
+	        <h5><a href="#">Customer Service</a></h5>
+	        <button class="chatbox__title__tray">
+	            <span></span>
+	        </button>        
+	    </div>
+	    <div class="chatbox__body " id="chatbox__body">	                
+	    </div>
+	    <form class="chatbox__credentials">
+	        <div class="form-group">
+	            <label for="inputName">Digita il tuo nome :</label>
+	            <input type="text" class="form-control" id="inputName" required="true"></input>
+	        </div>        
+	        <button type="submit" class="btn btn-success btn-block">Entra in Chat</button>
+	    </form>
+	    <div>	    
+			<textarea class="chatbox__message" id="domanda" placeholder="scrivi il testo...." maxlength="250"></textarea>
+			<button type="button" class="btn-success invia" id="invia">invia</button>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

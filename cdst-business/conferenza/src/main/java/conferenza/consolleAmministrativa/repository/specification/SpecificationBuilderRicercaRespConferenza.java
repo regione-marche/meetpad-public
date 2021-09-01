@@ -1,0 +1,8 @@
+package conferenza.consolleAmministrativa.repository.specification;
+
+import conferenza.consolleAmministrativa.model.RicercaResponsabileConferenza;
+import conferenza.repository.SpecificationBuilder;
+
+public class SpecificationBuilderRicercaRespConferenza extends SpecificationBuilder<RicercaResponsabileConferenza>{
+
+}

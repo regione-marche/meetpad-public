@@ -1,0 +1,256 @@
+--//==============================================
+--//branch : REGIONE MARCHE
+--// git\cdst-business\conferenza\src\main\resources\note_rilascio.txt
+--// Profilo : '@cdst.profile@'
+--//==============================================
+
+Versione 2.2.19 - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.19
+--//Data: 24/10/2019
+--//note rilascio: 
+	-- changed template docs
+	-- domus task scheduler
+	-- Modifiche timeout per domus
+	-- fix protocollazione paleo
+	-- temaplate docs regioanle modified
+	-- fixed CAP null
+	-- Modifica scheduler e abilitazione servizio di protocollazione
+	-- Inserimento property per la disabilitazione degli scheduler, Fix inserimento rubrica partecipanti da pannello di amministrazione
+	-- fix mail send domus
+	-- Inserimento creatore conferenza in linea con l'utente loggato su Paleo
+	-- Modificata l'importazione da paleo con la possibilità di utilizzare un richiedente vuoto
+--// FE - TAG RIFERIMENTO: marche-test-1.21.16
+
+Versione 2.2.18 - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.18
+--//Data: 17/10/2019
+--//note rilascio: 
+	-- Inserimento nuove tipologie di conferenza ambiente
+	-- Minor fix gestione tipologia specializzata
+	-- Added user filters and regione templates
+	-- Added operation meeting
+	-- Domus asincronous task
+--// FE - TAG RIFERIMENTO: marche-test-1.21.15
+
+Versione 2.2.17 - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.17
+--//Data: 10/10/2019
+--//note rilascio: 
+	-- fix mail pec
+	-- parametrizzazione domus
+	-- Paleo creazioen conferenza - bug enti
+	-- Fix nella validazione dei documenti condivisi di tipo modello e appunti
+--// FE - TAG RIFERIMENTO: marche-dev-1.21.14, marche-test-1.21.14
+
+Versione 2.2.16 - 
+--//Versione:   - TAG RIFERIMENTO: marche-dev-2.2.16, marche-test-2.2.16
+--//note rilascio: 
+	-- Verifica file firmato digitalmente
+	-- Persistenza flag conformita file nei documenti
+--// FE - TAG RIFERIMENTO: marche-dev-1.21.14, marche-test-1.21.14
+
+
+Versione 2.2.15  -
+--//Versione:   - TAG RIFERIMENTO: marche-dev-2.2.15, marche-test-2.2.15
+--//note rilascio: 
+	-- Inserimento di un nuovo evento modifica data
+--// FE - TAG RIFERIMENTO: marche-dev-1.21.13, marche-test-1.21.13
+
+Versione 2.2.14  -
+--//Versione:   - TAG RIFERIMENTO: marche-dev-2.2.14
+--//note rilascio: 
+	-- Implementata la sincronizzazione dei documenti importati da Domus
+	-- Implementata la rimozione multipla dei documenti
+--// FE - TAG RIFERIMENTO: marche-dev-1.21.12
+
+Versione 2.2.13  -
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.13, marche-prod-2.2.13
+--//note rilascio: 
+	--Fix mittente eventi
+    --Fix ticket V20190719-TKT20190801.1
+--// FE - TAG RIFERIMENTO: marche-test-1.21.11
+
+Versione 2.2.12  -
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.12
+--//note rilascio: 
+	--Fix unlock del documento firmato
+	--Fix ticket TKT20190701.1
+	--Fix ticket TKT-I-20190708.25
+    --Fix ticket TKT-I-20190708.11
+    --Fix ticket TKT20190702.9
+    --Minor fix
+--// FE - TAG RIFERIMENTO: marche-test-1.21.10
+
+Versione 2.2.11  -
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.11
+--//note rilascio: 
+	--Inserito nuovo path per lo scaricamento e il download dei file firmati
+    --Modificata la validazione e la gestione dello scaricamento dei file a partire dal token
+    --eliminati duplicati su Domus
+--// FE - TAG RIFERIMENTO: marche-test-1.21.9
+
+Versione 2.2.10  -
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.10
+--//note rilascio: 
+	--fix Domus :
+		--DOMUS20190712.2
+		--DOMUS20190719.1
+		--DOMUS20190719.2
+	--fix ticket TKT20190702.2
+	--fix ticket TKT-I-20190708.19
+	--FakeSMTP
+	--fix mail amministratore
+--// FE - TAG RIFERIMENTO: marche-test-1.21.8
+
+
+Versione 2.2.9  - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.9
+--//note rilascio:
+	-- modifica root upload
+	-- modificata la verifica degli exclusionPath per il checkTokenFilter
+	-- modifica email meetpadtest@emarche.it su dev
+	-- fix ticket TKT-I-20190708.3
+	-- generazione del war con nome dipendente dal contesto
+	-- modifica pom per nome war dinamico
+	-- Fix ticket TKT20190705.1
+	-- aggiunta  metodo  sendSingleMailIndizioneForConferenceMailSpecifica
+--// FE - TAG RIFERIMENTO: marche-test-1.21.7
+
+Versione 2.2.8  - 
+--//Versione:   - TAG RIFERIMENTO: marche-dev-2.2.8
+--//note rilascio:
+	-- modifica xns per parametri impresa e localizzazione
+	-- fix pars xns
+	-- Fix ticket TKT20190715.1
+	-- domus - dati pratica - modifica xml
+	-- Updated report controller to manage all types of report
+    -- Fixed TKT20190708.1
+    
+--// FE - TAG RIFERIMENTO: marche-dev-1.21.6
+
+Versione 2.2.7  - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.7
+--//note rilascio:
+	--ticket:
+			TKT18: Paleo - risolto bug per protocollazione documenti in ingresso.
+			TKT18: Paleo - risolto bug per mancanza di allegati per dato documento	
+			fix ticket [TKT20190710.1]
+			Inserito controller per lo scaricamento dell'applicazione Calamaio
+			Added fix on permission events - added file name on unlockcallback
+			Aggiornato il pom con la versione
+			Aggiornato application-devMarcheBatch.yml con la property per Calamaio
+--// FE - TAG RIFERIMENTO: marche-test-1.21.5
+
+
+
+
+--//==============================================
+Versione 2.2.6  - 
+--//Versione:   - TAG RIFERIMENTO: marche-test-2.2.6
+--//note rilascio:
+	-- fix di getBase64FileBuffer
+	-- modifiche firma
+	-- modifica modello per errore nella query
+	-- update application-dev
+--// FE - TAG RIFERIMENTO: marche-test-1.21.4
+
+--//==============================================
+Versione 2.2.5  - 
+--//Versione:   - TAG RIFERIMENTO: marche-dev-2.2.5
+--//note rilascio:
+	--Inserimento support firma con calamaio
+	--Aggiunto check sull'estensione del documento firmato p7m
+    --Rifattorizzata l'inizializzazione della sessione di firma in FirmaService
+    --Modificato l'unlock del documento di firma
+    --Inserito script sql per l'inserimento del tipo firma calamaio
+
+--// FE - TAG RIFERIMENTO:
+
+--//==============================================
+Versione 2.2.4  - 
+--//Versione:   - TAG RIFERIMENTO: 
+--//note rilascio:
+	--creazione nuovo profilo preProdMarche
+    --aggiornato application-staging.yml
+    --fix: nella validazione della creazione dei documenti, in particolare nel check se il file è null
+    --tiket: 
+    	TKT20190702.1 - Domus: modica XPAth per recupero Richiedente 
+    	TKT18:
+    		  Paleo - recuperata la corrispondenza tra Fascicolo di creazione e conferenza ai fini della portocollazione..
+    		  Paleo - aggiunti eventi alla protocollazione..
+--// FE - TAG RIFERIMENTO: 
+--// FE - TAG RIFERIMENTO PREPRODUZIONE: 
+
+
+
+
+--//==============================================
+Versione 2.2.3  - 
+--//Versione 2.2.1  - TAG RIFERIMENTO: SVILUPPO20190705
+--//note rilascio:
+	--creazione nuovo profilo preProdMarche
+    --aggiornato application-staging.yml
+    --fix nella validazione della creazione dei documenti, in particolare nel check se il file è null
+--// FE - TAG RIFERIMENTO: 1.21.3
+-- FE - TAG RIFERIMENTO PREPRODUZIONE: //da verificare o aggiornare in prod per avere la versione
+
+
+--//==============================================
+Versione 2.2.2  - 
+--//Versione 2.2.1  - TAG RIFERIMENTO: SVILUPPO20190705
+--//note rilasio:
+    --aggiunta gestione richiedenti ed imprese domus
+    --fix regressione tip ie fonti domus
+    --fix errore su stato domus stato 
+    --ticket: [TKT20190702.1]
+--// FE - TAG RIFERIMENTO: 1.21.3
+
+
+--//==============================================
+Versione 2.2.1  - 
+--//Versione 2.2.1  - TAG RIFERIMENTO: 2.2.1
+--//note rilasio:
+    aggiunta gestionde delle votazioni
+    aggiunta gestione delle API per il caricamento e gestione della firma digitale nella conferenza
+--// FE - TAG RIFERIMENTO: 1.21.3
+
+--//==============================================
+Versione 2.2.0  - 
+--//Versione 2.1  - TAG RIFERIMENTO:
+--//note rilasio:
+	- Bug fixing  - guideluc
+--// FE - TAG RIFERIMENTO: 
+
+--//==============================================
+Versione 2.2.0  - 
+--//Versione 2.1  - TAG RIFERIMENTO:
+--//note rilasio:
+	- Bug fixing  - guideluc
+--// FE - TAG RIFERIMENTO: 
+
+
+--//==============================================
+--//Versione 2.1  - TAG RIFERIMENTO:
+--//note rilasio:
+	- Bug fixing 
+--// FE - TAG RIFERIMENTO: 
+
+
+--//==============================================
+--//Versione 2.0 - TAG RIFERIMENTO: 
+--//Versione rilasciata il 2019/05/
+--//note rilascio
+	- Restailing
+	- Gestione Profilazione Eventi bottoni
+--// FE - TAG RIFERIMENTO:
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+ALTER TABLE cdst.utente ADD flag_firmatario bool NULL;

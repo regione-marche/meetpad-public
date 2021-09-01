@@ -1,0 +1,1 @@
+ALTER TABLE cdst.ente ADD COLUMN flag_amministrazione_principale boolean not null default false;

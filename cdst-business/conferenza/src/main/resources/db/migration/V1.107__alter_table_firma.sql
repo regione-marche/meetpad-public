@@ -1,0 +1,1 @@
+alter table registro_firma_adapter add column shot  character varying(255);

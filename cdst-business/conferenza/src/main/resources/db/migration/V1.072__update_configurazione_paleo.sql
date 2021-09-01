@@ -1,0 +1,2 @@
+UPDATE cdst.paleo_tipoconferenza_properties	SET id_tipo_conferenza='1' WHERE id_tipo_conferenza='4';
+UPDATE cdst.paleo_tipoconferenza_properties	SET id_tipo_conferenza='2' WHERE id_tipo_conferenza='5';

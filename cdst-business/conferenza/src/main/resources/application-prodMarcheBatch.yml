@@ -1,0 +1,242 @@
+#------------------------------------------------------------------
+# CONFIGURAZIONE PER AMBIENTE STAGING (TESTATO DA UTENTE)
+#------------------------------------------------------------------ 
+#
+#------------------------------------------------------------------  
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+  jpa:
+    #show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_schema: cdst
+    hibernate:
+    #none, validate, update, create
+      ddlAuto: validate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url:
+    username: 
+    password:
+  jmx:
+    default-domain: batch    
+  #FLYWAY enabled = true per lanciare flyway:migrate all'avvio del server. 
+  # Per gli altri comandi (info, repair, ...) utilizzare il maven plugin (per questo configurare connessione db anche nel pom.xml per flyway-maven-plugin)
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    schemas: cdst
+    out-of-order: true
+    ignore-missing-migrations: true
+#------------------------------------------------------------------
+#SECURITY {S,N}
+#------------------------------------------------------------------
+security:
+  enable: N    
+
+mail:
+    defaultFormatPec: true
+    qualifierStrategy: regione_marche
+    default-encoding: UTF-8
+    host: webmail.regione.marche.it
+    pop3: 
+      host:
+      port:
+      folder:
+    from:
+    username:
+    password:
+    port: 25
+    protocol: smtp
+    smtp:
+      debug: true
+      auth: true
+      ehlo: false
+      ssl: false      
+      starttls:
+        required: false
+        enable: false
+      socketFactory:
+        fallback: false                         
+        required: false                 
+    test-connection: false
+    baseUrlIndizione: https://meetpad.regione.marche.it/join
+    urlDocumentazione: https://meetpad.regione.marche.it/authInstructions.pdf
+    urlAccessoCDST: https://meetpad.regione.marche.it/conference/
+    sendEnabled: true
+    recipient: 
+      fake: false
+      fakeAddress: guido.deluca@postaraffaello.it
+mailPec:
+    host:
+    pop3: 
+      host:
+      port: 995
+      folder: Inbox
+    from: meetpad@emarche.it
+    username:
+    password:
+    port: 465
+    enableAsyncCheckMailStatus: true
+    enableAsyncReinoltroNonAccettazionePec: true
+    enableAsyncReinoltroMailInErrore: true
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------  
+file:  
+  upload-dir: /data/uploads
+  upload-subdir: ./${cfAmministrazioneProcedente}/${idConferenza}
+  token-expire-minutes: 30
+  download-context-path: https://meetpad.regione.marche.it/mpad-rest/1.0/
+  delegate-dir: /data/delegates
+  delegate-subdir: ./${idRubricaDelegato}
+autenticazione:
+  utente-audit-fittizio: true
+  cf-utente-audit-fittizio: BATCH
+  utente-fittizio: true
+  cf-utente-fittizio:
+  verifica-token: false
+  token-filter-exclude-urls: /actuator/httptrace,/v2/api-docs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: httptrace
+  trace:
+    http:
+      enabled: true
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------        
+jwt:
+  urlpublickey: src/main/resources/certificates/PublicAOuthCertified.pem
+  tokenWSO2JWTClass: TokenJWT_min
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------  
+messages:
+  properties: classpath:messages 
+
+#------------------------------------------------------------------
+alfresco:
+    baseRoot: 
+    superadmin:
+      user: 
+      password: 
+      baseurl:  
+      baseroot:     
+      
+integrazioni:
+  suap:
+    baseUrlDettaglioConferenza: 
+    dblink: 
+    protocollo:
+      url: 
+      
+protocollo:
+ utenteprotocollo: 
+
+# {Y,N}
+ enableservice: Y 
+ 
+onlyoffice:
+ url:
+    root: https://oocomserver-test.regione.marche.it/api/2.0
+    login: https://oocomserver-test.regione.marche.it/api/2.0/authentication.json 
+    createuser: https://oocomserver-test.regione.marche.it/api/2.0/people
+    upladfile: https://oocomserver-test.regione.marche.it/api/2.0/files/@my/upload
+    editfile: https://oocomserver-test.regione.marche.it/products/files/doceditor.aspx?fileid=IDDOCOO
+    downloadfileOO: https://oocomserver-test.regione.marche.it/products/files/httphandlers/filehandler.ashx?action=download&fileid=
+    downloadfile: https://meetpad.regione.marche.it/oo/downloadFile/
+    callback: https://meetpad.regione.marche.it/oo/docucondivisa/callback
+    dockserverapi: https://oodocserver-test.regione.marche.it/web-apps/apps/api/documents/api.js    
+ admin:
+  user:
+  password:
+
+paleo: 
+ ambiente: PROD
+ escludiMail: regione.marche.informatica@emarche.it;regione.marche.valutazamb@emarche.it;regione.marche.usr@emarche.it
+ operatore:
+  codiceUO:
+  nome: 
+  cognome: 
+  ruolo: Protocollista
+ url: https://paleows.regione.marche.it/PaleoWebServices2020R_MARCHE/PaleoWebService.svc
+ token:
+  user: 
+  password:
+ operatoreUSR:
+  codiceUO: 
+  nome: 
+  cognome: 
+  ruolo: Protocollista
+ tokenUSR:
+  user: 
+  password: 
+ urlUSR: 
+ trasmissione:
+  # NOINVIO=disabilita trasmissione
+  ragione: Inoltro_a_ruolo
+  ragioneUsr: Inoltro_a_ruolo
+  #
+  ruoloDestinatario: Funzionario
+  ruoloDestinatarioUsr: Dirigente
+  #
+  noteGenerali: 
+  noteGeneraliUsr: 
+  # DEFAULT=operatore paleo altrimenti "CodiceUO1;Cognome1;Nome1;Ruolo1;CodiceRuolo1;Ragione1|CodiceUO2;Cognome2;Nome2;Ruolo2;CodiceRuolo2;Ragione2|..."
+  utenti: 
+  utentiUsr: 
+ comunicazioneGenerica: 7
+ richiestaIntegrazioni: 3
+ espressionePareri: 11
+  
+  
+report:
+  driver: org.postgresql.Driver
+  url: 
+  username: 
+  password: 
+  fileroot: report
+  resourcepath: /report
+  
+domus:
+     asincronousservice: Y
+     ambiente: PROD
+     tipoconferenza: 6
+     connection:
+           timeout: 1000000
+           url: 
+           user:
+           password: 
+           stato: ConferenzaRegionale
+     contattiSupporto:
+  
+calamaio:
+  applicationPath: classpath:calamaio/calamaio.jnlp
+  remoteService: http://calamaio.regione.marche.it:8080/EjbCalamaio/SignServices/SignServices
+  configurationId: aruba.remote.cades
+  defaultDomain: frRegioneMarche
+  soapCallTimeout: 60000
+  debugCalls: Y
+  
+  
+schedulerEnabled: true  
+
+descrizioneAmmProcedente:
+ descrizione: ruoloPartecipante.amministrazioneProcedente
+ 
+idTipoEventoCaricamentoVerbale:
+ id: 9
+
+emailPartecipantiTemplateDaEscludere: 
+ email:

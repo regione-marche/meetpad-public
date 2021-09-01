@@ -1,0 +1,1 @@
+alter table oo_adapter_versioni add IF NOT EXISTS  jwt character varying(255);

@@ -1,0 +1,33 @@
+<div class="container">
+
+  <eng-header></eng-header>
+
+  <eng-breadcrumb [appName]="appName"></eng-breadcrumb>
+  <button id="trigger-slider-menu" class="pull-left" aria-label="Apre il menù laterale" aria-expanded="false" aria-controls="navigazionesecondaria"
+    (click)="showMenu()">
+    <span class="fa fa-2x fa-outdent"></span>
+  </button>
+  <div class="row">
+    <nav id="navigazionesecondaria" [ngClass]="{'show-menu':show}" class="col-xs-12 col-sm-4 col-lg-3 slider-menu filtro">
+      <div class="box-menu-contestuale servizi-online-primo-livello">
+        <button id="close-slider-menu" class="pull-right" aria-label="Chiude il menù laterale" aria-expanded="true" (click)='hideMenu()'
+          aria-controls="navigazionesecondaria">
+          <span class="fa fa-close"></span>
+        </button>
+
+        <eng-menu></eng-menu>
+
+      </div>
+    </nav>
+
+    <main id="contenutoprincipale" class="col-xs-12 col-sm-8 col-lg-9">
+      <eng-page-title></eng-page-title>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <eng-footer></eng-footer>
+
+</div>
+
+<!-- <eng-message-viewer></eng-message-viewer> -->

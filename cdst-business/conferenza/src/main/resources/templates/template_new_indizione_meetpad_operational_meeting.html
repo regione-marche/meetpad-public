@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<BR>    
+Spett.le <u><span th:text="${descrizione_ente}"></span></u>,<BR><BR>
+l'amministrazione <u><span th:text="${amministrazioneProcedente}"></span></u> vi invita a partecipare all’incontro tecnico di seguito descritto:<BR><BR>
+ID conferenza: <u><span th:text="${idConferenza}"></span></u><BR>
+<BR>
+<div th:unless="${#strings.isEmpty(riferimentoIstanza)}">
+Riferimento pratica: <u><span th:text="${riferimentoIstanza}"></span></u><BR><BR>
+</div>
+<div th:unless="${#strings.isEmpty(oggettoDetermina)}">
+Oggetto: <u><b><span th:text="${oggettoDetermina}"></span></b></u><BR><BR>
+</div>
+
+L'incontro si terrà in data <span th:text="${dataSessioneSimultanea}"></span> alle ore <span th:text="${orarioConferenza}"></span> presso <span th:text="${indirizzoSessioneOperationalMeeting}"></span><BR><BR>
+
+<ol>
+	<li>cliccare sul link: <u><a th:href="${urlAccreditamento}"><span th:text="${urlAccreditamento}"></span></a></u></li>
+
+	<li>cliccare su "Accedi" in alto a destra</li>
+
+	<li>inserire le credenziali di autenticazione tramite Cohesion</li>
+
+	<li>scaricare il materiale relativo all’incontro in oggetto nella sezione documentazione</li><BR>
+</ol>
+
+<div th:unless="${#strings.isEmpty(listaContattiSupporto)}">
+Per eventuali informazioni  e chiarimenti sull’incontro di seguito i riferimenti da contattare:<BR><BR> 
+<p th:utext="${#strings.replace(listaContattiSupporto,'~','&lt;br /&gt;')}" ></p>
+</div>
+
+
+<BR><BR>
+Distinti saluti
+    
+</body>
+</html>

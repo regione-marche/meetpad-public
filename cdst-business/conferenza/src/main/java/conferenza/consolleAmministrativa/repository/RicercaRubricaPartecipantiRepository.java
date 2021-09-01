@@ -1,0 +1,11 @@
+package conferenza.consolleAmministrativa.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import conferenza.consolleAmministrativa.model.RicercaRubricaPartecipanti;
+
+public interface RicercaRubricaPartecipantiRepository extends JpaRepository<RicercaRubricaPartecipanti, Integer>,
+		JpaSpecificationExecutor<RicercaRubricaPartecipanti> {
+
+}

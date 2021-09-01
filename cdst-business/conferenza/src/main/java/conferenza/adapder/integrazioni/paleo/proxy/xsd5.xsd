@@ -1,0 +1,48 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/RegioneMarche.Protocollo.Common.TipiInterop" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RegioneMarche.Protocollo.Common.TipiInterop">
+<xs:simpleType name="TipoDirezioneMessaggio">
+<xs:annotation>
+<xs:appinfo>
+<ActualType xmlns="http://schemas.microsoft.com/2003/10/Serialization/" Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema"/>
+</xs:appinfo>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="Ingresso"/>
+<xs:enumeration value="Uscita"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TipoDirezioneMessaggio" nillable="true" type="tns:TipoDirezioneMessaggio"/>
+<xs:simpleType name="TipoStatoSpedizione">
+<xs:annotation>
+<xs:appinfo>
+<ActualType xmlns="http://schemas.microsoft.com/2003/10/Serialization/" Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema"/>
+</xs:appinfo>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="NonSpedito"/>
+<xs:enumeration value="Spedito"/>
+<xs:enumeration value="Accettato"/>
+<xs:enumeration value="NonAccettato"/>
+<xs:enumeration value="PresoInCarico"/>
+<xs:enumeration value="Consegnato"/>
+<xs:enumeration value="NonConsegnato"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TipoStatoSpedizione" nillable="true" type="tns:TipoStatoSpedizione"/>
+<xs:simpleType name="TipoMessaggioInterop">
+<xs:annotation>
+<xs:appinfo>
+<ActualType xmlns="http://schemas.microsoft.com/2003/10/Serialization/" Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema"/>
+</xs:appinfo>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="Indefinito"/>
+<xs:enumeration value="Segnatura"/>
+<xs:enumeration value="ConfermaRicezione"/>
+<xs:enumeration value="NotificaEccezione"/>
+<xs:enumeration value="Aggiornamento"/>
+<xs:enumeration value="Annullamento"/>
+<xs:enumeration value="NoInterop"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TipoMessaggioInterop" nillable="true" type="tns:TipoMessaggioInterop"/>
+</xs:schema>

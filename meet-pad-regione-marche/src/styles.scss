@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker3.css";
+@import "~font-awesome/css/font-awesome.css";
+
+@import "css-temp/custom.css";
+@import "css-temp/custom-webkit.css";
+
+
+/**
+MENU
+**/
+.slider-menu.filtro.show-menu {
+    display: block !important;
+}
+
+/**
+MANAGE ACCORDION LOOKUP
+**/
+.lookup-type-3 {
+    h2,
+    h3 {
+        display: none;
+    }
+
+    .form-grey {
+        margin-top: 0;
+    }
+
+    button.fa-angle-down {
+        /* to improve selection*/
+        display: none;
+    }
+}
+
+.eng-page {
+    display: block;
+}
+
+.schifodatogliere-post-demo {
+    .modal-body {
+        height: 70vh;
+        max-height: 80vh;
+        // border: 1px solid red;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+.eng-hidden {
+    display: none;
+}
+
+.schifodatogliere-post-demo {
+    .modal-body {
+        height: 70vh;
+        max-height: 80vh;
+        // border: 1px solid red;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+/**
+ZONA FIX DA RIVEDERE CON LEOPOLDO
+**/
+
+/* per il padding degli elementi negli accordion */
+.display tbody > tr > td.fix-col-span-4-in-accordion {
+    // position: absolute;
+    width: 100%;
+    padding: 0;
+    border-top: 0;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    background-color: rgb(246, 246, 246);
+}
+
+.display tbody > tr > td.pop.fix-col-span-4-in-accordion {
+    width: 1000000px; //la qualsiasi enorme. da rivedere  con urgenza
+}
+
+/* per togliere lo sfondo bianco nelle tabelle dentro accordion */
+table.accordionTab table.table {
+    background: transparent;
+
+    thead tr {
+        border: 0;
+        background: transparent;
+    }
+
+    .pagination li a {
+        background: transparent;
+    }
+}
+
+/* alcuni problemi con il menu */
+.slider-menu {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/** 
+problemi con gli input di intevallo
+*/
+eng-input-double-date .date-range .datePicker > .form-group,
+eng-input-number-interval .date-range .datePicker > .form-group {
+    width: auto;
+
+    &:nth-child(2) {
+        margin-left: 10px;
+    }
+}
+
+.wizard-final-step eng-form-title {
+    display: none;
+}
+
+.capitalized {
+    text-transform: capitalize;
+}

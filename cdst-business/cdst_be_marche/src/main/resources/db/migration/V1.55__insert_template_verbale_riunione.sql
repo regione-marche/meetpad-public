@@ -1,0 +1,5 @@
+INSERT INTO cdst.template (id_template, nome_template, fk_tipologia_conferenza, fk_tipo_evento) VALUES ('11', 'template_verbale_riunione', '1', '9') ON CONFLICT DO NOTHING;
+INSERT INTO cdst.template (id_template, nome_template, fk_tipologia_conferenza, fk_tipo_evento) VALUES ('12', 'template_verbale_riunione', '2', '9') ON CONFLICT DO NOTHING;
+INSERT INTO cdst.template (id_template, nome_template, fk_tipologia_conferenza, fk_tipo_evento) VALUES ('13', 'template_verbale_riunione', '3', '9') ON CONFLICT DO NOTHING;
+INSERT INTO cdst.template (id_template, nome_template, fk_tipologia_conferenza, fk_tipo_evento) VALUES ('14', 'template_verbale_riunione', '4', '9') ON CONFLICT DO NOTHING;
+INSERT INTO cdst.template (id_template, nome_template, fk_tipologia_conferenza, fk_tipo_evento) VALUES ('15', 'template_verbale_riunione', '5', '9') ON CONFLICT DO NOTHING;

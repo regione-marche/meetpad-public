@@ -1,0 +1,1 @@
+ALTER TABLE cdst.utente ADD COLUMN flag_delega_altre_amministrazioni boolean;

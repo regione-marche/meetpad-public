@@ -1,0 +1,8 @@
+package conferenza.consolleAmministrativa.repository.specification;
+
+import conferenza.consolleAmministrativa.model.RicercaRubricaRichiedenti;
+import conferenza.repository.SpecificationBuilder;
+
+public class SpecificationBuilderRicercaRubricaRichiedenti extends SpecificationBuilder<RicercaRubricaRichiedenti>{
+
+}

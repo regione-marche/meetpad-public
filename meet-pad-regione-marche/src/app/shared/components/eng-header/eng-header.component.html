@@ -1,0 +1,77 @@
+<div class="container">
+
+    <div class="link-menu">
+        <a href="#" translate="HEADER.AMMINISTRAZIONE_TRASPARENTE"></a>
+        <a href="#" translate="HEADER.PROFILO_DEL_COMMITTENTE"></a>
+        <a href="#" translate="HEADER.SEGNALAZIONE_DI_SEMPLIFICAZIONE"></a>
+        <a href="#" translate="HEADER.COME_FARE_PER"></a>
+        <a href="#" translate="HEADER.RUBRICA"></a>
+        <a class="last" href="#" translate="HEADER.URP"></a>
+
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <p class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuprincipale">
+                    <span class="sr-only">Menu</span>
+                </p>
+            </div>
+
+            <div class="navbar-collapse collapse" id="menuprincipale">
+                <h2 class="hidden" translate="HEADER.MAIN_MENU_NAVIGATION"></h2>
+                <ul id="navigazioneprincipale" role="menu" class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#">
+                            {{ 'HEADER.IN_THE_FOCUS' | translate }}
+                            <span class="sr-only">({{ 'HEADER.SELECTED' | translate }})</span>
+                        </a>
+                        <!-- <div class="dropdown-menu">
+                            <div class="visible-sm-block visible-md-block visible-lg-block">
+                                <h3>In Primo Piano</h3>
+                                <p>
+                                    Presentazione dell’Ente, della sua organizzazione amministrativa e territoriale, delle relazioni con altri enti e con organi
+                                    e organismi internazionali.
+                                </p>
+
+                                <p>
+                                    <button type="submit" class="btn btn-default" onclick="">vai alla sezione</button>
+                                </p>
+
+                            </div>
+                            <ul role="menu">
+
+                                <li>
+                                    <a href="">Chi siamo</a>
+                                </li>
+
+                            </ul>
+                        </div> -->
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            {{ 'HEADER.USEFUL_REGION' | translate }}
+                            <span class="sr-only">({{ 'HEADER.SELECTED' | translate }})</span>
+                        </a>
+                    </li>
+                    <li class="dropdown last">
+                        <a href="#">
+                            {{ 'HEADER.JOIN_REGION' | translate }}
+                            <span class="sr-only">({{ 'HEADER.SELECTED' | translate }})</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul role="menu" class="nav navbar-nav nav-exit navbar-right">
+                    <li>
+                        <a href="#logout" title="Esci" id="logoutButton">ESCI</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+</div>

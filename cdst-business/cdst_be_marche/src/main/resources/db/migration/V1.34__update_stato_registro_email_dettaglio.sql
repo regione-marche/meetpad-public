@@ -1,0 +1,2 @@
+UPDATE cdst.registro_email_dettaglio SET stato_email='INOLTRATO' WHERE stato_email='INNOLTRATO';
+UPDATE cdst.registro_email_dettaglio SET stato_email='AVVISODINONACCETTAZIONE' WHERE stato_email='AVVISO DI NON ACCETTAZIONE';

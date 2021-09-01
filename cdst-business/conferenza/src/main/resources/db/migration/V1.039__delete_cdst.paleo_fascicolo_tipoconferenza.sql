@@ -1,0 +1,1 @@
+DELETE FROM cdst.paleo_fascicolo_tipoconferenza;

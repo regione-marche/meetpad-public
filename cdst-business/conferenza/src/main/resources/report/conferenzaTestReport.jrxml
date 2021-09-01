@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employeeReport" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	
+	 	<parameter name="title" class="java.lang.String" isForPrompting="false"/>
+	
+		<queryString language="xPath">
+			<![CDATA[/conferenze/conferenza]]>
+		</queryString>
+		
+		
+		<field name="codiceFiscaleRichiedente" class="java.lang.String">
+			<fieldDescription><![CDATA[@codiceFiscaleRichiedente]]></fieldDescription>
+		</field>		
+		<field name="cognomeRichiedente" class="java.lang.String">
+			<fieldDescription><![CDATA[@cognomeRichiedente]]></fieldDescription>
+		</field>
+		<field name="impresaDenominazione" class="java.lang.String">
+			<fieldDescription><![CDATA[@impresaDenominazione]]></fieldDescription>
+		</field>
+		<field name="idConferenza" class="java.lang.Integer">
+			<fieldDescription><![CDATA[@idConferenza]]></fieldDescription>
+		</field>		
+
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+    <title>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="200" y="0" width="200" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="23" backcolor="#66FF66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[idConferenza]]></text>
+			</staticText>
+			
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="0" width="100" height="23" backcolor="#66FF66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[codiceFiscaleRichiedente]]></text>
+			</staticText>
+			
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="0" width="100" height="23" backcolor="#66FF66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[cognomeRichiedente]]></text>
+			</staticText>
+			
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="0" width="100" height="23" backcolor="#66FF66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[impresaDenominazione]]></text>
+			</staticText>									
+			
+		</band>
+	</columnHeader>		
+		
+				    		
+    <detail>
+        <band height="47" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String"><![CDATA[$F{idConferenza}]]></textFieldExpression>
+            </textField>        
+            <textField>
+                <reportElement x="100" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String"><![CDATA[$F{codiceFiscaleRichiedente}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="200" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String"><![CDATA[$F{cognomeRichiedente}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="300" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String"><![CDATA[$F{impresaDenominazione}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

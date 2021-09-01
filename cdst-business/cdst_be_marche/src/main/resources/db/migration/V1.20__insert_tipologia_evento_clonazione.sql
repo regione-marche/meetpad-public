@@ -1,0 +1,1 @@
+INSERT INTO cdst.tipo_evento (codice, descrizione, fk_oggetto_evento) VALUES ('8', 'Clonazione Conferenza', null) ON CONFLICT DO NOTHING;

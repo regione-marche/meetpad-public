@@ -1,0 +1,26 @@
+CREATE TABLE cdst.ente_uffici_appoggio_csv
+(
+    cod_ou character varying(255) COLLATE pg_catalog."default",
+    cod_aoo character varying(255) COLLATE pg_catalog."default",
+    des_ou character varying(1000) COLLATE pg_catalog."default",
+    comune character varying(255) COLLATE pg_catalog."default",
+    Cap character varying(255) COLLATE pg_catalog."default",
+    provincia character varying(255) COLLATE pg_catalog."default",
+    Regione character varying(255) COLLATE pg_catalog."default",
+    Indirizzo character varying(255) COLLATE pg_catalog."default",
+    Tel character varying(255) COLLATE pg_catalog."default",
+    nome_resp character varying(255) COLLATE pg_catalog."default",
+    cogn_resp character varying(255) COLLATE pg_catalog."default",
+    mail_resp character varying(255) COLLATE pg_catalog."default",
+    tel_resp character varying(255) COLLATE pg_catalog."default",
+    cod_amm character varying(255) COLLATE pg_catalog."default",
+    cod_ou_padre character varying(255) COLLATE pg_catalog."default",
+    Fax character varying(255) COLLATE pg_catalog."default",
+    cod_uni_ou character varying(255) COLLATE pg_catalog."default",
+    mail1 character varying(255) COLLATE pg_catalog."default",
+    tipo_mail1 character varying(255) COLLATE pg_catalog."default",
+    mail2 character varying(255) COLLATE pg_catalog."default",
+    tipo_mail2 character varying(255) COLLATE pg_catalog."default",
+    mail3 character varying(255) COLLATE pg_catalog."default",
+    tipo_mail3 character varying(255) COLLATE pg_catalog."default"
+  )

@@ -1,0 +1,2 @@
+INSERT INTO cdst.tipologia_conferenza(codice, descrizione) VALUES ('4', 'tipologiaConferenza.bandaLarga') ON CONFLICT DO NOTHING;
+INSERT INTO cdst.tipologia_conferenza(codice, descrizione) VALUES ('5', 'tipologiaConferenza.istruttoria') ON CONFLICT DO NOTHING;

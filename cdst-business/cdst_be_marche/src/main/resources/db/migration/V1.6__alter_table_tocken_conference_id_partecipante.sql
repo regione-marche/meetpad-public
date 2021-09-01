@@ -1,0 +1,1 @@
+ALTER TABLE cdst.tocken_conference ADD COLUMN id_partecipante integer;

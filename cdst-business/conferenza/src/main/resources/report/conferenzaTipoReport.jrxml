@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employeeReport" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d719c635-8859-4579-95ea-8dc229bb6ab5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="AlternateBackground" backcolor="#CCFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[($V{REPORT_COUNT} % 2) == 1]]></conditionExpression>
+			<style backcolor="#99FFFF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="title" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.io.InputStream" isForPrompting="false"/>
+	<queryString language="xPath">
+		<![CDATA[/conferenze/conferenza]]>
+	</queryString>
+	<field name="codiceFiscaleRichiedente" class="java.lang.String">
+		<fieldDescription><![CDATA[@codiceFiscaleRichiedente]]></fieldDescription>
+	</field>
+	<field name="cognomeRichiedente" class="java.lang.String">
+		<fieldDescription><![CDATA[@cognomeRichiedente]]></fieldDescription>
+	</field>
+	<field name="impresaDenominazione" class="java.lang.String">
+		<fieldDescription><![CDATA[@impresaDenominazione]]></fieldDescription>
+	</field>
+	<field name="idConferenza" class="java.lang.Integer">
+		<fieldDescription><![CDATA[@idConferenza]]></fieldDescription>
+	</field>
+	<field name="oggettoDeterminazione" class="java.lang.String">
+		<fieldDescription><![CDATA[@oggettoDeterminazione]]></fieldDescription>
+	</field>
+	<field name="primaSessioneSimultanea" class="java.util.Date">
+		<fieldDescription><![CDATA[@primaSessioneSimultanea]]></fieldDescription>
+	</field>
+	<field name="nomeRichiedente" class="java.lang.String">
+		<fieldDescription><![CDATA[@nomeRichiedente]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="752" height="20" uuid="bc9f27b2-efd5-4f2c-a722-687dc26201bd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<image scaleImage="RetainShape" onErrorType="Blank">
+				<reportElement x="0" y="0" width="168" height="68" uuid="c1c0c5ce-ebab-4f5a-8424-2997e324551f"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="77" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="160c8611-7e89-4039-8b38-82cf8d6bc5bd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Id Conferenza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="77" y="0" width="208" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="bde04501-85c7-4aa9-9ce4-1885949abbd7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Oggetto determinazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="285" y="0" width="121" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="680a2f56-8958-4b0f-a379-c4444114c98a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Codice fiscale richiedente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="523" y="0" width="117" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="790037e1-97fc-42f6-9efd-0e11b49f9922"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Impresa denominazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="406" y="0" width="117" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="0d701f26-09e1-4bbe-b07c-3db3526ef255"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Richiedente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="640" y="0" width="112" height="34" forecolor="#FFFFFF" backcolor="#000099" uuid="9c9d57ab-0a4a-4295-8ecb-90664dd3ac0e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="2.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data prima sessione simultanea  ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="77" height="23" uuid="c1d45e4e-e5ba-4ea0-82f3-84e4a2154400"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{idConferenza}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="77" y="0" width="208" height="23" uuid="65bfc838-dad2-4192-ba61-6289324dcf0a"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{oggettoDeterminazione}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="285" y="0" width="121" height="23" uuid="64975863-aaf8-4e2d-96ab-22917eae488c"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{codiceFiscaleRichiedente}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="523" y="0" width="117" height="23" uuid="9fa2c006-7b0a-4890-9892-4f92a996cb8a"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{impresaDenominazione}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="640" y="0" width="112" height="23" uuid="df605211-e4d4-40a9-bfde-f1f9f663af32"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{primaSessioneSimultanea}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="AlternateBackground" stretchType="RelativeToBandHeight" mode="Opaque" x="406" y="0" width="117" height="23" uuid="6894e6b0-ec80-4a07-adc1-9a85809396ce"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{cognomeRichiedente} != null
+&& $F{nomeRichiedente}  != null ? $F{nomeRichiedente} + " " + $F{cognomeRichiedente}:""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

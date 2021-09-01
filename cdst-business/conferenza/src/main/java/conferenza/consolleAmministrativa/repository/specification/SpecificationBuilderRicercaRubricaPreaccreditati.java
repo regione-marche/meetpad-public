@@ -1,0 +1,8 @@
+package conferenza.consolleAmministrativa.repository.specification;
+
+import conferenza.consolleAmministrativa.model.RicercaRubricaPreaccreditati;
+import conferenza.repository.SpecificationBuilder;
+
+public class SpecificationBuilderRicercaRubricaPreaccreditati extends SpecificationBuilder<RicercaRubricaPreaccreditati>{
+
+}

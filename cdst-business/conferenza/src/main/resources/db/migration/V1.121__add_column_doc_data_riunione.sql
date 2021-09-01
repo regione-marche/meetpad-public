@@ -1,0 +1,1 @@
+ALTER TABLE cdst.documento ADD COLUMN data_riunione timestamp without time zone;

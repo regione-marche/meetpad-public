@@ -1,0 +1,1 @@
+update cdst.tipologia_conferenza_specializzazione set flag_autoaccreditamento = true where descrizione = 'tipologiaConferenzaSpec.domus';

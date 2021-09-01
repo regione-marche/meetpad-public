@@ -1,0 +1,1 @@
+update cdst.registro_documento set rif_esterno = replace(rif_esterno, '\', '/');

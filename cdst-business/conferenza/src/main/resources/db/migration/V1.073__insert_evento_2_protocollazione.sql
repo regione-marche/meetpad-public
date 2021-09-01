@@ -1,0 +1,2 @@
+INSERT INTO cdst.observer_registry(codice, nome, subrscribed_event_type, class)
+	VALUES ('SCRITTURA-PROTOCOLLO-PALEO-USCITA', 'Protocollazione Paleo in Uscita', '2', 'PaleoObserverExitListnerInterface');

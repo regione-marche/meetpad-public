@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<BR>    
+Buon giorno<BR>
+L&apos;amministrazione <b><span th:text="${amministrazioneProcedente}"></span></b> vi invita a partecipare alla conferenza di servizi di seguito descritta:<BR>
+ID conferenza: <b><span th:text="${idConferenza}"></span></b><BR>
+<BR>
+Tipologia di conferenza: <b><span th:text="${tipoConferenza}"></span></b><BR>
+<div th:unless="${#strings.isEmpty(riferimentoIstanza)}">
+Pratica oggetto della conferenza: <b><span th:text="${riferimentoIstanza}"></span></b><BR>
+</div>
+<div th:unless="${#strings.isEmpty(oggettoDetermina)}">
+Oggetto della determinazione da assumere: <b><span th:text="${oggettoDetermina}"></span></b><BR>
+</div>
+Ruolo ricoperto: <b><span th:text="${ruolo}"></span></b><BR>
+<BR>
+<b>Per accedere alla piattaforma cliccare sul seguente link:</b><BR>
+<p><b><a th:href="${urlAccreditamento}"><span th:text="${urlAccreditamento}"></span></a></b></p>
+Non sarà possibile accedere alla Conferenza finché il Responsabile della conferenza non approvi la richiesta.
+<BR>
+
+    
+</body>
+</html>

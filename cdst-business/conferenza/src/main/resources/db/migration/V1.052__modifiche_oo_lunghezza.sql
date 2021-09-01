@@ -1,0 +1,1 @@
+alter table oo_adapter_versioni alter column jwt type character varying(2000);

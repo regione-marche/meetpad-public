@@ -1,0 +1,133 @@
+#------------------------------------------------------------------
+# CONFIGURAZIONE PER AMBIENTE DI SVILUPPO
+#------------------------------------------------------------------ 
+#
+#------------------------------------------------------------------  
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+  jpa:
+    #show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_schema: cdst
+    hibernate:
+    #none, validate, update, create
+      ddlAuto: validate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: 
+    username: 
+    password: 
+  jmx:
+    default-domain: sviluppo
+  #FLYWAY enabled = true per lanciare flyway:migrate all'avvio del server. 
+  # Per gli altri comandi (info, repair, ...) utilizzare il maven plugin (per questo configurare connessione db anche nel pom.xml per flyway-maven-plugin)
+  flyway:
+    enabled: false
+    baseline-on-migrate: true
+    schemas: cdst
+    out-of-order: true
+    ignore-missing-migrations: true
+
+#------------------------------------------------------------------
+# SVIL -ENG - mailoutpsm.sys
+#------------------------------------------------------------------    
+mail:
+    defaultFormatPec: false
+    qualifierStrategy: regione_marche
+    default-encoding: UTF-8
+    host: mailoutpsm.sys    
+    from: meetpadmarche@eng.it
+    pop3: 
+      host: mailoutpsm.sys
+      port: 25
+      folder: Inbox 
+    username:  test
+    password:  test
+    port: 25
+    protocol: smtp
+    smtp:
+          debug: true
+          auth: false
+          ehlo: true          
+          starttls:
+            required: true
+            enable: true   
+          socketFactory:
+            fallback: false 
+            required: false                           
+    test-connection: false
+    baseUrlIndizione: https://wso2.meetpad-dev.eng.it/meet-pad-svil/join
+    urlDocumentazione: https://wso2.meetpad-dev.eng.it/meet-pad-svil/authInstructions.pdf
+    sendEnabled: false
+    recipient: 
+      fake: true
+      fakeAddress: andrea.rosina@eng.it  
+mailPec:
+    host: smtps.emarche.it
+    pop3: 
+      host: pop3s.emarche.it
+      port: 995
+      folder: Inbox
+    from: meetpad@emarche.it
+    username: 
+    password: 
+    port: 465
+    enableAsyncCheckMailStatus: false
+    enableAsyncReinoltroMailInErrore: false    
+
+file:
+  upload-dir: ./uploadsSvil
+  upload-subdir: ./${cfAmministrazioneProcedente}/${idConferenza}
+  token-expire-minutes: 30
+  download-context-path: https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/
+autenticazione:
+  utente-fittizio: true
+  cf-utente-fittizio: 
+  verifica-token: false
+  token-filter-exclude-urls: /actuator/httptrace,/v2/api-docs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: httptrace
+  trace:
+    http:
+      enabled: true
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------        
+jwt:
+  urlpublickey: src/main/resources/certificates/PublicAOuthCertified.pem
+  tokenWSO2JWTClass: TokenJWT_min
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------   
+messages:
+  properties: classpath:messages
+  
+#------------------------------------------------------------------
+alfresco:
+    baseRoot: Shared
+    superadmin:
+      user: 
+      password: 
+      baseurl:  
+      baseroot: 
+      
+integrazioni:
+  suap:
+    baseUrlDettaglioConferenza: https://wso2.meetpad-dev.eng.it/meet-pad-svil/conference/{idConferenza}/edit
+    dblink: 
+    protocollo:
+      url: http://localhost:8082/integrazioni/suap/protocollo/testupload/
+
+protocollo:
+ utenteprotocollo: 
+  

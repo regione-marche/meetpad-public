@@ -1,0 +1,1 @@
+ALTER TABLE cdst.ente ALTER COLUMN id_ente SET DEFAULT nextval('cdst.ente_id_ente_seq'); 

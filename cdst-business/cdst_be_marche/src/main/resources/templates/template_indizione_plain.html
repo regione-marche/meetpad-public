@@ -1,0 +1,31 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:inline="text">
+<PRE>
+Spett.le [( ${descrizione_ente} )]
+l'amministrazione [(${amministrazioneProcedente})] vi invita a partecipare alla [(${tipoConferenza})] della Conferenza di Servizi di seguito descritta:
+ID conferenza: [(${idConferenza})]
+
+[# th:unless="${#strings.isEmpty(riferimentoIstanza)}"]
+Riferimento pratica: [(${riferimentoIstanza})]
+[/]
+[# th:unless="${#strings.isEmpty(oggettoDetermina)}"]
+Oggetto: [(${oggettoDetermina})]
+[/]
+L'incontro si terrà in data [(${dataSessioneSimultanea})] alle ore [(${orarioConferenza})] presso [(${indirizzoSessioneSimultanea})]
+
+La documentazione della pratica é disponibile sulla piattaforma MeetPAd di Regione Marche per la gestione delle Conferenze di Servizi e può essere consultata attraverso i seguenti passi:
+
+1.cliccare sul link: [(${urlAccreditamento})]
+2.cliccare su "Accedi" in alto a destra
+3.inserire le credenziali di autenticazione tramite Cohesion
+4.confermare l'accesso alla piattaforma
+5.scaricare il materiale relativo alla [(${tipoConferenza})] in esame nella sezione documentazione
+
+
+Al link https://meetpad.regione.marche.it/authInstructions.pdf é possibile trovare le istruzioni per l'accesso e il supporto all'utenticazione Cohesion.
+
+Per informazioni varie e indicazioni sui riferimenti da contattare per eventuali chiarimenti di natura tecnica, visualizzare la nota in allegato.
+
+Distinti saluti
+
+</PRE>
+</html>

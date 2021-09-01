@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jnlp codebase="http://calamaio.regione.marche.it:8080/Calamaio/applet/" spec="1.0+">
+    <information>
+        <title>Gpi Calamaio</title>
+        <vendor>GPI S.p.A.</vendor>
+        <homepage href="http://www.gpi.it"/>
+        <description></description>
+        <description kind="short">Gpi Calamaio</description>
+        <offline-allowed/>
+    </information>
+    <resources>
+        <j2se version="1.6+" initial-heap-size="64m" max-heap-size="1024m"/>
+		<jar href="CalamaioSignCore.jar"/>
+		<jar href="bcmail-jdk15to18-168.jar"/>
+		<jar href="bcprov-jdk15to18-168.jar"/>
+		<jar href="bcpkix-jdk15to18-168.jar"/>
+		<jar href="bctls-jdk15to18-168.jar"/>
+		<jar href="bcpg-jdk15to18-168.jar"/>
+		<jar href="bctsp-jdk16-145.jar"/>
+		<jar href="commons-codec-1.3.jar"/>
+		<jar href="commons-io-1.3.1.jar"/>
+		<jar href="commons-lang-2.3.jar"/>
+		<jar href="commons-logging-1.1.1.jar"/>
+		<jar href="itextpdf-5.5.13.1.jar"/>
+		<jar href="jcryptoki.jar"/>
+		<jar href="jdigitsign.jar"/>
+		<jar href="jscapi.jar"/>
+		<jar href="log4j-1.2.17.jar"/>
+		<jar href="pdf-renderer-1.0.5.jar"/>
+		<jar href="pknetjpdf.jar"/>
+		<jar href="pknetjxml.jar"/>
+		
+	    <!-- only for scanner -->
+        <jar href="hamcrest-core-1.3.jar"/>
+        <jar href="itext-rtf-2.1.5.jar"/>
+        <jar href="jai_codec-1.1.3.jar"/>
+        <jar href="jai_core-1.1.3.jar"/>
+        <jar href="jai_imageio-1.1.jar"/>
+        <jar href="JSane-Base-0.8.jar"/>
+        <jar href="JSane-gui-0.8.jar"/>
+        <jar href="JSane-Net-0.8.jar"/>
+        <jar href="JSane-Net-Frontend-0.8.jar"/>
+		<jar href="morena_license.jar"/>
+        <jar href="morena7_win.jar"/>
+        <jar href="morena7.jar"/>
+    </resources>
+    <security>
+        <all-permissions/>
+    </security>
+    <application-desc main-class="it.gpi.calamaio.CalamaioService">
+        <argument>http://calamaio.regione.marche.it:8080/Calamaio/applet/</argument>
+    </application-desc>
+</jnlp>

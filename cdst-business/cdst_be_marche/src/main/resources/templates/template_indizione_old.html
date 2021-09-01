@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<BR>    
+Buon giorno<BR>
+L&apos;amministrazione Regione Marche (CAMPO RICHIAMATO) vi invita a partecipare alla conferenza di servizi di seguito descritta:<BR>
+ID conferenza: <p><span th:text="${idconferenza}"><BR>
+Tipologia di conferenza: ${tipoconferenza}<BR>
+Pratica oggetto della conferenza: ${oggettoconferenza}<BR>
+Oggetto della determinazione da assumere: ${oggettodetermina}<BR>
+Ruolo ricoperto: ${ruoloricoperto}<BR>
+Procedimenti su cui è richiesta la vostra determinazione: ${procedimento}<BR>
+<BR>
+Termine per la richiesta di integrazioni: ${terminerichiestaintegrazioni}<BR>
+Termine per l’espressione delle determinazioni:  ${termineespressionedeterminazioni}<BR>
+Data prima sessione simultanea:  ${datasessionesmultanea}<BR>
+<BR>
+<b>Per accedere alla piattaforma cliccare sul seguente link:</b><BR>
+<p><span th:text="${accreditamento}"></span></p><BR>  <BR>
+<BR>
+e utilizzare il tasto “Accreditati per una nuova conferenza” fornendo le credenziali indicate di seguito:<BR>
+identificativo: <p><span th:text="${tkn2}"></span></p><BR>
+Password: <p><span th:text="${tkn1}"></span></p><BR>
+<BR>
+Non sarà possibile accedere alla Conferenza finché il Responsabile della conferenza non approvi la richiesta.<BR>
+<BR>
+<BR>        
+<span th:text="${message}"></span>
+<BR>
+<BR>
+
+<BR>
+<p>La videoconferenza è indetta tramite il seguente link:</p>
+<p><span th:text="${conferenza}"></span></p><BR>    
+<BR>
+
+
+
+    
+</body>
+</html>

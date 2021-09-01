@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<BR>    
+Gentile <u><span th:text="${destinatario}"></span></u>,<BR><BR>
+sulla piattaforma MeetPAd sono presenti i seguenti documenti in attesa di essere visti e sottoscritti digitalmente:<BR><BR>
+ID conferenza: <u><span th:text="${idConferenza}"></span></u><BR>
+<BR>
+<div th:unless="${#strings.isEmpty(riferimentoIstanza)}">
+Riferimento pratica: <u><span th:text="${riferimentoIstanza}"></span></u><BR><BR>
+</div>
+<div th:unless="${#strings.isEmpty(tipoDocumento)}">
+Tipo Documento: <u><span th:text="${tipoDocumento}"></span></u><BR><BR>
+</div>
+<div th:unless="${#strings.isEmpty(oggettoDetermina)}">
+Oggetto: <u><b><span th:text="${oggettoDetermina}"></span></b></u><BR><BR>
+</div>
+Per visualizzare e firmare i documenti<BR><BR>
+1. Accedere alla piattaforma MeetPAd al link https://meetpad.regione.marche.it<BR><BR>
+2. Cliccare su Accedi in alto a destra e selezionare Cohesion<BR><BR>
+3. Inserire le credenziali<BR><BR>
+4. Cliccare nel menu in alto a sinistra (le tre linee orizzontali) e selezionare la voce "Alla firma"<BR><BR>
+
+A quel punto sarà presente l'elenco dei documenti sottoposti alla Sua visione per essere sottoscritti.<BR></BR>
+Per qualunque informazione non esiti a contattare l'assistenza.<BR><BR>
+
+Cordiali saluti
+</body>
+</html>

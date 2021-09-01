@@ -1,0 +1,138 @@
+#------------------------------------------------------------------
+# CONFIGURAZIONE PER SVILUPPO LOCALE
+#------------------------------------------------------------------ 
+#
+#------------------------------------------------------------------  
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+  jpa:
+    #show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_schema: cdst
+    hibernate:
+    #none, validate, update, create
+      ddlAuto: validate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cdst
+    username: cdst
+    password: cdst
+  #FLYWAY enabled = true per lanciare flyway:migrate all'avvio del server. 
+  # Per gli altri comandi (info, repair, ...) utilizzare il maven plugin (per questo configurare connessione db anche nel pom.xml per flyway-maven-plugin)
+  flyway:
+    enabled: false
+    baseline-on-migrate: true
+    schemas: cdst
+    out-of-order: true
+    ignore-missing-migrations: true
+
+#------------------------------------------------------------------
+# MAil
+#------------------------------------------------------------------    
+mail:
+    defaultFormatPec: false
+    qualifierStrategy: regione_lazio
+    default-encoding: UTF-8
+    host: smtp.regione.lazio.it
+    from: suaplazio@regione.lazio.it
+    pop3:
+      host:
+      port:
+      folder:
+    imap:
+      host: imap.regione.lazio.it
+      port: 993
+      folder: Inbox
+    username: 
+    password: 
+    port: 25
+    protocol: smtp
+    smtp:
+          debug: true
+          auth: true
+          ehlo: true
+          starttls:
+            required: false
+            enable: false
+          socketFactory:
+            fallback: false
+            required: false
+    test-connection: false
+    baseUrlIndizione: ​​​​​​http://suap.test.laitspa.it/conferenza-suap/join
+    urlDocumentazione: http://suap.test.laitspa.it/conferenza-suap/authInstructions.pdf
+    sendEnabled: false
+    recipient: 
+      fake: true
+      fakeAddress: andrea.rosina@eng.it
+mailPec:
+    host: smtp.regione.lazio.it
+    imap: 
+      host: imap.regione.lazio.it
+      port: 993
+      folder: Inbox
+    pop3: 
+      host: 
+      port: 
+      folder: 
+    from: 
+    username: 
+    password: 
+    port: 25
+    enableAsyncCheckMailStatus: false
+    enableAsyncReinoltroMailInErrore: false
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------  
+file:
+  upload-dir: ./uploads
+  upload-subdir: ./${cfAmministrazioneProcedente}/${idConferenza}
+  token-expire-minutes: 30
+autenticazione:
+  utente-fittizio: true
+  cf-utente-fittizio: 
+  verifica-token: false
+  token-filter-exclude-urls: /actuator/httptrace,/v2/api-docs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: httptrace
+  trace:
+    http:
+      enabled: true
+#------------------------------------------------------------------
+#
+#------------------------------------------------------------------        
+jwt:
+  urlpublickey: src/main/resources/certificates/PublicAOuthCertified.pem
+  tokenWSO2JWTClass: TokenJWT_min
+#------------------------------------------------------------------
+#
+messages:
+  properties: classpath:messages
+
+#------------------------------------------------------------------
+alfresco:
+    baseRoot: Shared
+    superadmin:
+      user: admin
+      password: suap2018
+      baseurl:  http://cs.lacr-dev.eng:8080/
+      baseroot: MEETPAD    
+      
+integrazioni:
+  suap:
+    baseUrlDettaglioConferenza: http://localhost:8080/conferences/{idConferenza}
+    dblink: 
+    protocollo:
+       url: http://192.168.157.128:8080/rest/protocollosuap/listner/upload
+       
+protocollo:
+ utenteprotocollo: 

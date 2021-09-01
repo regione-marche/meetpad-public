@@ -1,0 +1,1 @@
+DROP VIEW cdst.visibilita_documento;

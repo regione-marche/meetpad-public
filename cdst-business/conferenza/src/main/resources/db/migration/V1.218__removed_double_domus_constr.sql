@@ -1,0 +1,1 @@
+drop INDEX domus_registry_adapter_testa_unique;

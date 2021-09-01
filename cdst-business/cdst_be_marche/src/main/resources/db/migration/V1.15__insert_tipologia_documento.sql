@@ -1,0 +1,1 @@
+INSERT INTO cdst.tipologia_documento(codice, descrizione) VALUES ('DOCUMENTO_ACCREDITAMENTO', 'tipologiaDocumento.documentoAccreditamento') ON CONFLICT DO NOTHING;

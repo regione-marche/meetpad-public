@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<BR>    
+Spett.le <u><span th:text="${amministrazioneProcedente}"></span></u>,<BR><BR>
+l'amministrazione <u><span th:text="${mittente}"></span></u> vi invia in allegato a questa email il proprio parere relativo alla Conferenza di Servizi di seguito descritta:<BR><BR>
+ID conferenza: <u><span th:text="${idConferenza}"></span></u><BR>
+<BR>
+<div th:unless="${#strings.isEmpty(riferimentoIstanza)}">
+Riferimento pratica: <u><span th:text="${riferimentoIstanza}"></span></u><BR><BR>
+</div>
+<div th:unless="${#strings.isEmpty(oggettoDetermina)}">
+Oggetto: <u><b><span th:text="${oggettoDetermina}"></span></b></u><BR><BR>
+</div>
+<div th:unless="${#strings.isEmpty(corpoEvento)}">
+Testo: <u><b><span th:text="${corpoEvento}"></span></b></u><BR><BR>
+</div>
+
+Distinti saluti
+    
+</body>
+</html>

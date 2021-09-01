@@ -1,0 +1,1 @@
+ALTER TABLE cdst.documento ADD column competenza_territoriale character varying(255);
