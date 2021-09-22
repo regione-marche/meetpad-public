@@ -33,7 +33,6 @@ description:
       Il MeetPAd è un sistema integrato, sviluppato per componenti atomiche e micro-servizi, facilmente riusabili,
       generalizzabili ed estensibili (SaaS). Avvenuta l'autenticazione Federata tra FrontEnd, WSO2 e Cohesion/SPID, l'applicativo  
       autenticato (FrontEend) usa l'autorizzazione OATH2 per i servizi restfull esposti dal BackEnd.
-
     shortDescription: Meetpad è un piattaforma di collaborazione e condivisione documentale per gestire da remoto conferenze di servizi e riunioni formali tra Enti
 developmentStatus: stable
 intendedAudience:
