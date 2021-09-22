@@ -69,7 +69,7 @@ maintenance:
     - email: andrea.sergiacomi@regione.marche.it
       name: Andrea Sergiacomi
   contractors:
-    - email: info@
+    - email: meetpad@regione.marche.it
       name: Engineering
       until: '2021-07-31'
   type: contract
