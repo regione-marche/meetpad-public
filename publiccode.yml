@@ -17,9 +17,11 @@ description:
       - Integrazione con il Protocollo
       - |-
         Gestione invio PEC mediante integrazione con la casella di posta
+
         certificata dell'Ente
       - |-
         Gestione invio di semplici email mediante integrazione con la casella di
+
         posta dell'Ente
       - Gestione degli utenti e dei ruoli
       - Integrazione con la rubrica IPA
@@ -30,26 +32,41 @@ description:
     localisedName: Meetpad
     longDescription: |
       Meetpad è un piattaforma di collaborazione e condivisione documentale per
+
       gestire interamente da remoto conferenze di servizi e riunioni formali tra
+
       enti locali della PA.
 
+
       Il Sistema Informativo Meetpad supporta la piena Collaborazione digitale
+
       inter-istituzionale da remoto e viene impiegato, al momento, per gestire i
+
       processi di ricostruzione post sisma, l’avanzamento amministrativo della
+
       BUL nei territori e le autorizzazioni ambientali VIA e AIA. Il MeetPAd è
+
       un sistema integrato, sviluppato per componenti atomiche e micro-servizi,
+
       facilmente riusabili, generalizzabili ed estensibili (SaaS). Avvenuta
+
       l'autenticazione Federata tra FrontEnd, WSO2 e Cohesion/SPID,
+
       l'applicativo
 
+
       autenticato (FrontEnd) usa l'autorizzazione OATH2 per i servizi restfull
+
       esposti dal BackEnd.
 
 
+
       E' in fase di creazione una community Open Source dedicata alla
+
       manutenzione e all'evoluzione della piattaforma.
     shortDescription: |-
       Meetpad è un piattaforma di collaborazione e condivisione documentale per
+
       gestire da remoto conferenze di servizi e riunioni formali tra Enti
     videos:
       - 'https://youtu.be/9vUBJFW-tes'
@@ -82,6 +99,8 @@ localisation:
   availableLanguages:
     - it
   localisationReady: true
+logo: |-
+  https://raw.githubusercontent.com/regione-marche/meetpad-public/master/MeetPad_finale.svg
 maintenance:
   contacts:
     - email: andrea.sergiacomi@regione.marche.it
