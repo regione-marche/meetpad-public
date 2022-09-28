@@ -1,0 +1,41 @@
+<div
+    [hidden]="!files.length"
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+>
+    <div class="row panel-heading custom-panel-title">
+        {{
+            'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.TABLE.TITLE' | translate
+        }}
+    </div>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="files"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+        ></eng-table-result>
+    </div>
+</div>
+
+<ng-template #ownerTemplate let-model="item">
+    {{ model.owner.name }} {{ model.owner.surname }}
+</ng-template>
+
+<ng-template #statusTemplate let-model="item">
+    {{ ("CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.STATUS." + model.status) | translate }}
+</ng-template>
+
+<ng-template #actionTemplate let-model="item">
+    <eng-action
+        *ngFor="let action of actions"
+        [action]="action"
+        [model]="model"
+        [onlyIcon]="true"
+        [disabled]="!isActionVisible(model.status, action, model)"
+    >
+    </eng-action>
+    {{ model.type.key }}
+</ng-template>
+
+<div class="row col-xs-12 col-sm-12 col-lg-12 noPadding" *ngIf="!files.length">
+    {{ 'CONFERENCE.WIZARD.DOCUMENTATION.EMPTY_TABLE' | translate }}.
+</div>

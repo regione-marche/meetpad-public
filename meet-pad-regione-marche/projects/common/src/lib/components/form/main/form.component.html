@@ -1,0 +1,133 @@
+<div class="row">
+    <div *ngIf="menu" class="col-md-3 col-lg-2 mt-30">
+        <ul class="nav nav-pills nav-stacked formNav">
+            <li
+                *ngFor="let item of menuItems; let i = index">
+                <a
+                    data-toggle="collapse"
+                    [attr.data-parent]="'#accordion' + formName"
+                    href="#collapse{{ formName + i }}"
+                    [translate]="item"
+                    [class.active]="openPanel === 'collapse' + formName + i"
+                ></a>
+            </li>
+        </ul>
+    </div>
+    <form
+        class="row col-xs-12 col-sm-12 {{ formClass.join(' ') }}"
+        [ngClass]="{
+            'form-grey': formGrey,
+            'col-md-9 col-lg-10': menu,
+            'col-md-12 col-lg-12': !menu
+        }"
+    >
+        <div
+            id="accordion{{ formName }}"
+            [ngClass]="{ 'panel-group': hasAccordion }"
+        >
+            <!-- cicla gli eventuali pannelli -->
+            <ng-container
+                *ngFor="let item of groupFields | getValues; let i = index"
+            >
+                <div
+                    [ngClass]="{ 'panel panel-default': isPanel(item.val) }"
+                    *ngIf="!oneToMany(item.val)"
+                >
+                    <!-- stampa l'eventuale head del pannello -->
+                    <div
+                        *ngIf="haveHead(item.val)"
+                        class="panel-heading custom-panel-title"
+                    >
+                        <a
+                            *ngIf="isAccordion(item.val); else noAccordion"
+                            data-toggle="collapse"
+                            [attr.data-parent]="'#accordion' + formName"
+                            href="#{{ item.val.accordionName }}"
+                            [translate]="item.val.panelHead"
+                        >
+                        </a>
+                        <ng-template #noAccordion>
+                            {{ item.val.panelHead | translate }}
+                        </ng-template>
+                    </div>
+
+                    <!-- eventuale body del pannello -->
+                    <div
+                        id="{{ item.val.accordionName }}"
+                        [ngClass]="{
+                            'panel-collapse collapse': isAccordion(item.val)
+                        }"
+                        [class.in]="openPanel === item.val.accordionName"
+                    >
+                        <div
+                            [ngClass]="{
+                                'panel-body': isPanel(item.val),
+                                row: !isPanel(item.val)
+                            }"
+                        >
+                            <ng-template
+                                alert-host
+                                [alert]="haveAlert(item.val) && item.val.alert"
+                            ></ng-template>
+                            <app-inputs-form
+                                [groupName]="item.key"
+                                [fields]="item.val.fields"
+                                [form]="form"
+                                [errorLabels]="errorLabels"
+                                [submitDisabled]="form.invalid"
+                            >
+                            </app-inputs-form>
+                        </div>
+                    </div>
+                </div>
+
+                <app-one-to-many-form
+                    *ngIf="oneToMany(item.val)"
+                    [group]="item.val"
+                    [formName]="formName"
+                    [accordion]="item.val.accordion ? formName + i : false"
+                    [detailLookup]="
+                        item.val.detailLookup ? item.val.detailLookup : null
+                    "
+                    [groupName]="item.key"
+                    [form]="form.get(item.key)"
+                    [errorLabels]="errorLabels"
+                    [addRowFn]="addRow"
+                    [submitRowFn]="submitRow"
+                    (openControl)="openControl($event)"
+                    (removeControl)="removeControl($event)"
+                >
+                </app-one-to-many-form>
+            </ng-container>
+        </div>
+
+        <div class="row mt-15" *ngIf="footerButtons">
+            <eng-button
+                *ngIf="showCancelBtn"
+                type="reset"
+                (onClick)="resetForm()"
+                [title]="'BUTTON.CANCEL' | translate"
+                [isLink]="true"
+            >
+            </eng-button>
+            <div class="pull-right">
+                <eng-input-loading
+                    [loading]="submitLoading"
+                ></eng-input-loading>
+                <div class="footerButton">
+                    <eng-button
+                        [title]="footerTextSubmitButton | translate"
+                        (onClick)="onSubmit()"
+                        [disabled]="
+                            form.invalid || submitLoading || !formStore.valid
+                        "
+                    >
+                    </eng-button>
+                </div>
+                <app-footer-buttons
+                    [groupButtons]="groupButtons"
+                ></app-footer-buttons>
+            </div>
+        </div>
+    </form>
+</div>

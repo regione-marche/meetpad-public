@@ -1,0 +1,25 @@
+<admin-manager-search
+    (onNewSearch)="startResearch($event)"
+></admin-manager-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="AUTHORITIES.PROCEDING.MANAGER.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="
+                    'AUTHORITIES.PROCEDING.MANAGER.ACTIONS.NEW_MANAGER'
+                        | translate
+                "
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-manager-list
+                [searchQuery]="searchQuery"
+            ></admin-manager-list>
+        </div>
+    </div>
+</eng-form-section>

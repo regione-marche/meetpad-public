@@ -1,0 +1,93 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "subject": "Preparazione",
+                "votingType": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "endVotingDate": "28-05-2019",
+                "votingRule": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "votingState": {
+                    "key": 0,
+                    "value": "string"
+                },
+                "votingResult": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "visibility": [
+                    {
+                        "key": "string",
+                        "value": "string"
+                    }
+                ],
+                "vote": [
+                    {
+                        "id": "1",
+                        "participant": { "key": "string", "value": "string1" },
+                        "vote": true,
+                        "date": "20-05-2019",
+                        "detail": "string1"
+                    },
+                    {
+                        "id": "2",
+                        "participant": { "key": "string", "value": "string2" },
+                        "vote": false,
+                        "date": "20-05-2019",
+                        "detail": "string2"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "subject": "In corso",
+                "votingType": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "endVotingDate": "28-05-2019",
+                "votingRule": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "votingState": {
+                    "key": 1,
+                    "value": "string"
+                },
+                "votingResult": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "visibility": [
+                    {
+                        "key": "string",
+                        "value": "string"
+                    }
+                ],
+                "vote": [
+                    {
+                        "participant": { "key": "string", "value": "string1" },
+                        "vote": true,
+                        "date": "20-05-2019",
+                        "detail": "string"
+                    },
+                    {
+                        "participant": { "key": "string", "value": "string2" },
+                        "vote": false,
+                        "date": "20-05-2019",
+                        "detail": "string"
+                    }
+                ]
+            }
+        ],
+        "total": 1
+    }
+}

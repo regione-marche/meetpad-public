@@ -1,0 +1,291 @@
+<div class="container-fluid header-content">
+    <header class="custom-header">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <div class="visible-smarphone sandwich">
+                    <button
+                        class="navbar-toggle collapsed"
+                        aria-label="Apre il menù laterale"
+                        data-toggle="collapse"
+                        data-target="#menuprincipale"
+
+                    >
+                        <span class="fa fa-2x fa-bars"></span>
+                        <span class="sr-only">Menu</span>
+                    </button>
+                </div>
+                <img
+                    class="visible-smarphone"
+                    src="assets/img/MeetPad.png"
+                    alt="Meetpad"
+                />
+                <div class="visible-smarphone user">
+                    <li class="dropdown-custom">
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <span
+                                    class="fa fa-2x fa-user"
+                                    [ngClass]="{
+                                        logged:
+                                            (showUser$ | async) ||
+                                            (showFiscalCode$ | async)
+                                    }"
+                                ></span>
+                            </button>
+
+                            <!-- Menu per utente non censito-->
+                            <div class="dropdown-content"
+                                *ngIf="showFiscalCode$ | async"
+                            >
+                                <a href="javascript:;" class="cursor-default">{{
+                                    fiscalCode
+                                }}</a>
+                                <li role="separator" class="divider"></li>
+                                <a
+                                    href="javascript:;"
+                                    (click)="logout.emit($event)"
+                                    >{{ 'LOGOUT' | translate }}</a
+                                >
+                            </div>
+
+                            <!-- Menu per utente censito-->
+                            <div
+                                class="dropdown-content"
+                                *ngIf="showUser$ | async"
+                            >
+                                <a href="javascript:;" class="cursor-default">{{
+                                    user$ | async
+                                }}</a>
+                                <li role="separator" class="divider"></li>
+                                <div *ngIf="admin$ | async">
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToPortal()"
+                                        *ngIf="inAdmin"
+                                        >{{ 'PORTAL_LINK' | translate }}</a
+                                    >
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToAdmin()"
+                                        *ngIf="!inAdmin"
+                                        >{{ 'ADMIN_LINK' | translate }}</a
+                                    >
+                                </div>
+                                <div *ngIf="uploads > 0">
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToUploadStatus()"
+                                        >{{ 'UPLOAD_LINK' | translate }}</a
+                                    >
+                                </div>
+                                <a
+                                    href="javascript:;"
+                                    (click)="logout.emit($event)"
+                                    >{{ 'LOGOUT' | translate }}</a
+                                >
+                            </div>
+
+                            <!-- Menu per utente non loggato-->
+                            <div
+                                class="dropdown-content"
+                                *ngIf="showLogin$ | async"
+                            >
+                                <a
+                                    href="javascript:;"
+                                    (click)="login.emit(loginType.COHESION)"
+                                    >{{ 'LOGIN.COHESION' | translate }}</a
+                                >
+                                <a
+                                    href="javascript:;"
+                                    (click)="login.emit(loginType.SPID)"
+                                    >{{ 'LOGIN.SPID' | translate }}</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse" id="menuprincipale">
+                <ul
+                    id="navigazioneprincipale"
+                    
+                    class="nav navbar-nav"
+                >
+                    <button
+                        *ngIf="showMenu$ | async"
+                        id="trigger-slider-menu"
+                        class="pull-left hidden-xs"
+                        aria-label="Apre il menù laterale"
+                        aria-controls="navigazionesecondaria"
+                        (click)="showMenu.emit($event)"
+                    >
+                        <span class="fa fa-2x fa-bars"></span>
+                    </button>
+
+                    <li class="dropdown">
+                        <a
+                            *ngIf="showUser$ | async as showUser; else public"
+                            href="javascript:;"
+                            [class.active]="isHomeLinkActive$ | async"
+                            (click)="navigateHome()"
+                            >{{ 'HEADER.HOME' | translate }}</a
+                        >
+                        <ng-template #public>
+                            <a
+                                href="javascript:;"
+                                [class.active]="isPublicRoute"
+                                (click)="navigateHome()"
+                                >{{ 'HEADER.HOME' | translate }}</a
+                            >
+                        </ng-template>
+                    </li>
+
+                    <li
+                        class="dropdown visible-xs"
+                        *ngFor="let item of menuItems"
+                    >
+                        <a
+                            *ngIf="item.type === 'CALLBACK'"
+                            (click)="manageClick(item)"
+                        >
+                            {{ item.name }}
+                        </a>
+                        <a
+                            *ngIf="item.type !== 'CALLBACK'"
+                            [routerLink]="item.routerLink"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            (click)="closeMobileMenu()"
+                            >{{ item.name }}
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a
+                            href="http://www.regione.marche.it/"
+                            target="_blank"
+                            data-toggle="collapse"
+                            data-target="#menuprincipale"
+                        >
+                            {{ 'HEADER.REGION' | translate }}
+                            <span class="sr-only"
+                                >({{ 'HEADER.SELECTED' | translate }})</span
+                            >
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a
+                            href="javascript:;"
+                            [routerLink]="['/', 'opendata']"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            (click)="closeMobileMenu()"
+                        >
+                            {{ 'HEADER.REPORT' | translate }}
+                            <span class="sr-only"
+                            >({{ 'HEADER.SELECTED' | translate }})</span
+                            >
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a
+                            href="javascript:;"
+                            [routerLink]="['/', 'contact']"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }"
+                            (click)="closeMobileMenu()"
+                        >
+                            {{ 'HEADER.CONTACT' | translate }}
+                            <span class="sr-only"
+                                >({{ 'HEADER.SELECTED' | translate }})</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+
+                <ul
+                    
+                    class="nav navbar-nav nav-exit navbar-right hidden-xs"
+                >
+                    <!-- Menu per utente non censito-->
+                    <li class="dropdown-custom" *ngIf="showFiscalCode$ | async">
+                        <div class="dropdown">
+                            <button class="dropbtn">{{ fiscalCode }}</button>
+                            <div class="dropdown-content">
+                                <a
+                                    href="javascript:;"
+                                    (click)="logout.emit($event)"
+                                    >{{ 'LOGOUT' | translate }}</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Menu per utente censito-->
+                    <li class="dropdown-custom" *ngIf="showUser$ | async">
+                        <div class="dropdown">
+                            <button class="dropbtn">{{ user$ | async }}</button>
+                            <div class="dropdown-content">
+                                <div *ngIf="admin$ | async">
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToPortal()"
+                                        *ngIf="inAdmin"
+                                        >{{ 'PORTAL_LINK' | translate }}</a
+                                    >
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToAdmin()"
+                                        *ngIf="!inAdmin"
+                                        >{{ 'ADMIN_LINK' | translate }}</a
+                                    >
+                                </div>
+                                <div *ngIf="uploads > 0">
+                                    <a
+                                        class="cursor"
+                                        (click)="navigateToUploadStatus()"
+                                        >{{ 'UPLOAD_LINK' | translate }}</a
+                                    >
+                                </div>
+                                <a
+                                    href="javascript:;"
+                                    (click)="logout.emit($event)"
+                                    >{{ 'LOGOUT' | translate }}</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Menu per utente non loggato-->
+                    <li class="dropdown-custom" *ngIf="showLogin$ | async">
+                        <div class="dropdown">
+                            <button
+                                class="dropbtn"
+                            >
+                                {{ 'LOGIN.TITLE' | translate }}
+                            </button>
+                            <div class="dropdown-content">
+                                <a
+                                    href="javascript:;"
+                                    (click)="login.emit(loginType.COHESION)"
+                                    >{{ 'LOGIN.COHESION' | translate }}</a
+                                >
+                                <a
+                                    href="javascript:;"
+                                    (click)="login.emit(loginType.SPID)"
+                                    >{{ 'LOGIN.SPID' | translate }}</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <img
+                    class="hidden-xs pull-right right-logo"
+                    src="assets/img/MeetPad.png"
+                    alt="Meetpad"
+                />
+            </div>
+        </nav>
+    </header>
+</div>

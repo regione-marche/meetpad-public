@@ -1,0 +1,53 @@
+<eng-template role="region" aria-label="Recommendations">
+    <div class="container custom-container">
+        <!-- Show it when there is no records -->
+        <div class="no-data text-center" *ngIf="OpenData.length == 0">
+            <p>Nessun contenuto ancora disponibile in questa sezione</p>
+
+        </div>
+
+
+        <div *ngIf="OpenData.length > 0" class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Elenco file disponibili</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-list">
+                            <thead>
+                            <tr>
+                                <th role="cell" scope="col">CODICE</th>
+                                <th role="cell" scope="col">DESCRIZIONE</th>
+                                <!--<th scope="col">TIPO REPORT</th>-->
+                                <th role="cell" scope="col">MODELLO</th>
+                                <th role="cell" scope="col">NOTE</th>
+                                <th><em class="fa fa-cog"></em></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let openData of OpenData">
+
+                                <td>{{openData.CODICE}}</td>
+                                <td>{{openData.DESCRIZIONE}}</td>
+                                <!--<td>{{openData.TIPOREPORT}}</td>-->
+                                <td>{{openData.MODELLO}}</td>
+                                <td ><p class="note_openData">{{openData.NOTE}}</p></td>
+                                <td><a (click)='downloadFile(openData)'><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col col-xs-4">
+                            </div>
+                            <div class="col col-xs-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</eng-template>

@@ -1,0 +1,14 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "status": "SIGNED",
+        "owner": {
+            "name": "Federico", 
+            "surname": "Dainelli"
+        }
+    },
+    "errros": [
+        
+    ]
+}

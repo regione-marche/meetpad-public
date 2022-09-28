@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12 noPaddingLeft">
+        <file-drop
+            [multiple]="true"
+            [disabled]="disabled"
+            [accept]="accept"
+            [browseBtnLabel]="'DROPZONE.BROWSE.BTN_LABEL' | translate"
+            [dropZoneLabel]="'DROPZONE.LABEL' | translate"
+            (onFileDrop)="dropped($event)"
+            (onFileOver)="fileOver($event)"
+            (onFileLeave)="fileLeave($event)"
+        >
+        </file-drop>
+    </div>
+</div>
+
+<eng-modal
+    class="smallModal"
+    #confirmUploadModal
+    [buttons]="modalUploadButtons"
+    [title]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.DROP_FILE.MODAL.TITLE' | translate
+    "
+>
+    <p [translate]="'CONFERENCE.WIZARD.DOCUMENTATION.DROP_FILE.MODAL.TEXT'"></p>
+</eng-modal>

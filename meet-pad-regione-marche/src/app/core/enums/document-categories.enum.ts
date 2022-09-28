@@ -1,0 +1,9 @@
+export enum DocumentCategories {
+    APPLICATION_SUPPLIED_DOCUMENTATION = '1',
+    INSTANCE = '2',
+    ADDITIONAL_DOCUMENT = '3',
+    NOTE = '4',
+    OTHER = '5',
+    MUNICIPALITY_DOCUMENTATION = '6',
+    PROVINCE_DOCUMENTATION = '7'
+}

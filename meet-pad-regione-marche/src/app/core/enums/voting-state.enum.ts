@@ -1,0 +1,6 @@
+export enum VotingState {
+    PREPARAZIONE = "PREPARAZIONE",
+    IN_CORSO = "IN_CORSO",
+    TERMINATA = "TERMINATA",
+    ESITO_IMPOSTATO = "ESITO_IMPOSTATO"
+}

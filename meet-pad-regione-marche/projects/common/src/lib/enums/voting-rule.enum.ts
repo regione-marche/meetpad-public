@@ -1,0 +1,6 @@
+export enum VotingRule {
+    EVENTO = 'EVENTO',
+    MAGGIORANZA = 'MAGGIORANZA',
+    UNANIMITA = 'UNANIMITA',
+    VALUTAZIONE = 'VALUTAZIONE'
+}

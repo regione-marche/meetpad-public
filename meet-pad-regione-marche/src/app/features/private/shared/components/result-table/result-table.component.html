@@ -1,0 +1,106 @@
+<div
+    class="row panel panel-default form-accordion pd-zero col-xs-12 col-sm-12 col-lg-12"
+    [hidden]="results.length === 0"
+>
+    <eng-content-loader [loading]="loading"></eng-content-loader>
+    <div class="row panel-heading">
+        <h3 class="title-modulo">{{ title }}</h3>
+    </div>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="results"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [showActions]="false"
+            [totalPages]="totalPages"
+            [accordion]="documentsLookup"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+
+        <ng-template #conferenceTypeTemplate let-model="item">
+            {{ model.conferenceType ? model.conferenceType.value : '----' }}
+        </ng-template>
+
+        <ng-template #conferenceEndProcedureTemplate let-model="item">
+            {{ (model.endProcedure.toDate() | date: dateFormat) || '----' }}
+        </ng-template>
+
+        <ng-template #conferenceStateTemplate let-model="item">
+            {{ model.state ? model.state.value : '----' }}
+        </ng-template>
+
+        <ng-template
+            #conferencepPoceedingAdministrationTemplate
+            let-model="item"
+        >
+            {{
+                (model.proceedingCompany && model.proceedingCompany.name) ||
+                    '----'
+            }}
+        </ng-template>
+
+        <ng-template #conferenceApplicant let-model="item">
+            {{ (model.applicant.name && model.applicant.surname)? model.applicant.name + ' ' + model.applicant.surname : '' }}
+        </ng-template>
+
+        <ng-template #conferenceDenomination let-model="item">
+            {{ (model.denomination )? model.denomination : '' }}
+        </ng-template>
+
+        <ng-template #documentsLookup let-model="item">
+            <form>
+                <eng-input-detail
+                    [label]="'SEARCH.RESULT_TABLE.END_INTEGRATION'"
+                    [value]="
+                        (model.endIntegration.toDate() | date: dateFormat) ||
+                        '----'
+                    "
+                    data-size="12|4|4"
+                >
+                </eng-input-detail>
+                <eng-input-detail
+                    [label]="'SEARCH.RESULT_TABLE.END_DETERMINE'"
+                    [value]="
+                        (model.endDetermine.toDate() | date: dateFormat) ||
+                        '----'
+                    "
+                    data-size="12|4|4"
+                >
+                </eng-input-detail>
+                <eng-input-detail
+                    [label]="'SEARCH.RESULT_TABLE.END_NEXT_SESSION'"
+                    [value]="
+                        (model.endNextSession.toDate() | date: dateFormat) ||
+                        '----'
+                    "
+                    data-size="12|4|4"
+                >
+                </eng-input-detail>
+            </form>
+        </ng-template>
+    </div>
+
+    <eng-modal
+        #confirmModal
+        class="smallModal"
+        [buttons]="modalButtons"
+        [title]="'SEARCH.CONFIRM_DELETE_MODAL.TITLE' | translate"
+    >
+        <p>{{ modalText }}</p>
+    </eng-modal>
+
+    <eng-modal
+        #confirmModalForClone
+        class="smallModal"
+        [buttons]="modalButtonsForClone"
+        [title]="'SEARCH.CONFIRM_CLONE_MODAL.TITLE' | translate"
+    >
+        <eng-content-loader
+            class="cloneModalLoading"
+            [loading]="loading$ | async"
+        ></eng-content-loader>
+        <p>{{ modalTextForClone }}</p>
+    </eng-modal>
+</div>

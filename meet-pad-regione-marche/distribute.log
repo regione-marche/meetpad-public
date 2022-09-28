@@ -1,0 +1,27 @@
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: 
+######################################################### 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:                                                          _      _                _            _                            _         _         
+   _ __    __ _ __  __         ___  _ __    __ _        | |__  | |  __ _  _ __  | | __       | |_   ___  _ __ ___   _ __  | |  __ _ | |_   ___ 
+  | '_ \  / _` |\ \/ / _____  / _ \| '_ \  / _` | _____ | '_ \ | | / _` || '_ \ | |/ / _____ | __| / _ \| '_ ` _ \ | '_ \ | | / _` || __| / _ \
+  | | | || (_| | >  < |_____||  __/| | | || (_| ||_____|| |_) || || (_| || | | ||   < |_____|| |_ |  __/| | | | | || |_) || || (_| || |_ |  __/
+  |_| |_| \__, |/_/\_\        \___||_| |_| \__, |       |_.__/ |_| \__,_||_| |_||_|\_\        \__| \___||_| |_| |_|| .__/ |_| \__,_| \__| \___|
+          |___/                            |___/                                                                   |_|                         
+ 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: ######################################################### 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:   App name:			 ngx-eng-blank-template 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:   App label:			 ngx-eng-blank-template 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:   App version:			 1.21.0 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:   App version label:		 1.21.0 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]:   Change log:			 No changelog 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: #########################################################
+ 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: # 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: #  Compile source: 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: #  $ ng build common && ng build admin-console && ng build --configuration=dev --base-href=/meet-pad-svil/ --delete-output-path --sourceMap=false 
+Tue Jun 18 2019 18:33:08 GMT+0200 (GMT+02:00) [INFO]: # 
+Tue Jun 18 2019 18:34:05 GMT+0200 (GMT+02:00) [INFO]: # 
+Tue Jun 18 2019 18:34:05 GMT+0200 (GMT+02:00) [INFO]: #  Set '1.21.0' as version in C:\SOURCE\conf-devel\dist\ngx-eng-blank-template\index.html 
+Tue Jun 18 2019 18:34:05 GMT+0200 (GMT+02:00) [INFO]: # 
+Tue Jun 18 2019 18:34:06 GMT+0200 (GMT+02:00) [INFO]: # 
+Tue Jun 18 2019 18:34:06 GMT+0200 (GMT+02:00) [INFO]: #  Deploy angular build at C:\SOURCE\conf-devel\dist\ngx-eng-blank-template to server 161.27.206.16:/var/www/html/meet-pad-svil 
+Tue Jun 18 2019 18:34:06 GMT+0200 (GMT+02:00) [INFO]: # 

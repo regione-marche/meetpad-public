@@ -1,0 +1,10 @@
+{
+    "git": {
+        "changelog": null,
+        "requireCleanWorkingDir": false,
+        "requireUpstream": false
+    },
+    "npm": {
+        "publish": false
+    }
+}

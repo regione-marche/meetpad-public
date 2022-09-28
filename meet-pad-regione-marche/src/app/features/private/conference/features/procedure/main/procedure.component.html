@@ -1,0 +1,12 @@
+<app-form
+    [formClass]="summary ? [] : ['mb-30']"
+    [saveFn]="onNext"
+    [groupButtons]="groupButtons"
+    [groupFields]="groupFields"
+    [footerButtons]="!isReadonly()"
+    [saveComplete]="saveComplete"
+    [saveError]="saveError"
+    [menu]="!summary"
+    [showFooterLoading]="true"
+    [footerTextSubmitButton]="getFooterTextFormButton()"
+></app-form>

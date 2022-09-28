@@ -1,0 +1,26 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "date": "20/12/2018",
+                "type": { "key": "3", "value": "Richiesta integrazioni" },
+                "sender": "Amm. Competente (Comune Senigalia)",
+                "subject": { "key": "1", "value": "Richiesta integrazioni" }
+            },
+            {
+                "id": "2",
+                "date": "19/11/2018",
+                "type": { "key": "6", "value": "Chiusura integrazioni" },
+                "sender": "Responsabile",
+                "subject": { "key": "1", "value": "Richiesta integrazioni" }
+            }
+        ],
+        "totalRow": 1
+
+    },
+    "errros": [
+    ]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appletResponse>
+    <externalSessionId></externalSessionId>
+    <signResult>Success</signResult>
+    <behaviorWhenErrors>halt</behaviorWhenErrors>
+    <documents>
+        <document>
+            <documentIdentifier>firma_doc_1017</documentIdentifier>
+            <documentData>dGVzdC1zaWduZWQ=</documentData>
+            <result>OK</result>
+            <signType>PAdES</signType>
+        </document>
+    </documents>
+    <errorList/>
+</appletResponse>

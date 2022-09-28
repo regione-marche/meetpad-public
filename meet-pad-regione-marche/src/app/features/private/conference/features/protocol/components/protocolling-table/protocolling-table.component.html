@@ -1,0 +1,52 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+
+<ng-template #templateProtocolState let-model="item">
+    <div *ngIf="model.protocolState == 'Protocollazione in corso'">
+        <span
+            class="label label-warning"
+            translate="CONFERENCE.WIZARD.PROTOCOL.TABLE.STATE.PROCESSING"
+        ></span>
+    </div>
+    <div *ngIf="model.protocolState == 'Protocollata'">
+        <span
+            class="label label-success"
+            translate="CONFERENCE.WIZARD.PROTOCOL.TABLE.STATE.REGISTERED"
+        ></span>
+    </div>
+    <div *ngIf="model.protocolState == 'In Errore'">
+        <span
+            class="label label-danger"
+            translate="CONFERENCE.WIZARD.PROTOCOL.TABLE.STATE.ERROR"
+        ></span>
+    </div>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'CONFERENCE.WIZARD.PROTOCOL.TABLE.EMPTY_MESSAGE' | translate }}.
+    <a
+        *ngIf="hasCriteria"
+        href="javascript:;"
+        (click)="resetSearch(); refreshSearch(true)"
+        >{{
+            'CONFERENCE.WIZARD.PROTOCOL.TABLE.REFRESH_LIST' | translate
+        }}</a
+    >
+</div>

@@ -1,0 +1,13 @@
+export enum StepName {
+    INITIAL = -1,
+    PROCEDURE = 0,
+    DEFINITION,
+    PARTICIPANT,
+    DOCUMENTATION,
+    SUMMARY,
+    ACCREDITATION,
+    EVENT,
+    PEC,
+    VOTINGS,
+    PROTOCOL
+}

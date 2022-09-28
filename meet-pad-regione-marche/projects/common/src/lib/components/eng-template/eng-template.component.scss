@@ -1,0 +1,106 @@
+eng-header {
+    .img-header {
+        width: 500px;
+        margin-top: -62px;
+    }
+
+    img {
+        margin: 0 30px 5px 30px;
+        display: inline;
+    }
+
+    .img-logo {
+        width: 32%;
+    }
+
+    .img-meetpad-logo {
+        width: 24%;
+    }
+
+    .right-logo {
+        margin: 5px;
+        width: 3.8em;
+    }
+
+    #logoutButton {
+        background-color: rgb(7, 67, 146);
+    }
+
+    #menuprincipale {
+        background-color: rgb(7, 67, 146);
+        border: 0;
+        #navigazioneprincipale a {
+            color: white;
+        }
+    }
+
+    .dropwown-custom {
+        /* Style The Dropdown Button */
+        .dropbtn {
+            background-color: rgb(7, 67, 146);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black !important;
+            padding: 12px 16px !important;
+            text-decoration: none !important;
+            display: block !important;
+
+            background-color: white !important;
+            width: auto !important;
+            padding: auto !important;
+            margin: auto !important;
+            text-align: center !important;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1 !important;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: rgba(127, 208, 141, 0.2);
+        }
+    }
+}
+
+header.custom-header {
+    padding-top: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .img-header {
+        display: none;
+    }
+}
+
+

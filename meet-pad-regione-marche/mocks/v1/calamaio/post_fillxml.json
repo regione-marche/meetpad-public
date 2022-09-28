@@ -1,0 +1,10 @@
+{
+	"code": "200",
+	"msg": null,
+	"errors": [],
+	"data": {
+		"idDocumento": 1013,
+		"fk_tipo_firma": 3,
+		"callbackbody": "<appletRequest xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"xmlSignRequest.xsd\"><externalSessionId></externalSessionId><userAuthentication><userCode /><applicationCode>openAct</applicationCode></userAuthentication><configurationIdentifier>pknet.pades</configurationIdentifier><documents><document><documentIdentifier>firma_doc_1013</documentIdentifier><documentData>tvtvtc3</documentData></document></documents></appletRequest>"
+	}
+}

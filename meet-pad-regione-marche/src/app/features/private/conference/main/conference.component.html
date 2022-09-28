@@ -1,0 +1,41 @@
+<!-- [asTabs]="wizardAsTabs" -->
+<table>
+    <tr>
+        <td width="1850px">
+            <eng-wizard
+            [conferenceAuth]="appSections.CONFERENCE_WIZARD"
+            [authParams]="conferenceStoreService"
+            [doCheck]="true"
+            [steps]="steps"
+            [activeStep]="activeStep"
+            (stepChange)="changeStepToChild($event)"
+        ></eng-wizard>
+        </td>
+    </tr>
+</table>
+
+
+<app-conference-head *ngIf="conference.id" [conference]="conference">
+</app-conference-head>
+
+<app-alert-info
+    [conferenceAuth]="appSections.CONFERENCE_ALERT_INFO"
+    [authParams]="conferenceStoreService"
+></app-alert-info>
+
+<router-outlet></router-outlet>
+
+<app-conference-modal-before-create
+    #modalBeforeCreate
+    (cancel)="cancelModalBeforeCreate()"
+    (close)="closeModalBeforeCreate()"
+></app-conference-modal-before-create>
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="modalButtons"
+    [title]="modalTitle"
+>
+    <p [translate]="modalText"></p>
+</eng-modal>

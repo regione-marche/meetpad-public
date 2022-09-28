@@ -1,0 +1,17 @@
+<eng-modal
+    #docModal
+    [buttons]="[]"
+    title="{{ title | translate }} {{ fileName }}"
+>
+    <app-form
+        #formCmp
+        [saveFn]="save"
+        [saveComplete]="saveComplete"
+        [saveError]="saveError"
+        [groupFields]="groupFields"
+        [footerButtons]="!disabled"
+        [showCancelBtn]="false"
+        [formGrey]="false"
+        footerTextSubmitButton="BUTTON.SAVE"
+    ></app-form>
+</eng-modal>

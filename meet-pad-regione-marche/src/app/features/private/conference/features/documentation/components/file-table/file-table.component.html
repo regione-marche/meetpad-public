@@ -1,0 +1,131 @@
+<div
+    [hidden]="!files.length"
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+>
+    <div class="row panel-heading custom-panel-title">
+        {{
+            'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.TITLE' | translate
+        }}
+
+
+        <span
+            *ngIf="showSectionDownload"
+            class="pull-right fa fa-download mr-10 mt-5"
+            aria-hidden="true"
+            (click)="doDownloadSectionFiles()"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DOWNLOAD_ZIP_LIST_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+        
+        <span
+            *ngIf="!disabled && showSectionDeleteList"
+            class="pull-right fa fa-trash mr-10 mt-5"
+            aria-hidden="true"
+            (click)="deleteFilesSelected()"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DELETE_SELECTED_LIST_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+
+        <span
+            *ngIf="!disabled && (showSectionDeleteList || showSectionDownload)"
+            class="pull-right fa fa-check mr-10 mt-5"
+            aria-hidden="true"
+            (click)="toggleSelection()"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DELETE_LIST_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+
+    </div>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="files"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+        ></eng-table-result>
+    </div>
+</div>
+
+<ng-template #templateVisibility let-model="item">
+    <div *ngIf="model.visibility.length == 0" class="td-visibility">
+        <span class="label label-success" translate="COMMON.ALL"></span>
+    </div>
+    <div *ngIf="model.visibility.length > 0" class="td-visibility">
+        <div *ngFor="let vis of model.visibility" class="item-label">
+            <div
+                class="label label-success"
+                data-toggle="tooltip"
+                data-placement="top"
+                [title]="vis.value"
+            >
+                <span>{{ truncate(vis.value) }} </span>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #categoryTemplate let-model="item">
+    {{ category(model) }}
+</ng-template>
+
+<ng-template #statusTemplate let-model="item">
+    <span *ngIf="model.statusDocument"  class="label {{ model.statusDocument | lowercase }}"
+    >   
+        {{ getStatus(model) | translate}}
+    </span>
+    <span *ngIf="!model.statusDocument" 
+    >   
+        ---
+    </span>
+</ng-template>
+
+<ng-template #actionTemplate let-model="item">
+    <eng-action
+        *ngFor="let action of actions"
+        [action]="action"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="!disabled && selectionEnabled && !model.isSelected()"
+        [action]="selectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="!disabled && selectionEnabled && model.isSelected()"
+        [action]="unselectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="cloudAction && sharedDocumentation && !isLink(model)"
+        [action]="cloudAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="isLink(model)"
+        [action]="linkAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    {{ model.type.key }}
+</ng-template>
+
+<div class="row col-xs-12 col-sm-12 col-lg-12 noPadding" *ngIf="!files.length">
+    {{ 'CONFERENCE.WIZARD.DOCUMENTATION.EMPTY_TABLE' | translate }}.
+</div>

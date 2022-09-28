@@ -1,0 +1,18 @@
+{
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/common",
+    "lib": {
+        "entryFile": "src/public_api.ts",
+        "umdModuleIds": {
+            "angular-oauth2-oidc": "AngularOauth2Oidc",
+            "angular-confirmation-popover": "DateFns",
+            "@ng-select/ng-select": "NgSlect",
+            "ngx-toastr": "NgxToastr",
+            "ngx-file-drop": "NgxFileDrop",
+            "@ngx-translate/core": "NgxTranslateCore",
+            "jquery": "$",
+            "@eng-ds/ng-core": "NgCore",
+            "@eng-ds/ng-toolkit": "NgToolkit"
+        }
+    }
+}

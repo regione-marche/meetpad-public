@@ -1,0 +1,40 @@
+<eng-accordion
+    id="el1"
+    [title]="'USERS.SEARCH.TITLE' | translate"
+    [open]="false"
+    [initialOpen]="false"
+>
+    <form class="row content col-xs-12 col-sm-12 col-lg-12">
+        <eng-form-group>
+            <div class="col-lg-offset-1 col-lg-10">
+                <eng-input
+                    size="6"
+                    label="USERS.SEARCH.MANAGER_LABEL"
+                    [formControl]="form.get('value')"
+                >
+                </eng-input>
+                <eng-input
+                    size="6"
+                    label="USERS.SEARCH.AUTHORITY_LABEL"
+                    [formControl]="form.get('prosecutingAdministration')"
+                >
+                </eng-input>
+            </div>
+        </eng-form-group>
+        <div class="col-xs-12 marginTop">
+            <div class="pull-right">
+                <eng-input-loading
+                    [loading]="searchLoading$ | async"
+                ></eng-input-loading>
+                <eng-button
+                    class="pull-right"
+                    type="button"
+                    (onClick)="search()"
+                    title="USERS.SEARCH.SEARCH_BUTTON"
+                    [disabled]="form.invalid || (searchLoading$ | async)"
+                >
+                </eng-button>
+            </div>
+        </div>
+    </form>
+</eng-accordion>

@@ -1,0 +1,35 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "company": "Ente 1",
+                "accreditations": [
+                    {
+                        "key": "67",
+                        "value": "Nome Cognome"
+                    },
+                    {
+                        "key": "89",
+                        "value": "NomeN CognomeN"
+                    }
+                ]
+            },
+            {
+                "company": "Ente N",
+                "accreditations": [
+                    {
+                        "key": "96",
+                        "value": "Nome Cognome"
+                    },
+                    {
+                        "key": "22",
+                        "value": "Nome1 Cognome1"
+                    }
+                ]
+            }
+        ],
+        "totalRow": 2
+    }
+}

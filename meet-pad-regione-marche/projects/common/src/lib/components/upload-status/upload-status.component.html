@@ -1,0 +1,11 @@
+<div style="min-width:100%">
+    <div *ngIf="tmpUploads.length !== 0">
+        <div *ngFor="let upload of tmpUploads">
+            <app-upload [progress]="upload"></app-upload>
+            <hr />
+        </div>
+    </div>
+    <div *ngIf="tmpUploads.length === 0">
+        <h2 style="text-align: center">{{ noFileUploading }}</h2>
+    </div>
+</div>

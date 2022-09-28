@@ -1,0 +1,30 @@
+<div class="panel panel-default" [ngClass]="{ 'mt-5': accordionIndex != 0 }">
+    <div class="panel-heading custom-panel-title">
+        <a
+            data-toggle="collapse"
+            data-parent="#panelGroupDocumentation"
+            href="#collapseDocumentation-{{ accordionIndex }}"
+            [translate]="title"
+        >
+        </a>    
+    </div>
+
+    <div
+        id="collapseDocumentation-{{ accordionIndex }}"
+        class="panel-collapse collapse"
+    >
+
+    <div class="panel-body">
+        <app-sign-table
+            #signTableComponent
+            [title]="title" 
+            [status]="status"
+            [selectionEnabled] ="selectionEnabled"
+            [readonly]="readonly"
+            [disabledSignButton]="disabledSignButton"
+            (rejectSectionFiles)="doRejectFilesSelected($event)"
+            (signSectionFiles)="doSignFilesSelected($event)"
+        >
+        </app-sign-table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Marche" },
+            { "key": "2", "value": "Umbria" },
+            { "key": "2", "value": "Toscana" }
+        ]
+    }
+}

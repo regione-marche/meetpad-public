@@ -1,0 +1,19 @@
+<h2 translate="CONFERENCE.JOIN.PENDING_LIST_PAGE.TITLE"></h2>
+<div>
+    <p>
+        {{ 'CONFERENCE.JOIN.PENDING_LIST_PAGE.TEXT' | translate }}
+    </p>
+
+    <div *ngIf="(penndingAccreditations$ | async)?.length > 0">
+        <h3>
+            {{ 'CONFERENCE.JOIN.PENDING_LIST_PAGE.TABLE.TITLE' | translate }}
+        </h3>
+
+        <eng-table-result
+            [results]="penndingAccreditations$ | async"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+            [showActions]="false"
+        ></eng-table-result>
+    </div>
+</div>

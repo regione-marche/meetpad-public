@@ -1,0 +1,29 @@
+<eng-modal
+    #modal
+    [class.smallModal]="showEditQuestion"
+    [closeIcon]="false"
+    [buttons]="modalButtons"
+    [title]="modalTitle"
+>
+    <eng-content-loader
+        class="accreditationModalLoading"
+        [loading]="loading$ | async"
+    ></eng-content-loader>
+    <app-form
+        #formCmp
+        *ngIf="showAccreditmentMask"
+        [extractDataToSubmitFn]="extractDataToSubmit"
+        [saveFn]="saveAccreditation"
+        [saveComplete]="saveAccreditationComplete"
+        [saveError]="saveAccreditationError"
+        [groupFields]="groupFields"
+        [footerButtons]="true"
+        [showCancelBtn]="false"
+        [formGrey]="false"
+        footerTextSubmitButton="BUTTON.SAVE"
+    ></app-form>
+
+    <div *ngIf="showEditQuestion">
+        <p [translate]="'CONFERENCE.JOIN.MASKS.EDIT_QUESTION.TEXT'"></p>
+    </div>
+</eng-modal>

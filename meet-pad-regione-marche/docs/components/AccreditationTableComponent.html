@@ -1,0 +1,2070 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AccreditationTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>AutoUnsubscribe</code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-accreditation-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./accreditation-table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./accreditation-table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actionTemplate">actionTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#hasCriteria">hasCriteria</a>
+                            </li>
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pageNumber">pageNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pageSizeNumber">pageSizeNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#searchSubscription">searchSubscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sortFieldActive">sortFieldActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sortType">sortType</a>
+                            </li>
+                            <li>
+                                <a href="#tableStructure">tableStructure</a>
+                            </li>
+                            <li>
+                                <a href="#templateAccreditationState">templateAccreditationState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#totalPages">totalPages</a>
+                            </li>
+                            <li>
+                                <a href="#viewAccreditation">viewAccreditation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildCriteriaDto">buildCriteriaDto</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changePage">changePage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changePageElementsShowed">changePageElementsShowed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changeSort">changeSort</a>
+                            </li>
+                            <li>
+                                <a href="#defineTableStructure">defineTableStructure</a>
+                            </li>
+                            <li>
+                                <a href="#getDefaultSortField">getDefaultSortField</a>
+                            </li>
+                            <li>
+                                <a href="#isReadonly">isReadonly</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#refreshSearch">refreshSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resetSearch">resetSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#runSearch">runSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#search">search</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#startPageLoading">startPageLoading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stopPageLoading">stopPageLoading</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#action">action</a>
+                            </li>
+                            <li>
+                                <a href="#list">list</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#view">view</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#conferenceId">conferenceId</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(i18nService: I18nService, loaderService: LoaderService, accreditationService: <a href="../injectables/AccreditationService.html">AccreditationService</a>, conferenceStoreService: <a href="../injectables/ConferenceStoreService.html">ConferenceStoreService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loaderService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoaderService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>accreditationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AccreditationService.html" target="_self" >AccreditationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>conferenceStoreService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConferenceStoreService.html" target="_self" >ConferenceStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="action"></a>
+                        <b>action</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ActionForm" target="_self" >ActionForm</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="list"></a>
+                        <b>list</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="view"></a>
+                        <b>view</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildCriteriaDto"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            buildCriteriaDto
+                        </b>
+                        <a href="#buildCriteriaDto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildCriteriaDto()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:268</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Build the dto for backend from criteria</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changePage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            changePage
+                        </b>
+                        <a href="#changePage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changePage(pageNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change the page to load</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageNumber</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changePageElementsShowed"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            changePageElementsShowed
+                        </b>
+                        <a href="#changePageElementsShowed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changePageElementsShowed(pageSizeNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageSizeNumber</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeSort"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            changeSort
+                        </b>
+                        <a href="#changeSort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changeSort(field: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change the sort field to input one. If the field it&#39;s the same change the sort type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defineTableStructure"></a>
+                    <span class="name">
+                        <b>
+                            defineTableStructure
+                        </b>
+                        <a href="#defineTableStructure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>defineTableStructure(structure: AbstractTableField[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>structure</td>
+                                    <td>
+                                            <code>AbstractTableField[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>AbstractTableField[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDefaultSortField"></a>
+                    <span class="name">
+                        <b>
+                            getDefaultSortField
+                        </b>
+                        <a href="#getDefaultSortField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDefaultSortField()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isReadonly"></a>
+                    <span class="name">
+                        <b>
+                            isReadonly
+                        </b>
+                        <a href="#isReadonly"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isReadonly()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="293"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:293</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshSearch"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            refreshSearch
+                        </b>
+                        <a href="#refreshSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>refreshSearch(newSearch)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:220</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh the search and managing also che reset of page cache</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>newSearch</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetSearch"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            resetSearch
+                        </b>
+                        <a href="#resetSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>resetSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:276</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="runSearch"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            runSearch
+                        </b>
+                        <a href="#runSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>runSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:230</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This internal method build the new criteriaDto and run a search managing also the page number and result</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="search"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            search
+                        </b>
+                        <a href="#search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>search()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/AccreditamentPreview.html" target="_self" >Observable&lt;WrapperGetData&lt;AccreditamentPreview&gt;&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startPageLoading"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            startPageLoading
+                        </b>
+                        <a href="#startPageLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>startPageLoading()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="283"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:283</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stopPageLoading"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            stopPageLoading
+                        </b>
+                        <a href="#stopPageLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>stopPageLoading()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="288"
+                            class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:288</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actionTemplate"></a>
+                        <span class="name">
+                            <b>
+                            actionTemplate</b>
+                            <a href="#actionTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;actionTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasCriteria"></a>
+                        <span class="name">
+                            <b>
+                            hasCriteria</b>
+                            <a href="#hasCriteria"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageNumber"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pageNumber</b>
+                            <a href="#pageNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Actual page of result loaded</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageSizeNumber"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pageSizeNumber</b>
+                            <a href="#pageSizeNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>10</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchSubscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            searchSubscription</b>
+                            <a href="#searchSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This will contain the subscription to search operation</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortFieldActive"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sortFieldActive</b>
+                            <a href="#sortFieldActive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Witch filed use for sort the result</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortType"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            sortType</b>
+                            <a href="#sortType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>&quot;asc&quot; | &quot;desc&quot;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;asc&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Kind of sort</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tableStructure"></a>
+                        <span class="name">
+                            <b>
+                            tableStructure</b>
+                            <a href="#tableStructure"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AbstractTableField[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="templateAccreditationState"></a>
+                        <span class="name">
+                            <b>
+                            templateAccreditationState</b>
+                            <a href="#templateAccreditationState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;templateAccreditationState&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalPages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            totalPages</b>
+                            <a href="#totalPages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewAccreditation"></a>
+                        <span class="name">
+                            <b>
+                            viewAccreditation</b>
+                            <a href="#viewAccreditation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="conferenceId"></a>
+                        <span class="name"><b>conferenceId</b><a href="#conferenceId"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>conferenceId()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/features/private/conference/features/accreditation/components/accreditation-table/accreditation-table.component.ts:95</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    OnInit,
+    Input,
+    Output,
+    EventEmitter,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+import { Subscription, of, Observable } from &#x27;rxjs&#x27;;
+import { takeUntil, catchError, tap } from &#x27;rxjs/operators&#x27;;
+
+import {
+    AbstractTableField,
+    ActionItem,
+    TableField,
+    TemplateField,
+    ActionsField
+} from &#x27;@eng-ds/ng-toolkit&#x27;;
+
+import { I18nService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import {
+    LoaderService,
+    WrapperGetData,
+    SectionLoading,
+    AutoUnsubscribe
+} from &#x27;@common&#x27;;
+
+import { ActionForm } from &#x27;@app/core&#x27;;
+
+import { AccreditationService } from &#x27;@features/private/core/services/accreditation/accreditation.service&#x27;;
+import {
+    AccreditamentPreview,
+    ConferenceStoreService
+} from &#x27;@app/features/private/conference/core&#x27;;
+
+@Component({
+    selector: &#x27;app-accreditation-table&#x27;,
+    templateUrl: &#x27;./accreditation-table.component.html&#x27;,
+    styleUrls: [&#x27;./accreditation-table.component.scss&#x27;]
+})
+export class AccreditationTableComponent extends AutoUnsubscribe
+    implements OnInit {
+    @Input(&#x27;list&#x27;) list &#x3D; [];
+    @Input(&#x27;action&#x27;) action: ActionForm;
+    @Output(&#x27;view&#x27;) view &#x3D; new EventEmitter&lt;AccreditamentPreview&gt;();
+
+    @ViewChild(&#x27;actionTemplate&#x27;) actionTemplate;
+    @ViewChild(&#x27;templateAccreditationState&#x27;) templateAccreditationState;
+
+    viewAccreditation: ActionItem;
+
+    tableStructure: AbstractTableField[] &#x3D; [];
+
+    loading &#x3D; true;
+    hasCriteria &#x3D; false;
+    /**
+     * Witch filed use for sort the result
+     */
+    public sortFieldActive: string;
+
+    /**
+     * Kind of sort
+     */
+    public sortType: &#x27;asc&#x27; | &#x27;desc&#x27; &#x3D; &#x27;asc&#x27;;
+
+    /**
+     * Actual page of result loaded
+     */
+    public pageNumber: number &#x3D; 1;
+    public pageSizeNumber: number &#x3D; 10;
+    public totalPages &#x3D; 0;
+
+    /**
+     * This will contain the subscription to search operation
+     */
+    protected searchSubscription: Subscription;
+
+    constructor(
+        private i18nService: I18nService,
+        private loaderService: LoaderService,
+        private accreditationService: AccreditationService,
+        private conferenceStoreService: ConferenceStoreService
+    ) {
+        super();
+    }
+
+    ngOnInit(): void {
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+        this.tableStructure &#x3D; this.defineTableStructure(this.tableStructure);
+        this.sortFieldActive &#x3D; this.getDefaultSortField();
+        this.runSearch();
+    }
+
+    get conferenceId(): string {
+        return this.conferenceStoreService.conference.id;
+    }
+
+    defineTableStructure(
+        structure: AbstractTableField[]
+    ): AbstractTableField[] {
+        const actions &#x3D; [
+            new ActionItem(
+                &#x27;BUTTON.VIEW&#x27;,
+
+                (a, item: AccreditamentPreview) &#x3D;&gt; {
+                    this.view.emit(item);
+                },
+                &#x27;eye&#x27;
+            )
+        ];
+
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.USER&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;user&#x27;,
+                true
+            )
+        );
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.EMAIL&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;email&#x27;,
+                true
+            )
+        );
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.PROFILE&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;profile.value&#x27;,
+                true
+            )
+        );
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.PARTICIPANT_DESCRIPTION&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;participantDescription&#x27;,
+                false
+            )
+        );
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.TITLE&#x27;
+                ),
+                this.templateAccreditationState
+            )
+        );
+
+        structure.push(
+            new ActionsField(
+                &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.ACTIONS&#x27;,
+                actions
+            )
+        );
+
+        return structure;
+    }
+
+    getDefaultSortField(): string {
+        return &#x27;surname&#x27;;
+    }
+
+    /**
+     * Change the sort field to input one. If the field it&#x27;s the same change the sort type.
+     * @param field
+     */
+    public changeSort(field: string) {
+        if (field &#x3D;&#x3D;&#x3D; this.sortFieldActive) {
+            // switch sort type
+            this.sortType &#x3D; this.sortType &#x3D;&#x3D;&#x3D; &#x27;asc&#x27; ? &#x27;desc&#x27; : &#x27;asc&#x27;;
+            this.pageNumber &#x3D; 0;
+            this.pageSizeNumber &#x3D; 10;
+        } else {
+            this.sortType &#x3D; &#x27;asc&#x27;;
+            this.sortFieldActive &#x3D; field;
+            this.pageNumber &#x3D; 0;
+            this.pageSizeNumber &#x3D; 10;
+        }
+        this.hasCriteria &#x3D; true;
+        // after change refresh the search
+        this.refreshSearch();
+    }
+
+    /**
+     * Change the page to load
+     */
+    public changePage(pageNumber: number) {
+        if (pageNumber &gt; 0) {
+            this.pageNumber &#x3D; pageNumber--;
+        } else {
+            this.pageNumber &#x3D; pageNumber;
+        }
+
+        this.hasCriteria &#x3D; true;
+        this.runSearch();
+    }
+
+    public changePageElementsShowed(pageSizeNumber: number) {
+        this.hasCriteria &#x3D; true;
+        this.pageSizeNumber &#x3D; pageSizeNumber;
+        this.refreshSearch();
+    }
+
+    /**
+     * Refresh the search and managing also che reset of page cache
+     */
+    public refreshSearch(newSearch &#x3D; false) {
+        if (newSearch) {
+            this.pageNumber &#x3D; 1;
+        }
+        this.runSearch();
+    }
+
+    /**
+     * This internal method build the new criteriaDto and run a search managing also the page number and result
+     */
+    private runSearch() {
+        // 3. manage old search don&#x27;t complete
+        if (this.searchSubscription) {
+            this.searchSubscription.unsubscribe();
+            // this.stopPageLoading();
+        }
+        // 4. run search
+        this.startPageLoading();
+
+        this.searchSubscription &#x3D; this.search()
+            .pipe(takeUntil(this.destroy$))
+            .subscribe(() &#x3D;&gt; {
+                this.stopPageLoading();
+            });
+    }
+
+    public search(): Observable&lt;WrapperGetData&lt;AccreditamentPreview&gt;&gt; {
+        return this.accreditationService
+            .getList(this.buildCriteriaDto(), this.conferenceId)
+            .pipe(
+                // TODO: ridonante
+                tap((results: WrapperGetData&lt;AccreditamentPreview&gt;) &#x3D;&gt; {
+                    this.list &#x3D; results.list;
+                    // tslint:disable-next-line:radix
+                    this.totalPages &#x3D; Math.ceil(
+                        parseInt(results.totalNumber) / this.pageSizeNumber
+                    );
+                }),
+                catchError(() &#x3D;&gt; {
+                    this.stopPageLoading();
+                    return of({ list: [], totalNumber: &#x27;&#x27; });
+                })
+            );
+    }
+
+    /**
+     * Build the dto for backend from criteria
+     */
+    private buildCriteriaDto() {
+        const criteria &#x3D; {};
+        criteria[&#x27;sort&#x27;] &#x3D; this.sortFieldActive + &#x27;,&#x27; + this.sortType;
+        criteria[&#x27;page&#x27;] &#x3D; this.pageNumber;
+        criteria[&#x27;size&#x27;] &#x3D; this.pageSizeNumber || 10;
+        return criteria;
+    }
+
+    public resetSearch() {
+        this.sortType &#x3D; &#x27;asc&#x27;;
+        this.sortFieldActive &#x3D; this.getDefaultSortField();
+        this.pageNumber &#x3D; 0;
+        this.pageSizeNumber &#x3D; 10;
+    }
+
+    public startPageLoading() {
+        this.loading &#x3D; true;
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+    }
+
+    public stopPageLoading() {
+        this.loading &#x3D; false;
+        this.conferenceStoreService.hidePageLoader();
+    }
+
+    isReadonly(): boolean {
+        return this.action &#x3D;&#x3D;&#x3D; ActionForm.READONLY;
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div
+    class&#x3D;&quot;row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding&quot;
+    [hidden]&#x3D;&quot;!list.length || loading&quot;
+&gt;
+    &lt;div class&#x3D;&quot;row panel-body body-form-grey&quot;&gt;
+        &lt;eng-table-result
+            [results]&#x3D;&quot;list&quot;
+            [structure]&#x3D;&quot;tableStructure&quot;
+            [showPageSize]&#x3D;&quot;true&quot;
+            [totalPages]&#x3D;&quot;totalPages&quot;
+            (onSortChange)&#x3D;&quot;changeSort($event)&quot;
+            (onPageChanged)&#x3D;&quot;changePage($event)&quot;
+            (onPageSizeChange)&#x3D;&quot;changePageElementsShowed($event)&quot;
+        &gt;&lt;/eng-table-result&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #templateAccreditationState let-model&#x3D;&quot;item&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;!model.rejectedFlag &amp;&amp; !model.accreditamentFlag&quot;&gt;
+        &lt;span
+            class&#x3D;&quot;label label-warning&quot;
+            translate&#x3D;&quot;CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.WAITING&quot;
+        &gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;model.accreditamentFlag &amp;&amp; !model.rejectedFlag&quot;&gt;
+        &lt;span
+            class&#x3D;&quot;label label-success&quot;
+            translate&#x3D;&quot;CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.OK&quot;
+        &gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;model.rejectedFlag&quot;&gt;
+        &lt;span
+            class&#x3D;&quot;label label-danger&quot;
+            translate&#x3D;&quot;CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.REJECTED&quot;
+        &gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;div
+    class&#x3D;&quot;row col-xs-12 col-sm-12 col-lg-12 noPadding&quot;
+    *ngIf&#x3D;&quot;!list.length &amp;&amp; !loading&quot;
+&gt;
+    {{ &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.EMPTY_MESSAGE&#x27; | translate }}.
+    &lt;a
+        *ngIf&#x3D;&quot;hasCriteria&quot;
+        href&#x3D;&quot;javascript:;&quot;
+        (click)&#x3D;&quot;resetSearch(); refreshSearch(true)&quot;
+        &gt;{{
+            &#x27;CONFERENCE.WIZARD.ACCREDITATION.TABLE.REFRESH_LIST&#x27; | translate
+        }}&lt;/a
+    &gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./accreditation-table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"    [hidden]="!list.length || loading">    <div class="row panel-body body-form-grey">        <eng-table-result            [results]="list"            [structure]="tableStructure"            [showPageSize]="true"            [totalPages]="totalPages"            (onSortChange)="changeSort($event)"            (onPageChanged)="changePage($event)"            (onPageSizeChange)="changePageElementsShowed($event)"        ></eng-table-result>    </div></div><ng-template #templateAccreditationState let-model="item">    <div *ngIf="!model.rejectedFlag && !model.accreditamentFlag">        <span            class="label label-warning"            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.WAITING"        ></span>    </div>    <div *ngIf="model.accreditamentFlag && !model.rejectedFlag">        <span            class="label label-success"            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.OK"        ></span>    </div>    <div *ngIf="model.rejectedFlag">        <span            class="label label-danger"            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.REJECTED"        ></span>    </div></ng-template><div    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"    *ngIf="!list.length && !loading">    {{ \'CONFERENCE.WIZARD.ACCREDITATION.TABLE.EMPTY_MESSAGE\' | translate }}.    <a        *ngIf="hasCriteria"        href="javascript:;"        (click)="resetSearch(); refreshSearch(true)"        >{{            \'CONFERENCE.WIZARD.ACCREDITATION.TABLE.REFRESH_LIST\' | translate        }}</a    ></div></div>'
+    var COMPONENTS = [{'name': 'AccreditationComponent', 'selector': 'app-accreditation'},{'name': 'AccreditationTabComponent', 'selector': 'app-conference-accreditation'},{'name': 'AccreditationTableComponent', 'selector': 'app-accreditation-table'},{'name': 'AlertInfoComponent', 'selector': 'app-alert-info'},{'name': 'AlertWithLinkComponent', 'selector': 'app-form-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'ConferenceComponent', 'selector': ''},{'name': 'ConferenceModalBeforeCreateComponent', 'selector': 'app-conference-modal-before-create'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DefinitionComponent', 'selector': 'app-conference-definition'},{'name': 'DesktopComponent', 'selector': 'app-desktop'},{'name': 'DocumentationComponent', 'selector': 'app-conference-documentation'},{'name': 'EditModalFileComponent', 'selector': 'app-edit-modal-file'},{'name': 'EventsComponent', 'selector': 'app-conference-events'},{'name': 'EventsSearchComponent', 'selector': 'app-events-search'},{'name': 'EventsTableComponent', 'selector': 'app-events-table'},{'name': 'FilePanelComponent', 'selector': 'app-file-panel'},{'name': 'FileTableComponent', 'selector': 'app-file-table'},{'name': 'HeadComponent', 'selector': 'app-conference-head'},{'name': 'MainComponent', 'selector': 'main-root'},{'name': 'MainComponent', 'selector': 'app-dashboard-main'},{'name': 'MediaMainComponent', 'selector': ''},{'name': 'MediaSearchComponent', 'selector': 'search'},{'name': 'MediaTableComponent', 'selector': 'app-media-table'},{'name': 'NotAuthorizedComponent', 'selector': ''},{'name': 'NothingToDoComponent', 'selector': ''},{'name': 'PaleoComponent', 'selector': 'app-paleo'},{'name': 'ParticipantsComponent', 'selector': 'app-conference-participants'},{'name': 'ParticipantsTableComponent', 'selector': 'app-participants-table'},{'name': 'PecComponent', 'selector': 'app-conference-pec'},{'name': 'PecSearchComponent', 'selector': 'app-pec-search'},{'name': 'PendingAccreditationPageComponent', 'selector': 'app-pending-accreditation-page'},{'name': 'PendingListPageComponent', 'selector': ''},{'name': 'PrivateComponent', 'selector': ''},{'name': 'ProcedureComponent', 'selector': 'app-conference-procedure'},{'name': 'PublicComponent', 'selector': ''},{'name': 'RelevantInformationComponent', 'selector': 'app-relevant-information'},{'name': 'ResultTableComponent', 'selector': 'app-result-table'},{'name': 'SearchComponent', 'selector': ''},{'name': 'SearchComponent', 'selector': 'search'},{'name': 'SummaryComponent', 'selector': 'app-conference-summary'}];
+    var DIRECTIVES = [{'name': 'AuthConferenceDirective', 'selector': '[conferenceAuth]'},{'name': 'AuthDirective', 'selector': '[appAuth]'}];
+    var ACTUAL_COMPONENT = {'name': 'AccreditationTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AccreditationTableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

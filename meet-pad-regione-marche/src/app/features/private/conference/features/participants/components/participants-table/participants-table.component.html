@@ -1,0 +1,76 @@
+<div class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding">
+
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="listParticipants"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #authorityTemplate let-model="item">
+    <!-- {{ getAuthorityByKey(model.authority.key) }} -->
+    {{ (model.authority && model.authority.value) || '---' }}
+</ng-template>
+<ng-template #roleTemplate let-model="item">
+    <!-- {{ getRoleByKey(model.role.key) }} -->
+    {{ (model.role && model.role.value) || '---' }}
+</ng-template>
+<ng-template #determinationExpressedTemplate let-model="item">
+    <i
+        class="fa fa-times-circle unexecuted"
+        *ngIf="!model.determinationExpressed"
+    ></i>
+    <i
+        class="fa fa-check-circle executed"
+        *ngIf="model.determinationExpressed"
+    ></i>
+</ng-template>
+<ng-template #integrationRequiredTemplate let-model="item">
+    <i
+        class="fa fa-times-circle unexecuted"
+        *ngIf="!model.integrationRequired"
+    ></i>
+    <i
+        class="fa fa-check-circle executed"
+        *ngIf="model.integrationRequired"
+    ></i>
+</ng-template>
+
+<ng-template #actionTemplate let-model="item">
+    <eng-action
+       *ngIf="!model.readonly && !isReadonly() && !model.isSelected()"
+        [action]="selectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="!model.readonly && !isReadonly() && model.isSelected()"
+        [action]="unselectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        [action]="viewParticipant"
+        [model]="model"
+        [onlyIcon]="true"
+        *ngIf="model.readonly || isReadonly()"
+    >
+    </eng-action>
+    <eng-action
+        [action]="editParticipant"
+        [model]="model"
+        [onlyIcon]="true"
+        *ngIf="!model.readonly && !isReadonly()"
+    >
+    </eng-action>
+    <eng-action
+        [action]="deleteParticipant"
+        [model]="model"
+        [onlyIcon]="true"
+        *ngIf="!model.readonly && !isReadonly()"
+    >
+    </eng-action>
+</ng-template>

@@ -1,0 +1,8 @@
+export enum ApplicationRole {
+    ADMINISTRATOR = '4',
+    CONFERENCE_MANAGER = '2',
+    CONFERENCE_CREATOR = '1',
+    PARTICIPANT = '3',
+    ADMIN_AMMINISTRAZIONE_PROCEDENTE = '5',
+    ADMIN_AMMINISTRAZIONI = '6'
+}

@@ -1,0 +1,10 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data": {
+        "idUser": 2,
+        "domanda": "grazie",
+        "risposta": "prego ; figurati di nulla ; è stato un dovere"
+    }
+}

@@ -1,0 +1,557 @@
+<app-form
+    [groupFields]="groupFieldsForSwitch"
+    [footerButtons]="false"
+    [showCancelBtn]="false"
+    [formGrey]="false"
+    [formClass]="['mb-0', 'formDocumentsSwitch']"
+></app-form>
+
+<div class="row">
+    <div class="col-md-2 col-lg-2" *ngIf="!summary">
+        <ul class="nav nav-pills nav-stacked formNav">
+            <li
+                *ngFor="let item of menuItems; let i = index">
+                <a
+                    data-toggle="collapse"
+                    data-parent="#panelGroupDocumentation"
+                    href="#collapseDocumentation-{{ i }}"
+                    [class.active]="openPanel === 'collapseDocumentation-' + i"
+                    [translate]="item"
+                ></a>
+            </li>
+        </ul>
+    </div>
+
+    <form
+        class="row form-grey col-xs-12 col-sm-12"
+        [ngClass]="{
+            'mb-30': !summary,
+            'col-md-10 col-lg-10': !summary,
+            'col-md-12 col-lg-12': summary
+        }"
+    >
+        <div id="panelGroupDocumentation" class="panel-group">
+            <app-file-panel
+                #additionalFiles
+                accordionIndex="0"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TITLE'"
+                [saveButtonText]="saveAdditionalUrlButtonText"
+                [saveFn]="saveAdditionalUrl"
+                [saveComplete]="saveAdditionalUrlComplete"
+                [saveError]="saveAdditionalUrlError"
+                [readonly]="isReadonly()"
+                [showSyncronize]="!isReadonly() || isOperationalUSR()"
+                [showDeleteList]="!isReadonly()"
+                [plusSignIsVisble]= "!isReadonly()"
+                [selectionEnabled]="true"
+                [showSectionDownload]="true"
+                [showSectionDeleteList]="true"
+                [additionalDocumentation]="isPaleoDomus()"
+                [files]="additional"
+                [showAlert]="showConformityAlert"
+                [textAlert]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.CONFORMITY_ALERT.TEXT'
+                "
+                typeAlert="danger"
+                [groupFields]="groupFieldsAdditional"
+                (openEditFile)="openEditFile($event)"
+                (deleteFile)="deleteFile($event)"
+                (openEditCloud)="openEditCloud($event)"
+                (downloadFile)="downloadFile($event)"
+                (downloadPDFFile)="downloadPDFFile($event)"
+                (deleteFileList)="deleteFileList($event)"
+                (syncronizeFiles)="syncronizeFiles($event)"
+                (downloadSectionFiles)="downloadSectionFiles($event)"
+                (deleteSectionFiles)="deleteSectionFiles($event)"
+            >
+            </app-file-panel>
+
+            <app-file-panel
+                #interectionFiles
+                accordionIndex="1"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.INTERACTIONS.TITLE'"
+                [readonly]="true"
+                [plusSignIsVisble]= "false"
+                [files]="interection"
+                [multiple]="true"
+                (openEditFile)="openEditFile($event)"
+                (deleteFile)="deleteFile($event)"
+                (openEditCloud)="openEditCloud($event)"
+                (downloadFile)="downloadFile($event)"
+            >
+            </app-file-panel>
+
+            <app-file-panel
+                #sharedFiles
+                accordionIndex="2"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.SHARED.TITLE'"
+                [saveButtonText]="saveSharedButtonText"
+                [saveFn]="saveShared"
+                [saveComplete]="saveSharedComplete"
+                [saveError]="saveSharedError"
+                [readonly]="summary"
+                [plusSignIsVisble]= "!isClosedMode() && !summary"
+                [files]="shared"
+                [multiple]="true"
+                [groupFields]="groupFieldsShared"
+                [sharedDocumentation]="true"
+                (openEditFile)="openEditFile($event)"
+                (deleteFile)="deleteFile($event)"
+                (openEditCloud)="openEditCloud($event)"
+                (downloadFile)="downloadFile($event)"
+            >
+            </app-file-panel>
+
+            <!--            
+                [readonly]= "!isJudgement()"
+                [plusSignIsVisble]= "isJudgement()"
+            -->
+            <app-file-panel-sign
+                #signatureFiles
+                accordionIndex="3"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.TITLE'"
+                [conferenceAuth]="appSections.CONFERENCE_SIGN_FILE"
+                [isImpersonatedAdmin]="isImpersonatedAdmin()"
+                [saveButtonText]="saveSignButtonText"
+                [saveFn]="saveSignature"
+                [saveComplete]="saveSignatureComplete"
+                [saveError]="saveSignatureError"
+                [readonly]= "false"
+                [plusSignIsVisble]= "!isClosedMode()"
+                [isDelegate]= "isUserDelegate()"
+                [files]="signature"
+                [multiple]="true"
+                [groupFields]="groupFieldsForSign"
+                
+                (downloadCalamaioApplication)="downloadCalamaioApplication()"
+                (signFile)="openSignatureFileModal($event)"
+                (deleteFile)="deleteFile($event)"
+                (unlockFile)="unlockSignatureFile($event)"
+                (downloadFile)="downloadFile($event)"
+                (openInputForm)="checkCalamaioStatus()"
+            >
+            </app-file-panel-sign>
+
+            <app-file-panel
+                #preliminaryFiles
+                accordionIndex="4"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.TITLE'"
+                [readonly]="isReadonly()"
+                [plusSignIsVisble]= "!isReadonly()"
+                [files]="preliminary"
+                [multiple]="true"
+                [groupFields]="groupFieldsPreliminary"
+                (openEditFile)="openEditFile($event)"
+                (deleteFile)="deleteFile($event)"
+                (openEditCloud)="openEditCloud($event)"
+                (downloadFile)="downloadFile($event)"
+            >
+            </app-file-panel>
+
+            <app-file-panel
+                #indictionFile
+                accordionIndex="5"
+                [conferenceAuth]="appSections.CONFERENCE_INDICTION_FILE"
+                [title]="'CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.TITLE'"
+                [readonly]="isReadonly() || !showIndictionPanel()"
+                [plusSignIsVisble]= "false"
+                [statusDocumentation]="isMultipleSignEnable()"
+                [files]="indiction"
+                [multiple]="false"
+                [groupFields]="groupFieldsIndiction"   
+                (openEditFile)="openEditFile($event)"
+                (deleteFile)="deleteFile($event)"
+                (openEditCloud)="openEditCloud($event)"
+                (downloadFile)="downloadFile($event)"
+            >
+            </app-file-panel>
+
+        </div>
+        <div class="pull-right mt-15">
+            <eng-button
+                *ngIf="showFooterBtn()"
+                class="pull-right"
+                color="info"
+                [title]="'BUTTON.NEXT' | translate"
+                (onClick)="onNext()"
+            >
+            </eng-button>
+            <app-footer-buttons
+                [groupButtons]="groupButtons"
+            ></app-footer-buttons>
+        </div>
+    </form>
+</div>
+
+<app-edit-modal-file
+    #fileModal
+    [disabled]="isReadonly()"
+    [participants]="participants"
+    [file]="modalFile"
+    [groupFields]="groupFields"
+    [save]="editFile"
+    [saveComplete]="editFileComplete"
+    [saveError]="editFileError"
+    [fileName]="fileName"
+>
+</app-edit-modal-file>
+
+<app-edit-modal-file
+    #uploadSignatureFileModal
+
+    [disabledTitle]="'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.UPLOAD'"
+    [disabled]="true"
+    [groupFields]="signatureUploadGroupFields"
+>
+</app-edit-modal-file>
+
+
+
+<eng-modal
+    class="smallModal"
+    #uploadRemoteSignatureFileModal
+    [closeIcon]="!(loadingForSignature | async)"
+    [buttons]="modalFirstUploadRemoteSignatureButtons"
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.TITLE_REMOTE' | translate"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="signatureFileLoading"
+                [loading]="loadingForSignature | async"
+            ></eng-content-loader>
+            <p>
+                Per aggiungere la propria firma al file indicare le credenziali e la OTP necessarie per l'autenticazione del server di firma remota.
+            </p>
+            <div>
+                <p><br>Username</p>
+                <input type="text" id="dlgRemoteCalamaioUID">
+            </div>
+            <div>
+                <p><br>Password</p>
+                <input type="text" id="dlgRemoteCalamaioPwd" type="password" value="">
+            </div>
+            <div>
+                <p><br>Dominio</p>
+                <input type="text" id="dlgRemoteCalamaioDomain" value="frRegioneMarche">
+            </div>
+            <div>
+                <p><br>One Time Password</p>
+                <input type="text" id="dlgRemoteCalamaioOTP">
+            </div>
+            <div>
+                <br>
+                <input type="checkbox" id="dlgCadesPades" name="dlgCadesPades">
+                <label for="dlgCadesPades"> &nbsp;Firma in formato .pdf (PADES)</label><br>
+            </div>
+        </div>
+    </div>
+</eng-modal>
+
+
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="modalButtons"
+    [title]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_MODAL.TITLE' | translate
+    "
+>
+    <p
+        [translate]="
+            'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_MODAL.MESSAGE'
+        "
+    ></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #deleteListFileConfirmModal
+    [buttons]="deleteListFileModalButtons"
+    [title]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_LIST_MODAL.TITLE' | translate
+    "
+>
+    <p
+        [translate]="
+            'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_LIST_MODAL.MESSAGE'
+        "
+    ></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #confirmDeleteSignatureFileModal
+    [buttons]="modalDeleteSignatureFileButtons"
+    [title]="
+    'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_MODAL.TITLE' | translate
+"
+>
+<p
+    [translate]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.CONFIRM_DELETE_MODAL.MESSAGE'
+    "
+></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #downloadSignatureFileModal
+    [buttons]="modalDownloadSignatureButtons"
+    [title]="
+    'CONFERENCE.WIZARD.DOCUMENTATION.DOWNLOAD_SIGNATURE_FILE_MODAL.TITLE' | translate
+"
+>
+<p
+    [translate]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.DOWNLOAD_SIGNATURE_FILE_MODAL.DOWNLOAD_MESSAGE'
+    "
+></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #confirmSharedModal
+    [closeIcon]="!(loadingForShared | async)"
+    [buttons]="modalUploadButtons"
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.SHARED.MODAL.TITLE' | translate"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="sharedFileLoading"
+                [loading]="loadingForShared | async"
+            ></eng-content-loader>        
+            <p
+                [translate]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.SHARED.MODAL.TEXT'
+                "
+            ></p>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #confirmSignatureModal
+    [closeIcon]="!(loadingForSignature | async)"
+    [buttons]="modalFirstUploadSignatureButtons"
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.TITLE' | translate"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="signatureFileLoading"
+                [loading]="loadingForSignature | async"
+            ></eng-content-loader>
+            <p
+                [translate]="
+                    (uploadSignatureFileWithCalamaio? 'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.TEXT_CALAMAIO_SELECTED':'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.TEXT')
+                "
+            ></p>
+            <div *ngIf="isCalamaioRemote()">
+                One Time Password da usare per il server calamaio<br>
+                <input type="text" name="OTPforCalamio" id="otpForCalamaio">
+            </div>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    #choiseSignModeModal
+    [buttons]="choiceSignModeModalButtons"
+    [title]="
+    'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.SIGN_CHOISE_TITLE' | translate
+"
+>
+<p
+    [translate]="
+        'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.SIGN_CHOISE_TEXT'
+    "
+></p>
+</eng-modal>
+
+
+<eng-modal
+    class="smallModal"
+    #indictionModal
+    [closeIcon]="!(loading | async)"
+    [buttons]="modalIndictionButtons"
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.TITLE'"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="indictionFileLoading"
+                [loading]="loading | async"
+            ></eng-content-loader>
+
+            <h4
+                [translate]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.SUMMARY_DATE'
+                "
+            ></h4>
+
+            <div class="ml-15">
+                <div class="summaryDate">
+                    <h5
+                        [translate]="
+                            'CONFERENCE.WIZARD.DEFINITION.INSTANCE.END_INTEGRATION_DATE'
+                        "
+                    ></h5>
+                    <p>
+                        {{ endIntegrationDate }}
+                    </p>
+                </div>
+                <div class="summaryDate">
+                    <h5
+                        [translate]="
+                            'CONFERENCE.WIZARD.DEFINITION.INSTANCE.END_OPINION_DATE'
+                        "
+                    ></h5>
+                    <p>
+                        {{ endOpinionDate }}
+                    </p>
+                </div>
+                <div class="summaryDate">
+                    <h5
+                        [translate]="
+                            'CONFERENCE.WIZARD.DEFINITION.INSTANCE.FIRST_SESSION_DATE'
+                        "
+                    ></h5>
+                    <p>
+                        {{ firstSessionDate }}
+                    </p>
+                </div>
+                <div class="summaryDate" *ngIf="instance.conferenceTime">
+                    <h5
+                        [translate]="
+                            'CONFERENCE.WIZARD.DEFINITION.INSTANCE.CONFERENCE_TIME'
+                        "
+                    ></h5>
+                    <p>{{ instance.conferenceTime }}</p>
+                </div>
+                <div class="summaryDate">
+                    <h5
+                        [translate]="
+                            'CONFERENCE.WIZARD.DEFINITION.INSTANCE.EXPIRATION_DATE'
+                        "
+                    ></h5>
+                    <p>
+                        {{ expirationDate }}
+                    </p>
+                </div>
+            </div>
+            <hr />
+
+            <div
+                class="alert alert-warning"
+                [translate]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.PARTICIPANT_ALERT'
+                "
+            ></div>
+            <hr />
+            <p
+                [translate]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.TEXT'
+                "
+            ></p>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #indictionModalToSign
+    [closeIcon]="!(loading | async)"
+    [buttons]="modalIndictionToSignButtons"
+    [title]="'SIGN.MODAL_SIGN.TITLE'"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="indictionFileLoading"
+                [loading]="loading | async"
+            ></eng-content-loader>
+
+            <h4
+                [translate]="
+                    'SIGN.MODAL_SIGN.TEXT'
+                "
+            ></h4>
+
+            <div>
+                <eng-select
+                    (change)="selectChangeHandler($event)"
+                    label="SIGN.MODAL_SIGN.MANAGER"
+                    [options]="managerOptions | async"
+                    size="12|12|12"
+                    placeholder=""
+                    field-for-option="value"
+                    field-for-id="key"
+                ></eng-select>
+            </div>
+            
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #uploadStatusModal
+    [closeIcon]="false"
+    [buttons]=[]
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.STATUS_UPLOAD_MODAL.TITLE' | translate"
+>
+    <div style="min-width:100%">
+        <div *ngIf="tmpUploads.length !== 0">
+            <div *ngFor="let upload of tmpUploads">
+                <app-upload [progress]="upload"></app-upload>
+                <hr />
+            </div>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #downloadStatusModal
+    [closeIcon]="false"
+    [buttons]=[]
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.STATUS_DOWNLOAD_MODAL.TITLE' | translate"
+>
+    <div style="min-width:100%">
+        <div *ngIf="tmpDownloads.length !== 0">
+            <div *ngFor="let download of tmpDownloads">
+                <app-download [progress]="download"></app-download>
+                <hr />
+            </div>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #uploadCalamaioFileModal
+    [closeIcon]="!(loadingForSignature | async)"
+    [buttons]="modalFirstUploadCalamaioSignatureButtons"
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.MODAL.TITLE_CALAMAIO' | translate"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                class="signatureFileLoading"
+                [loading]="loadingForSignature | async"
+            ></eng-content-loader>
+            <p>
+                Seleziona il seguente check se vuoi firmare il file in formato .pdf (PADES). Se non viene selezionato, il file verrà firmato automaticamente in formato .p7m (CADES)
+            </p>
+            <div>
+                <br>
+                <input type="checkbox" id="dlgCalamaioCadesPades" name="dlgCalamaioCadesPades">
+                <label for="dlgCalamaioCadesPades"> &nbsp;Firma in formato .pdf (PADES)</label><br>
+            </div>
+        </div>
+    </div>
+</eng-modal>

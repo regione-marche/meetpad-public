@@ -1,0 +1,17 @@
+<admin-conference-search
+    (onNewSearch)="startResearch($event)"
+></admin-conference-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="CONFERENCE.LIST.TITLE"></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-conference-list
+                [actions]="actions"
+                [searchQuery]="searchQuery"
+            ></admin-conference-list>
+        </div>
+    </div>
+</eng-form-section>

@@ -1,0 +1,14 @@
+{
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/admin-console",
+    "lib": {
+        "entryFile": "src/public_api.ts",
+        "umdModuleIds": {
+            "angular-oauth2-oidc": "AngularOauth2Oidc",
+            "@common": "Common",
+            "ngx-toastr": "NgxToastr",
+            "@eng-ds/ng-core": "NgCore",
+            "@eng-ds/ng-toolkit": "NgToolkit"
+        }
+    }
+}

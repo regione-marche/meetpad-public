@@ -1,0 +1,27 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "sender": "string",
+                "recipient": "string",
+                "statusMessage": "string",
+                "status": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "event": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "sentDate": {
+                    "key": "string",
+                    "value": "string"
+                }
+            }
+        ],
+        "totalRow": 1
+    },
+    "errros": []
+}

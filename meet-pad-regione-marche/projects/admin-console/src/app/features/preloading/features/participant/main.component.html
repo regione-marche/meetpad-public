@@ -1,0 +1,23 @@
+<admin-participants-search
+    (onNewSearch)="startResearch($event)"
+></admin-participants-search>
+
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="PRELOADING.PARTICIPANT.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="'PRELOADING.PARTICIPANT.ACTIONS.NEW' | translate"
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-participants-list
+                [searchQuery]="searchQuery"
+            ></admin-participants-list>
+        </div>
+    </div>
+</eng-form-section>

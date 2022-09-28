@@ -1,0 +1,52 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onPageChanged)="changePage($event)"
+            (onSortChange)="changeSort($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        *ngFor="let action of actions"
+        [action]="action"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+
+<ng-template #templateProtocolState let-model="item">
+    <div *ngIf="model.protocolState == 'Protocollazione in corso'">
+        <span
+            class="label label-warning"
+            translate="PROTOCOLS.LIST.STATE.PROCESSING"
+        ></span>
+    </div>
+    <div *ngIf="model.protocolState == 'Protocollata'">
+        <span
+            class="label label-success"
+            translate="PROTOCOLS.LIST.STATE.REGISTERED"
+        ></span>
+    </div>
+    <div *ngIf="model.protocolState == 'In Errore'">
+        <span
+            class="label label-danger"
+            translate="PROTOCOLS.LIST.STATE.ERROR"
+        ></span>
+    </div>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'PROTOCOLS.LIST.EMPTY_MESSAGE' | translate }}.
+</div>

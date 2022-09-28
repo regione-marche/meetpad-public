@@ -1,0 +1,164 @@
+<eng-accordion
+    title="{{ searchTitle }}"
+    [open]="searchOpen"
+    [initialOpen]="searchInitialOpen"
+    class="searchEvent"
+>
+    <app-events-search
+        class="form"
+        (searchQuery)="startResearch($event)"
+    ></app-events-search>
+</eng-accordion>
+
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="CONFERENCE.WIZARD.EVENTS.TITLE"></span>
+            <ng-container *ngIf="eventTypes">
+                <div
+                    *ngIf="showEventsAction() && eventTypes.length !== 0"
+                    class="dropdown pull-right"
+                >
+                    <span
+                        id="dropdownMenu2"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        class="fa fa-plus"
+                        aria-hidden="true"
+                        [title]="
+                            'CONFERENCE.WIZARD.EVENTS.PANEL.ADD_EVENT_BUTTON'
+                                | translate
+                        "
+                    >
+                    </span>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li *ngFor="let type of eventTypes">
+                            <a
+                                href="javascript:;"
+                                (click)="createEvent(type.key)"
+                                >{{ type.value }}</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="panel-body">
+            <app-events-table
+                (view)="viewEvent($event)"
+                [searchQuery]="searchQuery"
+            >
+            </app-events-table>
+        </div>
+    </div>
+</eng-form-section>
+
+<eng-modal
+    *ngIf="detailModalInstance"
+    #detailModal
+    [buttons]="buttons"
+    [title]="modalTitle | translate"
+    [closeIcon]="!(loading | async)"
+    (onClose)="modalOnClose()"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <eng-content-loader
+                [loading]="loading | async"
+            ></eng-content-loader>
+            <h4>{{ title }}</h4>
+            <app-form
+                *ngIf="groupFields"
+                [groupFields]="groupFields"
+                [formGrey]="false"
+                [footerButtons]="footerButtons"
+                [saveFn]="saveFn"
+                [saveComplete]="saveCompleteFn"
+                [saveError]="saveErrorFn"
+                [extractDataToSubmitFn]="extractDataToSubmit"
+                [footerTextSubmitButton]="footerTextSubmitBtn"
+                (openControl)="checkFormStatus()"
+            >
+            </app-form>
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #attentionModal
+    [buttons]="attentionModalBtn"
+    [title]="'CONFERENCE.WIZARD.EVENTS.ATTENTION_MODAL.TITLE' | translate"
+>
+    <p [translate]="'CONFERENCE.WIZARD.EVENTS.ATTENTION_MODAL.MESSAGE'"></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="confirmModalButtons"
+    [title]="confirmModalTitle"
+>
+    <p [translate]="confirmModalText"></p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #errorModal
+    [buttons]="errorModalButtons"
+    [title]="errorModalTitle"
+>
+    <p [translate]="errorModalText"></p>
+</eng-modal>
+
+
+<eng-modal
+    class="smallModal"
+    #eventModalToSign
+    [closeIcon]="!(loading | async)"
+    [buttons]="modalIndictionToSignButtons"
+    [title]="'SIGN.MODAL_SIGN.TITLE'"
+>
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <h4
+                [translate]="
+                    'SIGN.MODAL_SIGN.TEXT'
+                "
+            ></h4>
+
+            <div>
+                <eng-select
+                    (change)="selectChangeHandler($event)"
+                    label="SIGN.MODAL_SIGN.MANAGER"
+                    [options]="managerOptions | async"
+                    size="12|12|12"
+                    placeholder=""
+                    field-for-option="value"
+                    field-for-id="key"
+                ></eng-select>
+            </div>
+            
+        </div>
+    </div>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #uploadStatusModal
+    [closeIcon]="false"
+    [buttons]=[]
+    [title]="'CONFERENCE.WIZARD.DOCUMENTATION.STATUS_UPLOAD_MODAL.TITLE' | translate"
+>
+    <div style="min-width:100%">
+        <div *ngIf="tmpUploads.length !== 0">
+            <div *ngFor="let upload of tmpUploads">
+                <app-upload [progress]="upload"></app-upload>
+                <hr />
+            </div>
+        </div>
+    </div>
+</eng-modal>

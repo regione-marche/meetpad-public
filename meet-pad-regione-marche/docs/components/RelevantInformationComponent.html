@@ -1,0 +1,749 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RelevantInformationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/private/relevant-information/relevant-information.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>AutoUnsubscribe</code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-relevant-information</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./relevant-information.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./relevant-information.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#page">page</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_createContent">_createContent</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#paragraph1">paragraph1</a>
+                                </li>
+                                <li>
+                                    <a href="#paragraph2">paragraph2</a>
+                                </li>
+                                <li>
+                                    <a href="#paragraph3">paragraph3</a>
+                                </li>
+                                <li>
+                                    <a href="#paragraph5">paragraph5</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(loaderService: LoaderService, i18nService: I18nService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loaderService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoaderService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_createContent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _createContent
+                        </b>
+                        <a href="#_createContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_createContent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="page"></a>
+                        <span class="name">
+                            <b>
+                            page</b>
+                            <a href="#page"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Section[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paragraph1"></a>
+                        <span class="name"><b>paragraph1</b><a href="#paragraph1"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>paragraph1()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:32</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paragraph2"></a>
+                        <span class="name"><b>paragraph2</b><a href="#paragraph2"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>paragraph2()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:42</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paragraph3"></a>
+                        <span class="name"><b>paragraph3</b><a href="#paragraph3"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>paragraph3()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:53</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paragraph5"></a>
+                        <span class="name"><b>paragraph5</b><a href="#paragraph5"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>paragraph5()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/features/private/relevant-information/relevant-information.component.ts:59</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {
+    LoaderService,
+    SectionLoading,
+    AutoUnsubscribe,
+    Section,
+    ContentSection
+} from &#x27;@common&#x27;;
+import { I18nService } from &#x27;@eng-ds/ng-core&#x27;;
+
+@Component({
+    selector: &#x27;app-relevant-information&#x27;,
+    templateUrl: &#x27;./relevant-information.component.html&#x27;,
+    styleUrls: [&#x27;./relevant-information.component.scss&#x27;]
+})
+export class RelevantInformationComponent extends AutoUnsubscribe
+    implements OnInit {
+    page: Section[] &#x3D; [];
+
+    constructor(
+        private loaderService: LoaderService,
+        private i18nService: I18nService
+    ) {
+        super();
+        this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+    }
+
+    ngOnInit() {
+        this._createContent();
+    }
+
+    get paragraph1(): string {
+        return &#x60;La &lt;strong&gt; conferenza di servizi &lt;/strong&gt; è una forma di
+        cooperazione tra amministrazioni pubbliche introdotta dalla
+        L.241/90, e recentemente oggetto di una serie di modifiche operate
+        dal D.Lgs. n. 127/2016, al fine di snellire l’azione amministrativa
+        ed evitare che nei procedimenti particolarmente complessi, le
+        amministrazioni partecipanti debbano pronunciarsi in luoghi e tempi
+        diversi.&#x60;;
+    }
+
+    get paragraph2(): string {
+        return &#x60;Il D.Lgs. n. 127/2016 ha introdotto in particolare due distinte
+        modalità di svolgimento consistenti nella
+        &lt;strong&gt;conferenza semplificata&lt;/strong&gt; (art. 14-bis) e nella
+        &lt;strong&gt;conferenza simultanea&lt;/strong&gt; (art. 14-ter). Inoltre, a
+        seconda della fase procedimentale in cui viene utilizzata e, dello
+        scopo per cui deve essere convocata, avremo i seguenti tipi di
+        conferenza di servizi: I) istruttoria; II) decisoria; III)
+        preliminare.&#x60;;
+    }
+
+    get paragraph3(): string {
+        return &#x60;&lt;strong&gt;La Conferenza decisoria&lt;/strong&gt; è sempre indetta
+            dall’Amministrazione Procedente (di seguito AP) e può svolgersi
+            secondo due modalità: &#x60;;
+    }
+
+    get paragraph5(): string {
+        return &#x60;&lt;strong&gt;La Conferenza istruttoria&lt;/strong&gt; può essere indetta
+    dall’Amministrazione Procedente, anche su richiesta di altra
+    amministrazione coinvolta nel procedimento o del privato
+    interessato, quando lo ritenga opportuno per effettuare un esame
+    contestuale degli interessi pubblici coinvolti. Si svolge in forma
+    semplificata o, in alternativa, secondo le modalità
+    definite dall’Amministrazione Procedente sempre nel rispetto dei
+    principi di semplificazione e secondo i termini indicati nel
+    diagramma soprariportato.&#x60;;
+    }
+
+    private _createContent(): void {
+        this.page.push({
+            title: &#x27;INFORMATION.CONFERENCE.TITLE&#x27;,
+            accordion: true,
+            initialOpen: true,
+            panel: false,
+            content: new Map&lt;string, ContentSection&gt;()
+                .set(&#x27;paragraph1&#x27;, {
+                    type: &#x27;p&#x27;,
+                    value: this.paragraph1,
+                    class: &#x27;text-margin&#x27;
+                })
+                .set(&#x27;paragraph2&#x27;, {
+                    type: &#x27;p&#x27;,
+                    value: this.paragraph2,
+                    class: &#x27;text-margin&#x27;
+                })
+                .set(&#x27;paragraph3&#x27;, {
+                    type: &#x27;p&#x27;,
+                    value: this.paragraph3,
+                    class: &#x27;text-margin&#x27;
+                })
+                .set(&#x27;list&#x27;, {
+                    type: &#x27;ul&#x27;,
+                    list: new Map&lt;string, string&gt;()
+                        .set(&#x27;point1&#x27;, &#x27;forma semplificata e asincrona&#x27;)
+                        .set(
+                            &#x27;point2&#x27;,
+                            &#x60;forma simultanea e sincrona (in base alla complessità della
+                        determinazione o su richiesta di altre amministrazioni)&#x60;
+                        )
+                })
+                .set(&#x27;paragraph4&#x27;, {
+                    type: &#x27;p&#x27;,
+                    value: &#x60;Per facilità di consultazione, il processo relativo a tale
+                    procedimento amministrativo può essere riassunto nel seguente
+                    diagramma:&#x60;,
+                    class: &#x27;text-margin&#x27;
+                })
+                .set(&#x27;image&#x27;, {
+                    type: &#x27;img&#x27;,
+                    value: &#x27;assets/img/informazioni_utili.svg&#x27;,
+                    class:
+                        &#x27;col-md-12 col-sm-12 col-xs-12 marginBottomTrue noDragGhost&#x27;
+                })
+                .set(&#x27;paragraph5&#x27;, {
+                    type: &#x27;p&#x27;,
+                    value: this.paragraph5,
+                    class: &#x27;text-margin&#x27;
+                })
+        });
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;col-md-8 col-sm-12 col-xs-12&quot;&gt;
+    &lt;app-page [page]&#x3D;&quot;page&quot;&gt;&lt;/app-page&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;col-md-4 col-sm-12 col-xs-12 no-padding&quot;&gt;
+    &lt;h3 class&#x3D;&quot;noMargin&quot;&gt;
+        &lt;span&gt;&lt;strong [translate]&#x3D;&quot;&#x27;INFORMATION.REGULATION&#x27;&quot;&gt;&lt;/strong&gt;&lt;/span&gt;
+    &lt;/h3&gt;
+    &lt;div&gt;
+        &lt;a
+            href&#x3D;&quot;https://www.gazzettaufficiale.it/eli/id/1990/08/18/090G0294/sg&quot;
+            target&#x3D;&quot;blank&quot;
+        &gt;
+            &lt;span class&#x3D;&quot;fa fa-gavel&quot;&gt;&lt;/span&gt;LEGGE 7 agosto 1990, n. 241
+        &lt;/a&gt;
+        &lt;br /&gt;
+        &lt;a
+            href&#x3D;&quot;https://www.gazzettaufficiale.it/eli/id/2016/07/13/16G00141/sg&quot;
+            target&#x3D;&quot;blank&quot;
+        &gt;
+            &lt;span class&#x3D;&quot;fa fa-gavel&quot;&gt;&lt;/span&gt;DECRETO LEGISLATIVO 30 giugno 2016,
+            n. 127
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;
+        &lt;span&gt;&lt;strong [translate]&#x3D;&quot;&#x27;INFORMATION.USEFUL_DOC&#x27;&quot;&gt;&lt;/strong&gt;&lt;/span&gt;
+    &lt;/h3&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;h3&gt;
+        &lt;span&gt;&lt;strong [translate]&#x3D;&quot;&#x27;INFORMATION.FORMS&#x27;&quot;&gt;&lt;/strong&gt;&lt;/span&gt;
+    &lt;/h3&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./relevant-information.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">h3.noMargin {
+    margin-top: 0;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="col-md-8 col-sm-12 col-xs-12">    <app-page [page]="page"></app-page></div><div class="col-md-4 col-sm-12 col-xs-12 no-padding">    <h3 class="noMargin">        <span><strong [translate]="\'INFORMATION.REGULATION\'"></strong></span>    </h3>    <div>        <a            href="https://www.gazzettaufficiale.it/eli/id/1990/08/18/090G0294/sg"            target="blank"        >            <span class="fa fa-gavel"></span>LEGGE 7 agosto 1990, n. 241        </a>        <br />        <a            href="https://www.gazzettaufficiale.it/eli/id/2016/07/13/16G00141/sg"            target="blank"        >            <span class="fa fa-gavel"></span>DECRETO LEGISLATIVO 30 giugno 2016,            n. 127        </a>    </div>    <h3>        <span><strong [translate]="\'INFORMATION.USEFUL_DOC\'"></strong></span>    </h3>    <div></div>    <h3>        <span><strong [translate]="\'INFORMATION.FORMS\'"></strong></span>    </h3>    <div></div></div></div>'
+    var COMPONENTS = [{'name': 'AccreditationComponent', 'selector': 'app-accreditation'},{'name': 'AccreditationTabComponent', 'selector': 'app-conference-accreditation'},{'name': 'AccreditationTableComponent', 'selector': 'app-accreditation-table'},{'name': 'AlertInfoComponent', 'selector': 'app-alert-info'},{'name': 'AlertWithLinkComponent', 'selector': 'app-form-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'ConferenceComponent', 'selector': ''},{'name': 'ConferenceModalBeforeCreateComponent', 'selector': 'app-conference-modal-before-create'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DefinitionComponent', 'selector': 'app-conference-definition'},{'name': 'DesktopComponent', 'selector': 'app-desktop'},{'name': 'DocumentationComponent', 'selector': 'app-conference-documentation'},{'name': 'EditModalFileComponent', 'selector': 'app-edit-modal-file'},{'name': 'EventsComponent', 'selector': 'app-conference-events'},{'name': 'EventsSearchComponent', 'selector': 'app-events-search'},{'name': 'EventsTableComponent', 'selector': 'app-events-table'},{'name': 'FilePanelComponent', 'selector': 'app-file-panel'},{'name': 'FileTableComponent', 'selector': 'app-file-table'},{'name': 'HeadComponent', 'selector': 'app-conference-head'},{'name': 'MainComponent', 'selector': 'main-root'},{'name': 'MainComponent', 'selector': 'app-dashboard-main'},{'name': 'MediaMainComponent', 'selector': ''},{'name': 'MediaSearchComponent', 'selector': 'search'},{'name': 'MediaTableComponent', 'selector': 'app-media-table'},{'name': 'NotAuthorizedComponent', 'selector': ''},{'name': 'NothingToDoComponent', 'selector': ''},{'name': 'PaleoComponent', 'selector': 'app-paleo'},{'name': 'ParticipantsComponent', 'selector': 'app-conference-participants'},{'name': 'ParticipantsTableComponent', 'selector': 'app-participants-table'},{'name': 'PecComponent', 'selector': 'app-conference-pec'},{'name': 'PecSearchComponent', 'selector': 'app-pec-search'},{'name': 'PendingAccreditationPageComponent', 'selector': 'app-pending-accreditation-page'},{'name': 'PendingListPageComponent', 'selector': ''},{'name': 'PrivateComponent', 'selector': ''},{'name': 'ProcedureComponent', 'selector': 'app-conference-procedure'},{'name': 'PublicComponent', 'selector': ''},{'name': 'RelevantInformationComponent', 'selector': 'app-relevant-information'},{'name': 'ResultTableComponent', 'selector': 'app-result-table'},{'name': 'SearchComponent', 'selector': ''},{'name': 'SearchComponent', 'selector': 'search'},{'name': 'SummaryComponent', 'selector': 'app-conference-summary'}];
+    var DIRECTIVES = [{'name': 'AuthConferenceDirective', 'selector': '[conferenceAuth]'},{'name': 'AuthDirective', 'selector': '[appAuth]'}];
+    var ACTUAL_COMPONENT = {'name': 'RelevantInformationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RelevantInformationComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

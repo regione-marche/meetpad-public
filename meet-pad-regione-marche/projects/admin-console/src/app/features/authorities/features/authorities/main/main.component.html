@@ -1,0 +1,26 @@
+<admin-authority-search
+    (onNewSearch)="startResearch($event)"
+></admin-authority-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="AUTHORITIES.PROCEDING.EDIT.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="
+                    'AUTHORITIES.PROCEDING.MANAGER.ACTIONS.NEW_MANAGER'
+                        | translate
+                "
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-authorities-list
+                [procedingPage]="false"
+                [searchQuery]="searchQuery"
+            ></admin-authorities-list>
+        </div>
+    </div>
+</eng-form-section>

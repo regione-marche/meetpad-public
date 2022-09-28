@@ -1,0 +1,16 @@
+<eng-accordion
+    id="el1"
+    [title]="'MEDIA_LIBRARY.SEARCH.TITLE' | translate"
+    [open]="true"
+    [initialOpen]="true"
+>
+    <search (onNewSearch)="onNewSearch($event)"></search>
+</eng-accordion>
+
+<app-media-table
+    [searchedValue]="searchValue"
+    [title]="'MEDIA_LIBRARY.TABLE.TITLE' | translate"
+    (downloadFile)="downloadFile($event)"
+    (navigateToConference)="navigateToConference($event)"
+>
+</app-media-table>

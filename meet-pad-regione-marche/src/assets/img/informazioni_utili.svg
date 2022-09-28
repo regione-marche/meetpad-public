@@ -1,0 +1,176 @@
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" width="1309.21" height="1539" viewBox="0 0 1309.21 1539">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+
+      .cls-2 {
+        font-size: 31.61px;
+      }
+
+      .cls-13, .cls-15, .cls-16, .cls-17, .cls-2, .cls-22, .cls-9 {
+        font-family: Helvetica-Bold, Helvetica;
+      }
+
+      .cls-13, .cls-15, .cls-17, .cls-22, .cls-3, .cls-6, .cls-9 {
+        font-weight: 700;
+      }
+
+      .cls-12, .cls-20, .cls-4, .cls-5 {
+        font-family: Helvetica, Helvetica;
+      }
+
+      .cls-5, .cls-7 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-14, .cls-15, .cls-6 {
+        fill: red;
+      }
+
+      .cls-13, .cls-8 {
+        fill: #70ad47;
+      }
+
+      .cls-9 {
+        font-size: 43.6px;
+      }
+
+      .cls-11, .cls-18, .cls-22, .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-10 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-11 {
+        stroke: #70ad47;
+      }
+
+      .cls-11, .cls-18, .cls-19 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-11, .cls-18 {
+        stroke-width: 3px;
+      }
+
+      .cls-12 {
+        font-size: 32.7px;
+      }
+
+      .cls-18 {
+        stroke: #ffc000;
+      }
+
+      .cls-19 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .cls-20 {
+        font-size: 28.73px;
+      }
+
+      .cls-21 {
+        fill: #ffc000;
+      }
+
+      .cls-22 {
+        font-size: 26px;
+      }
+
+      .cls-23 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-24 {
+        letter-spacing: -0.05em;
+      }
+
+      .cls-25 {
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </defs>
+  <title>INFO</title>
+  <g>
+    <g>
+      <g>
+        <rect class="cls-1" width="562.49" height="233.28" rx="41" ry="41"/>
+        <text class="cls-2" transform="translate(81.89 64.45)"><tspan class="cls-3">Conferenza semplificata o </tspan><tspan class="cls-3" x="-58.63" y="37.94">asincrona</tspan><tspan class="cls-4" x="90.72" y="37.94">: è indetta dall’A</tspan><tspan class="cls-5" x="315.67" y="37.94">P</tspan><tspan class="cls-4" x="336.2" y="37.94"> </tspan><tspan class="cls-6" x="344.98" y="37.94">entro 5 </tspan><tspan class="cls-6" x="-55.38" y="75.87">giorni</tspan><tspan class="cls-4" x="32.42" y="75.87" xml:space="preserve"> dall’inizio del procedimento o </tspan><tspan class="cls-4"><tspan x="-13.26" y="113.81">dalla ricezione della domanda</tspan></tspan></text>
+      </g>
+      <g>
+        <rect class="cls-1" x="746.72" y="2.18" width="562.49" height="233.28" rx="41" ry="41"/>
+        <text class="cls-2" transform="translate(838.4 52.64)"><tspan class="cls-3">Conferenza simultanea o </tspan><tspan class="cls-3" x="-1.54" y="37.94">sincrona</tspan><tspan class="cls-4" x="130.23" y="37.94">: è indetta dall’A</tspan><tspan class="cls-5" x="355.18" y="37.94">P</tspan><tspan class="cls-4" x="375.71" y="37.94"> </tspan><tspan class="cls-6" x="-21.13" y="75.87">direttamente </tspan><tspan class="cls-4" x="177.38" y="75.87">sulla base delle </tspan><tspan class="cls-4"><tspan x="-55.15" y="113.81">valutazioni e</tspan><tspan class="cls-7" x="120.6" y="113.81">f</tspan><tspan x="128.82" y="113.81">fettuate o su richiesta </tspan><tspan x="4.36" y="151.74">delle altre amministrazioni</tspan></tspan></text>
+      </g>
+      <rect class="cls-8" x="8.72" y="287.79" width="1288.5" height="119.91"/>
+      <text class="cls-9" transform="translate(67.67 360.56)">Cosa viene comunicato dall’A<tspan class="cls-10" x="617.89" y="0">P</tspan><tspan x="646.21" y="0" xml:space="preserve"> alle altre amministrazioni</tspan></text>
+      <g>
+        <rect class="cls-11" x="264.49" y="221.29" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="240.1 247.13 320.49 247.13 280.75 291.06 240.1 247.13"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="1014.48" y="226.74" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="990.1 252.58 1070.48 252.58 1030.74 296.51 990.1 252.58"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="162.02" y="402.25" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="137.64 428.09 218.02 428.09 178.28 472.01 137.64 428.09"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="478.15" y="402.25" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="453.76 428.09 534.15 428.09 494.41 472.01 453.76 428.09"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="794.28" y="402.25" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="769.89 428.09 850.28 428.09 810.54 472.01 769.89 428.09"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="1110.41" y="402.25" width="31.61" height="38.76"/>
+        <polygon class="cls-11" points="1086.03 428.09 1166.41 428.09 1126.67 472.01 1086.03 428.09"/>
+      </g>
+      <g>
+        <rect class="cls-11" x="26.71" y="470.38" width="301.96" height="458.93" rx="12" ry="12"/>
+        <text class="cls-12" transform="translate(80.22 511.76)">Oggetto della <tspan x="-19.07" y="39.24">determinazione;</tspan><tspan x="-26.34" y="78.49">Istanza e relativa </tspan><tspan x="-27.27" y="117.73">documentazione;</tspan><tspan x="-12.7" y="156.98">Credenziali per </tspan><tspan x="8.2" y="196.22">l’acceso alla </tspan><tspan x="-15.43" y="235.46">piattaforma ove </tspan><tspan x="31.83" y="274.71">risiede la </tspan><tspan x="-22.72" y="313.95">documentazione</tspan><tspan class="cls-13"><tspan x="88.18" y="392.44">1</tspan></tspan></text>
+      </g>
+      <g>
+        <rect class="cls-11" x="343.93" y="470.38" width="301.96" height="458.93" rx="12" ry="12"/>
+        <text class="cls-12" transform="translate(392.96 511.76)">Il termine<tspan class="cls-14" x="134.49" y="0"> </tspan><tspan class="cls-15" x="143.57" y="0">non </tspan><tspan class="cls-15"><tspan x="-9.13" y="39.24">superiore a 15 </tspan></tspan><tspan class="cls-16"><tspan class="cls-6" x="-41.84" y="78.49">giorni</tspan><tspan class="cls-4" x="48.99" y="78.49" xml:space="preserve"> entro il quale </tspan></tspan><tspan x="52.67" y="117.73">le altre </tspan><tspan x="-13.65" y="156.98">Amministrazioni </tspan><tspan x="-27.34" y="196.22">possono chiedere</tspan><tspan x="18.12" y="235.46">integrazioni</tspan><tspan class="cls-13"><tspan x="92.66" y="392.44">2</tspan></tspan></text>
+      </g>
+      <g>
+        <rect class="cls-11" x="660.06" y="470.38" width="301.96" height="458.93" rx="12" ry="12"/>
+        <text class="cls-12" transform="translate(709.09 511.76)">Il termine <tspan class="cls-15" x="143.57" y="0">non </tspan><tspan class="cls-15"><tspan x="-9.13" y="39.24">superiore a 15 </tspan></tspan><tspan class="cls-16"><tspan class="cls-6" x="-41.84" y="78.49">giorni</tspan><tspan class="cls-4" x="48.99" y="78.49" xml:space="preserve"> entro il quale </tspan></tspan><tspan x="52.67" y="117.73">le altre </tspan><tspan x="-13.64" y="156.98">Amministrazioni </tspan><tspan x="-30.07" y="196.22">devono rendere le </tspan><tspan x="50.85" y="235.46">proprie </tspan><tspan x="-4.59" y="274.71">determinazioni</tspan><tspan class="cls-13"><tspan x="92.66" y="392.44">3</tspan></tspan></text>
+      </g>
+      <g>
+        <rect class="cls-11" x="978.37" y="470.38" width="301.96" height="458.93" rx="12" ry="12"/>
+        <text class="cls-12" transform="translate(1074.6 511.76)">La data <tspan x="-45.45" y="39.24">dell’eventuale </tspan><tspan x="-87.24" y="78.49">riunione in modalità </tspan><tspan x="-34.52" y="117.73">sincrona, da </tspan><tspan x="-78.12" y="156.98">svolgersi </tspan><tspan class="cls-17" x="60.01" y="156.98">entro 10 </tspan><tspan class="cls-17"><tspan x="-88.1" y="196.22">giorni a partire dai </tspan><tspan x="-50.87" y="235.46">precedenti 45</tspan></tspan><tspan class="cls-13"><tspan x="45.46" y="392.44">4</tspan></tspan></text>
+      </g>
+      <text x="-95" y="-47"></text>
+    </g>
+    <g>
+      <rect class="cls-18" x="731.15" y="923.25" width="31.61" height="38.76"/>
+      <polygon class="cls-18" points="706.76 949.09 787.15 949.09 747.41 993.01 706.76 949.09"/>
+    </g>
+    <g>
+      <rect class="cls-18" x="859.28" y="924.25" width="31.61" height="38.76"/>
+      <polygon class="cls-18" points="834.89 950.09 915.28 950.09 875.54 994.01 834.89 950.09"/>
+    </g>
+    <g>
+      <rect class="cls-19" x="445.06" y="993.5" width="365.1" height="244.2" rx="12" ry="12"/>
+      <text class="cls-20" transform="translate(472.64 1036.15)">Il termine è fissato in <tspan class="cls-15" x="271.44" y="0">90 </tspan><tspan class="cls-16"><tspan class="cls-6" x="-2.38" y="34.48">giorni</tspan><tspan class="cls-4" x="77.41" y="34.48">, se sono coinvolti </tspan></tspan><tspan x="6.37" y="68.95">Enti preposti alla tutela </tspan><tspan x="-18.39" y="103.43">ambientale, paesaggistica, </tspan><tspan x="-14.4" y="137.9">beni culturali e tutela della </tspan><tspan x="55.87" y="172.38">salute pubblica </tspan></text>
+    </g>
+    <g>
+      <rect class="cls-19" x="838.89" y="993.5" width="365.1" height="244.2" rx="12" ry="12"/>
+      <text class="cls-20" transform="translate(881.44 1069.06)">In caso di VIA, gli Enti <tspan x="23.13" y="34.48">rendono le proprie </tspan><tspan x="-10.39" y="68.95">determinazioni entro </tspan><tspan class="cls-15" x="257.89" y="68.95">60 </tspan><tspan class="cls-15"><tspan x="0.7" y="103.43">giorni dal 90° giorno</tspan></tspan></text>
+    </g>
+    <rect class="cls-21" x="329" y="1317" width="977" height="222"/>
+    <text class="cls-22" transform="translate(390.88 1351.07)">Le<tspan class="cls-23" x="30.34" y="0"> </tspan><tspan x="36.61" y="0">Amministrazioni convolte esprimono assenso o dissenso motivato, </tspan><tspan x="58.03" y="31.2">entro i termini suddetti. </tspan><tspan class="cls-24" x="354.16" y="31.2">V</tspan><tspan x="370.08" y="31.2">ale il principio del silenzio-assenso.</tspan><tspan x="-28.4" y="93.6">Scaduti i termini previsti, l’A</tspan><tspan class="cls-25" x="321.24" y="93.6">P</tspan><tspan x="338.13" y="93.6"> </tspan><tspan class="cls-14" x="345.35" y="93.6">entro ulteriori 5 giorni</tspan><tspan x="615.48" y="93.6" xml:space="preserve"> adotta determinazione </tspan><tspan x="19.75" y="124.8">di conclusione positiva o negativa. In quest’ultimo caso è possibile </tspan><tspan x="195.3" y="156">presentare opposizione </tspan><tspan class="cls-14" x="494.36" y="156">entro 10 giorni</tspan></text>
+    <g>
+      <rect class="cls-18" x="809.15" y="1242.25" width="31.61" height="38.76"/>
+      <polygon class="cls-18" points="784.76 1268.09 865.15 1268.09 825.41 1312.01 784.76 1268.09"/>
+    </g>
+  </g>
+</svg>

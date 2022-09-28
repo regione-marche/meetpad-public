@@ -1,0 +1,54 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'CONFERENCE.WIZARD.VOTING.TABLE.EMPTY_MESSAGE' | translate }}.
+</div>
+
+<eng-modal
+    #confirmModal
+    class="smallModal"
+    [buttons]="modalButtons"
+    [title]="modalTitle"
+>
+    <p>{{ modalText | translate }}</p>
+</eng-modal>
+<eng-modal
+    #voteModal
+    [buttons]="voteModalButtons"
+    [title]="'CONFERENCE.WIZARD.VOTING.VOTE.MODAL.TITLE' | translate"
+>
+    <p class="text-center">
+        {{ selectedVoting ? selectedVoting.subject : '---' }}
+    </p>
+    <app-form
+        [groupFields]="groupFieldsForVote"
+        [formGrey]="false"
+        [footerButtons]="false"
+    ></app-form>
+
+    <ng-template #votingType let-model="item">
+        {{ ('CONFERENCE.WIZARD.VOTING.OPTIONS_ENUM.'+model.votingType.key) | translate}}
+    </ng-template>
+
+    <ng-template #votingState let-model="item">
+        {{ ('CONFERENCE.WIZARD.VOTING.OPTIONS_ENUM.'+model.votingState.key) | translate}}
+    </ng-template>
+
+</eng-modal>

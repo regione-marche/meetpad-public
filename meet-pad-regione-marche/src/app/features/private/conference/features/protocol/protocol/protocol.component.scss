@@ -1,0 +1,29 @@
+i.unexecuted {
+    color: red;
+}
+i.executed {
+    color: green;
+}
+.text-center {
+    text-align: center;
+}
+p.noMargin {
+    margin: 0;
+}
+
+
+
+
+.contentConfirmAccreditation {
+    margin-bottom: 80px;
+}
+
+.marginAccreditation {
+    margin-bottom: 40px;
+}
+
+:host /deep/ {
+    eng-form-section .panel {
+        margin-bottom: 0 !important;
+    }
+}

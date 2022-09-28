@@ -1,0 +1,24 @@
+<!-- [closeIcon]="false" -->
+
+<eng-modal
+    #modal
+    [buttons]="buttons"
+    (onClose)="onCancel($event)"
+    [title]="'CONFERENCE.WIZARD.MODAL_BEFORE_CREATE.TITLE' | translate"
+>
+    <eng-content-loader
+        class="beforeCreateModalLoading"
+        [loading]="loading | async"
+    ></eng-content-loader>
+
+    <app-form
+        [saveComplete]="saveComplete"
+        [saveError]="saveError"
+        [saveFn]="save"
+        [groupFields]="groupFields"
+        [footerButtons]="true"
+        [showCancelBtn]="false"
+        [formGrey]="false"
+    ></app-form>
+</eng-modal>
+

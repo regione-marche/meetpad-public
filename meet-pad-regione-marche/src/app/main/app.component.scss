@@ -1,3 +1,26 @@
-eng-accordion {
-    background: blue;
+#navigazionesecondaria,
+.box-menu-contestuale {
+    background-color: rgb(7, 67, 146);
+}
+
+img.img-meetpad-logo {
+    margin-top: 16px;
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+.img-logo {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 767px) {
+    .img-logo {
+        display: none;
+    }
+
+    #navigazionesecondaria {
+        display: none !important;
+    }
 }

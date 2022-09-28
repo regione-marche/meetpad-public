@@ -1,0 +1,35 @@
+<div class="row form-grey">
+    <div [ngClass]="{'col-xs-3': showAddressSkypeLink(), 'col-xs-4': !showAddressSkypeLink()}">
+        <span>
+            <strong [translate]="'CONFERENCE.HEAD.ID'"></strong>
+        </span>
+        <br/>
+        <span>{{conference.id}}</span>
+        <div *ngIf="conference.clonedFromId">
+            <span>
+                <strong [translate]="'CONFERENCE.HEAD.CLONEID'"></strong>
+            </span>
+            <br/>
+            <a [routerLink]="'/conference/' + conference.clonedFromId">{{conference.clonedFromId}}</a>
+        </div>
+    </div>
+    <div [ngClass]="{'col-xs-3': showAddressSkypeLink(), 'col-xs-4': !showAddressSkypeLink()}">
+        <span>
+            <strong [translate]="'CONFERENCE.HEAD.INSTANCE_REFERENCE'"></strong>
+        </span>
+        <br/>
+        <span>{{conference.procedure.applicant.requestReference}}</span>
+    </div>
+    <div [ngClass]="{'col-xs-3': showAddressSkypeLink(), 'col-xs-4': !showAddressSkypeLink()}">
+        <span>
+            <strong [translate]="'CONFERENCE.HEAD.STATE'"></strong>
+        </span>
+        <br/>
+        <span>{{conferenceState}}</span>
+        <eng-input-tooltip [tooltip]="tooltipState()"></eng-input-tooltip>
+    </div>
+    <div class="col-xs-3" *ngIf="showAddressSkypeLink()">
+        <em role="button"  class="fa fa-skype cursor-pointer" (click)="openAddressSkypeLink()" aria-label="openAddressSkypeLink"></em>
+        <span>&nbsp;<strong [translate]="'CONFERENCE.HEAD.SKYPE_CONFERENCE'"></strong></span>
+    </div>
+</div>

@@ -1,0 +1,2045 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>GetFileReturn</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/private/conference/features/documentation/main/documentation.component.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#file">file</a>
+                                </li>
+                                <li>
+                                        <a href="#model">model</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="file"></a>
+                                        <span class="name"><b>file</b><a href="#file"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>file:     <code>File</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>File</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="model"></a>
+                                        <span class="name"><b>model</b><a href="#model"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>model:     <code>PreliminaryFile | AdditionalFile | InterectionFile</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>PreliminaryFile | AdditionalFile | InterectionFile</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    ViewChild,
+    OnInit,
+    Output,
+    EventEmitter,
+    Input,
+    AfterViewInit,
+    ChangeDetectorRef
+} from &#x27;@angular/core&#x27;;
+import { FormControl, Validators } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+import { Observable, of, forkJoin, Subscriber } from &#x27;rxjs&#x27;;
+import { takeUntil, catchError, mergeMap, filter } from &#x27;rxjs/operators&#x27;;
+
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { UploadFile, FileSystemFileEntry } from &#x27;ngx-file-drop&#x27;;
+
+import {
+    ErrorLabelConstants,
+    ErrorMessage,
+    ActionItem,
+    ModalComponent,
+    TooltipModel
+} from &#x27;@eng-ds/ng-toolkit&#x27;;
+
+import { LoggerService, I18nService, ConfigService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import {
+    BaseFile,
+    ComboBox,
+    LoaderService,
+    SectionLoading,
+    AutoUnsubscribe,
+    FormFieldGroup,
+    FormButton,
+    FormField,
+    FileType,
+    FooterButtons,
+    WrapperPostPutData,
+    WrapperResponse,
+    SelectValueValidator,
+    FileService,
+    OnlyOffice
+} from &#x27;@common&#x27;;
+
+import { environment } from &#x27;@env/environment&#x27;;
+
+import {
+    UtilityService,
+    ActionForm,
+    ConferenceState,
+    StepName,
+    Mixin,
+    DocumentCategories
+} from &#x27;@app/core&#x27;;
+
+import {
+    Documentation,
+    AdditionalFile,
+    InterectionFile,
+    IndictionFile,
+    PreliminaryFile,
+    ConferenceStoreService,
+    ConferencePermissionsService,
+    Instance,
+    SharedFile,
+    FieldDateName
+} from &#x27;@features/private/conference/core&#x27;;
+
+import { customConfigurationConf } from &#x27;@config&#x27;;
+import { EditModalFileComponent, FilePanelComponent } from &#x27;../components&#x27;;
+import { FormStep } from &#x27;../../../core/mixins&#x27;;
+
+declare var $: any;
+
+interface GetFileReturn {
+    file: File;
+    model: PreliminaryFile | AdditionalFile | InterectionFile;
+}
+
+@Component({
+    selector: &#x27;app-conference-documentation&#x27;,
+    templateUrl: &#x27;./documentation.component.html&#x27;,
+    styleUrls: [&#x27;./documentation.component.scss&#x27;]
+})
+@Mixin([FormStep])
+export class DocumentationComponent extends AutoUnsubscribe
+    implements OnInit, AfterViewInit {
+    @ViewChild(&#x27;fileModal&#x27;) fileModal: EditModalFileComponent;
+    @ViewChild(&#x27;confirmModal&#x27;) confirmModal: ModalComponent;
+    @ViewChild(&#x27;confirmSharedModal&#x27;) confirmSharedModal: ModalComponent;
+    @ViewChild(&#x27;indictionModal&#x27;) indictionModal: ModalComponent;
+    @ViewChild(&#x27;additionalFiles&#x27;) additionalFiles: FilePanelComponent;
+    @ViewChild(&#x27;interectionFiles&#x27;) interectionFiles: FilePanelComponent;
+    @ViewChild(&#x27;preliminaryFiles&#x27;) preliminaryFiles: FilePanelComponent;
+    @ViewChild(&#x27;sharedFiles&#x27;) sharedFiles: FilePanelComponent;
+
+    @Input(&#x27;summary&#x27;) summary: boolean &#x3D; false;
+    @Output(&#x27;openConfirmModal&#x27;) openConfirmModal &#x3D; new EventEmitter&lt;
+        FooterButtons
+    &gt;();
+
+    switchControl: boolean &#x3D; false;
+
+    fileName: string &#x3D; &#x27;&#x27;;
+
+    saveSharedButtonText: string &#x3D;
+        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.BUTTON.SAVE&#x27;;
+
+    modalButtons: ActionItem[] &#x3D; [
+        new ActionItem(
+            &#x27;SEARCH.CONFIRM_DELETE_MODAL.CANCEL_BUTTON&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this.confirmModal.close();
+            },
+            &#x27;close&#x27;
+        ),
+        new ActionItem(
+            &#x27;SEARCH.CONFIRM_DELETE_MODAL.OK_BUTTON&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this._deleteFile();
+            },
+            &#x27;trash&#x27;
+        )
+    ];
+
+    modalUploadButtons: ActionItem[] &#x3D; [
+        new ActionItem(
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.MODAL.CANCEL&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this.confirmSharedModal.close();
+            },
+            &#x27;close&#x27;
+        ),
+        new ActionItem(
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.MODAL.UPLOAD&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this.loaderService.showLoading(
+                    SectionLoading.SHARED_FILE_MODAL
+                );
+                this.uploadSharedFile(this.sharedFile);
+            },
+            &#x27;upload&#x27;
+        )
+    ];
+
+    modalIndictionButtons: ActionItem[] &#x3D; [
+        new ActionItem(
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.CANCEL_BUTTON&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this.indictionModal.close();
+            },
+            &#x27;close&#x27;
+        ),
+        new ActionItem(
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.INDICTION_MODAL.OK_BUTTON&#x27;,
+            (action: ActionItem) &#x3D;&gt; {
+                this.loaderService.showLoading(
+                    SectionLoading.INDICTION_FILE_MODAL
+                );
+                this.uploadIndictionFile(this.indictionFile);
+            },
+            &#x27;check&#x27;
+        )
+    ];
+
+    idToDelete: string &#x3D; &#x27;&#x27;;
+    fileToDelete: BaseFile;
+
+    // loading: false;
+    tmpAdditionalFile: AdditionalFile &#x3D; new AdditionalFile();
+    tmpPreliminaryFile: PreliminaryFile &#x3D; new PreliminaryFile();
+    modalFile: BaseFile &#x3D; new BaseFile();
+    modalAdditionalFile: AdditionalFile &#x3D; new AdditionalFile();
+    modalInterectionFile: InterectionFile &#x3D; new InterectionFile();
+    modalIndictionFile: IndictionFile &#x3D; new IndictionFile();
+    modalSharedFile: SharedFile &#x3D; new SharedFile();
+    modalPreliminaryFile: PreliminaryFile &#x3D; new PreliminaryFile();
+
+    optionsCategory: Observable&lt;
+        ComboBox[]
+    &gt; &#x3D; this.utilityService.getCategoriesFile(this.conferenceType);
+    files: Array&lt;File&gt; &#x3D; [];
+
+    optionsCategoryForSharedDoc: Observable&lt;
+        ComboBox[]
+    &gt; &#x3D; this.utilityService.getCategoriesFileForDocumentType(
+        this.conferenceType,
+        FileType.SHARED
+    );
+
+    groupFieldsAdditional: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+    groupFieldsIndiction: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+    groupFieldsShared: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+    groupFieldsPreliminary: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+    groupFieldsForSwitch: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+
+    indictionFile: File;
+    sharedFile: File;
+    saveShared: (data: SharedFile) &#x3D;&gt; Observable&lt;WrapperPostPutData&gt;;
+    saveSharedComplete: (response: WrapperPostPutData) &#x3D;&gt; void;
+    saveSharedError: (error: ErrorMessage) &#x3D;&gt; void;
+    indictionBaseFile: IndictionFile &#x3D; new IndictionFile();
+
+    actionClicked: (action: ActionForm) &#x3D;&gt; Observable&lt;ActionForm&gt;;
+    editFile: (data: { file: BaseFile }) &#x3D;&gt; Observable&lt;BaseFile&gt;;
+    editFileComplete: (response: BaseFile) &#x3D;&gt; void;
+    editFileError: (error: ErrorMessage) &#x3D;&gt; void;
+
+    saveAdditionalUrl: (data: AdditionalFile) &#x3D;&gt; Observable&lt;WrapperPostPutData&gt;;
+    saveAdditionalUrlComplete: (response: WrapperPostPutData) &#x3D;&gt; void;
+    saveAdditionalUrlError: (error: ErrorMessage) &#x3D;&gt; void;
+    saveAdditionalUrlButtonText: string &#x3D;
+        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.BUTTON.SAVE&#x27;;
+
+    groupFields: Map&lt;string, FormFieldGroup&gt; &#x3D; new Map();
+    groupButtons: Map&lt;FooterButtons, FormButton&gt; &#x3D; new Map();
+
+    inventoryNumberLabel: string &#x3D; &#x27;&#x27;;
+    openPanel: string;
+
+    constructor(
+        private loggerService: LoggerService,
+        private route: ActivatedRoute,
+        private i18nService: I18nService,
+        private utilityService: UtilityService,
+        private fileService: FileService,
+        private loaderService: LoaderService,
+        private toastr: ToastrService,
+        private conferenceStoreService: ConferenceStoreService,
+        private changeDetectorRef: ChangeDetectorRef,
+        private conferencePermissionsService: ConferencePermissionsService,
+        private configService: ConfigService
+    ) {
+        super();
+
+        if (
+            environment.customConfigurationConf
+                .documentationInventoryNumberMpTitle
+        ) {
+            this.inventoryNumberLabel &#x3D; this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.INVENTORY_NUMBER&#x27;
+            );
+        } else {
+            this.inventoryNumberLabel &#x3D; this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.INVENTORY_SUAP_NUMBER&#x27;
+            );
+        }
+    }
+
+    ngOnInit(): void {
+        this._initPermission();
+        this._createAdditionalInputs();
+        this._createIndictionInputs();
+        this._createSharedInputs();
+        this._createPreliminaryInputs();
+        this._createSwitchFilterInput();
+        this._initCallbacks();
+        if (!this.summary) {
+            this.conferenceStoreService.hidePageLoader();
+        }
+    }
+    getPreliminaryTitle() {
+        if (customConfigurationConf.documentationPreliminaryTitle) {
+            return &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.TITLE&#x27;;
+        } else {
+            return &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.TITLE_SUAP&#x27;;
+        }
+    }
+
+    ngAfterViewInit(): void {
+        this._setAccordionListener();
+        this._checkFragment();
+    }
+
+    get menuItems(): string[] {
+        return [
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TITLE&#x27;,
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INTERACTIONS.TITLE&#x27;,
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.TITLE&#x27;,
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.TITLE&#x27;,
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.TITLE&#x27;
+        ];
+    }
+
+    // TODO REMOVE
+    get loadingFooterButtons(): Observable&lt;boolean&gt; {
+        return this.loaderService.getLoading$(
+            SectionLoading.CONFERENCE_FOOTER_BUTTON
+        );
+    }
+
+    get instance(): Instance {
+        return this.conferenceStoreService.conference.definition.instance;
+    }
+
+    get model(): Documentation {
+        return this.conferenceStoreService.conference.documentation;
+    }
+
+    get conferenceId(): string {
+        return this.conferenceStoreService.conference.id;
+    }
+
+    get conferenceType(): string {
+        return this.conferenceStoreService.conference.definition.instance
+            .conferenceType.key;
+    }
+
+    get conferenceState(): ConferenceState {
+        return this.conferenceStoreService.conference.state
+            .key as ConferenceState;
+    }
+
+    get participants(): ComboBox[] {
+        return this.conferenceStoreService.conference.getParticipantsComboBox();
+    }
+
+    get action(): ActionForm {
+        return this.conferenceStoreService.getStepActionForm(
+            StepName.DOCUMENTATION
+        );
+    }
+
+    get loading(): Observable&lt;boolean&gt; {
+        return this.fileService.loading;
+    }
+
+    get loadingForShared(): Observable&lt;boolean&gt; {
+        return this.fileService.loadingForShared;
+    }
+
+    get endIntegrationDate(): string {
+        return this._getDate(FieldDateName.END_INTEGRATION_DATE);
+    }
+
+    get endOpinionDate(): string {
+        return this._getDate(FieldDateName.END_OPINION_DATE);
+    }
+
+    get firstSessionDate(): string {
+        return this._getDate(FieldDateName.FIRST_SESSION_DATE);
+    }
+
+    get expirationDate(): string {
+        return this._getDate(FieldDateName.EXPIRATION_DATE);
+    }
+
+    get additional() {
+        if (this.model) {
+            return this.model.additional;
+        }
+        return [];
+    }
+
+    get interection() {
+        if (this.model) {
+            return this.model.interection;
+        }
+        return [];
+    }
+
+    get shared() {
+        if (this.model) {
+            return this.model.shared;
+        }
+        return [];
+    }
+
+    get preliminary() {
+        if (this.model) {
+            return this.model.preliminary;
+        }
+        return [];
+    }
+
+    get indiction() {
+        if (this.model) {
+            return this.model.indiction;
+        }
+        return [];
+    }
+
+    private _getDate(fieldDateName: FieldDateName): string {
+        let returnDate &#x3D; (this.inventoryNumberLabel &#x3D; this.i18nService.translate(
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.EMPTY_DATE&#x27;
+        ));
+        if (
+            this.instance[fieldDateName] &amp;&amp;
+            this.instance[fieldDateName].toString() !&#x3D;&#x3D; &#x27;&#x27;
+        ) {
+            returnDate &#x3D; this.instance[fieldDateName].toString();
+        }
+        return returnDate;
+    }
+
+    setFooterButtons(buttons: Map&lt;FooterButtons, FormButton&gt;): void {
+        this.groupButtons &#x3D; new Map&lt;FooterButtons, FormButton&gt;();
+        if (buttons !&#x3D; null) {
+            buttons.forEach((value, key) &#x3D;&gt; {
+                value.onClick &#x3D; this[key].bind(this);
+            });
+        }
+        setTimeout(() &#x3D;&gt; {
+            this.groupButtons &#x3D; buttons;
+        }, 0);
+    }
+
+    getFooterTextButton(): string {
+        return this.action &#x3D;&#x3D;&#x3D; ActionForm.CREATE
+            ? &#x27;BUTTON.SAVE_NEXT&#x27;
+            : &#x27;BUTTON.SAVE&#x27;;
+    }
+
+    onNext(): void {
+        return this.conferenceStoreService.submitDocumentation();
+    }
+
+    onIndiction(): void {
+        this.conferenceStoreService.onIndiction();
+    }
+
+    showIndictionPanel(): boolean {
+        return this.conferenceState !&#x3D;&#x3D; ConferenceState.COMPILING;
+    }
+
+    showFooterBtn(): boolean {
+        return this.action &#x3D;&#x3D;&#x3D; ActionForm.CREATE;
+    }
+
+    isReadonly(): boolean {
+        return this.action &#x3D;&#x3D;&#x3D; ActionForm.READONLY;
+    }
+
+    uploadIndictionFile(file: File): void {
+        const newFile &#x3D; new IndictionFile({
+            name: file.name,
+            visibility: [],
+            // tmp workaround
+            protocolNumber: this.groupFieldsIndiction
+                .get(&#x27;indictionPanel&#x27;)
+                .fields.get(&#x27;protocolNumber&#x27;).control.value,
+            protocolDate: this.groupFieldsIndiction
+                .get(&#x27;indictionPanel&#x27;)
+                .fields.get(&#x27;protocolDate&#x27;).control.value,
+            inventoryNumber: this.groupFieldsIndiction
+                .get(&#x27;indictionPanel&#x27;)
+                .fields.get(&#x27;inventoryNumber&#x27;).control.value
+        });
+        this.fileService
+            .upload(this.conferenceId, newFile, file, newFile.type)
+            .pipe(
+                takeUntil(this.destroy$),
+                catchError(() &#x3D;&gt; {
+                    this.loaderService.hideLoading(
+                        SectionLoading.INDICTION_FILE_MODAL
+                    );
+                    this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                    this.toastr.error(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+                        )
+                    );
+                    return of();
+                })
+            )
+            .subscribe((res: BaseFile) &#x3D;&gt; {
+                this.model.indiction.push(new IndictionFile(res));
+                this.loaderService.hideLoading(
+                    SectionLoading.INDICTION_FILE_MODAL
+                );
+                this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                this.toastr.info(
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TEXT&#x27;
+                    ),
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TITLE&#x27;
+                    )
+                );
+                this.onIndiction();
+            });
+    }
+
+    uploadSharedFile(file: File): void {
+        const newFile &#x3D; new SharedFile({
+            name: file.name
+        });
+        const formValue &#x3D; this.groupFieldsShared.get(&#x27;sharedPanel&#x27;).fields;
+
+        if (formValue.get(&#x27;visibility&#x27;).control.value.value) {
+            newFile.setVisibility([]);
+        } else {
+            newFile.setVisibility(formValue.get(&#x27;visibility&#x27;).control.value);
+        }
+
+        this.fileService
+            .upload(this.conferenceId, newFile, file, newFile.type)
+            .pipe(
+                takeUntil(this.destroy$),
+                catchError(() &#x3D;&gt; {
+                    this.loaderService.hideLoading(
+                        SectionLoading.SHARED_FILE_MODAL
+                    );
+                    this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                    this.toastr.error(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+                        )
+                    );
+                    this.confirmSharedModal.close();
+                    return of();
+                })
+            )
+            .subscribe((res: BaseFile) &#x3D;&gt; {
+                this.model.push(new SharedFile(res));
+                this.confirmSharedModal.close();
+                this.loaderService.hideLoading(
+                    SectionLoading.SHARED_FILE_MODAL
+                );
+                this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+            });
+    }
+
+    // evento emesso dalla tabella
+    // crea un clone e passa il corrispondente file
+    // della riga selezionata
+    openEditFile(
+        file:
+            | PreliminaryFile
+            | AdditionalFile
+            | InterectionFile
+            | IndictionFile
+            | SharedFile
+    ): void {
+        this.modalFile &#x3D; file;
+        this.fileName &#x3D; file.name;
+        switch (this.modalFile.type) {
+            case FileType.ADDITIONAL:
+                this.modalAdditionalFile.visibility &#x3D; (file as AdditionalFile).visibility;
+                this.modalAdditionalFile.category &#x3D; (file as AdditionalFile).category;
+                this.modalAdditionalFile.cityReference &#x3D; file.cityReference;
+                this._createAdditionalModalGroupsFields();
+                break;
+            case FileType.PRELIMINARY:
+                this.modalPreliminaryFile.visibility &#x3D; file.visibility;
+                this.modalPreliminaryFile.category &#x3D; (file as PreliminaryFile).category;
+                this.modalPreliminaryFile.cityReference &#x3D; file.cityReference;
+                this._createPreliminaryModalGroupsFields();
+                break;
+            case FileType.INTERETION:
+                this.modalInterectionFile.visibility &#x3D; file.visibility;
+                this._createInterationModalGroupsFields();
+                break;
+            case FileType.INDICTION:
+                this.modalIndictionFile.protocolDate &#x3D; (file as IndictionFile).protocolDate;
+                this.modalIndictionFile.protocolNumber &#x3D; (file as IndictionFile).protocolNumber;
+                this.modalIndictionFile.visibility &#x3D; (file as IndictionFile).visibility;
+                this.modalIndictionFile.inventoryNumber &#x3D; (file as IndictionFile).inventoryNumber;
+                this._createIndictionModalGroupsFields();
+                break;
+            case FileType.SHARED:
+                this.modalSharedFile.name &#x3D; (file as SharedFile).name;
+                this.modalSharedFile.visibility &#x3D; (file as SharedFile).visibility;
+                this.modalSharedFile.url &#x3D; (file as SharedFile).url;
+                this._createSharedModalGroupsFields();
+                break;
+        }
+        this.fileModal.openModal();
+    }
+
+    // open confirm modal
+    deleteFile(file: BaseFile): void {
+        this.idToDelete &#x3D; file.id;
+        this.fileToDelete &#x3D; file;
+        this.confirmModal.open();
+    }
+
+    downloadFile(file: BaseFile): void {
+        // window.open(item.url, &#x27;_blank&#x27;).focus();
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+        this.fileService
+            .download(file)
+            .pipe(
+                catchError(_ &#x3D;&gt; {
+                    this.toastr.error(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.FILE_DOWNLOAD_ERROR.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.FILE_DOWNLOAD_ERROR.TITLE&#x27;
+                        )
+                    );
+                    return of(null);
+                })
+            )
+            .subscribe(_ &#x3D;&gt; {
+                this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+            });
+    }
+
+    openEditCloud(file: BaseFile): void {
+        const token &#x3D; file.url.substring(file.url.lastIndexOf(&#x27;/&#x27;) + 1);
+        this.fileService
+            .getOOData(token)
+            .pipe(
+                takeUntil(this.destroy$),
+                catchError(() &#x3D;&gt; {
+                    this.toastr.error(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.OO_ERROR.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.OO_ERROR.TITLE&#x27;
+                        )
+                    );
+                    return of();
+                })
+            )
+            .subscribe((data: OnlyOffice) &#x3D;&gt; {
+                // const _data &#x3D; {
+                //     document: {
+                //         fileType: &#x27;docx&#x27;,
+                //         title: &#x27;1.docx&#x27;,
+                //         url:
+                //             &#x27;http://10.101.11.135:8080/scritturacondivisa/1.docx&#x27;
+                //     },
+                //     permissions: {
+                //         edit: &#x27;true&#x27;,
+                //         download: &#x27;true&#x27;,
+                //         review: &#x27;edit&#x27;
+                //     },
+                //     documentType: &#x27;text&#x27;,
+                //     editorConfig: {
+                //         callbackUrl: &#x27;https://example.com/url-to-callback.ashx&#x27;
+                //     }
+                // };
+                if (data) {
+                    window.open(
+                        &#x27;./oo.html?data&#x3D;&#x27; + btoa(JSON.stringify(data)),
+                        &#x27;_blank&#x27;
+                    );
+                }
+            });
+    }
+
+    openIndictionModal(file: File) {
+        this.indictionFile &#x3D; file;
+        this.indictionModal.open();
+    }
+
+    openSharedModal(file: File) {
+        this.sharedFile &#x3D; file;
+        this.confirmSharedModal.open();
+    }
+
+    closeIndictionModal() {
+        this.indictionModal.close();
+    }
+
+    private _checkFragment(): void {
+        this.route.fragment
+            .pipe(
+                filter(
+                    fragment &#x3D;&gt;
+                        !!fragment &amp;&amp; fragment &#x3D;&#x3D;&#x3D; &#x27;panelGroupDocumentation&#x27;
+                ),
+                takeUntil(this.destroy$)
+            )
+            .subscribe(() &#x3D;&gt; {
+                this._openAccordion(&#x27;collapseDocumentation-4&#x27;);
+            });
+    }
+
+    private _initPermission(): void {
+        this.conferencePermissionsService.apply(
+            this,
+            this.appSections.CONFERENCE_STEP,
+            this.conferenceStoreService
+        );
+    }
+
+    private _complete(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.COMPLETE
+        );
+    }
+
+    private _authorize(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.AUTHORIZE
+        );
+    }
+
+    private _unauthorize(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.UNAUTHORIZE
+        );
+    }
+
+    private _onNext(): void {
+        return this.onNext();
+    }
+
+    postSharedFile(): Observable&lt;any&gt; {
+        const formValue &#x3D; this.groupFieldsShared.get(&#x27;sharedPanel&#x27;).fields;
+        const dataFile: any &#x3D; {
+            model: formValue.get(&#x27;model&#x27;)
+                ? formValue.get(&#x27;model&#x27;).control.value
+                : null,
+
+            category:
+                formValue.get(&#x27;mode&#x27;).control.value.key &#x3D;&#x3D;&#x3D; &#x27;dashboard&#x27;
+                    ? environment.defaultComboBox.conference.documentation
+                          .sharedDashboardCategory
+                    : undefined
+        };
+        if (formValue.get(&#x27;mode&#x27;).control.value.key &#x3D;&#x3D;&#x3D; &#x27;dashboard&#x27;) {
+            dataFile.name &#x3D; formValue.get(&#x27;mode&#x27;).control.value.value;
+        } else {
+            dataFile.name &#x3D; formValue.get(&#x27;model&#x27;)
+                ? formValue.get(&#x27;model&#x27;).control.value.value
+                : formValue.get(&#x27;name&#x27;).control.value;
+        }
+        const newFile &#x3D; new SharedFile(dataFile);
+
+        if (formValue.get(&#x27;visibility&#x27;).control.value.value) {
+            newFile.setVisibility([]);
+        } else {
+            newFile.setVisibility(formValue.get(&#x27;visibility&#x27;).control.value);
+        }
+
+        return this.fileService.postModelUrlFile(
+            this.conferenceId,
+            newFile,
+            newFile.type
+        );
+    }
+
+    private _postSharedCompleted(response: WrapperResponse&lt;any&gt;): void {
+        const addResponse &#x3D; response as any;
+
+        if (addResponse.id) {
+            this.model.push(new SharedFile(addResponse));
+            this.sharedFiles.hideForm();
+            this.toastr.info(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TEXT&#x27;
+                ),
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TITLE&#x27;
+                )
+            );
+        }
+        if (response.code) {
+            if (response.code &#x3D;&#x3D;&#x3D; &#x27;404&#x27;) {
+                this.toastr.error(
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+                    ),
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+                    )
+                );
+            }
+        }
+    }
+
+    private _postSharedError(error: ErrorMessage): void {
+        this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+        this.toastr.error(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+            )
+        );
+    }
+
+    postAdditionalUrlFile(): Observable&lt;any&gt; {
+        const formValue &#x3D; this.groupFieldsAdditional.get(&#x27;additionalPanel&#x27;)
+            .fields;
+        const newFile &#x3D; new AdditionalFile({
+            url: formValue.get(&#x27;url&#x27;)
+                ? formValue.get(&#x27;url&#x27;).control.value
+                : null,
+            name: formValue.get(&#x27;name&#x27;).control.value,
+            cityReference: formValue.get(&#x27;cityReference&#x27;)
+                ? formValue.get(&#x27;cityReference&#x27;).control.value
+                : null
+        });
+
+        newFile.setCategory(formValue.get(&#x27;category&#x27;).control.value);
+
+        return this.fileService.postModelUrlFile(
+            this.conferenceId,
+            newFile,
+            newFile.type
+        );
+    }
+
+    private _postAdditionalUrlCompleted(response: WrapperResponse&lt;any&gt;): void {
+        const addResponse &#x3D; response as any;
+
+        if (addResponse.id) {
+            this.model.push(new AdditionalFile(addResponse));
+            this.toastr.info(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TEXT&#x27;
+                ),
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TITLE&#x27;
+                )
+            );
+        }
+        if (response.code) {
+            if (response.code &#x3D;&#x3D;&#x3D; &#x27;404&#x27;) {
+                this.toastr.error(
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+                    ),
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+                    )
+                );
+            }
+        }
+    }
+
+    private _postAdditionalUrlError(error: ErrorMessage): void {
+        this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+        this.toastr.error(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+            )
+        );
+    }
+
+    private _initCallbacks(): void {
+        this.editFile &#x3D; this._editFile.bind(this);
+        this.editFileComplete &#x3D; this._editFileComplete.bind(this);
+        this.editFileError &#x3D; this._editFileError.bind(this);
+
+        this.saveSharedComplete &#x3D; this._postSharedCompleted.bind(this);
+        this.saveSharedError &#x3D; this._postSharedError.bind(this);
+
+        this.saveAdditionalUrlComplete &#x3D; this._postAdditionalUrlCompleted.bind(
+            this
+        );
+        this.saveAdditionalUrlError &#x3D; this._postAdditionalUrlError.bind(this);
+    }
+
+    private _editFileComplete(response: BaseFile): void {
+        this.fileModal.close();
+        this._editFileCompleted(response);
+    }
+
+    private _editFile(data: { file: BaseFile }): Observable&lt;BaseFile&gt; {
+        const { file } &#x3D; data;
+
+        this.modalFile &#x3D; Object.assign(this.modalFile, file);
+
+        this.loggerService.log(&#x27;_saveFile&#x27;, this.modalFile);
+
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+        return this.fileService
+            .edit(this.modalFile, this.modalFile.type)
+            .pipe(takeUntil(this.destroy$));
+    }
+
+    private _editFileCompleted(file: BaseFile): void {
+        this.model.update(this.modalFile);
+        this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+        this.toastr.info(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TITLE&#x27;
+            )
+        );
+    }
+
+    private _editFileError(error: ErrorMessage): void {
+        this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+        this.toastr.error(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+            )
+        );
+    }
+
+    private _createSwitchFilterInput(): void {
+        this.groupFieldsForSwitch &#x3D; new Map();
+        this.groupFieldsForSwitch.set(&#x27;switchPanel&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map().set(&#x27;switchDocumentVisibility&#x27;, {
+                type: &#x27;switch&#x27;,
+                label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SWITCH_LABEL&#x27;,
+                control: new FormControl({
+                    value: false,
+                    disabled: false
+                }),
+                valueChange: (val: boolean): void &#x3D;&gt; {
+                    this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+                    this.conferenceStoreService
+                        .updateDocuments(this.conferenceId, val)
+                        .subscribe(() &#x3D;&gt; {
+                            this.loaderService.hideLoading(
+                                SectionLoading.ALL_CONTENT,
+                                300
+                            );
+                        });
+                },
+                size: &#x27;12|6|6&#x27;
+            })
+        });
+    }
+
+    private _createAdditionalModalGroupsFields(): void {
+        // work arround for angular change detection
+        this.groupFields &#x3D; new Map();
+        this.groupFields.set(&#x27;file&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;category&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.CATEGORY&#x27;,
+                    control: new FormControl(
+                        {
+                            value: this.modalAdditionalFile.category,
+                            disabled: this.fileModal.disabled
+                        },
+                        [Validators.required]
+                    ),
+                    size: &#x27;12|12|12&#x27;,
+                    options: this.optionsCategory,
+                    errorLabels: [ErrorLabelConstants.REQUIRED],
+                    valueChange: (value: ComboBox) &#x3D;&gt; {
+                        this.groupFields &#x3D; this._setCityReferenceFieldsOnModal(
+                            this.groupFields,
+                            value,
+                            &#x27;file&#x27;,
+                            &#x27;_setCityReferenceFieldsOnAdditionalModal&#x27;
+                        );
+                    }
+                })
+                .set(&#x27;visibility&#x27;, {
+                    type: &#x27;select-two&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.PARTICIPANT&#x27;,
+                    control: new FormControl({
+                        value: this.modalAdditionalFile.visibility,
+                        disabled: this.fileModal.disabled
+                    }),
+                    tooltip:
+                        !this.isReadonly() &amp;&amp;
+                        new TooltipModel(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.CONTENT&#x27;,
+                            undefined,
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.TITLE&#x27;
+                        ),
+                    placeholder: &#x27;COMMON.ALL&#x27;,
+                    size: &#x27;12|12|12&#x27;,
+                    options: of(this.participants)
+                })
+        });
+        this.groupFields &#x3D; this._setCityReferenceFieldsOnModal(
+            this.groupFields,
+            this.groupFields.get(&#x27;file&#x27;).fields.get(&#x27;category&#x27;).control.value,
+            &#x27;file&#x27;,
+            &#x27;_setCityReferenceFieldsOnAdditionalModal&#x27;
+        );
+    }
+
+    private _createInterationModalGroupsFields(): void {
+        // work arround for angular change detection
+        this.groupFields &#x3D; new Map();
+        this.groupFields.set(&#x27;file&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map().set(&#x27;visibility&#x27;, {
+                type: &#x27;select-two&#x27;,
+                label:
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.PARTICIPANT&#x27;,
+                control: new FormControl({
+                    value: this.modalInterectionFile.visibility,
+                    disabled: true
+                }),
+                tooltip:
+                    !this.isReadonly() &amp;&amp;
+                    new TooltipModel(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.CONTENT&#x27;,
+                        undefined,
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.TITLE&#x27;
+                    ),
+                placeholder: &#x27;COMMON.ALL&#x27;,
+                size: &#x27;12|12|12&#x27;
+            })
+        });
+    }
+
+    private _createIndictionModalGroupsFields(): void {
+        let inventoryNumber &#x3D; &#x27;&#x27;;
+        if (this.modalIndictionFile.inventoryNumber !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+            inventoryNumber &#x3D; this.modalIndictionFile.inventoryNumber;
+        }
+        this.groupFields &#x3D; new Map();
+        this.groupFields.set(&#x27;file&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;protocolNumber&#x27;, {
+                    type: &#x27;text&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.PROTOCOL_NUMBER&#x27;,
+                    control: new FormControl({
+                        value: this.modalIndictionFile.protocolNumber,
+                        disabled: this.fileModal.disabled
+                    }),
+                    size: &#x27;12|6|6&#x27;,
+                    errorLabels: [ErrorLabelConstants.REQUIRED]
+                })
+                .set(&#x27;protocolDate&#x27;, {
+                    type: &#x27;date&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.PROTOCOL_DATE&#x27;,
+                    control: new FormControl({
+                        value: this.modalIndictionFile.protocolDate,
+                        disabled: this.fileModal.disabled
+                    }),
+                    size: &#x27;12|6|6&#x27;,
+                    errorLabels: [ErrorLabelConstants.REQUIRED]
+                })
+                .set(&#x27;inventoryNumber&#x27;, {
+                    type: &#x27;text&#x27;,
+                    label: this.inventoryNumberLabel,
+                    control: new FormControl({
+                        value: inventoryNumber,
+                        disabled: this.fileModal.disabled
+                    }),
+                    size: &#x27;12|6|6&#x27;
+                })
+                .set(&#x27;visibility&#x27;, {
+                    type: &#x27;select-two&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.PARTICIPANT&#x27;,
+                    control: new FormControl({
+                        value: this.modalIndictionFile.visibility,
+                        disabled: this.fileModal.disabled
+                    }),
+                    tooltip:
+                        !this.isReadonly() &amp;&amp;
+                        new TooltipModel(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.CONTENT&#x27;,
+                            undefined,
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.MODAL.PARTICIPANT.TOOLTIP.TITLE&#x27;
+                        ),
+                    placeholder: &#x27;COMMON.ALL&#x27;,
+                    size: &#x27;12|12|12&#x27;,
+                    options: of(this.participants)
+                })
+        });
+    }
+
+    private _createPreliminaryModalGroupsFields(): void {
+        // work arround for angular change detection
+        this.groupFields &#x3D; new Map();
+        this.groupFields.set(&#x27;file&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;category&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.FILE.CATEGORY&#x27;,
+                    control: new FormControl(
+                        {
+                            value: this.modalPreliminaryFile.category,
+                            disabled: this.fileModal.disabled
+                        },
+                        [Validators.required]
+                    ),
+                    size: &#x27;12|12|12&#x27;,
+                    options: this.optionsCategory,
+                    errorLabels: [ErrorLabelConstants.REQUIRED],
+                    valueChange: (value: ComboBox) &#x3D;&gt; {
+                        this.groupFields &#x3D; this._setCityReferenceFieldsOnModal(
+                            this.groupFields,
+                            value,
+                            &#x27;file&#x27;,
+                            &#x27;_setCityReferenceFieldsOnPreliminaryModal&#x27;
+                        );
+                    }
+                })
+
+                .set(&#x27;visibility&#x27;, {
+                    type: &#x27;select-two&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.FILE.PARTICIPANT&#x27;,
+                    control: new FormControl({
+                        value: this.modalPreliminaryFile.visibility,
+                        disabled: this.fileModal.disabled
+                    }),
+                    tooltip:
+                        !this.isReadonly() &amp;&amp;
+                        new TooltipModel(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.MODAL.PARTICIPANT.TOOLTIP.CONTENT&#x27;,
+                            undefined,
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.MODAL.PARTICIPANT.TOOLTIP.TITLE&#x27;
+                        ),
+                    placeholder: &#x27;COMMON.ALL&#x27;,
+                    size: &#x27;12|12|12&#x27;,
+                    options: of(this.participants)
+                })
+        });
+
+        this.groupFields &#x3D; this._setCityReferenceFieldsOnModal(
+            this.groupFields,
+            this.groupFields.get(&#x27;file&#x27;).fields.get(&#x27;category&#x27;).control.value,
+            &#x27;file&#x27;,
+            &#x27;_setCityReferenceFieldsOnPreliminaryModal&#x27;
+        );
+    }
+
+    private _createAdditionalInputs(): void {
+        const mode: ComboBox&lt;string&gt;[] &#x3D; [
+            { key: &#x27;file&#x27;, value: &#x27;File&#x27; },
+            { key: &#x27;url&#x27;, value: &#x27;URL&#x27; }
+        ];
+
+        const uploadMode &#x3D; new Map()
+            .set(&#x27;file&#x27;, {
+                type: &#x27;drop-file&#x27;,
+                onMultipleUpload: this._uploadMultipleFiles.bind(
+                    this,
+                    AdditionalFile,
+                    this.additionalFiles,
+                    this.model
+                )
+            })
+            .set(&#x27;url&#x27;, {
+                type: &#x27;text&#x27;,
+                label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.URL&#x27;,
+                control: new FormControl(this.modalSharedFile.url, [
+                    Validators.required,
+                    Validators.pattern(
+                        &#x27;^(http://www.|https://www.|http://|https://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$&#x27;
+                    )
+                ]),
+                errorLabels: [
+                    ErrorLabelConstants.REQUIRED,
+                    ErrorLabelConstants.REGEX(&#x27;ERROR.REGEX&#x27;)
+                ],
+                size: &#x27;12|6|6&#x27;
+            })
+            .set(&#x27;name&#x27;, {
+                type: &#x27;text&#x27;,
+                label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.NAME&#x27;,
+                control: new FormControl(this.modalSharedFile.name, [
+                    Validators.required
+                ]),
+                size: &#x27;12|6|6&#x27;
+            });
+
+        this.groupFieldsAdditional.set(&#x27;additionalPanel&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;mode&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.MODE&#x27;,
+                    size: &#x27;12|6|6&#x27;,
+                    options: of(mode),
+                    tooltip: new TooltipModel(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TOOLTIP.MODE.TEXT&#x27;,
+                        undefined,
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TOOLTIP.MODE.TITLE&#x27;
+                    ),
+                    control: new FormControl(),
+                    valueChange: (value: ComboBox) &#x3D;&gt; {
+                        if (value.key &#x3D;&#x3D;&#x3D; &#x27;url&#x27;) {
+                            this.groupFieldsAdditional
+                                .get(&#x27;additionalPanel&#x27;)
+                                .fields.set(&#x27;name&#x27;, uploadMode.get(&#x27;name&#x27;));
+                        } else {
+                            this.groupFieldsAdditional
+                                .get(&#x27;additionalPanel&#x27;)
+                                .fields.delete(&#x27;name&#x27;);
+                        }
+                        mode.forEach((_value: ComboBox) &#x3D;&gt; {
+                            if (value.key !&#x3D;&#x3D; _value.key) {
+                                this.groupFieldsAdditional
+                                    .get(&#x27;additionalPanel&#x27;)
+                                    .fields.delete(_value.key);
+                            }
+                        });
+                        if (value.key !&#x3D;&#x3D; &#x27;file&#x27;) {
+                            this.saveAdditionalUrl &#x3D; this.postAdditionalUrlFile.bind(
+                                this
+                            );
+                        } else {
+                            this.saveAdditionalUrl &#x3D; null;
+                        }
+
+                        this.groupFieldsAdditional
+                            .get(&#x27;additionalPanel&#x27;)
+                            .fields.set(value.key, uploadMode.get(value.key));
+                        this.groupFieldsAdditional &#x3D; new Map(
+                            this.groupFieldsAdditional
+                        );
+                    }
+                })
+                .set(&#x27;category&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.CATEGORY&#x27;,
+                    control: new FormControl(this.tmpAdditionalFile.category, [
+                        Validators.required
+                    ]),
+                    options: this.optionsCategory,
+                    errorLabels: [ErrorLabelConstants.REQUIRED],
+                    size: &#x27;12|6|6&#x27;,
+                    valueChange: (value: ComboBox&lt;DocumentCategories&gt;) &#x3D;&gt; {
+                        this.groupFieldsAdditional &#x3D; this._setCityReferenceFields(
+                            this.groupFieldsAdditional,
+                            value,
+                            &#x27;additionalPanel&#x27;
+                        );
+                    }
+                })
+                .set(&#x27;file&#x27;, {
+                    type: &#x27;drop-file&#x27;,
+                    onMultipleUpload: this._uploadMultipleFiles.bind(
+                        this,
+                        AdditionalFile,
+                        this.additionalFiles,
+                        this.model
+                    )
+                })
+        });
+        this.groupFieldsAdditional &#x3D; this._setCityReferenceFields(
+            this.groupFieldsAdditional,
+            this.groupFieldsAdditional
+                .get(&#x27;additionalPanel&#x27;)
+                .fields.get(&#x27;category&#x27;).control.value,
+            &#x27;additionalPanel&#x27;
+        );
+    }
+
+    private _createIndictionInputs(): void {
+        this.groupFieldsIndiction.set(&#x27;indictionPanel&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;protocolNumber&#x27;, {
+                    type: &#x27;text&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.PROTOCOL_NUMBER&#x27;,
+                    control: new FormControl(
+                        this.indictionBaseFile.protocolNumber,
+                        [Validators.required]
+                    ),
+                    size: &#x27;12|6|6&#x27;,
+                    errorLabels: [ErrorLabelConstants.REQUIRED]
+                })
+                .set(&#x27;protocolDate&#x27;, {
+                    type: &#x27;date&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.INDICTION.FILE.PROTOCOL_DATE&#x27;,
+                    control: new FormControl(
+                        this.indictionBaseFile.protocolDate,
+                        [Validators.required]
+                    ),
+                    size: &#x27;12|6|6&#x27;,
+                    errorLabels: [ErrorLabelConstants.REQUIRED]
+                })
+                .set(&#x27;inventoryNumber&#x27;, {
+                    type: &#x27;text&#x27;,
+                    label: this.inventoryNumberLabel,
+                    control: new FormControl(
+                        this.indictionBaseFile.protocolNumber,
+                        []
+                    ),
+                    size: &#x27;12|6|6&#x27;
+                })
+                .set(&#x27;file&#x27;, {
+                    type: &#x27;file&#x27;,
+                    onUpload: this.openIndictionModal.bind(this)
+                })
+        });
+    }
+
+    private _createSharedInputs(): void {
+        const mode: ComboBox&lt;string&gt;[] &#x3D; [
+            {
+                key: &#x27;file&#x27;,
+                value: this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.FILE&#x27;
+                )
+            },
+            {
+                key: &#x27;model&#x27;,
+                value: this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.MODEL&#x27;
+                )
+            },
+            {
+                key: &#x27;dashboard&#x27;,
+                value: this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.DASHBOARD&#x27;
+                )
+            }
+        ];
+
+        const uploadMode &#x3D; new Map()
+            .set(&#x27;model&#x27;, {
+                type: &#x27;select&#x27;,
+                label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.MODEL&#x27;,
+                control: new FormControl(this.modalSharedFile.model, [
+                    Validators.required,
+                    SelectValueValidator
+                ]),
+                size: &#x27;12|12|12&#x27;,
+                options: this.utilityService.getDocumentModels(
+                    this.conferenceType
+                )
+            })
+            .set(&#x27;file&#x27;, {
+                type: &#x27;file&#x27;,
+                onUpload: this.openSharedModal.bind(this)
+            });
+
+        this.groupFieldsShared.set(&#x27;sharedPanel&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;mode&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.MODE&#x27;,
+                    size: &#x27;12|12|12&#x27;,
+                    options: of(mode),
+                    tooltip: new TooltipModel(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.TOOLTIP.MODE.TEXT&#x27;,
+                        undefined,
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.TOOLTIP.MODE.TITLE&#x27;
+                    ),
+                    control: new FormControl(),
+                    valueChange: (value: ComboBox) &#x3D;&gt; {
+                        mode.forEach((_value: ComboBox) &#x3D;&gt; {
+                            if (value.key !&#x3D;&#x3D; _value.key) {
+                                this.groupFieldsShared
+                                    .get(&#x27;sharedPanel&#x27;)
+                                    .fields.delete(_value.key);
+                            }
+                        });
+
+                        if (value.key !&#x3D;&#x3D; &#x27;file&#x27;) {
+                            this.saveShared &#x3D; this.postSharedFile.bind(this);
+                        } else {
+                            this.saveShared &#x3D; null;
+                        }
+
+                        if (uploadMode.has(value.key)) {
+                            this.groupFieldsShared
+                                .get(&#x27;sharedPanel&#x27;)
+                                .fields.set(
+                                    value.key,
+                                    uploadMode.get(value.key)
+                                );
+                        }
+
+                        this.groupFieldsShared &#x3D; new Map(
+                            this.groupFieldsShared
+                        );
+                    }
+                })
+                .set(&#x27;visibility&#x27;, {
+                    type: &#x27;select-two&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.PARTICIPANT&#x27;,
+                    control: new FormControl({
+                        value: this.modalSharedFile.visibility
+                    }),
+
+                    placeholder: &#x27;COMMON.ALL&#x27;,
+                    size: &#x27;12|6|6&#x27;,
+                    options: of(this.participants)
+                })
+                .set(&#x27;file&#x27;, {
+                    type: &#x27;file&#x27;,
+                    onUpload: this.openSharedModal.bind(this)
+                })
+        });
+    }
+
+    private _createSharedModalGroupsFields(): void {
+        this.groupFields.set(&#x27;file&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;name&#x27;, {
+                    type: &#x27;text&#x27;,
+                    label: &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.NAME&#x27;,
+                    control: new FormControl(this.modalSharedFile.name, [
+                        Validators.required
+                    ]),
+                    size: &#x27;12|12|12&#x27;,
+                    errorLabels: [ErrorLabelConstants.REQUIRED]
+                })
+                .set(&#x27;visibility&#x27;, {
+                    type: &#x27;select-two&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.SHARED.FILE.PARTICIPANT&#x27;,
+                    control: new FormControl({
+                        value: this.modalSharedFile.visibility,
+                        disabled: this.fileModal.disabled
+                    }),
+
+                    placeholder: &#x27;COMMON.ALL&#x27;,
+                    size: &#x27;12|6|6&#x27;,
+                    options: of(this.participants)
+                })
+        });
+        this.groupFields &#x3D; new Map(this.groupFields);
+    }
+
+    isLink(model: any): boolean {
+        return model.url.indexOf(this.configService.get(&#x27;backend.baseUrl&#x27;));
+    }
+
+    private _createPreliminaryInputs(): void {
+        this.groupFieldsPreliminary.set(&#x27;preliminaryPanel&#x27;, {
+            panel: false,
+            panelHead: null,
+            fields: new Map()
+                .set(&#x27;category&#x27;, {
+                    type: &#x27;select&#x27;,
+                    label:
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.FILE.CATEGORY&#x27;,
+                    control: new FormControl(this.tmpPreliminaryFile.category, [
+                        Validators.required
+                    ]),
+                    options: this.optionsCategory,
+                    errorLabels: [ErrorLabelConstants.REQUIRED],
+                    size: &#x27;12|12|12&#x27;,
+                    valueChange: (value: ComboBox&lt;DocumentCategories&gt;) &#x3D;&gt; {
+                        this.groupFieldsPreliminary &#x3D; this._setCityReferenceFields(
+                            this.groupFieldsPreliminary,
+                            value,
+                            &#x27;preliminaryPanel&#x27;
+                        );
+                    }
+                })
+                .set(&#x27;file&#x27;, {
+                    type: &#x27;drop-file&#x27;,
+                    onMultipleUpload: this._uploadMultipleFiles.bind(
+                        this,
+                        PreliminaryFile,
+                        this.preliminaryFiles,
+                        this.model
+                    )
+                })
+        });
+        this.groupFieldsPreliminary &#x3D; this._setCityReferenceFields(
+            this.groupFieldsPreliminary,
+            this.groupFieldsPreliminary
+                .get(&#x27;preliminaryPanel&#x27;)
+                .fields.get(&#x27;category&#x27;).control.value,
+            &#x27;preliminaryPanel&#x27;
+        );
+    }
+
+    private _setAccordionListener(): void {
+        this._listenShowAccordion();
+        this._listenShownAccordion();
+        this._listenHiddenAccordion();
+    }
+
+    private _listenShowAccordion(): void {
+        $(&#x27;#panelGroupDocumentation&#x27;).on(&#x27;show.bs.collapse&#x27;, e &#x3D;&gt; {
+            if (e.target.nodeName !&#x3D;&#x3D; &#x27;INPUT&#x27;) {
+                this._closeAllAccordion();
+            }
+        });
+    }
+
+    private _closeAllAccordion(): void {
+        $(&#x27;#panelGroupDocumentation&#x27;)
+            .find(&#x27;.panel-collapse.in&#x27;)
+            .collapse(&#x27;hide&#x27;);
+    }
+
+    private _openAccordion(id: string): void {
+        $(&#x27;#panelGroupDocumentation&#x27;)
+            .find(&#x60;#${id}&#x60;)
+            .collapse(&#x27;show&#x27;);
+        this._setActiveAccordion(id);
+    }
+
+    private _listenHiddenAccordion(): void {
+        $(&#x27;#panelGroupDocumentation&#x27;).on(&#x27;hidden.bs.collapse&#x27;, e &#x3D;&gt; {
+            if (!this._existOpenAccordion()) {
+                this._setActiveAccordion(null);
+                this._blurAllMenuItem();
+            }
+        });
+    }
+
+    private _blurAllMenuItem(): void {
+        $(&#x27;.formNav a&#x27;).blur();
+    }
+
+    private _listenShownAccordion(): void {
+        $(&#x27;#panelGroupDocumentation&#x27;).on(&#x27;shown.bs.collapse&#x27;, e &#x3D;&gt; {
+            this._setActiveAccordion(e.target.id);
+        });
+    }
+
+    private _existOpenAccordion(): boolean {
+        return $(&#x27;#panelGroupDocumentation&#x27;).find(&#x27;.panel-collapse.in&#x27;).length;
+    }
+
+    private _setActiveAccordion(id: string): void {
+        this.openPanel &#x3D; id;
+        this.changeDetectorRef.detectChanges();
+    }
+
+    private _setCityReferenceFields(
+        groupFields: Map&lt;string, FormFieldGroup&gt;,
+        value: ComboBox&lt;DocumentCategories&gt;,
+        panel: &#x27;preliminaryPanel&#x27; | &#x27;additionalPanel&#x27;
+    ): Map&lt;string, FormFieldGroup&gt; {
+        const category: FormField &#x3D; groupFields
+            .get(panel)
+            .fields.get(&#x27;category&#x27;);
+        if (
+            value &amp;&amp;
+            value.key &#x3D;&#x3D;&#x3D; DocumentCategories.MUNICIPALITY_DOCUMENTATION
+        ) {
+            const file: FormField &#x3D; groupFields.get(panel).fields.get(&#x27;file&#x27;);
+            groupFields.get(panel).fields.delete(&#x27;file&#x27;);
+            groupFields.get(panel).fields.set(&#x27;cityReference&#x27;, {
+                type: &#x27;text&#x27;,
+                label:
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.CITY_REFERENCE&#x27;,
+                control: null,
+                size: &#x27;12|12|12&#x27;
+            });
+            if (file) {
+                groupFields.get(panel).fields.set(&#x27;file&#x27;, file);
+            }
+            if (panel &#x3D;&#x3D;&#x3D; &#x27;preliminaryPanel&#x27;) {
+                groupFields
+                    .get(panel)
+                    .fields.get(&#x27;cityReference&#x27;).control &#x3D; new FormControl(
+                    this.tmpPreliminaryFile.cityReference
+                );
+            }
+            if (panel &#x3D;&#x3D;&#x3D; &#x27;additionalPanel&#x27;) {
+                groupFields
+                    .get(panel)
+                    .fields.get(&#x27;cityReference&#x27;).control &#x3D; new FormControl(
+                    this.tmpAdditionalFile.cityReference
+                );
+            }
+            category.size &#x3D; &#x27;12|6|6&#x27;;
+        } else {
+            groupFields.get(panel).fields.delete(&#x27;cityReference&#x27;);
+            category.size &#x3D; &#x27;12|6|6&#x27;;
+        }
+        return new Map(groupFields);
+    }
+
+    private _setCityReferenceFieldsOnModal(
+        groupFields: Map&lt;string, FormFieldGroup&gt;,
+        value: ComboBox,
+        panel: &#x27;file&#x27;,
+        supportMethod:
+            | &#x27;_setCityReferenceFieldsOnAdditionalModal&#x27;
+            | &#x27;_setCityReferenceFieldsOnPreliminaryModal&#x27;
+    ): Map&lt;string, FormFieldGroup&gt; {
+        const category: FormField &#x3D; groupFields
+            .get(panel)
+            .fields.get(&#x27;category&#x27;);
+
+        if (
+            value &amp;&amp;
+            value.key &#x3D;&#x3D;&#x3D; DocumentCategories.MUNICIPALITY_DOCUMENTATION
+        ) {
+            const visibility: FormField &#x3D; groupFields
+                .get(panel)
+                .fields.get(&#x27;visibility&#x27;);
+            groupFields.get(panel).fields.delete(&#x27;visibility&#x27;);
+            groupFields.get(panel).fields.get(&#x27;category&#x27;).size &#x3D; &#x27;12|6|6&#x27;;
+
+            this[supportMethod](groupFields, panel);
+
+            groupFields.get(panel).fields.set(&#x27;visibility&#x27;, visibility);
+        } else {
+            delete this.modalFile.cityReference;
+            groupFields.get(panel).fields.delete(&#x27;cityReference&#x27;);
+            category.size &#x3D; &#x27;12|12|12&#x27;;
+        }
+        return new Map(groupFields);
+    }
+
+    private _setCityReferenceFieldsOnAdditionalModal(
+        groupFields: Map&lt;string, FormFieldGroup&gt;,
+        panel: string
+    ): void {
+        groupFields.get(panel).fields.set(&#x27;cityReference&#x27;, {
+            type: &#x27;text&#x27;,
+            label:
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.FILE.CITY_REFERENCE&#x27;,
+            control: new FormControl({
+                value: this.modalAdditionalFile.cityReference,
+                disabled: this.fileModal.disabled
+            }),
+            size: &#x27;12|6|6&#x27;
+        });
+    }
+
+    private _setCityReferenceFieldsOnPreliminaryModal(
+        groupFields: Map&lt;string, FormFieldGroup&gt;,
+        panel: string
+    ): void {
+        groupFields.get(panel).fields.set(&#x27;cityReference&#x27;, {
+            type: &#x27;text&#x27;,
+            label:
+                &#x27;CONFERENCE.WIZARD.DOCUMENTATION.PRELIMINARY.FILE.CITY_REFERENCE&#x27;,
+            control: new FormControl({
+                value: this.modalPreliminaryFile.cityReference,
+                disabled: this.fileModal.disabled
+            }),
+            size: &#x27;12|6|6&#x27;
+        });
+    }
+
+    private _getFile(
+        modelClass:
+            | typeof PreliminaryFile
+            | typeof AdditionalFile
+            | typeof InterectionFile,
+        fileEntry: FileSystemFileEntry
+    ): Observable&lt;GetFileReturn&gt; {
+        return new Observable((observer: Subscriber&lt;GetFileReturn&gt;) &#x3D;&gt; {
+            fileEntry.file((file: File) &#x3D;&gt; {
+                let modelData: Partial&lt;
+                    PreliminaryFile | AdditionalFile | InterectionFile
+                &gt;;
+                switch (modelClass.name) {
+                    case &#x27;AdditionalFile&#x27;:
+                        modelData &#x3D; {
+                            name: file.name,
+                            visibility: [],
+                            category: this.groupFieldsAdditional
+                                .get(&#x27;additionalPanel&#x27;)
+                                .fields.get(&#x27;category&#x27;).control.value,
+                            cityReference: this.groupFieldsAdditional
+                                .get(&#x27;additionalPanel&#x27;)
+                                .fields.get(&#x27;cityReference&#x27;)
+                                ? this.groupFieldsAdditional
+                                      .get(&#x27;additionalPanel&#x27;)
+                                      .fields.get(&#x27;cityReference&#x27;).control.value
+                                : null
+                        };
+                        break;
+                    case &#x27;InterectionFile&#x27;:
+                        modelData &#x3D; {
+                            name: file.name,
+                            visibility: [],
+                            category: null,
+                            cityReference: null
+                        };
+                        break;
+                    case &#x27;PreliminaryFile&#x27;:
+                        modelData &#x3D; {
+                            name: file.name,
+                            visibility: [],
+                            category: this.groupFieldsPreliminary
+                                .get(&#x27;preliminaryPanel&#x27;)
+                                .fields.get(&#x27;category&#x27;).control.value,
+                            cityReference: this.groupFieldsPreliminary
+                                .get(&#x27;preliminaryPanel&#x27;)
+                                .fields.get(&#x27;cityReference&#x27;)
+                                ? this.groupFieldsPreliminary
+                                      .get(&#x27;preliminaryPanel&#x27;)
+                                      .fields.get(&#x27;cityReference&#x27;).control.value
+                                : null
+                        };
+                        break;
+                }
+                observer.next({
+                    file,
+                    model: new modelClass(modelData)
+                });
+                observer.complete();
+            });
+        });
+    }
+
+    private _uploadMultipleFiles(
+        modelClass:
+            | typeof PreliminaryFile
+            | typeof AdditionalFile
+            | typeof InterectionFile,
+        filePanelCmp: FilePanelComponent,
+        model: Documentation,
+        files: UploadFile[]
+    ): void {
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+        const obsFile: Observable&lt;GetFileReturn&gt;[] &#x3D; [];
+        // tslint:disable-next-line:forin
+        for (const k in files) {
+            const fileEntry &#x3D; files[k].fileEntry as FileSystemFileEntry;
+            obsFile.push(this._getFile(modelClass, fileEntry));
+        }
+        forkJoin(obsFile)
+            .pipe(
+                takeUntil(this.destroy$),
+                mergeMap((data: GetFileReturn[]) &#x3D;&gt; {
+                    const obs &#x3D; [];
+
+                    // tslint:disable-next-line:forin
+                    for (const k in files) {
+                        obs.push(
+                            this.fileService.upload(
+                                this.conferenceId,
+                                data[k].model,
+                                data[k].file,
+                                data[k].model.type
+                            )
+                        );
+                    }
+
+                    return forkJoin(obs);
+                }),
+                catchError(() &#x3D;&gt; {
+                    this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                    filePanelCmp.hideForm();
+                    this.toastr.error(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_SAVE_FILE.TITLE&#x27;
+                        )
+                    );
+                    return of();
+                })
+            )
+            .subscribe((res: BaseFile[]) &#x3D;&gt; {
+                // tslint:disable-next-line:forin
+                for (const k in res) {
+                    model.push(new modelClass(res[k]));
+                }
+                this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+
+                filePanelCmp.hideForm();
+
+                this.toastr.info(
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TEXT&#x27;
+                    ),
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_SAVE_FILE.TITLE&#x27;
+                    )
+                );
+            });
+    }
+
+    private _deleteFile(): void {
+        this.loaderService.showLoading(SectionLoading.ALL_CONTENT);
+        this.fileService
+            .deleteFile(this.idToDelete)
+            .pipe(
+                takeUntil(this.destroy$),
+                catchError(() &#x3D;&gt; {
+                    this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                    this.confirmModal.close();
+                    this.toastr.info(
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_DELETE_FILE.TEXT&#x27;
+                        ),
+                        this.i18nService.translate(
+                            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.ERROR_DELETE_FILE.TITLE&#x27;
+                        )
+                    );
+                    return of();
+                })
+            )
+            .subscribe(res &#x3D;&gt; {
+                this.model.delete(this.fileToDelete);
+                this.loaderService.hideLoading(SectionLoading.ALL_CONTENT);
+                this.confirmModal.close();
+                this.toastr.info(
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_DELETE_FILE.TEXT&#x27;
+                    ),
+                    this.i18nService.translate(
+                        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TOASTR.SUCCESS_DELETE_FILE.TITLE&#x27;
+                    )
+                );
+            });
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'GetFileReturn.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

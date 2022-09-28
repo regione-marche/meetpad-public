@@ -1,0 +1,308 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data": {
+       "additional": [
+            {
+                "id": null,
+                "name": "default",
+                "files": [
+                    {
+                        "id": 733,
+                        "name": "file prova_firmato digitalmente.pdf",
+                        "type": {
+                            "key": "DOCUMENTAZIONE_AGGIUNTIVA",
+                            "value": "Documentazione aggiuntiva"
+                        },
+                        "category": null,
+                        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/CGLLD2w8R5RIUBBo",
+                        "visibility": [
+                            {
+                                "key": "8133",
+                                "value": "Provincia di Ancona - UO Gestione siti e aree tutelate – Paesaggio"
+                            },
+                            {
+                                "key": "8155",
+                                "value": "Regione Marche"
+                            }
+                        ],
+                        "signatories": [],
+                        "protocolNumber": "56",
+                        "protocolDate": "22-03-2019",
+                        "inventoryNumber": null,
+                        "cityReference": null,
+                        "folder": null,
+                        "meetingDate": null
+                    },
+                    {
+                        "id": 710,
+                        "name": "file prova_firmato digitalmente.pdf",
+                        "type": {
+                            "key": "DOCUMENTAZIONE_AGGIUNTIVA",
+                            "value": "Documentazione aggiuntiva"
+                        },
+                        "category": {
+                            "key": "1",
+                            "value": "Documentazione a corredo dell'istanza"
+                        },
+                        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/A01k4XfrYW4O7CL4",
+                        "visibility": [],
+                        "signatories": [],
+                        "protocolNumber": null,
+                        "protocolDate": null,
+                        "inventoryNumber": null,
+                        "cityReference": null,
+                        "folder": null,
+                        "meetingDate": null
+                    },
+                    {
+                        "id": 711,
+                        "name": "Allegato prova.pdf",
+                        "type": {
+                            "key": "DOCUMENTAZIONE_AGGIUNTIVA",
+                            "value": "Documentazione aggiuntiva"
+                        },
+                        "category": {
+                            "key": "6",
+                            "value": "Documentazione per Comune"
+                        },
+                        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/W8JSbjv6JieRmunX",
+                        "visibility": [],
+                        "signatories": [],
+                        "protocolNumber": null,
+                        "protocolDate": null,
+                        "inventoryNumber": null,
+                        "cityReference": "Fabriano",
+                        "folder": null,
+                        "meetingDate": null
+                    }
+                ]
+            }
+        ],
+        "interection": [
+            {
+                "id": null,
+                "name": "default",
+                "files": [
+                    {
+                        "id": 720,
+                        "name": "file prova_firmato digitalmente.pdf",
+                        "type": {
+                            "key": "INTERAZIONI",
+                            "value": "Documentazione interazioni"
+                        },
+                        "category": {
+                            "key": "4",
+                            "value": "Nota"
+                        },
+                        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                        "visibility": [
+                            {
+                                "key": "8155",
+                                "value": "Regione Marche"
+                            }
+                        ],
+                        "signatories": [],
+                        "protocolNumber": "34",
+                        "protocolDate": "21-03-2019",
+                        "inventoryNumber": null,
+                        "cityReference": null,
+                        "folder": null,
+                        "meetingDate": null
+                    },
+                    {
+                        "id": 721,
+                        "name": "file prova_firmato digitalmente.pdf",
+                        "type": {
+                            "key": "INTERAZIONI",
+                            "value": "Documentazione interazioni"
+                        },
+                        "category": {
+                            "key": "4",
+                            "value": "Nota"
+                        },
+                        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/TvwEosRvr9vJNF9m",
+                        "visibility": [
+                            {
+                                "key": "8155",
+                                "value": "Regione Marche"
+                            }
+                        ],
+                        "signatories": [],
+                        "protocolNumber": "45",
+                        "protocolDate": "21-03-2019",
+                        "inventoryNumber": null,
+                        "cityReference": null,
+                        "folder": null,
+                        "meetingDate": null
+                    }
+                ]
+            }
+        ],
+        "indiction": [
+            {
+                "id": 717,
+                "name": "file prova_firmato digitalmente.pdf",
+                "type": {
+                    "key": "DOCUMENTO_INDIZIONE",
+                    "value": "Documento di indizione"
+                },
+                "category": null,
+                "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/io2iQkJUxc57sKUt",
+                "visibility": [],
+                "signatories": [],
+                "protocolNumber": "12",
+                "protocolDate": "20-03-2019",
+                "inventoryNumber": "45",
+                "cityReference": null,
+                "folder": null,
+                "meetingDate": null
+            }
+        ],
+        "accreditation": [],
+        "preliminary": [],
+        "shared": [],
+        "signature": [{
+            "id": null,
+            "name": "default",
+            "files": [
+                {
+                    "id": 72000,
+                    "name": "UNLOCKED.pdf",
+                    "type": {
+                        "key": "DOCUMENTAZIONE_FIRMATA",
+                        "value": "Documentazione firmata"
+                    },
+                    "category": {
+                        "key": "4",
+                        "value": "Nota"
+                    },
+                    "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                    "visibility": [
+                        {
+                            "key": "8155",
+                            "value": "Regione Marche"
+                        }
+                    ],
+                    "signatories": [],
+                    "status": "UNLOCKED",               
+                    "protocolNumber": "34",
+                    "protocolDate": "21-03-2019",
+                    "inventoryNumber": null,
+                    "cityReference": null,
+                    "folder": null,
+                    "meetingDate": null
+                },
+                {
+                    "id": 72000,
+                    "name": "SIGNING.pdf",
+                    "type": {
+                        "key": "DOCUMENTAZIONE_FIRMATA",
+                        "value": "Documentazione firmata"
+                    },
+                    "category": {
+                        "key": "4",
+                        "value": "Nota"
+                    },
+                    "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                    "visibility": [
+                        {
+                            "key": "8155",
+                            "value": "Regione Marche"
+                        }
+                    ],
+                    "signatories": [],
+                    "status": "SIGNING",               
+                    "protocolNumber": "34",
+                    "protocolDate": "21-03-2019",
+                    "inventoryNumber": null,
+                    "cityReference": null,
+                    "folder": null,
+                    "meetingDate": null
+                },                
+                {
+                    "id": 72000,
+                    "name": "LOCKED.pdf",
+                    "type": {
+                        "key": "DOCUMENTAZIONE_FIRMATA",
+                        "value": "Documentazione firmata"
+                    },
+                    "category": {
+                        "key": "4",
+                        "value": "Nota"
+                    },
+                    "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                    "visibility": [
+                        {
+                            "key": "8155",
+                            "value": "Regione Marche"
+                        }
+                    ],
+                    "signatories": [],
+                    "status": "LOCKED",               
+                    "protocolNumber": "34",
+                    "protocolDate": "21-03-2019",
+                    "inventoryNumber": null,
+                    "cityReference": null,
+                    "folder": null,
+                    "meetingDate": null
+                },                        
+                {
+                    "id": 72000,
+                    "name": "SIGNED.pdf",
+                    "type": {
+                        "key": "DOCUMENTAZIONE_FIRMATA",
+                        "value": "Documentazione firmata"
+                    },
+                    "category": {
+                        "key": "4",
+                        "value": "Nota"
+                    },
+                    "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                    "visibility": [
+                        {
+                            "key": "8155",
+                            "value": "Regione Marche"
+                        }
+                    ],
+                    "signatories": [],
+                    "status": "SIGNED",               
+                    "protocolNumber": "34",
+                    "protocolDate": "21-03-2019",
+                    "inventoryNumber": null,
+                    "cityReference": null,
+                    "folder": null,
+                    "meetingDate": null
+                },
+                {
+                    "id": 72000,
+                    "name": "COMPLETED.pdf",
+                    "type": {
+                        "key": "DOCUMENTAZIONE_FIRMATA",
+                        "value": "Documentazione firmata"
+                    },
+                    "category": {
+                        "key": "4",
+                        "value": "Nota"
+                    },
+                    "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+                    "visibility": [
+                        {
+                            "key": "8155",
+                            "value": "Regione Marche"
+                        }
+                    ],
+                    "signatories": [],
+                    "status": "COMPLETED",               
+                    "protocolNumber": "34",
+                    "protocolDate": "21-03-2019",
+                    "inventoryNumber": null,
+                    "cityReference": null,
+                    "folder": null,
+                    "meetingDate": null
+                }   
+            ]
+        }]
+    }
+}

@@ -1,0 +1,23 @@
+
+<admin-delegates-search
+(onNewSearch)="startResearch($event)"
+></admin-delegates-search>
+<eng-form-section>
+<div class="panel panel-default">
+    <div class="panel-heading custom-panel-title">
+        <span translate="PRELOADING.DELEGATE.LIST.TITLE"></span>
+        <span
+            class="pull-right fa fa-plus"
+            aria-hidden="true"
+            [title]="'PRELOADING.DELEGATE.ACTIONS.NEW' | translate"
+            (click)="navigateToCreate()"
+        ></span>
+    </div>
+
+    <div class="panel-body">
+        <admin-delegates-list
+            [searchQuery]="searchQuery"
+        ></admin-delegates-list>
+    </div>
+</div>
+</eng-form-section>

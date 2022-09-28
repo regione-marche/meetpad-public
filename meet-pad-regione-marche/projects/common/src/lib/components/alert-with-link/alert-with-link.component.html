@@ -1,0 +1,5 @@
+<div class="alert alert-{{ type }}" role="alert">
+    {{ textBeforeLink | translate }}
+    <a *ngIf="link" href="javascript:;" #ahref>{{ textLink | translate }}</a>
+    {{ textAfterLink | translate }}
+</div>

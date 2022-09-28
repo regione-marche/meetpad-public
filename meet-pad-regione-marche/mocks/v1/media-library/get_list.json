@@ -1,0 +1,17 @@
+{
+    "code": "200",
+    "msg": null,
+    "data": {
+        "list": [
+            {
+                "conferenceId": 519,
+                "conferenceSubject": "Preistruttoria della conferenza dei servizi avente per oggetto l’autorizzazione per la costruzione di infrastruttura passiva a Banda Ultra Larga nelle aree Bianche del territorio dei Comuni di Colli al Metauro (per l’ex. Municipalità di Serrungarina), Fer",
+                "id": 51,
+                "name": "REGIONE SERVIZIO TUTELA.zip",
+                "registryId": 51,
+                "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/HfMmu98DN7HdfqW8"
+            }
+        ],
+        "totalNumber": 5
+    }
+}

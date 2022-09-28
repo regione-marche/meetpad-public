@@ -1,0 +1,27 @@
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="CONFERENCE.WIZARD.PROTOCOL.TABLE.TITLE"></span>
+        </div>
+        <div class="panel-body">
+          <app-protocolling-table (view)="updateProtocolState($event)"></app-protocolling-table>
+        </div>
+    </div>
+    <eng-button
+        *ngIf="showFooterBtn()"
+        class="pull-right"
+        color="info"
+        [title]="'BUTTON.NEXT' | translate"
+        (onClick)="onNext.emit()"
+    ></eng-button>
+  </eng-form-section>
+  
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="confirmModalButtons"
+    [title]="confirmModalTitle">
+    <p [translate]="confirmModalText"></p>
+</eng-modal>
+  

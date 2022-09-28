@@ -1,0 +1,23 @@
+
+<admin-preaccreditation-search
+(onNewSearch)="startResearch($event)"
+></admin-preaccreditation-search>
+<eng-form-section>
+<div class="panel panel-default">
+    <div class="panel-heading custom-panel-title">
+        <span translate="PRELOADING.PREACCREDITATION.LIST.TITLE"></span>
+        <span
+            class="pull-right fa fa-plus"
+            aria-hidden="true"
+            [title]="'PRELOADING.PREACCREDITATION.ACTIONS.NEW' | translate"
+            (click)="navigateToCreate()"
+        ></span>
+    </div>
+
+    <div class="panel-body">
+        <admin-preaccreditation-list
+            [searchQuery]="searchQuery"
+        ></admin-preaccreditation-list>
+    </div>
+</div>
+</eng-form-section>

@@ -1,6 +1,6 @@
 /************* Generali *************/
 a {
-    color: #106CDB;
+    color: #106cdb;
     text-decoration-line: none;
 }
 
@@ -8,14 +8,14 @@ a:hover {
     text-decoration-line: underline;
 }
 
-div[data-toggle=collapse] {
+div[data-toggle='collapse'] {
     cursor: pointer;
 }
 
 /*
 main h1 {
     background-color: inherit;
-    color: #002E5F;
+    color: #074392;
     margin-top: 0;
     margin-bottom: 60px;
     font-size: 1.65em;
@@ -24,7 +24,10 @@ main h1 {
 }
 */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Open Sans semibold', sans-serif;
 }
 
@@ -44,7 +47,9 @@ span.span-title {
     font-weight: 300;
 }
 
-p.typeOf, span.typeOf, legend.typeOf {
+p.typeOf,
+span.typeOf,
+legend.typeOf {
     font-style: italic;
     color: #767676;
     font-weight: 300;
@@ -53,18 +58,17 @@ p.typeOf, span.typeOf, legend.typeOf {
     border-bottom: none;
 }
 
-
-input[type=checkbox], input[type=radio] {
+input[type='checkbox'],
+input[type='radio'] {
     cursor: pointer;
 }
-
 
 form .checkbox > label {
     font-weight: normal;
     margin-left: 0;
 }
 
-form .checkbox > label > input[type=checkbox] {
+form .checkbox > label > input[type='checkbox'] {
     margin-left: -20px;
 }
 
@@ -106,25 +110,27 @@ form .checkbox > label > input[type=checkbox] {
 }
 
 .errorLabel {
-  color: #C9291B !important;
+    color: #c9291b !important;
 }
 
-a.linkDettagli.pull-right, a.linkDettagli.right {
+a.linkDettagli.pull-right,
+a.linkDettagli.right {
     display: block;
     padding-right: 20px;
     background-image: url(../assets/img/double_arrow_r.png);
     background-repeat: no-repeat;
     background-position: right;
     text-align: right;
-    margin-top: 50px
+    margin-top: 50px;
 }
 
-a span.screen-reader-text, button .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+a span.screen-reader-text,
+button .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 button .fa {
@@ -135,7 +141,8 @@ button .fa {
     border: none;
 }
 
-.fa.fa-angle-left, .fa.fa-angle-right {
+.fa.fa-angle-left,
+.fa.fa-angle-right {
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -143,16 +150,13 @@ button .fa {
 .dataTable button.tabIndex-input {
     font-weight: bolder;
     font-size: 16px;
-    color: #106CDB !important;
+    color: #106cdb !important;
     /*margin-top: 5px;*/
     margin-left: 0;
     margin-right: 0;
 }
 
-
-
 /********** FINE Generali ***********/
-
 
 /********** Tabelle ***********/
 
@@ -173,62 +177,58 @@ table.table > thead > tr > th {
     border-bottom: 0.1em solid #000;
 }
 
-
 table.table.dataTable > thead > tr > th {
     cursor: pointer;
 }
 
-.download-tab table.table.dataTable > thead > tr > th, .notifiche-tab table.table.dataTable > thead > tr > th {
+.download-tab table.table.dataTable > thead > tr > th,
+.notifiche-tab table.table.dataTable > thead > tr > th {
     cursor: auto;
 }
-
 
 .tabella table.table > tbody > tr {
     background-color: transparent;
     color: #000000;
     height: 60px;
     border: none !important;
-    border-bottom: 1px solid #AFAFAF !important;
+    border-bottom: 1px solid #afafaf !important;
     border-collapse: collapse !important;
 }
 
-.tabella table.table.tabella-base > tbody > tr, .modal .tabella table.table > tbody > tr {
+.tabella table.table.tabella-base > tbody > tr,
+.modal .tabella table.table > tbody > tr {
     height: auto;
 }
 
 table.table > tbody > tr:hover {
-    background-color: #E4E4E4;
+    background-color: #e4e4e4;
 }
 
 /* table > tbody > tr[role="row"] > td {
     text-align: center;
 } */
 
-
-
-table.dataTable > thead > tr > th, table.dataTable > tbody > tr > td {
+table.dataTable > thead > tr > th,
+table.dataTable > tbody > tr > td {
     vertical-align: middle;
     padding: 9px 20px 9px 28px;
     text-align: left;
 }
 
-.table > thead > tr > th, .table > tbody > tr > td {
+.table > thead > tr > th,
+.table > tbody > tr > td {
     vertical-align: middle;
     padding: 9px 20px 9px 28px;
     text-align: left;
 }
 
-table.dataTable > tbody > tr > td  {
-    border-bottom: 1px solid #AFAFAF !important;
+table.dataTable > tbody > tr > td {
+    border-bottom: 1px solid #afafaf !important;
 }
-
-
 
 /* .tabella .caption {
     padding: 0 15px 0 0;
 } */
-
-
 
 div.dataTables_length {
     position: relative;
@@ -251,11 +251,10 @@ select::-ms-expand {
     display: none;
 }
 
-
 .dataTables_length > label:after {
-    content: "\f107";
+    content: '\f107';
     font-family: FontAwesome;
-    color: #106CDB;
+    color: #106cdb;
     padding: 12px 8px;
     position: absolute;
     right: 0;
@@ -268,7 +267,6 @@ select::-ms-expand {
     font-weight: bolder;
     font-size: 16px;
 }
-
 
 /*
 
@@ -284,14 +282,13 @@ select::-ms-expand {
 }
 */
 
-
 table.table > thead th.sorting_disabled {
     cursor: default;
 }
 
 table.table.dataTable > thead .thLabel:after {
     cursor: pointer;
-    content: "\f0d7";
+    content: '\f0d7';
     font-family: FontAwesome;
     font-size: 1.3em;
     padding: 0 10px;
@@ -303,22 +300,23 @@ table.table.dataTable > thead th.sorting_disabled .thLabel:after {
 }
 
 table.table.dataTable > thead .sorting_desc .thLabel:after {
-    content: "\f0d8";
-    color: #106CDB;
+    content: '\f0d8';
+    color: #106cdb;
 }
 
 table.table.dataTable > thead .sorting_asc .thLabel:after {
-    content: "\f0d7";
-    color: #106CDB;
+    content: '\f0d7';
+    color: #106cdb;
 }
 
-table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after , table.dataTable thead .sorting_desc::after {
+table.dataTable thead .sorting::after,
+table.dataTable thead .sorting_asc::after,
+table.dataTable thead .sorting_desc::after {
     content: none !important;
 }
 
-
 table.table .fa {
-    color: #002E5F;
+    color: #074392;
     font-size: 18px;
 }
 
@@ -328,29 +326,33 @@ table.table .fa {
 }
 
 .dataTable .btn-link {
-    color: #106CDB;
+    color: #106cdb;
 }
 
-.pagination > li:first-child > a:before, .pagination > li:first-child > span:before {
+.pagination > li:first-child > a:before,
+.pagination > li:first-child > span:before {
     padding-left: 5px;
-    content: "indietro";
+    content: 'indietro';
     width: 60px;
 }
 
-.pagination > li:first-child > a, .pagination > li:first-child > span {
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
     background-repeat: no-repeat;
     background-image: url(../assets/img/icona_freccia-blu_reverse.png);
     background-position-y: 5px;
     background-color: transparent;
 }
 
-.pagination > li:last-child > a:before, .pagination > li:last-child > span:before {
+.pagination > li:last-child > a:before,
+.pagination > li:last-child > span:before {
     padding-right: 5px;
-    content: "avanti";
+    content: 'avanti';
     width: 60px;
 }
 
-.pagination > li:last-child > a, .pagination > li:last-child > span {
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
     background-repeat: no-repeat;
     background-image: url(../assets/img/icona_freccia-blu.png);
     background-position-x: 50px !important;
@@ -358,17 +360,19 @@ table.table .fa {
     background-color: transparent;
 }
 
-.pagination > li.next.disabled, .pagination > li.previous.disabled {
+.pagination > li.next.disabled,
+.pagination > li.previous.disabled {
     display: none !important;
 }
 
-.pagination > .active > a:focus, .pagination > .active > span:focus {
-    color: #002E5F;
-    background-color: #FFF;
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    color: #074392;
+    background-color: #fff;
 }
 
 tr.shown {
-    background-color: #E4E4E4 !important;
+    background-color: #e4e4e4 !important;
 }
 
 .unreadMessage {
@@ -380,7 +384,7 @@ tr.shown {
 }
 
 .badge {
-    background: #EE0000;
+    background: #ee0000;
     width: auto;
     width: 15px\9;
     height: auto;
@@ -403,7 +407,6 @@ tbody > tr > td.td-icons .fa.fa-exclamation-triangle {
     float: right;
 }
 
-
 /* Accordion Tab */
 
 table.accordionTab {
@@ -415,7 +418,6 @@ table.accordionTab > tbody > tr {
     border: none;
     background-color: inherit;
 }
-
 
 .display tbody > tr > td[colspan] {
     padding: 0;
@@ -444,18 +446,17 @@ table.accordionTab > tbody > tr {
 .accordionTab .pop .baseFooter > div {
     padding: 20px;
     font-size: 14px;
-    color: #002E5F;
+    color: #074392;
 }
 
 .accordionTab .pop .baseFooter > div a {
-    color: #002E5F;
+    color: #074392;
 }
 
 .accordionTab .pop .baseFooter > div button {
     background-color: transparent;
     border: none;
 }
-
 
 .pop form > div label {
     font-weight: normal;
@@ -481,7 +482,6 @@ table.accordionTab > tbody > tr {
     height: 27px;
 }
 
-
 /* Tabella Status */
 
 .progress {
@@ -499,19 +499,19 @@ table.accordionTab > tbody > tr {
 }
 
 .progress .progress-bar-25 {
-    background-color: #AFAFAF;
+    background-color: #afafaf;
 }
 
 .progress .progress-bar-50 {
-    background-color: #FFE377;
+    background-color: #ffe377;
 }
 
 .progress .progress-bar-75 {
-    background-color: #FFAA02;
+    background-color: #ffaa02;
 }
 
 .progress .progress-bar-100 {
-    background-color: #0E821A;
+    background-color: #0e821a;
 }
 
 .progress-bar {
@@ -522,28 +522,27 @@ table.accordionTab > tbody > tr {
     line-height: 20px;
     color: #fff;
     text-align: center;
-    background-color: #002e5f;
+    background-color: #074392;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-    -webkit-transition: width .6s ease;
-    -o-transition: width .6s ease;
-    transition: width .6s ease;
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
 }
 
-
 /********** FINE Tabelle ***********/
-
-
 
 /************* Form **************/
 
 .form-grey {
-    background: #F2F2F2 none repeat scroll 0 0;
+    background: #f2f2f2 none repeat scroll 0 0;
     margin-top: 30px;
     padding: 20px 15px;
 }
 
-.form-grey .title-modulo, .form-accordion .title-modulo, .filter-accordion  .title-modulo {
+.form-grey .title-modulo,
+.form-accordion .title-modulo,
+.filter-accordion .title-modulo {
     margin: 15px 15px 30px 15px;
     color: #000 !important;
     font-size: 1.14286em;
@@ -559,20 +558,21 @@ table.accordionTab > tbody > tr {
     position: relative;
 }
 
-.form-accordion > .heading-form-grey span.fa.fa-chevron-down, .form-accordion > .heading-form-grey span.fa.fa-chevron-up,
-.filter-accordion > .heading-form-grey span.fa.fa-chevron-down, .filter-accordion > .heading-form-grey span.fa.fa-chevron-up {
+.form-accordion > .heading-form-grey span.fa.fa-chevron-down,
+.form-accordion > .heading-form-grey span.fa.fa-chevron-up,
+.filter-accordion > .heading-form-grey span.fa.fa-chevron-down,
+.filter-accordion > .heading-form-grey span.fa.fa-chevron-up {
     position: absolute;
     top: 0px;
     right: 10px;
 }
 
-
 textarea.form-control {
     color: #000000;
     border-radius: 0;
     -webkit-appearance: none;
-    background-color: #FFF;
-    border: 1px solid #AFAFAF;
+    background-color: #fff;
+    border: 1px solid #afafaf;
     font-size: 1em !important;
     resize: none;
 }
@@ -582,7 +582,7 @@ textarea.form-control {
 } */
 
 label {
-font-weight: normal;
+    font-weight: normal;
 }
 
 form legend {
@@ -594,8 +594,8 @@ input.form-control {
     color: #000000;
     border-radius: 0;
     -webkit-appearance: none;
-    background-color: #FFF;
-    border: 1px solid #AFAFAF;
+    background-color: #fff;
+    border: 1px solid #afafaf;
     font-size: 1em !important;
 }
 
@@ -626,29 +626,31 @@ select.form-control {
     margin-bottom: 0;
 }
 
-.label-select > select, .date > input  {
+.label-select > select,
+.date > input {
     margin-top: 5px;
 }
-
 
 select.form-control {
     color: #000;
     padding: 5px;
-    background-color: #FFF;
-    border: 1px solid #AFAFAF;
+    background-color: #fff;
+    border: 1px solid #afafaf;
     font-size: 1em !important;
-   -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     /* appearance: none; */
     border-radius: 0;
 }
 
 .label-select:after {
-    content:"\f107";
+    content: '\f107';
     font-family: FontAwesome;
-    color: #106CDB;
+    color: #106cdb;
     padding: 12px 25px;
-    position: absolute; right: 0; bottom: -5px;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
 
     z-index: 1;
     text-align: center;
@@ -659,11 +661,13 @@ select.form-control {
 }
 
 .arrowSelect:after {
-    content:"\f107";
+    content: '\f107';
     font-family: FontAwesome;
-    color: #106CDB;
+    color: #106cdb;
     padding: 12px 8px;
-    position: absolute; right: 15px; top: -5px;
+    position: absolute;
+    right: 15px;
+    top: -5px;
 
     z-index: 1;
     text-align: center;
@@ -674,10 +678,7 @@ select.form-control {
     font-size: 16px;
 }
 
-
-
-
-input[type="file"] {
+input[type='file'] {
     /*width: 0.1px;
     height: 0.1px;*/
     opacity: 0;
@@ -685,10 +686,8 @@ input[type="file"] {
     position: absolute;
 }
 
-
-
 input.disabled {
-    background-color: #E4E5E9;
+    background-color: #e4e5e9;
     color: #000000;
     cursor: default;
 }
@@ -702,12 +701,12 @@ input.disabled {
     position: relative;
 }
 
-
 /* Datepicker */
 
 .date.datePicker > .form-group {
     /*position: relative;*/
     /*width: 270px;*/
+    padding-right: 15px !important;
     margin-bottom: 15px;
 }
 
@@ -716,21 +715,27 @@ input.disabled {
 }
 
 .datePicker input {
-    width: 200px;
+    /* width: 200px; */
+    width: 100%;
 }
 
-.datePicker em.fa-calendar {
+/* .datePicker em.fa-calendar {
     position: absolute;
     float: right;
-    /*top: 35px;*/
     bottom: 10px;
-    /*right: 75px;*/
     left: 170px;
     cursor: pointer;
-}
+} */
 
+.datePicker em.fa-calendar {
+    position: relative;
+    float: right;
+    bottom: 24px;
+    right: 20px;
+    cursor: pointer;
+}
 .date-range > p {
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
 .date-range .datePicker div.form-group:nth-of-type(1) em.fa-calendar {
@@ -741,12 +746,10 @@ input.disabled {
     left: 180px;
 }
 
-
 .date-range .datePicker label {
     /*width: 25px;*/
     display: inline-block !important;
 }
-
 
 .form-control[disabled] + em.fa-calendar {
     cursor: not-allowed;
@@ -756,7 +759,9 @@ input.disabled {
     vertical-align: top;
 }
 
-.datepicker-days > table, .datepicker-months > table, .datepicker-years > table {
+.datepicker-days > table,
+.datepicker-months > table,
+.datepicker-years > table {
     overflow: hidden;
 }
 
@@ -778,7 +783,7 @@ form .radio label {
     font-weight: normal;
 }
 
-form .radio label > input[type="radio"] {
+form .radio label > input[type='radio'] {
     margin-left: -20px;
 }
 
@@ -792,7 +797,7 @@ form fieldset {
 /* Messaggi */
 
 .msg.msg-errore {
-  color: #C9291B !important;
+    color: #c9291b !important;
 }
 
 /* FINE Messaggi */
@@ -803,7 +808,6 @@ form fieldset {
     margin-right: 15px;
     padding: 6px 12px;
 }
-
 
 /* Popover form help icon */
 
@@ -819,7 +823,6 @@ form fieldset .date-range p {
     min-height: auto !important;
 }
 
-
 /* Combobox */
 
 .ui-widget {
@@ -833,7 +836,7 @@ form fieldset .date-range p {
 }
 
 .ui-widget > label {
-    width: 100%
+    width: 100%;
 }
 
 .ui-combobox > a.ui-button {
@@ -855,7 +858,6 @@ input.ui-autocomplete-input {
     height: 34px;
 }
 
-
 /* .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
     font-family: 'Open Sans', sans-serif;
 } */
@@ -866,11 +868,8 @@ input.ui-autocomplete-input {
 
 /* FINE Combobox */
 
-
-
-
-
-.fileUpload, .fileSubmit {
+.fileUpload,
+.fileSubmit {
     position: relative;
     overflow: hidden;
     margin: 7px 0 0 30px;
@@ -881,15 +880,15 @@ input.ui-autocomplete-input {
 }
 
 .innerx {
-  position: absolute;
-  right: 15px;
-  top: 3px;
-  background-color: transparent;
-  border: none;
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    background-color: transparent;
+    border: none;
 }
 
 .innerx span {
-  color: #AFAFAF;
+    color: #afafaf;
 }
 
 span.reset {
@@ -902,30 +901,25 @@ span.reset {
 }
 
 .fileSubmit {
-  display: none;
+    display: none;
 }
 
-.upload-file-button-container input[type=text] {
-    background-color: #FFF !important;
+.upload-file-button-container input[type='text'] {
+    background-color: #fff !important;
 }
 
-input[type="file"].btn-primary.upload {
+input[type='file'].btn-primary.upload {
     top: 0;
     left: 0;
 }
-
-
-
-
 
 form.filter-accordion > .panel-body {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-
 .heading-form-grey {
-    background-color: #E4E5E9 !important;
+    background-color: #e4e5e9 !important;
     height: 60px;
 }
 
@@ -962,26 +956,18 @@ form.filter-accordion > .panel-body {
 }
 
 .errorInput {
-    border: solid 3px #C9291B !important;
+    border: solid 3px #c9291b !important;
 }
 
 .completeInput {
-    border: solid 3px #0E821A !important;
+    border: solid 3px #0e821a !important;
 }
 
 .ncampi {
-    color: #106CDB !important;
+    color: #106cdb !important;
 }
 
-
-
-
 /********* Fine Form ************/
-
-
-
-
-
 
 /********* Filtri ***************/
 
@@ -989,7 +975,8 @@ form.filter-accordion > .panel-body {
     border: none;
 }
 
-.panel.panel-default.filter-accordion, .tab {
+.panel.panel-default.filter-accordion,
+.tab {
     min-width: 290px;
 }
 
@@ -997,44 +984,37 @@ form.filter-accordion > .panel-body {
     border: none;
 }
 
-.filter-accordion .panel-heading > *, .form-accordion .panel-heading > * {
+.filter-accordion .panel-heading > *,
+.form-accordion .panel-heading > * {
     margin: 12px 15px 8px 15px;
 }
 
-.filter-accordion .panel-heading .fa-chevron-down, .filter-accordion .panel-heading .fa-chevron-up {
+.filter-accordion .panel-heading .fa-chevron-down,
+.filter-accordion .panel-heading .fa-chevron-up {
     float: right;
-    color: #002E5F;
+    color: #074392;
 }
-
-
-
 
 .search-title {
     font-size: 1em;
     font-weight: 600;
-    color: #002E5F;
+    color: #074392;
     padding-bottom: 0;
     margin-bottom: 15px;
 }
-
 
 .labelfake {
     margin-bottom: 5px;
 }
 
-
-
 /********* FINE Filtri *******/
-
-
-
-
 
 /********* Box **********/
 
-.boxDate, .boxDashboard {
+.boxDate,
+.boxDashboard {
     position: relative;
-    background: #F2F2F2;
+    background: #f2f2f2;
     padding: 25px 30px;
     min-height: 200px;
     margin-bottom: 78px;
@@ -1048,8 +1028,8 @@ form.filter-accordion > .panel-body {
 .boxDate .date {
     padding-right: 30px;
     margin-right: 30px;
-    border-right: 1px solid #AFAFAF;
-    color: #002E5F;
+    border-right: 1px solid #afafaf;
+    color: #074392;
     float: left;
     height: 100px;
 }
@@ -1070,13 +1050,14 @@ form.filter-accordion > .panel-body {
     font-size: 1.28571em;
 }
 
-.boxDate .titolo-box, .boxDashboard .titolo-box {
+.boxDate .titolo-box,
+.boxDashboard .titolo-box {
     margin: 0;
     margin-bottom: 0;
     line-height: 1.42857em;
     text-transform: none;
     font-weight: 600;
-    color: #002E5F;
+    color: #074392;
     font-size: 1em;
 }
 
@@ -1088,7 +1069,8 @@ form.filter-accordion > .panel-body {
     overflow: hidden;
 }
 
-.boxDate .linkDettagli, .boxScadenze .linkDettagli {
+.boxDate .linkDettagli,
+.boxScadenze .linkDettagli {
     position: absolute;
     text-align: right;
     color: #106cdb;
@@ -1096,13 +1078,13 @@ form.filter-accordion > .panel-body {
     right: 30px;
 }
 
-.boxDashboard .titolo-box, .boxScadenze .btn-link-lower {
+.boxDashboard .titolo-box,
+.boxScadenze .btn-link-lower {
     margin-bottom: 13px;
     text-transform: uppercase;
 }
 
 .carouselBox .carousel-control {
-
     width: 0%;
     font-size: 10px;
     color: #fff;
@@ -1121,17 +1103,14 @@ form.filter-accordion > .panel-body {
     right: 15px;
 }
 
-
 .carouselBox .carousel-control span {
     font-size: 30px;
-    color: #002D5E;
+    color: #002d5e;
     line-height: 190px;
-
 }
 
-
 .feedback-box .feedback-content {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     padding-bottom: 30px;
 }
 
@@ -1149,19 +1128,19 @@ form.filter-accordion > .panel-body {
 }
 
 .esito-positivo {
-    background: #0E821A;
+    background: #0e821a;
     color: #fff;
     padding: 5px 10px;
 }
 
 .esito-negativo {
-    background: #C9291B;
+    background: #c9291b;
     color: #fff;
     padding: 5px 10px;
 }
 
 .fa.fa-check-circle {
-    color: #0E821A;
+    color: #0e821a;
     margin-right: 5px;
 }
 
@@ -1181,22 +1160,44 @@ form.filter-accordion > .panel-body {
 
 /********* Modali ************/
 
+@media (min-width: 1200px) {
+    .modal-lg {
+        width: 1100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .smallModal > .modal > .modal-lg {
+        width: 500px;
+    }
+
+    .veryLargeModal > .modal > .modal-lg {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
 .vertical-alignment-helper {
-    display:table;
+    display: table;
     height: 100%;
     width: 100%;
-    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+    pointer-events: none; /* This makes sure that we can still click outside of the modal to close it */
 }
 .vertical-align-center {
     /* To center vertically */
     display: table-cell;
     vertical-align: middle;
-    pointer-events:none;
+    pointer-events: none;
 }
+
+eng-modal > .modal > .modal-backdrop {
+    height: 100vw !important;
+}
+
 .modal-content {
     /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
-    width:inherit;
-    height:inherit;
+    width: inherit;
+    height: inherit;
     /* To center horizontally */
     margin: 0 auto;
     pointer-events: all;
@@ -1204,8 +1205,8 @@ form.filter-accordion > .panel-body {
 
 .modal-content .modal-header {
     padding: 20px 30px;
-    background-color: #002E5F;
-    color: #FFF;
+    background-color: #074392;
+    color: #fff;
 }
 
 .modal-header {
@@ -1214,8 +1215,8 @@ form.filter-accordion > .panel-body {
     min-height: 16.43px;
 }
 
-.modal-header .close{
-    color: #FFF;
+.modal-header .close {
+    color: #fff;
     opacity: 1;
     text-shadow: none;
 }
@@ -1249,7 +1250,7 @@ span.modalData {
 
 span.modalStrong {
     font-weight: 600;
-    color: #002E5F;
+    color: #074392;
 }
 
 .modal table {
@@ -1257,8 +1258,6 @@ span.modalStrong {
 }
 
 /********* FINE Modali *********/
-
-
 
 /********* Tab *****************/
 
@@ -1279,33 +1278,33 @@ span.modalStrong {
     margin-top: 0;
 }
 
-.tab .nav li a, .tab .nav li a:hover, .tab .nav li a:focus {
+.tab .nav li a,
+.tab .nav li a:hover,
+.tab .nav li a:focus {
     border: none;
     border-radius: 0;
     margin: 0;
 }
 
-.tab .nav li a .labelTabTitle, .tab .nav li a .labelTabTitle {
+.tab .nav li a .labelTabTitle,
+.tab .nav li a .labelTabTitle {
     font-weight: 600;
     padding: 0 0 0 50px;
 }
 
-.tab ul.nav > li > a, .tab ul.nav > li > a:hover {
+.tab ul.nav > li > a,
+.tab ul.nav > li > a:hover {
     padding: 20px 0;
     color: black !important;
-    background-color: #E4E5E9;
+    background-color: #e4e5e9;
 }
 
-.tab ul.nav > li.active, .tab ul.nav > li.active > a {
-    background-color: #F2F2F2;
+.tab ul.nav > li.active,
+.tab ul.nav > li.active > a {
+    background-color: #f2f2f2;
 }
-
-
 
 /********* FINE Tab ************/
-
-
-
 
 /* Bottoni */
 
@@ -1318,7 +1317,7 @@ span.modalStrong {
     margin: 0 15px 10px 0;
 }
 
-.btn.btn-modale{
+.btn.btn-modale {
     line-height: 1.92857em;
     font-family: inherit;
     font-weight: 400;
@@ -1326,13 +1325,14 @@ span.modalStrong {
 }
 
 .btn.btn-primary.btn-success {
-    background: #0E821A;
+    background: #0e821a;
 }
 
-.btn-primary[disabled], .upload-container.disabled {
-    background: #D2D2D2;
-    border-color: #D2D2D2;
-    color: #002E5F;
+.btn-primary[disabled],
+.upload-container.disabled {
+    background: #d2d2d2;
+    border-color: #d2d2d2;
+    color: #074392;
     opacity: 1 !important;
     position: relative;
 }
@@ -1351,14 +1351,17 @@ button.btn-link span.fa {
 
 .btn.view-source {
     color: #fff;
-    background-color: #106CDB !important;
+    background-color: #106cdb !important;
     padding: 10px;
     display: block;
     min-width: 150px;
 }
 
-.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
-    color: #106CDB;
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+    color: #106cdb;
     float: left;
     text-transform: none;
     background-color: transparent;
@@ -1367,21 +1370,21 @@ button.btn-link span.fa {
     padding-right: 6px;
 }
 
-.btn-primary-outline, .btn-primary-outline:focus {
+.btn-primary-outline,
+.btn-primary-outline:focus {
     background-color: transparent;
-    color: #106CDB;
+    color: #106cdb;
     touch-action: none;
 }
 
 .btn-primary-outline:hover {
     background-color: transparent;
-    color: #106CDB;
+    color: #106cdb;
 }
 
 .download-btn {
-    color: #002E5F !important;
+    color: #074392 !important;
 }
-
 
 /* FINE Bottoni */
 
@@ -1401,39 +1404,41 @@ button.btn-link span.fa {
 
 .grayGrid > div {
     background-color: #eaedf2;
-    color: #002E5F;
+    color: #074392;
     font-size: 12px;
     border: 2px solid #fff;
     padding: 10px;
 }
 /* FINE Griglia Bootstrap */
 
-
 /* Lista colori */
 
-#colori-principali, #colori-status {
+#colori-principali,
+#colori-status {
     padding-left: 0;
 }
 
-#colori-principali .color-list .color-label, #colori-status .color-list .color-label {
+#colori-principali .color-list .color-label,
+#colori-status .color-list .color-label {
     padding-left: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-#colori-principali .color-list .color-example, #colori-status .color-list .color-example {
+#colori-principali .color-list .color-example,
+#colori-status .color-list .color-example {
     height: 10em;
     line-height: 6em;
     display: block;
     color: white;
     text-align: center;
     font-weight: 300;
-    margin: 0 auto .5em;
+    margin: 0 auto 0.5em;
     padding-top: 2em;
 }
 
 #webkit .bluEng {
-    background-color: #002E5F;
+    background-color: #074392;
 }
 
 #webkit .verdeEng {
@@ -1441,35 +1446,32 @@ button.btn-link span.fa {
 }
 
 #webkit .azzurroEng {
-    background-color: #106CDB;
+    background-color: #106cdb;
 }
 
 #webkit .greyformColor {
-    background-color: #F2F2F2;;
+    background-color: #f2f2f2;
 }
 
 #colori-principali .greyColor {
-    background-color: #EAEDF2;
+    background-color: #eaedf2;
 }
 
 #webkit .verdeColor {
-    background-color: #0E821A;
+    background-color: #0e821a;
 }
 
 #webkit .rossoColor {
-    background-color: #C9291B;
+    background-color: #c9291b;
 }
 
 #webkit .arancioColor {
-    background-color: #FFAA02;
+    background-color: #ffaa02;
 }
 
 #webkit .gialloColor {
-    background-color: #FFE377;
+    background-color: #ffe377;
 }
-
-
-
 
 /* FINE Lista colori */
 
@@ -1487,7 +1489,6 @@ button.btn-link span.fa {
     display: inline-block;
 }
 
-
 .accessibilita > div {
     border-bottom: 1px solid #afafaf;
     padding: 10px 0;
@@ -1502,14 +1503,14 @@ button.btn-link span.fa {
     height: 40px;
 }
 
-.download-tab table.table.dataTable > thead .thLabel:after, .notifiche-tab table.table.dataTable > thead .thLabel:after {
+.download-tab table.table.dataTable > thead .thLabel:after,
+.notifiche-tab table.table.dataTable > thead .thLabel:after {
     content: none;
 }
 
 .download-tab > form > .baseFooter button {
-    margin-top:15px;
+    margin-top: 15px;
 }
-
 
 .btn-link-lower {
     font-size: 1.28571em;
@@ -1517,8 +1518,6 @@ button.btn-link span.fa {
     font-weight: normal;
     /*text-transform: uppercase;*/
 }
-
-
 
 /* FINE Tabella Download e Filtri */
 
@@ -1545,7 +1544,7 @@ button.btn-link span.fa {
     font-family: 'FontAwesome';
     content: "\f077";
     float: right;
-    color: #002E5F;
+    color: #074392;
     font-size: 0.85714em;
     font-weight: lighter;
     padding-top: 13px;
@@ -1553,20 +1552,20 @@ button.btn-link span.fa {
 }
 */
 
-.panel.panel-default > .panel-body.body-form-grey {
-    background-color: #F2F2F2;
+.panel-body.body-form-grey {
+    background-color: #f2f2f2;
 }
 
 .panel-default > .panel-heading {
-    background-color: #E4E5E9;
+    background-color: #e4e5e9;
 }
 
 .accordion-gray .head-accordion-gray {
-    background-color: #E4E5E9;
+    background-color: #e4e5e9;
     padding: 5px 15px;
 }
 
-.accordion-gray .panel-body{
+.accordion-gray .panel-body {
     border: 1px solid rgb(204, 204, 204);
 }
 
@@ -1575,7 +1574,7 @@ button.btn-link span.fa {
 }
 
 .head-accordion-gray em.expand-icon {
-    color: #002E5F;
+    color: #074392;
     line-height: 1.5em;
 }
 
@@ -1592,84 +1591,84 @@ button.btn-link span.fa {
 
 /* Step Carousel */
 
-
 .carousel-step {
-  margin-top: 30px;
+    margin-top: 10px;
 }
 
 .stepByStep {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .stepByStep .stepControl {
-  display: none;
-  margin-top: 6px;
+    display: none;
+    margin-top: 6px;
 }
 
 .stepByStep .stepControl button {
-  background: transparent;
-  color: #002E5F;
+    background: transparent;
+    color: #074392;
 }
 
 .stepByStep .stepControl button.active-none {
-  color: #767676;
-  cursor: default;
+    color: #767676;
+    cursor: default;
 }
 
-.stepByStep .stepControl button.active, .stepByStep .stepControl button:active {
-  box-shadow: initial;
+.stepByStep .stepControl button.active,
+.stepByStep .stepControl button:active {
+    box-shadow: initial;
 }
 
 .stepByStep .carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  height: 40px;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom {
-  position: absolute;
+    position: absolute;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item {
-  padding: 0 20px 0 0;
-  margin: 0;
-  border: 0;
-  display: inline-block;
-  font-size: 1.28571em;
+    padding: 0 20px 0 0;
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    font-size: 1.28571em;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item a {
-  color: #767676;
-  text-decoration: none;
-  cursor: default;
+    color: #767676;
+    text-decoration: none;
+    cursor: default;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item.prevActive a {
-  color: #106CDB;
+    color: #106cdb;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item.active a {
-  color: #002E5F;
-  font-weight: 700;
+    color: #074392;
+    font-weight: 700;
 }
 
-.stepByStep .carousel-wrapper .carousel-custom .item.prevActive a:hover, .stepByStep .carousel-wrapper .carousel-custom .item.active a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.stepByStep .carousel-wrapper .carousel-custom .item.prevActive a:hover,
+.stepByStep .carousel-wrapper .carousel-custom .item.active a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item a span {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .stepByStep .carousel-wrapper .carousel-custom .item.last span {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 /* FINE Step Carousel */
-
 
 /* Tabella icone */
 
@@ -1678,11 +1677,6 @@ button.btn-link span.fa {
 }
 
 /* FINE Tabella icone */
-
-
-
-
-
 
 /* Header e footer */
 
@@ -1706,11 +1700,12 @@ button.btn-link span.fa {
     z-index: 100;
 }
 
-#overlayHeader > a , #overlayFooter > a {
+#overlayHeader > a,
+#overlayFooter > a {
     color: white;
 }
 
-.header_over_cover{
+.header_over_cover {
     position: absolute;
     width: 100%;
     background-color: black;
@@ -1721,21 +1716,19 @@ button.btn-link span.fa {
     z-index: 90;
 }
 
-
 .footer_over_cover {
-    bottom:0;
-    position:absolute;
-    width:100%;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
     background-color: black;
     opacity: 0.7;
     filter: Alpha(opacity=70);
     pointer-events: none;
     cursor: default;
-    z-index:90;
+    z-index: 90;
 }
 
 /* Fine Header e footer */
-
 
 /* Breadcrumb */
 
@@ -1749,8 +1742,6 @@ button.btn-link span.fa {
 
 /* Fine Breadcrumb */
 
-
-
 /* Menu Laterale e Servizi Online */
 
 #navigazionesecondaria ul li.selected > a {
@@ -1758,7 +1749,7 @@ button.btn-link span.fa {
 }
 
 #sidebar-inferiore {
-    background-color: #002E5F;
+    background-color: #074392;
     color: white;
     margin-left: -60px;
     padding: 36px 30px 33px 40px;
@@ -1770,7 +1761,7 @@ button.btn-link span.fa {
 }
 
 #sidebar-superiore > ul {
-    padding: 25px 10px;
+    padding: 25px 10px 25px 25px;
 }
 
 #sidebar-superiore > ul a {
@@ -1785,9 +1776,8 @@ button.btn-link span.fa {
     color: #002d5e;
 }
 
-
 #sidebar-superiore .miniMenuIcon .fa {
-    color: #002E5F;
+    color: #074392;
 }
 
 #sidebar-superiore ul.miniMenuIcon li {
@@ -1798,9 +1788,6 @@ button.btn-link span.fa {
 #sidebar-superiore ul.miniMenuIcon li a {
     text-decoration: underline;
 }
-
-
-
 
 #sidebar-inferiore > * {
     margin-bottom: 5px;
@@ -1822,33 +1809,25 @@ button.btn-link span.fa {
 }
 
 .yellowlink a {
-    color: #FFE377 !important;
+    color: #ffe377 !important;
 }
 
-
 .whitelink a {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     text-decoration: underline;
 }
 
 /* FINE Servizi Online */
-
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
     .carousel-indicators {
         bottom: 20px;
     }
-
 }
-
-
-
-
 
 /* Medium devices (desktops, 992px and up)
 @media (min-width: @screen-md-min) {
@@ -1864,7 +1843,6 @@ button.btn-link span.fa {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
 }
 
 /* xs 0-767px */
@@ -1885,45 +1863,29 @@ button.btn-link span.fa {
     .date-range .datePicker div.form-group:nth-of-type(2) em.fa-calendar {
         left: 170px;
     }
-
 }
 
 /* sm 768px-991px */
-@media (min-width: 768px) and (max-width: 991px) {
-
-
-
-}
+/* @media (min-width: 768px) and (max-width: 991px) {
+} */
 /* md 992px-1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .stepByStep .carousel-wrapper {
-        height: 80px;
-    }
-
-}
-
+/* @media (min-width: 992px) and (max-width: 1199px) {
+} */
 
 /* xs->sm 0-991px */
-@media (max-width: 991px) {
-
+@media (max-width: 827px) {
     .stepByStep .carousel-wrapper {
-        height: 150px;
+        height: 75px;
     }
-
 }
 /* xs->md 0-1199px */
 @media (max-width: 1199px) {
-
     .boxDashboard form > div:first-of-type {
         padding-bottom: 5px;
     }
-
 }
 
-
 @media (max-width: 440px) {
-
     h2.title-sorgente {
         width: 100%;
     }
@@ -1932,4 +1894,28 @@ button.btn-link span.fa {
         float: left !important;
         margin-bottom: 30px;
     }
+}
+
+.step-number {
+     overflow: auto;
+}
+
+.item > a > span {
+    overflow: auto;
+}
+
+.upload-container > span {
+    overflow: auto;
+}
+
+.form-group > button {
+    overflow: auto;
+}
+
+.btn-pimary {
+    overflow: auto;
+}
+
+.ngx-file-drop__drop-zone-label, .cursor {
+    color: #002d5e;
 }

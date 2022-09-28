@@ -1,0 +1,36 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data":  {
+        "id": 72000,
+        "name": "SIGNED.pdf",
+        "type": {
+            "key": "DOCUMENTAZIONE_FIRMATA",
+            "value": "Documentazione firmata"
+        },
+        "category": {
+            "key": "4",
+            "value": "Nota"
+        },
+        "url": "https://wso2.meetpad-dev.eng.it/meet-pad-rest-svil/1.0/downloadFile/SZSgFrg2WlflRg7E",
+        "visibility": [
+            {
+                "key": "8155",
+                "value": "Regione Marche"
+            }
+        ],
+        "signatories": [],
+        "status": "SIGNED",    
+        "owner": {
+            "name": "Federico", 
+            "surname": "Dainelli"
+        },          
+        "protocolNumber": "34",
+        "protocolDate": "21-03-2019",
+        "inventoryNumber": null,
+        "cityReference": null,
+        "folder": null,
+        "meetingDate": null
+    }
+}

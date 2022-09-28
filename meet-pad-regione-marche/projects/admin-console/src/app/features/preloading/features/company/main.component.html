@@ -1,0 +1,23 @@
+<admin-company-search
+    (onNewSearch)="startResearch($event)"
+></admin-company-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="PRELOADING.COMPANY.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="'PRELOADING.COMPANY.ACTIONS.NEW' | translate"
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-company-list
+                [searchQuery]="searchQuery"
+                [preloading]="true"
+            ></admin-company-list>
+        </div>
+    </div>
+</eng-form-section>

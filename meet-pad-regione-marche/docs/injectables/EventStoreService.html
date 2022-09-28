@@ -1,0 +1,1620 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>EventStoreService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/private/conference/features/events/services/events-store.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#conferenceStoreService">conferenceStoreService</a>
+                            </li>
+                            <li>
+                                <a href="#currentEvent">currentEvent</a>
+                            </li>
+                            <li>
+                                <a href="#currentEventType">currentEventType</a>
+                            </li>
+                            <li>
+                                <a href="#eventsRefresh$">eventsRefresh$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#i18nService">i18nService</a>
+                            </li>
+                            <li>
+                                <a href="#subscription">subscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#utilityService">utilityService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_resetContext">_resetContext</a>
+                            </li>
+                            <li>
+                                <a href="#extractDataToSubmit">extractDataToSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#fetchAllEvents">fetchAllEvents</a>
+                            </li>
+                            <li>
+                                <a href="#getEventById">getEventById</a>
+                            </li>
+                            <li>
+                                <a href="#getGroupFields">getGroupFields</a>
+                            </li>
+                            <li>
+                                <a href="#hasGroupFields">hasGroupFields</a>
+                            </li>
+                            <li>
+                                <a href="#needModal">needModal</a>
+                            </li>
+                            <li>
+                                <a href="#processCreationEvent">processCreationEvent</a>
+                            </li>
+                            <li>
+                                <a href="#resetContext">resetContext</a>
+                            </li>
+                            <li>
+                                <a href="#save">save</a>
+                            </li>
+                            <li>
+                                <a href="#saveComplete">saveComplete</a>
+                            </li>
+                            <li>
+                                <a href="#saveError">saveError</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#loading">loading</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(eventGroupFieldsService: <a href="../injectables/EventGroupFieldsService.html">EventGroupFieldsService</a>, eventsService: <a href="../injectables/EventsService.html">EventsService</a>, loaderService: LoaderService, toastrService: ToastrService, conferenceStoreService: <a href="../injectables/ConferenceStoreService.html">ConferenceStoreService</a>, utilityService: <a href="../injectables/UtilityService.html">UtilityService</a>, i18nService: I18nService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>eventGroupFieldsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventGroupFieldsService.html" target="_self" >EventGroupFieldsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loaderService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoaderService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastrService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>conferenceStoreService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConferenceStoreService.html" target="_self" >ConferenceStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>utilityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UtilityService.html" target="_self" >UtilityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_resetContext"></a>
+                    <span class="name">
+                        <b>
+                            _resetContext
+                        </b>
+                        <a href="#_resetContext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_resetContext()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:188</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractDataToSubmit"></a>
+                    <span class="name">
+                        <b>
+                            extractDataToSubmit
+                        </b>
+                        <a href="#extractDataToSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>extractDataToSubmit(form: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Partial&lt;IntegrationRequest | IntegrationClosed | IntegrationOnlyOneRequest | IntegrationSend | ConferenceMemo | ConferenceClosing | OpinionExpress | FinalResolution | GenericCommunication | IntegrationRegistered&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchAllEvents"></a>
+                    <span class="name">
+                        <b>
+                            fetchAllEvents
+                        </b>
+                        <a href="#fetchAllEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchAllEvents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEventById"></a>
+                    <span class="name">
+                        <b>
+                            getEventById
+                        </b>
+                        <a href="#getEventById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEventById(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, eventId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>eventId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Event.html" target="_self" >Observable&lt;Event&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroupFields"></a>
+                    <span class="name">
+                        <b>
+                            getGroupFields
+                        </b>
+                        <a href="#getGroupFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getGroupFields(eventType: <a href="../classes/Event.html">EventType</a>, mode: <a href="../undefineds/ActionForm.html">ActionForm</a>, model?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>eventType</td>
+                                    <td>
+                                                <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>mode</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#ActionForm" target="_self" >ActionForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Map&lt;string, FormFieldGroup&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasGroupFields"></a>
+                    <span class="name">
+                        <b>
+                            hasGroupFields
+                        </b>
+                        <a href="#hasGroupFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasGroupFields(eventType: <a href="../classes/Event.html">EventType</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>eventType</td>
+                                    <td>
+                                                <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="needModal"></a>
+                    <span class="name">
+                        <b>
+                            needModal
+                        </b>
+                        <a href="#needModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>needModal(eventType: <a href="../classes/Event.html">EventType</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:195</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>eventType</td>
+                                    <td>
+                                                <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="processCreationEvent"></a>
+                    <span class="name">
+                        <b>
+                            processCreationEvent
+                        </b>
+                        <a href="#processCreationEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>processCreationEvent(eventType: <a href="../classes/Event.html">EventType</a>, conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="199"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:199</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>eventType</td>
+                                    <td>
+                                                <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetContext"></a>
+                    <span class="name">
+                        <b>
+                            resetContext
+                        </b>
+                        <a href="#resetContext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetContext()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <b>
+                            save
+                        </b>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>save(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, event: IntegrationRequest | IntegrationClosed | IntegrationOnlyOneRequest | IntegrationSend | ConferenceMemo | ConferenceClosing | OpinionExpress | FinalResolution | GenericCommunication | IntegrationRegistered)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:139</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>IntegrationRequest | IntegrationClosed | IntegrationOnlyOneRequest | IntegrationSend | ConferenceMemo | ConferenceClosing | OpinionExpress | FinalResolution | GenericCommunication | IntegrationRegistered</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveComplete"></a>
+                    <span class="name">
+                        <b>
+                            saveComplete
+                        </b>
+                        <a href="#saveComplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveComplete(response: WrapperPostPutData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>response</td>
+                                    <td>
+                                            <code>WrapperPostPutData</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveError"></a>
+                    <span class="name">
+                        <b>
+                            saveError
+                        </b>
+                        <a href="#saveError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveError(error: ErrorMessage)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+                                    <td>
+                                            <code>ErrorMessage</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="conferenceStoreService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            conferenceStoreService</b>
+                            <a href="#conferenceStoreService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/ConferenceStoreService.html" target="_self" >ConferenceStoreService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentEvent"></a>
+                        <span class="name">
+                            <b>
+                            currentEvent</b>
+                            <a href="#currentEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >Event</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentEventType"></a>
+                        <span class="name">
+                            <b>
+                            currentEventType</b>
+                            <a href="#currentEventType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventsRefresh$"></a>
+                        <span class="name">
+                            <b>
+                            eventsRefresh$</b>
+                            <a href="#eventsRefresh$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;boolean&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="i18nService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            i18nService</b>
+                            <a href="#i18nService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>I18nService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                            subscription</b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="utilityService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            utilityService</b>
+                            <a href="#utilityService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/UtilityService.html" target="_self" >UtilityService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name"><b>loading</b><a href="#loading"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>loading()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/features/private/conference/features/events/services/events-store.service.ts:59</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+
+import { Observable, Subscription, Subject } from &#x27;rxjs&#x27;;
+import { tap } from &#x27;rxjs/operators&#x27;;
+
+import { ErrorMessage } from &#x27;@eng-ds/ng-toolkit&#x27;;
+import { I18nService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import {
+    LoaderService,
+    WrapperPostPutData,
+    SectionLoading,
+    WrapperGetData,
+    FormFieldGroup
+} from &#x27;@common&#x27;;
+
+import { EventType, ActionForm, UtilityService } from &#x27;@app/core&#x27;;
+
+import {
+    Event,
+    IntegrationRequest,
+    IntegrationClosed,
+    IntegrationOnlyOneRequest,
+    IntegrationSend,
+    ConferenceMemo,
+    ConferenceClosing,
+    OpinionExpress,
+    FinalResolution,
+    GenericCommunication,
+    IntegrationRegistered,
+    EventsService,
+    ConferenceStoreService
+} from &#x27;@features/private/conference/core&#x27;;
+
+import { EventGroupFieldsService } from &#x27;./group-fields/event-group-fields.service&#x27;;
+
+@Injectable()
+export class EventStoreService {
+    currentEvent: Event;
+    currentEventType: EventType;
+    subscription: Subscription;
+    eventsRefresh$: Subject&lt;boolean&gt;;
+
+    constructor(
+        private eventGroupFieldsService: EventGroupFieldsService,
+        private eventsService: EventsService,
+        private loaderService: LoaderService,
+        private toastrService: ToastrService,
+        public conferenceStoreService: ConferenceStoreService,
+        public utilityService: UtilityService,
+        public i18nService: I18nService
+    ) {
+        this.eventsRefresh$ &#x3D; new Subject&lt;boolean&gt;();
+    }
+
+    get loading(): Observable&lt;boolean&gt; {
+        return this.loaderService.getLoading$(SectionLoading.EVENTS_MODAL);
+    }
+
+    getGroupFields(
+        eventType: EventType,
+        mode: ActionForm,
+        model?: any
+    ): Map&lt;string, FormFieldGroup&gt; {
+        this.currentEventType &#x3D; eventType;
+        return this.eventGroupFieldsService.get(eventType, mode, model);
+    }
+
+    hasGroupFields(eventType: EventType): boolean {
+        return this.eventGroupFieldsService.has(eventType);
+    }
+
+    getEventById(conferenceId: string, eventId: string): Observable&lt;Event&gt; {
+        this.loaderService.showLoading(SectionLoading.EVENTS_MODAL);
+        return this.eventsService
+            .getById(conferenceId, eventId)
+            .pipe(
+                tap(_ &#x3D;&gt;
+                    this.loaderService.hideLoading(
+                        SectionLoading.EVENTS_MODAL,
+                        800
+                    )
+                )
+            );
+    }
+
+    fetchAllEvents() {
+        const criteria &#x3D; {};
+        criteria[&#x27;sort&#x27;] &#x3D; &#x27;id,asc&#x27;;
+        criteria[&#x27;page&#x27;] &#x3D; 1;
+        criteria[&#x27;size&#x27;] &#x3D; 10000;
+
+        return this.eventsService
+            .get(this.conferenceStoreService.conference.id, criteria)
+            .pipe(
+                tap((results: WrapperGetData&lt;Event&gt;) &#x3D;&gt; {
+                    this.conferenceStoreService.conference.addEvents(
+                        results.list
+                    );
+                })
+            );
+    }
+
+    extractDataToSubmit(
+        form: FormGroup
+    ): Partial&lt;
+        | IntegrationRequest
+        | IntegrationClosed
+        | IntegrationOnlyOneRequest
+        | IntegrationSend
+        | ConferenceMemo
+        | ConferenceClosing
+        | OpinionExpress
+        | FinalResolution
+        | GenericCommunication
+        | IntegrationRegistered
+    &gt; {
+        const formRawValue &#x3D; form.getRawValue();
+        return {
+            type: { key: this.currentEventType, value: &#x27;&#x27; },
+            notes:
+                (formRawValue.additionalFields &amp;&amp;
+                    formRawValue.additionalFields.notes) ||
+                null,
+            result:
+                (formRawValue.additionalFields &amp;&amp;
+                    formRawValue.additionalFields.result) ||
+                null,
+            body: formRawValue.head.body || null,
+            document: formRawValue.document,
+            determinationType: formRawValue.document.determinationType || null,
+            recipients: formRawValue.head.recipients || null
+        };
+    }
+
+    save(
+        conferenceId: string,
+        event:
+            | IntegrationRequest
+            | IntegrationClosed
+            | IntegrationOnlyOneRequest
+            | IntegrationSend
+            | ConferenceMemo
+            | ConferenceClosing
+            | OpinionExpress
+            | FinalResolution
+            | GenericCommunication
+            | IntegrationRegistered
+    ): Observable&lt;WrapperPostPutData&gt; {
+        this.currentEvent &#x3D; event;
+        this.loaderService.showLoading(SectionLoading.EVENTS_MODAL);
+        return this.eventsService.create(event, conferenceId);
+    }
+
+    saveComplete(response: WrapperPostPutData): void {
+        this.eventsRefresh$.next(true);
+        this.loaderService.hideLoading(SectionLoading.EVENTS_MODAL);
+        this.toastrService.info(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.EVENTS.TOASTR.SUCCESS.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.EVENTS.TOASTR.SUCCESS.TITLE&#x27;
+            )
+        );
+    }
+
+    saveError(error: ErrorMessage): void {
+        this.loaderService.showLoading(SectionLoading.EVENTS_MODAL);
+        this.toastrService.error(
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.EVENTS.TOASTR.ERROR.TEXT&#x27;
+            ),
+            this.i18nService.translate(
+                &#x27;CONFERENCE.WIZARD.EVENTS.TOASTR.ERROR.TITLE&#x27;
+            )
+        );
+    }
+
+    resetContext(): void {
+        this.eventGroupFieldsService.resetContext();
+        this._resetContext();
+    }
+
+    _resetContext(): void {
+        this.currentEvent &#x3D; undefined;
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+    }
+
+    needModal(eventType: EventType): boolean {
+        return eventType !&#x3D;&#x3D; EventType.INTEGRATION_CLOSED;
+    }
+
+    processCreationEvent(eventType: EventType, conferenceId: string): void {
+        if (eventType &#x3D;&#x3D;&#x3D; EventType.INTEGRATION_CLOSED) {
+            this.subscription &#x3D; this.save(
+                conferenceId,
+                new IntegrationClosed()
+            ).subscribe(
+                (response: WrapperPostPutData) &#x3D;&gt; {
+                    this.saveComplete(response);
+                },
+                (error: any) &#x3D;&gt; {
+                    const errorMex &#x3D; new ErrorMessage();
+                    errorMex.title &#x3D; &#x27;ERRORE.GENERICO_SERVER&#x27;;
+                    errorMex.message &#x3D; error.message;
+                    this.saveError(errorMex);
+                }
+            );
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'EventStoreService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

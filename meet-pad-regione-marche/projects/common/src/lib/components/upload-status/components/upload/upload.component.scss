@@ -1,0 +1,47 @@
+.progress {
+    height: 20px;
+    border-radius: 2px;
+}
+
+.upload-icon {
+    margin: auto;
+    i {
+        color: #074392;
+        .success {
+            color: #28a745 !important;
+        }
+
+        .error {
+            color: #bd362f !important;
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    grid-template-columns: 50px auto;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    grid-column-gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.upload {
+    min-width: 100%;
+    align-items: center;
+    h5 {
+        font-size: 18px;
+        color: #074392;
+        font-weight: 700;
+    }
+    .title {
+        width: 100%;
+        grid-template-columns: auto auto;
+        display: -ms-inline-grid;
+        display: inline-grid;
+        p.size {
+            text-align: right;
+        }
+    }
+}

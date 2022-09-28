@@ -1,0 +1,12 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Competenza 1" },
+            { "key": "2", "value": "Competenza 2" },
+            { "key": "3", "value": "Competenza 3" },
+            { "key": "4", "value": "Competenza 4" }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+.marginBottom {
+    margin-bottom: 20px;
+}
+
+:host /deep/ .panel-group {
+    margin-bottom: 0 !important;
+}
+
+.summary {
+    margin-top: 30px;
+}

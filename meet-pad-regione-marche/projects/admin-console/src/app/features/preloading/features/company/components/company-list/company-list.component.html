@@ -1,0 +1,56 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        [action]="actionEdit"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+
+    <eng-action
+        *ngIf="preloading"
+        [action]="actionDelete"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+<ng-template #fiscalCodeTemplate let-model="item">
+    <!-- {{ getAuthorityByKey(model.authority.key) }} -->
+    {{ model.fiscalCode || '---' }}
+</ng-template>
+<ng-template #nameTemplate let-model="item">
+    <!-- {{ getAuthorityByKey(model.authority.key) }} -->
+    {{ model.name || '---' }}
+</ng-template>
+<ng-template #vatTemplate let-model="item">
+    <!-- {{ getAuthorityByKey(model.authority.key) }} -->
+    {{ model.vatNumber || '---' }}
+</ng-template>
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'REGISTRY.COMPANY.TABLE.EMPTY_MESSAGE' | translate }}.
+</div>
+<eng-modal
+    #confirmModal
+    class="smallModal"
+    [buttons]="modalButtons"
+    [title]="'PRELOADING.COMPANY.CONFIRM_DELETE_MODAL.TITLE' | translate"
+>
+    <p>{{ modalText }}</p>
+</eng-modal>

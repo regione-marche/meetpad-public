@@ -1,0 +1,22 @@
+<div
+    [hidden]="!list.length"
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+>
+    <div class="row panel-heading custom-panel-title">
+        {{ title | translate }}
+    </div>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="structure"
+            [accordion]="detailLookup"
+            [showPageSize]="false"
+            [showActions]="false"
+        ></eng-table-result>
+    </div>
+   
+</div>
+
+<div class="row col-xs-12 col-sm-12 col-lg-12 noPadding" *ngIf="!list.length">
+    {{ emptyText | translate }}.
+</div>

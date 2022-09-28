@@ -1,0 +1,10 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Tipologia 1" },
+            { "key": "2", "value": "Tipologia 2" }
+        ]
+    }
+}

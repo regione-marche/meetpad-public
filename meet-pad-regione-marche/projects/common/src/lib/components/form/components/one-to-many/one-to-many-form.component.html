@@ -1,0 +1,78 @@
+<div
+    [ngClass]="{ 'panel panel-default': isPanel(), 'mt-5 mb-5': accordion }"
+    class="panel-with-manual-transiction"
+>
+    <!-- stampa l'eventuale head del pannello -->
+    <div *ngIf="haveHead()" class="panel-heading custom-panel-title">
+        <a
+            *ngIf="accordion; else noAccordion"
+            data-toggle="collapse"
+            [attr.data-parent]="'#accordion' + formName"
+            href="#collapse{{ accordion }}"
+            [translate]="group.panelHead"
+        >
+        </a>
+        <ng-template #noAccordion>
+            <span [translate]="group.panelHead"></span>
+        </ng-template>
+        <eng-input-tooltip
+            *ngIf="!group.tooltip"
+            [tooltip]="group.tooltip"
+        ></eng-input-tooltip>
+        <span
+            *ngIf="!group.readonly"
+            class="pull-right fa fa-plus"
+            aria-hidden="true"
+            (click)="!group.readonly && toogleForm()"
+        >
+        </span>
+    </div>
+
+    <!-- eventuale body del pannello [ngClass]="{'in': open}" -->
+    <div
+        id="collapse{{ accordion }}"
+        class="panel-collapse collapse"
+        role="tabpanel"
+        aria-labelledby="headingOne"
+    >
+        <div [ngClass]="{ 'panel-body': isPanel() }">
+            <div *ngIf="insertActive">
+                <div *ngIf="form" class="row">
+                    <!-- <eng-content-loader [loading]='loading'></eng-content-loader> -->
+                    <app-inputs-form
+                        [fields]="group.fields"
+                        [form]="form"
+                        [errorLabels]="errorLabels"
+                    >
+                    </app-inputs-form>
+                </div>
+
+                <div *ngIf="form" class="row">
+                    <eng-button
+                        type="reset"
+                        (onClick)="resetForm()"
+                        [title]="'BUTTON.CANCEL' | translate"
+                        [isLink]="true"
+                    >
+                    </eng-button>
+                    <eng-callback-button
+                        [disabled]="form && form.invalid"
+                        class="pull-right"
+                        [title]="'BUTTON.ADD' | translate"
+                        (onClick)="onSubmit($event)"
+                    >
+                    </eng-callback-button>
+                </div>
+            </div>
+
+            <app-form-list-table
+                [title]="group.listTitle"
+                [emptyText]="group.emptyTextList"
+                [structure]="group.listStructure"
+                [list]="group.listMany"
+                [detailLookup]="detailLookup"
+            >
+            </app-form-list-table>
+        </div>
+    </div>
+</div>

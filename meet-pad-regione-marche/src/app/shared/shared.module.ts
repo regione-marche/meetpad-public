@@ -1,32 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
-import { TranslateModule } from '@ngx-translate/core';
-
-import { NgxEngToolkitModule } from '@eng-ds/ng-toolkit';
-
-import { EngHeaderComponent } from '@app/shared/components/eng-header/eng-header.component';
-import { EngFooterComponent } from '@app/shared/components/eng-footer/eng-footer.component';
+import { CommonModule } from '@common';
+import { AuthDirective } from '@app/shared/directives';
+import { ContactComponent } from './components/contact/contact.component';
+import { OpendataComponent } from './components/opendata/opendata.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    TranslateModule,
-    NgxEngToolkitModule
-  ],
-  declarations: [
-    EngHeaderComponent,
-    EngFooterComponent
-  ],
-  exports: [
-    ReactiveFormsModule,
-    FormsModule,
-    EngHeaderComponent,
-    EngFooterComponent,
-    NgxEngToolkitModule
-  ]
+    imports: [CommonModule],
+    declarations: [AuthDirective, ContactComponent, OpendataComponent],
+    exports: [CommonModule, AuthDirective, ContactComponent, OpendataComponent]
 })
-export class SharedModule { }
+export class SharedModule {}

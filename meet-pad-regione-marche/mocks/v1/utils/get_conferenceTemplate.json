@@ -1,0 +1,101 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data": {
+        "procedure": {
+            "applicant": {
+                "action": null,
+                "activity": null,
+                "fiscalCode": "RSSGNN80A01H501N",
+                "name": "Giovanni",
+                "pec": "guido.deluca@postaraffaello.it",
+                "requestReference": null,
+                "startDate": null,
+                "surname": "Rossi",
+                "type": null
+            },
+            "companySection": [
+                {
+                    "company": {
+                        "id": 4,
+                        "denomination": "Open Fiber S.p.A.",
+                        "fiscalCode": "",
+                        "vatNumber": "09320630966",
+                        "legalForm": {
+                            "key": "5",
+                            "value": "Società di capitale"
+                        },
+                        "area": {
+                            "key": "03",
+                            "value": "Lombardia"
+                        },
+                        "province": {
+                            "key": "015",
+                            "value": "Milano"
+                        },
+                        "city": {
+                            "key": "015146",
+                            "value": "Milano"
+                        },
+                        "address": "Via certosa 2"
+                    },
+                    "applicant": {
+                        "action": null,
+                        "activity": null,
+                        "fiscalCode": "DLCGDU71D16C632S",
+                        "name": "Guido ",
+                        "pec": "ivana.atzori@eng.it",
+                        "requestReference": null,
+                        "startDate": null,
+                        "surname": "De Luca",
+                        "type": null
+                    }
+                }
+            ]
+        },
+        "definition": {
+            "instance": {
+                "endIntegrationDate": {
+                    "offsetBusinessDay": "integer",
+                    "offsetDay": "integer",
+                    "baseDate": "creationDate|endOpinionDate|endIntegrationDate|firstSessionDate",
+                    "required": "boolean"
+                },
+                "endOpinionDate": {
+                    "offsetBusinessDay": "integer",
+                    "offsetDay": "integer",
+                    "baseDate": "creationDate|endOpinionDate|endIntegrationDate|firstSessionDate",
+                    "required": "boolean"
+                },
+                "firstSessionDate": {
+                    "offsetBusinessDay": "integer",
+                    "offsetDay": "integer",
+                    "baseDate": "creationDate|endOpinionDate|endIntegrationDate|firstSessionDate",
+                    "required": "boolean"
+                },
+                "expirationDate": {
+                    "offsetBusinessDay": "integer",
+                    "offsetDay": "integer",
+                    "baseDate": "creationDate|endOpinionDate|endIntegrationDate|firstSessionDate",
+                    "required": "boolean"
+                },
+                "conferenceTime": {
+                    "visible": "boolean"
+                },
+                "address": {
+                    "type": "1|2",
+                    "disabled": "boolean"
+                }
+            }
+        },
+        "participant": {
+            "competence": [
+                {
+                    "key": "number",
+                    "value": "string"
+                }
+            ]
+        }
+    }
+}

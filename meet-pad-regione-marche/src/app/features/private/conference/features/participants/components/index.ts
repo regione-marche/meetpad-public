@@ -1,0 +1,1 @@
+export * from './participants-table/participants-table.component';

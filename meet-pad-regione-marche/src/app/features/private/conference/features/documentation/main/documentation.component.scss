@@ -1,0 +1,40 @@
+.summaryDate {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 80% 20%;
+    h5 {
+        font-weight: 600;
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.1;
+    }
+}
+
+form {
+    margin-top: 0px;
+}
+
+:host /deep/ .panel-group {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 992px) {
+    form {
+        margin-top: 30px;
+    }
+}
+
+.indictionFileLoading.loading {
+    height: calc(100% + 85px);
+}
+
+.sharedFileLoading.loading {
+    height: calc(100% + 85px);
+}
+
+:host /deep/ {
+    eng-select .label-select {
+        overflow: inherit !important;
+    }
+}

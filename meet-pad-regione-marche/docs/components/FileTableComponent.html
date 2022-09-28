@@ -1,0 +1,1538 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FileTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-file-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./file-table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./file-table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actions">actions</a>
+                            </li>
+                            <li>
+                                <a href="#actionTemplate">actionTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#categoryTemplate">categoryTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#cloudAction">cloudAction</a>
+                            </li>
+                            <li>
+                                <a href="#fileTypes">fileTypes</a>
+                            </li>
+                            <li>
+                                <a href="#linkAction">linkAction</a>
+                            </li>
+                            <li>
+                                <a href="#tableStructure">tableStructure</a>
+                            </li>
+                            <li>
+                                <a href="#templateVisibility">templateVisibility</a>
+                            </li>
+                            <li>
+                                <a href="#visibility">visibility</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#category">category</a>
+                            </li>
+                            <li>
+                                <a href="#defineTableStructure">defineTableStructure</a>
+                            </li>
+                            <li>
+                                <a href="#isLink">isLink</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#truncate">truncate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#files">files</a>
+                            </li>
+                            <li>
+                                <a href="#sharedDocumentation">sharedDocumentation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteFile">deleteFile</a>
+                            </li>
+                            <li>
+                                <a href="#downloadFile">downloadFile</a>
+                            </li>
+                            <li>
+                                <a href="#editCloud">editCloud</a>
+                            </li>
+                            <li>
+                                <a href="#editFile">editFile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(i18nService: I18nService, fileService: FileService, configService: ConfigService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileService</td>
+                                                  
+                                                        <td>
+                                                                    <code>FileService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ConfigService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <b>disabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="files"></a>
+                        <b>files</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BaseFile[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sharedDocumentation"></a>
+                        <b>sharedDocumentation</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteFile"></a>
+                        <b>deleteFile</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="downloadFile"></a>
+                        <b>downloadFile</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:40</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editCloud"></a>
+                        <b>editCloud</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:39</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editFile"></a>
+                        <b>editFile</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="category"></a>
+                    <span class="name">
+                        <b>
+                            category
+                        </b>
+                        <a href="#category"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>category(model: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defineTableStructure"></a>
+                    <span class="name">
+                        <b>
+                            defineTableStructure
+                        </b>
+                        <a href="#defineTableStructure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>defineTableStructure(structure: AbstractTableField[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>structure</td>
+                                    <td>
+                                            <code>AbstractTableField[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>AbstractTableField[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLink"></a>
+                    <span class="name">
+                        <b>
+                            isLink
+                        </b>
+                        <a href="#isLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isLink(model: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="193"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:193</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="truncate"></a>
+                    <span class="name">
+                        <b>
+                            truncate
+                        </b>
+                        <a href="#truncate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>truncate(s: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>s</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actions"></a>
+                        <span class="name">
+                            <b>
+                            actions</b>
+                            <a href="#actions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actionTemplate"></a>
+                        <span class="name">
+                            <b>
+                            actionTemplate</b>
+                            <a href="#actionTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;actionTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categoryTemplate"></a>
+                        <span class="name">
+                            <b>
+                            categoryTemplate</b>
+                            <a href="#categoryTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;categoryTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cloudAction"></a>
+                        <span class="name">
+                            <b>
+                            cloudAction</b>
+                            <a href="#cloudAction"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileTypes"></a>
+                        <span class="name">
+                            <b>
+                            fileTypes</b>
+                            <a href="#fileTypes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>FileType</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="linkAction"></a>
+                        <span class="name">
+                            <b>
+                            linkAction</b>
+                            <a href="#linkAction"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tableStructure"></a>
+                        <span class="name">
+                            <b>
+                            tableStructure</b>
+                            <a href="#tableStructure"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AbstractTableField[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contain the table structure for result</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="templateVisibility"></a>
+                        <span class="name">
+                            <b>
+                            templateVisibility</b>
+                            <a href="#templateVisibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;templateVisibility&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visibility"></a>
+                        <span class="name">
+                            <b>
+                            visibility</b>
+                            <a href="#visibility"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;visibility&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/features/private/conference/features/documentation/components/file-table/file-table.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    OnInit,
+    Input,
+    ViewChild,
+    Output,
+    EventEmitter,
+    ElementRef,
+    AfterViewInit
+} from &#x27;@angular/core&#x27;;
+
+import * as $ from &#x27;jquery&#x27;;
+
+import {
+    AbstractTableField,
+    TableField,
+    ActionItem,
+    TemplateField
+} from &#x27;@eng-ds/ng-toolkit&#x27;;
+
+import { I18nService, ConfigService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import { ComboBox, BaseFile, FileType, FileService } from &#x27;@common&#x27;;
+
+@Component({
+    selector: &#x27;app-file-table&#x27;,
+    templateUrl: &#x27;./file-table.component.html&#x27;,
+    styleUrls: [&#x27;./file-table.component.scss&#x27;]
+})
+export class FileTableComponent implements OnInit, AfterViewInit {
+    @Input(&#x27;disabled&#x27;) disabled: boolean &#x3D; false;
+    @Input(&#x27;files&#x27;) files: BaseFile[] &#x3D; [];
+    @Input(&#x27;sharedDocumentation&#x27;) sharedDocumentation: boolean &#x3D; false;
+
+    @Output(&#x27;editFile&#x27;) editFile &#x3D; new EventEmitter&lt;BaseFile&gt;();
+    @Output(&#x27;deleteFile&#x27;) deleteFile &#x3D; new EventEmitter&lt;BaseFile&gt;();
+    @Output(&#x27;editCloud&#x27;) editCloud &#x3D; new EventEmitter&lt;BaseFile&gt;();
+    @Output(&#x27;downloadFile&#x27;) downloadFile &#x3D; new EventEmitter&lt;BaseFile&gt;();
+
+    @ViewChild(&#x27;templateVisibility&#x27;) templateVisibility;
+    @ViewChild(&#x27;categoryTemplate&#x27;) categoryTemplate;
+    @ViewChild(&#x27;actionTemplate&#x27;) actionTemplate;
+    @ViewChild(&#x27;visibility&#x27;) visibility: ElementRef;
+
+    fileTypes &#x3D; FileType;
+    cloudAction: ActionItem;
+    linkAction: ActionItem;
+    actions: ActionItem[] &#x3D; [];
+
+    /**
+     * Contain the table structure for result
+     */
+    tableStructure: AbstractTableField[] &#x3D; [];
+
+    constructor(
+        private i18nService: I18nService,
+        private fileService: FileService,
+        private configService: ConfigService
+    ) {}
+
+    category(model: any) {
+        let _c &#x3D; &#x27;---&#x27;;
+        if (model.category &amp;&amp; model.category.value) {
+            _c &#x3D; model.category.value;
+        }
+
+        if (model.cityReference &amp;&amp; model.cityReference) {
+            _c &#x3D; &#x60;${_c} - ${model.cityReference}&#x60;;
+        }
+        return _c;
+    }
+
+    ngOnInit(): void {
+        this.tableStructure &#x3D; this.defineTableStructure(this.tableStructure);
+        $(&#x27;.td-visibility&#x27;)
+            .parent(&#x27;td&#x27;)
+            .addClass(&#x27;visibilityCel&#x27;);
+    }
+
+    ngAfterViewInit(): void {
+        // Workaround caused by use jQuery in Angular
+        // tslint:disable-next-line: no-eval
+        eval(&#x27;$(\&#x27;[data-toggle&#x3D;&quot;tooltip&quot;]\&#x27;).tooltip();&#x27;);
+    }
+
+    truncate(s: string): string {
+        if (s.length &gt; 35) {
+            return s.substring(0, 35) + &#x27;...&#x27;;
+        } else {
+            return s;
+        }
+    }
+
+    defineTableStructure(
+        structure: AbstractTableField[]
+    ): AbstractTableField[] {
+        this.actions &#x3D; [
+            new ActionItem(
+                &#x27;BUTTON.DOWNLOAD&#x27;,
+                (a, item: BaseFile) &#x3D;&gt; {
+                    this.downloadFile.emit(item);
+                },
+                &#x27;download&#x27;
+            )
+        ];
+        if (this.disabled) {
+            this.actions.push(
+                new ActionItem(
+                    &#x27;BUTTON.VIEW&#x27;,
+                    (a, item: BaseFile) &#x3D;&gt; {
+                        this.editFile.emit(item);
+                    },
+                    &#x27;eye&#x27;
+                )
+            );
+        } else {
+            this.actions.push(
+                new ActionItem(
+                    &#x27;BUTTON.DELETE&#x27;,
+                    (a, item: BaseFile) &#x3D;&gt; {
+                        this.deleteFile.emit(item);
+                    },
+                    &#x27;trash&#x27;
+                ),
+                new ActionItem(
+                    &#x27;BUTTON.UPDATE&#x27;,
+                    (a, item: BaseFile) &#x3D;&gt; {
+                        this.editFile.emit(item);
+                    },
+                    &#x27;pencil&#x27;
+                )
+            );
+        }
+
+        if (this.configService.get(&#x27;onlyOfficeEnabled&#x27;)) {
+            this.cloudAction &#x3D; new ActionItem(
+                &#x27;BUTTON.CLOUD_EDIT&#x27;,
+                (a, item: BaseFile) &#x3D;&gt; {
+                    this.editCloud.emit(item);
+                },
+                &#x27;cloud&#x27;
+            );
+        }
+        this.linkAction &#x3D; new ActionItem(
+            &#x27;BUTTON.LINK&#x27;,
+            (a, item: BaseFile) &#x3D;&gt; {
+                window.open(item.url, &#x27;_blank&#x27;);
+            },
+            &#x27;link&#x27;
+        );
+
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.NAME&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;name&#x27;,
+                false
+            )
+        );
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.CATEGORY&#x27;
+                ),
+                this.categoryTemplate
+            )
+        );
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.VISIBILITY&#x27;
+                ),
+                this.templateVisibility
+            )
+        );
+
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.ACTIONS&#x27;
+                ),
+                this.actionTemplate
+            )
+        );
+
+        return structure;
+    }
+
+    isLink(model: any): boolean {
+        return model.url.indexOf(this.configService.get(&#x27;backend.baseUrl&#x27;));
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div
+    [hidden]&#x3D;&quot;!files.length&quot;
+    class&#x3D;&quot;row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding&quot;
+&gt;
+    &lt;div class&#x3D;&quot;row panel-heading custom-panel-title&quot;&gt;
+        {{
+            &#x27;CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.TITLE&#x27; | translate
+        }}
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row panel-body body-form-grey&quot;&gt;
+        &lt;eng-table-result
+            [results]&#x3D;&quot;files&quot;
+            [structure]&#x3D;&quot;tableStructure&quot;
+            [showPageSize]&#x3D;&quot;false&quot;
+        &gt;&lt;/eng-table-result&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #templateVisibility let-model&#x3D;&quot;item&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;model.visibility.length &#x3D;&#x3D; 0&quot; class&#x3D;&quot;td-visibility&quot;&gt;
+        &lt;span class&#x3D;&quot;label label-success&quot; translate&#x3D;&quot;COMMON.ALL&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;model.visibility.length &gt; 0&quot; class&#x3D;&quot;td-visibility&quot;&gt;
+        &lt;div *ngFor&#x3D;&quot;let vis of model.visibility&quot; class&#x3D;&quot;item-label&quot;&gt;
+            &lt;div
+                class&#x3D;&quot;label label-success&quot;
+                data-toggle&#x3D;&quot;tooltip&quot;
+                data-placement&#x3D;&quot;top&quot;
+                [title]&#x3D;&quot;vis.value&quot;
+            &gt;
+                &lt;span&gt;{{ truncate(vis.value) }}&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #categoryTemplate let-model&#x3D;&quot;item&quot;&gt;
+    {{ category(model) }}
+&lt;/ng-template&gt;
+
+&lt;ng-template #actionTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;eng-action
+        *ngFor&#x3D;&quot;let action of actions&quot;
+        [action]&#x3D;&quot;action&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+    &gt;
+    &lt;/eng-action&gt;
+    &lt;eng-action
+        *ngIf&#x3D;&quot;cloudAction &amp;&amp; sharedDocumentation &amp;&amp; !isLink(model)&quot;
+        [action]&#x3D;&quot;cloudAction&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+    &gt;
+    &lt;/eng-action&gt;
+    &lt;eng-action
+        *ngIf&#x3D;&quot;isLink(model)&quot;
+        [action]&#x3D;&quot;linkAction&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+    &gt;
+    &lt;/eng-action&gt;
+    {{ model.type.key }}
+&lt;/ng-template&gt;
+
+&lt;div class&#x3D;&quot;row col-xs-12 col-sm-12 col-lg-12 noPadding&quot; *ngIf&#x3D;&quot;!files.length&quot;&gt;
+    {{ &#x27;CONFERENCE.WIZARD.DOCUMENTATION.EMPTY_TABLE&#x27; | translate }}.
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./file-table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.btnSave{
+    margin-top: 15px;
+}
+
+.simpleSelect.form-group{
+    padding: 0;
+}
+
+.paddingRight{
+    padding-right: 15px;
+}
+
+.item-label {
+    margin-bottom: 4px;
+}
+
+// .label:hover{
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     padding: unset;
+//     font-size: 80%;
+//     font-weight: normal;
+//     border-radius: 0;
+// }
+
+// .visibilityCel:hover{
+//     overflow: hidden !important;
+//     text-overflow: ellipsis !important;
+// }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div    [hidden]="!files.length"    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding">    <div class="row panel-heading custom-panel-title">        {{            \'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.TABLE.TITLE\' | translate        }}    </div>    <div class="row panel-body body-form-grey">        <eng-table-result            [results]="files"            [structure]="tableStructure"            [showPageSize]="false"        ></eng-table-result>    </div></div><ng-template #templateVisibility let-model="item">    <div *ngIf="model.visibility.length == 0" class="td-visibility">        <span class="label label-success" translate="COMMON.ALL"></span>    </div>    <div *ngIf="model.visibility.length > 0" class="td-visibility">        <div *ngFor="let vis of model.visibility" class="item-label">            <div                class="label label-success"                data-toggle="tooltip"                data-placement="top"                [title]="vis.value"            >                <span>{{ truncate(vis.value) }}</span>            </div>        </div>    </div></ng-template><ng-template #categoryTemplate let-model="item">    {{ category(model) }}</ng-template><ng-template #actionTemplate let-model="item">    <eng-action        *ngFor="let action of actions"        [action]="action"        [model]="model"        [onlyIcon]="true"    >    </eng-action>    <eng-action        *ngIf="cloudAction && sharedDocumentation && !isLink(model)"        [action]="cloudAction"        [model]="model"        [onlyIcon]="true"    >    </eng-action>    <eng-action        *ngIf="isLink(model)"        [action]="linkAction"        [model]="model"        [onlyIcon]="true"    >    </eng-action>    {{ model.type.key }}</ng-template><div class="row col-xs-12 col-sm-12 col-lg-12 noPadding" *ngIf="!files.length">    {{ \'CONFERENCE.WIZARD.DOCUMENTATION.EMPTY_TABLE\' | translate }}.</div></div>'
+    var COMPONENTS = [{'name': 'AccreditationComponent', 'selector': 'app-accreditation'},{'name': 'AccreditationTabComponent', 'selector': 'app-conference-accreditation'},{'name': 'AccreditationTableComponent', 'selector': 'app-accreditation-table'},{'name': 'AlertInfoComponent', 'selector': 'app-alert-info'},{'name': 'AlertWithLinkComponent', 'selector': 'app-form-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'ConferenceComponent', 'selector': ''},{'name': 'ConferenceModalBeforeCreateComponent', 'selector': 'app-conference-modal-before-create'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DefinitionComponent', 'selector': 'app-conference-definition'},{'name': 'DesktopComponent', 'selector': 'app-desktop'},{'name': 'DocumentationComponent', 'selector': 'app-conference-documentation'},{'name': 'EditModalFileComponent', 'selector': 'app-edit-modal-file'},{'name': 'EventsComponent', 'selector': 'app-conference-events'},{'name': 'EventsSearchComponent', 'selector': 'app-events-search'},{'name': 'EventsTableComponent', 'selector': 'app-events-table'},{'name': 'FilePanelComponent', 'selector': 'app-file-panel'},{'name': 'FileTableComponent', 'selector': 'app-file-table'},{'name': 'HeadComponent', 'selector': 'app-conference-head'},{'name': 'MainComponent', 'selector': 'main-root'},{'name': 'MainComponent', 'selector': 'app-dashboard-main'},{'name': 'MediaMainComponent', 'selector': ''},{'name': 'MediaSearchComponent', 'selector': 'search'},{'name': 'MediaTableComponent', 'selector': 'app-media-table'},{'name': 'NotAuthorizedComponent', 'selector': ''},{'name': 'NothingToDoComponent', 'selector': ''},{'name': 'PaleoComponent', 'selector': 'app-paleo'},{'name': 'ParticipantsComponent', 'selector': 'app-conference-participants'},{'name': 'ParticipantsTableComponent', 'selector': 'app-participants-table'},{'name': 'PecComponent', 'selector': 'app-conference-pec'},{'name': 'PecSearchComponent', 'selector': 'app-pec-search'},{'name': 'PendingAccreditationPageComponent', 'selector': 'app-pending-accreditation-page'},{'name': 'PendingListPageComponent', 'selector': ''},{'name': 'PrivateComponent', 'selector': ''},{'name': 'ProcedureComponent', 'selector': 'app-conference-procedure'},{'name': 'PublicComponent', 'selector': ''},{'name': 'RelevantInformationComponent', 'selector': 'app-relevant-information'},{'name': 'ResultTableComponent', 'selector': 'app-result-table'},{'name': 'SearchComponent', 'selector': ''},{'name': 'SearchComponent', 'selector': 'search'},{'name': 'SummaryComponent', 'selector': 'app-conference-summary'}];
+    var DIRECTIVES = [{'name': 'AuthConferenceDirective', 'selector': '[conferenceAuth]'},{'name': 'AuthDirective', 'selector': '[appAuth]'}];
+    var ACTUAL_COMPONENT = {'name': 'FileTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FileTableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

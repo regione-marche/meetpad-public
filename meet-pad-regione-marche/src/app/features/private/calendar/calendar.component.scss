@@ -1,0 +1,41 @@
+h3 {
+    margin-top: 0px;
+}
+
+.calendar {
+    margin-bottom: 50px;
+}
+
+.legend {
+    padding: 0;
+    margin-top: 25px;
+}
+
+.legend-symbol {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 2px;
+    border-color: #d1e8ff;
+    color: #fff;
+}
+
+.event-blue {
+    background-color: #1e90ff;
+}
+
+.event-red {
+    background-color: #ad2121;
+}
+
+.event-green {
+    background-color: #00e600;
+}
+
+.event-black {
+    background-color: #000000;
+}
+
+.event-yellow {
+    background-color: #e3bc08;
+}

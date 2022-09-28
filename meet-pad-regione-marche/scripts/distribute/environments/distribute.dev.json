@@ -1,0 +1,25 @@
+{
+    "app": {
+        "name": "ngx-eng-blank-template",
+        "label": "ngx-eng-blank-template"
+    },
+
+    "buildsDir": "dist/ngx-eng-blank-template",
+    "sources": {
+        "updateVersion": {
+            "replacingTag": "{version}",
+            "filePath": "dist/ngx-eng-blank-template/index.html"
+        },
+        "buildCommand": "ng build common && ng build admin-console && ng build --configuration=dev --base-href=/meet-pad-svil/ --delete-output-path --sourceMap=false",
+        "sourcePath": "."
+    },
+    "remote": {
+        "deploy": {
+            "host": "161.27.206.16",
+            "port": "22",
+            "user": "frontend",
+            "password": "EngFE2019!",
+            "angularDestinationPath": "/var/www/html/meet-pad-svil"
+        }
+    }
+}

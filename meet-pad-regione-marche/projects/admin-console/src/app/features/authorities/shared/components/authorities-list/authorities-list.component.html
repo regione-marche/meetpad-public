@@ -1,0 +1,54 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        [action]="actionEdit"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+
+    <eng-action
+        *ngIf="!model.flagProsecutingAdministration && procedingPage"
+        [action]="actionSetProceding"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+    <eng-action
+        *ngIf="model.flagProsecutingAdministration && procedingPage"
+        [action]="actionSetNotProceding"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+
+<ng-template #typeTemplate let-model="item">
+    <i
+        class="fa fa-times-circle flagFalse"
+        *ngIf="!model.flagProsecutingAdministration"
+    ></i>
+    <i
+        class="fa fa-check-circle flagTrue"
+        *ngIf="model.flagProsecutingAdministration"
+    ></i>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'AUTHORITIES.PROCEDING.EDIT.LIST.EMPTY_MESSAGE' | translate }}.
+</div>

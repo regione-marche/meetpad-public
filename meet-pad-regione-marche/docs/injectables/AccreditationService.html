@@ -1,0 +1,967 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>AccreditationService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/private/core/services/accreditation/accreditation.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#progress$">progress$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#confirmOrRejectAccreditation">confirmOrRejectAccreditation</a>
+                            </li>
+                            <li>
+                                <a href="#get">get</a>
+                            </li>
+                            <li>
+                                <a href="#getList">getList</a>
+                            </li>
+                            <li>
+                                <a href="#getPaginationParamsFromCriteria">getPaginationParamsFromCriteria</a>
+                            </li>
+                            <li>
+                                <a href="#post">post</a>
+                            </li>
+                            <li>
+                                <a href="#put">put</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(api: ApiService, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, configService: ConfigService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>api</td>
+                                                  
+                                                        <td>
+                                                                    <code>ApiService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ConfigService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmOrRejectAccreditation"></a>
+                    <span class="name">
+                        <b>
+                            confirmOrRejectAccreditation
+                        </b>
+                        <a href="#confirmOrRejectAccreditation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmOrRejectAccreditation(accreditation: <a href="../classes/AccreditamentPreview.html">AccreditamentPreview</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accreditation</td>
+                                    <td>
+                                                <code><a href="../classes/AccreditamentPreview.html" target="_self" >AccreditamentPreview</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                        <b>
+                            get
+                        </b>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get(token1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, token2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>token1</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>token2</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/AccreditamentInfo.html" target="_self" >Observable&lt;AccreditamentInfo&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getList"></a>
+                    <span class="name">
+                        <b>
+                            getList
+                        </b>
+                        <a href="#getList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getList(criteriaDto: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>criteriaDto</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/AccreditamentPreview.html" target="_self" >Observable&lt;WrapperGetData&lt;AccreditamentPreview&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaginationParamsFromCriteria"></a>
+                    <span class="name">
+                        <b>
+                            getPaginationParamsFromCriteria
+                        </b>
+                        <a href="#getPaginationParamsFromCriteria"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPaginationParamsFromCriteria(criteria: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>criteria</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/common/http/HttpParams" target="_blank" >HttpParams</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="post"></a>
+                    <span class="name">
+                        <b>
+                            post
+                        </b>
+                        <a href="#post"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>post(data: <a href="../classes/AccreditamentPreview.html">AccreditamentPreview</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/AccreditamentPreview.html" target="_self" >AccreditamentPreview</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutAccreditation&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="put"></a>
+                    <span class="name">
+                        <b>
+                            put
+                        </b>
+                        <a href="#put"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>put(data: <a href="../classes/AccreditamentPreview.html">AccreditamentPreview</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/AccreditamentPreview.html" target="_self" >AccreditamentPreview</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutAccreditation&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="progress$"></a>
+                        <span class="name">
+                            <b>
+                            progress$</b>
+                            <a href="#progress$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;number&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/features/private/core/services/accreditation/accreditation.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+
+import {
+    HttpRequest,
+    HttpClient,
+    HttpEventType,
+    HttpResponse,
+    HttpParams
+} from &#x27;@angular/common/http&#x27;;
+
+import { Observable, Subject, of } from &#x27;rxjs&#x27;;
+import { catchError, map } from &#x27;rxjs/operators&#x27;;
+
+import { ApiService, ConfigService } from &#x27;@eng-ds/ng-core&#x27;;
+import {
+    WrapperPostPutData,
+    WrapperGetData,
+    WrapperPostPutAccreditation
+} from &#x27;@common&#x27;;
+
+import {
+    AccreditamentPreview,
+    AccreditamentInfo
+} from &#x27;@features/private/conference/core/models/accreditation&#x27;;
+
+@Injectable()
+export class AccreditationService {
+    progress$ &#x3D; new Subject&lt;number&gt;();
+
+    constructor(
+        private api: ApiService,
+        private http: HttpClient,
+        private configService: ConfigService
+    ) {}
+
+    get(token1: string, token2: string): Observable&lt;AccreditamentInfo&gt; {
+        return this.api.request(&#x27;getAccreditations&#x27;, null, {
+            token1: token1,
+            token2: token2
+        });
+    }
+
+    post(data: AccreditamentPreview): Observable&lt;WrapperPostPutAccreditation&gt; {
+        const url &#x3D; this.configService.getApiConfig(&#x27;postAccreditations&#x27;).url;
+        const formData: FormData &#x3D; new FormData();
+
+        formData.append(&#x27;name &#x27;, data.name);
+        formData.append(&#x27;email &#x27;, data.email);
+        if (data.fiscalCode) {
+            formData.append(&#x27;fiscalCode&#x27;, data.fiscalCode.toUpperCase());
+        }
+        formData.append(&#x27;surname&#x27;, data.surname);
+        formData.append(&#x27;role&#x27;, data.profile.key);
+        if (data.file) {
+            // formData.append(&#x27;file&#x27;, data.file);
+            formData.append(&#x27;file&#x27;, data.file, data.file.name);
+        }
+        formData.append(&#x27;token1&#x27;, data.token1);
+        formData.append(&#x27;token2&#x27;, data.token2);
+
+        // create a http-put request and pass the form
+        // tell it to report the upload progress
+        const req &#x3D; new HttpRequest(&#x27;POST&#x27;, url, formData, {
+            reportProgress: true
+        });
+
+        const data$ &#x3D; new Subject&lt;WrapperPostPutAccreditation&gt;();
+
+        // send the http-request and subscribe for progress-updates
+        this.http
+            .request(req)
+            .pipe(
+                catchError(err &#x3D;&gt; {
+                    data$.error(err);
+                    data$.complete();
+                    return of(err);
+                })
+            )
+            .subscribe(event &#x3D;&gt; {
+                if (event.type &#x3D;&#x3D;&#x3D; HttpEventType.UploadProgress) {
+                    // calculate the progress percentage
+                    const percentDone &#x3D; Math.round(
+                        (100 * event.loaded) / event.total
+                    );
+
+                    // pass the percentage into the progress-stream
+                    this.progress$.next(percentDone);
+                } else if (event instanceof HttpResponse) {
+                    // Close the progress-stream if we get an answer form the API
+                    // The upload is complete
+                    // this.progress$.complete();
+                    data$.next(event.body as WrapperPostPutAccreditation);
+                    data$.complete();
+                }
+            });
+
+        // return the progress.observables
+        return data$.asObservable();
+    }
+
+    put(data: AccreditamentPreview): Observable&lt;WrapperPostPutAccreditation&gt; {
+        const url &#x3D; this.configService
+            .getApiConfig(&#x27;putAccreditations&#x27;)
+            .url.replace(&#x27;{id}&#x27;, data.id);
+        const formData: FormData &#x3D; new FormData();
+
+        formData.append(&#x27;name &#x27;, data.name);
+        formData.append(&#x27;email &#x27;, data.email);
+        if (data.fiscalCode) {
+            formData.append(&#x27;fiscalCode&#x27;, data.fiscalCode.toUpperCase());
+        }
+        formData.append(&#x27;id &#x27;, data.id);
+        formData.append(&#x27;surname&#x27;, data.surname);
+        formData.append(&#x27;role&#x27;, data.profile.key);
+        if (data.file) {
+            formData.append(&#x27;file&#x27;, data.file);
+            formData.append(&#x27;file&#x27;, data.file, data.file.name);
+        }
+        // create a http-put request and pass the form
+        // tell it to report the upload progress
+        const req &#x3D; new HttpRequest(&#x27;PUT&#x27;, url, formData, {
+            reportProgress: true
+        });
+
+        const data$ &#x3D; new Subject&lt;WrapperPostPutAccreditation&gt;();
+
+        // send the http-request and subscribe for progress-updates
+        this.http
+            .request(req)
+            .pipe(
+                catchError(err &#x3D;&gt; {
+                    data$.error(err);
+                    data$.complete();
+                    return of(err);
+                })
+            )
+            .subscribe(event &#x3D;&gt; {
+                if (event.type &#x3D;&#x3D;&#x3D; HttpEventType.UploadProgress) {
+                    // calculate the progress percentage
+                    const percentDone &#x3D; Math.round(
+                        (100 * event.loaded) / event.total
+                    );
+
+                    // pass the percentage into the progress-stream
+                    this.progress$.next(percentDone);
+                } else if (event instanceof HttpResponse) {
+                    // Close the progress-stream if we get an answer form the API
+                    // The upload is complete
+                    // this.progress$.complete();
+                    data$.next(event.body as WrapperPostPutAccreditation);
+                    data$.complete();
+                }
+            });
+
+        // return the progress.observables
+        return data$.asObservable();
+    }
+
+    getList(
+        criteriaDto: any,
+        conferenceId: string
+    ): Observable&lt;WrapperGetData&lt;AccreditamentPreview&gt;&gt; {
+        let params &#x3D; this.getPaginationParamsFromCriteria(criteriaDto);
+
+        return this.api
+            .request&lt;WrapperGetData&lt;AccreditamentPreview&gt;&gt;(
+                &#x27;getListAccreditations&#x27;,
+                null,
+                params,
+                { conferenceId }
+            )
+            .pipe(
+                map((result: WrapperGetData&lt;AccreditamentPreview&gt;) &#x3D;&gt; {
+                    const arr &#x3D; [];
+                    // tslint:disable-next-line:forin
+                    for (const k in result.list) {
+                        arr.push(AccreditamentPreview.fromDto(result.list[k]));
+                    }
+                    return {
+                        list: arr,
+                        totalNumber: result.totalNumber
+                    } as WrapperGetData&lt;AccreditamentPreview&gt;;
+                })
+            );
+    }
+
+    getPaginationParamsFromCriteria(criteria: any): HttpParams {
+        const query &#x3D; {};
+        if (criteria[&#x27;sort&#x27;]) {
+            const [col, direction] &#x3D; criteria[&#x27;sort&#x27;].split(&#x27;,&#x27;);
+            query[&#x27;orderColumn&#x27;] &#x3D; col;
+            query[&#x27;orderDirection&#x27;] &#x3D; direction;
+        }
+        if (criteria[&#x27;size&#x27;]) {
+            query[&#x27;recordForPage&#x27;] &#x3D; criteria[&#x27;size&#x27;];
+        }
+        if (criteria[&#x27;page&#x27;] &#x3D;&#x3D;&#x3D; 0 || criteria[&#x27;page&#x27;]) {
+            query[&#x27;pageNumber&#x27;] &#x3D; criteria[&#x27;page&#x27;];
+        }
+
+        delete criteria[&#x27;sort&#x27;];
+        delete criteria[&#x27;page&#x27;];
+        delete criteria[&#x27;size&#x27;];
+
+        const params &#x3D; new HttpParams({
+            fromObject: query
+        });
+        return params;
+    }
+
+    confirmOrRejectAccreditation(
+        accreditation: AccreditamentPreview
+    ): Observable&lt;WrapperPostPutData&gt; {
+        const conferenceId &#x3D; accreditation.idConference;
+        const accreditationId &#x3D; accreditation.id;
+        return this.api.request(&#x27;confirmAccreditation&#x27;, accreditation, null, {
+            conferenceId,
+            accreditationId
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AccreditationService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

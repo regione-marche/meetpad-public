@@ -1,0 +1,69 @@
+<app-form
+    [groupFields]="groupFieldsForSwitch"
+    [footerButtons]="false"
+    [showCancelBtn]="false"
+    [formGrey]="false"
+></app-form>
+
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="CONFERENCE.WIZARD.VOTING.TITLE"></span>
+            <div class="dropdown pull-right">
+                <span
+                    *ngIf="!readonlyMode()"
+                    id="dropdownMenu2"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    class="fa fa-plus"
+                    aria-hidden="true"
+                    [title]="
+                        'CONFERENCE.WIZARD.VOTING.PANEL.ADD_VOTING_BUTTON'
+                            | translate
+                    "
+                    (click)="addNewVoting()"
+                >
+                </span>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <app-voting-table
+                #votingTable
+                [searchQuery]="searchQuery"
+                (edit)="openVotingModal($event)"
+            >
+            </app-voting-table>
+        </div>
+    </div>
+</eng-form-section>
+<eng-modal #addModal [buttons]="[]" [title]="modalTitle">
+    <app-form
+        [groupFields]="groupFields"
+        [formGrey]="false"
+        [footerButtons]="!readonlyModal"
+        [footerTextSubmitButton]="'BUTTON.SAVE' | translate"
+        [saveFn]="saveFn"
+        [saveComplete]="saveCompleteFn"
+        [saveError]="saveErrorFn"
+    ></app-form>
+    <ng-template #dateTemplate let-model="item">
+        {{ (model.voteDate.toDate() | date: dateFormat) || '----' }}
+    </ng-template>
+
+    <ng-template #voteTemplateVoting let-model="item">
+        <i class="fa fa-times-circle unexecuted" *ngIf="!model.vote"></i>
+        <i class="fa fa-check-circle executed" *ngIf="model.vote"></i>
+    </ng-template>
+
+    <ng-template #voteTemplateCalendar let-model="item">
+        {{ (model.detail | date: dateFormat) || '----' }}
+    </ng-template>
+
+    <ng-template #detailLookup let-model="item">
+        <p class="noMargin">
+            <b>{{ detail }}:</b> {{ model.detail }}
+        </p>
+    </ng-template>
+
+</eng-modal>

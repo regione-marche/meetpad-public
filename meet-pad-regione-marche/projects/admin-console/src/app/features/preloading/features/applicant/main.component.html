@@ -1,0 +1,22 @@
+<admin-applicant-search
+    (onNewSearch)="startResearch($event)"
+></admin-applicant-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="PRELOADING.APPLICANT.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="'PRELOADING.APPLICANT.ACTIONS.NEW' | translate"
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-applicant-list
+                [searchQuery]="searchQuery"
+            ></admin-applicant-list>
+        </div>
+    </div>
+</eng-form-section>

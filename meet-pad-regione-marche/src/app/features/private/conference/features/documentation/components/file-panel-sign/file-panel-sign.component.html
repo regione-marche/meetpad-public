@@ -1,0 +1,95 @@
+<div class="panel panel-default" [ngClass]="{ 'mt-5': accordionIndex != 0 }">
+    
+    <div class="panel-heading custom-panel-title">
+        <a
+            data-toggle="collapse"
+            data-parent="#panelGroupDocumentation"
+            href="#collapseDocumentation-{{ accordionIndex }}"
+            [translate]="title"
+        >
+        </a>
+        <span
+            *ngIf="!readonly && showPlusIcon()"
+            class="pull-right fa fa-plus mr-10 mt-5"
+            aria-hidden="true"
+            (click)="toogleForm();"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.ADD_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+    </div>
+
+    <div
+        id="collapseDocumentation-{{ accordionIndex }}"
+        class="panel-collapse collapse"
+    >
+        <div class="panel-body">
+
+                <div class="alert alert-warning" role="alert" id="CALAMAIO_DOWNLOAD_MESSAGE">
+                        {{ ( 'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.FILE.ALERT.BEFORE_LINK' | translate) }} 
+                        <a style="cursor: pointer" (click)="downloadCalamaioApplication.emit($event)" class="alert-link">{{ ( 'CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.FILE.ALERT.LINK' | translate) }}</a>
+                        {{ ('CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.FILE.ALERT.AFTER_LINK') | translate}}
+                        <span style="font-weight: bold; color: #074392"  >{{ ('CONFERENCE.WIZARD.DOCUMENTATION.FIRMA.FILE.ALERT.WARNING_MESSAGE') | translate}}</span>
+                     </div>
+            <app-form
+                *ngIf="showForm && saveFn"
+                [groupFields]="groupFields"
+                [footerButtons]="true"
+                [saveFn]="saveFn"
+                [saveComplete]="saveComplete"
+                [saveError]="saveError"
+                [footerTextSubmitButton]="saveButtonText"
+                [formClass]="['mt-15']"
+            >
+            </app-form>
+            <app-form
+                *ngIf="showForm && !saveFn"
+                [groupFields]="groupFields"
+                [footerButtons]="false"
+                [formClass]="['mt-15']"
+            >
+            </app-form>
+            <div class="mt-15" *ngIf="hasFolders; else noFolders">
+                <fieldset
+                    *ngFor="let folder of folders"
+                    class="scheduler-border"
+                >
+                    <legend class="scheduler-border">
+                        {{
+                            folder.name ||
+                                ('CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DEFAULT_FOLDER_NAME'
+                                    | translate)
+                        }}
+                    </legend>
+                    <app-file-table-sign
+                        [disabled]="readonly"
+                        [files]="folder.files"
+                        [isAdmin]="isAdmin"                        
+                        (signFile)="signFile.emit($event)"   
+                        (unlockFile)="unlockFile.emit($event)"   
+                        (deleteFile)="deleteFile.emit($event)"
+                        (downloadFile)="downloadFile.emit($event)"
+                    >
+                    </app-file-table-sign>
+                </fieldset>
+            </div>
+
+            <ng-template #noFolders>
+                <div class="mt-15">
+                    <app-file-table-sign
+                        [disabled]="readonly"
+                        [files]="files"
+                        [isAdmin]="isAdmin"   
+                        (signFile)="signFile.emit($event)"   
+                        (unlockFile)="unlockFile.emit($event)"   
+                        (deleteFile)="deleteFile.emit($event)"
+                        (downloadFile)="downloadFile.emit($event)"
+                    >
+                    </app-file-table-sign>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

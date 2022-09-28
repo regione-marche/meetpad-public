@@ -1,0 +1,1358 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SummaryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/private/conference/features/summary/main/summary.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>AutoUnsubscribe</code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-conference-summary</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./summary.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./summary.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#definitionTitle">definitionTitle</a>
+                            </li>
+                            <li>
+                                <a href="#documentationTitle">documentationTitle</a>
+                            </li>
+                            <li>
+                                <a href="#footerButtons">footerButtons</a>
+                            </li>
+                            <li>
+                                <a href="#groupButtons">groupButtons</a>
+                            </li>
+                            <li>
+                                <a href="#participantTitle">participantTitle</a>
+                            </li>
+                            <li>
+                                <a href="#procedureTitle">procedureTitle</a>
+                            </li>
+                            <li>
+                                <a href="#tooltip">tooltip</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_authorize">_authorize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_complete">_complete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_initPermission">_initPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_unauthorize">_unauthorize</a>
+                            </li>
+                            <li>
+                                <a href="#isReadonly">isReadonly</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#save">save</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setFooterButtons">setFooterButtons</a>
+                            </li>
+                            <li>
+                                <a href="#showSubmitBtn">showSubmitBtn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#openConfirmModal">openConfirmModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#loadingFooterButtons">loadingFooterButtons</a>
+                                </li>
+                                <li>
+                                    <a href="#conference">conference</a>
+                                </li>
+                                <li>
+                                    <a href="#action">action</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(i18nService: I18nService, conferenceStoreService: <a href="../injectables/ConferenceStoreService.html">ConferenceStoreService</a>, loaderService: LoaderService, conferencePermissionsService: <a href="../injectables/ConferencePermissionsService.html">ConferencePermissionsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>conferenceStoreService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConferenceStoreService.html" target="_self" >ConferenceStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loaderService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoaderService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>conferencePermissionsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConferencePermissionsService.html" target="_self" >ConferencePermissionsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openConfirmModal"></a>
+                        <b>openConfirmModal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:49</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_authorize"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _authorize
+                        </b>
+                        <a href="#_authorize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_authorize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_complete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _complete
+                        </b>
+                        <a href="#_complete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_complete()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_initPermission"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _initPermission
+                        </b>
+                        <a href="#_initPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_initPermission()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_unauthorize"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _unauthorize
+                        </b>
+                        <a href="#_unauthorize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_unauthorize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isReadonly"></a>
+                    <span class="name">
+                        <b>
+                            isReadonly
+                        </b>
+                        <a href="#isReadonly"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isReadonly()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <b>
+                            save
+                        </b>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>save()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFooterButtons"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setFooterButtons
+                        </b>
+                        <a href="#setFooterButtons"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setFooterButtons(buttons: Map<FooterButtons | FormButton>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>buttons</td>
+                                    <td>
+                                            <code>Map&lt;FooterButtons | FormButton&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showSubmitBtn"></a>
+                    <span class="name">
+                        <b>
+                            showSubmitBtn
+                        </b>
+                        <a href="#showSubmitBtn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showSubmitBtn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="definitionTitle"></a>
+                        <span class="name">
+                            <b>
+                            definitionTitle</b>
+                            <a href="#definitionTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.DEFINITION.TITLE&#x27;
+    )</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="documentationTitle"></a>
+                        <span class="name">
+                            <b>
+                            documentationTitle</b>
+                            <a href="#documentationTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TITLE&#x27;
+    )</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="footerButtons"></a>
+                        <span class="name">
+                            <b>
+                            footerButtons</b>
+                            <a href="#footerButtons"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="groupButtons"></a>
+                        <span class="name">
+                            <b>
+                            groupButtons</b>
+                            <a href="#groupButtons"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Map&lt;FooterButtons | FormButton&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Map()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="participantTitle"></a>
+                        <span class="name">
+                            <b>
+                            participantTitle</b>
+                            <a href="#participantTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TITLE&#x27;
+    )</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="procedureTitle"></a>
+                        <span class="name">
+                            <b>
+                            procedureTitle</b>
+                            <a href="#procedureTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.PROCEDURE.TITLE&#x27;
+    )</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tooltip"></a>
+                        <span class="name">
+                            <b>
+                            tooltip</b>
+                            <a href="#tooltip"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TooltipModel</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadingFooterButtons"></a>
+                        <span class="name"><b>loadingFooterButtons</b><a href="#loadingFooterButtons"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>loadingFooterButtons()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:84</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="conference"></a>
+                        <span class="name"><b>conference</b><a href="#conference"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>conference()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:120</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="action"></a>
+                        <span class="name"><b>action</b><a href="#action"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>action()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/app/features/private/conference/features/summary/main/summary.component.ts:124</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Output, EventEmitter, OnInit } from &#x27;@angular/core&#x27;;
+
+import { Observable } from &#x27;rxjs&#x27;;
+
+import { I18nService } from &#x27;@eng-ds/ng-core&#x27;;
+import { TooltipModel } from &#x27;@eng-ds/ng-toolkit&#x27;;
+
+import {
+    LoaderService,
+    SectionLoading,
+    AutoUnsubscribe,
+    FormButton,
+    FooterButtons
+} from &#x27;@common&#x27;;
+
+import { ActionForm, StepName, Mixin } from &#x27;@app/core&#x27;;
+
+import { FormStep } from &#x27;../../../core/mixins&#x27;;
+import {
+    ConferenceStoreService,
+    Conference,
+    ConferencePermissionsService
+} from &#x27;../../../core&#x27;;
+
+@Component({
+    selector: &#x27;app-conference-summary&#x27;,
+    templateUrl: &#x27;./summary.component.html&#x27;,
+    styleUrls: [&#x27;./summary.component.scss&#x27;]
+})
+@Mixin([FormStep])
+export class SummaryComponent extends AutoUnsubscribe implements OnInit {
+    procedureTitle: string &#x3D; this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.PROCEDURE.TITLE&#x27;
+    );
+    definitionTitle: string &#x3D; this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.DEFINITION.TITLE&#x27;
+    );
+    documentationTitle: string &#x3D; this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.DOCUMENTATION.TITLE&#x27;
+    );
+    participantTitle: string &#x3D; this.i18nService.translate(
+        &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TITLE&#x27;
+    );
+    tooltip: TooltipModel;
+    footerButtons &#x3D; false;
+
+    groupButtons: Map&lt;FooterButtons, FormButton&gt; &#x3D; new Map();
+
+    @Output(&#x27;openConfirmModal&#x27;) openConfirmModal &#x3D; new EventEmitter&lt;
+        FooterButtons
+    &gt;();
+
+    constructor(
+        private i18nService: I18nService,
+        private conferenceStoreService: ConferenceStoreService,
+        private loaderService: LoaderService,
+        private conferencePermissionsService: ConferencePermissionsService
+    ) {
+        super();
+        this.tooltip &#x3D; new TooltipModel(
+            &#x27;CONFERENCE.WIZARD.SUMMARY.TOOLTIP.CONTENT&#x27;,
+            null,
+            &#x27;CONFERENCE.WIZARD.SUMMARY.TOOLTIP.TITLE&#x27;
+        );
+    }
+    ngOnInit() {
+        this._initPermission();
+        this.conferenceStoreService.hidePageLoader();
+    }
+
+    private _initPermission(): void {
+        this.conferencePermissionsService.apply(
+            this,
+            this.appSections.CONFERENCE_STEP,
+            this.conferenceStoreService
+        );
+    }
+
+    isReadonly(): boolean {
+        return false;
+    }
+
+    // TODO REMOVE
+    get loadingFooterButtons(): Observable&lt;boolean&gt; {
+        return this.loaderService.getLoading$(
+            SectionLoading.CONFERENCE_FOOTER_BUTTON
+        );
+    }
+
+    public setFooterButtons(buttons: Map&lt;FooterButtons, FormButton&gt;): void {
+        this.groupButtons &#x3D; new Map&lt;FooterButtons, FormButton&gt;();
+        if (buttons !&#x3D; null) {
+            buttons.forEach((value, key) &#x3D;&gt; {
+                value.onClick &#x3D; this[key].bind(this);
+            });
+        }
+        setTimeout(() &#x3D;&gt; {
+            this.groupButtons &#x3D; buttons;
+        }, 0);
+    }
+
+    private _complete(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.COMPLETE
+        );
+    }
+
+    private _authorize(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.AUTHORIZE
+        );
+    }
+
+    private _unauthorize(): void {
+        this.conferenceStoreService.openConfirmationModal(
+            FooterButtons.UNAUTHORIZE
+        );
+    }
+
+    get conference(): Conference {
+        return this.conferenceStoreService.conference;
+    }
+
+    get action(): ActionForm {
+        return this.conferenceStoreService.getStepActionForm(StepName.SUMMARY);
+    }
+
+    save(): void {
+        return this.conferenceStoreService.submitSummary();
+    }
+
+    showSubmitBtn(): boolean {
+        return (
+            this.action !&#x3D;&#x3D; ActionForm.READONLY &amp;&amp; this.conference.isCompiling()
+        );
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;summary&quot;&gt;
+    &lt;eng-accordion id&#x3D;&quot;procedure&quot; [title]&#x3D;&quot;procedureTitle&quot;&gt;
+        &lt;app-conference-procedure [summary]&#x3D;&quot;true&quot;&gt;&lt;/app-conference-procedure&gt;
+    &lt;/eng-accordion&gt;
+
+    &lt;eng-accordion id&#x3D;&quot;definition&quot; [title]&#x3D;&quot;definitionTitle&quot;&gt;
+        &lt;app-conference-definition [summary]&#x3D;&quot;true&quot;&gt;&lt;/app-conference-definition&gt;
+    &lt;/eng-accordion&gt;
+
+    &lt;eng-accordion id&#x3D;&quot;participant&quot; [title]&#x3D;&quot;participantTitle&quot;&gt;
+        &lt;app-conference-participants
+            [summary]&#x3D;&quot;true&quot;
+        &gt;&lt;/app-conference-participants&gt;
+    &lt;/eng-accordion&gt;
+
+    &lt;eng-accordion id&#x3D;&quot;documentation&quot; [title]&#x3D;&quot;documentationTitle&quot;&gt;
+        &lt;app-conference-documentation
+            [summary]&#x3D;&quot;true&quot;
+        &gt;&lt;/app-conference-documentation&gt;
+    &lt;/eng-accordion&gt;
+
+    &lt;div class&#x3D;&quot;pull-right&quot;&gt;
+        &lt;eng-input-tooltip
+            [tooltip]&#x3D;&quot;tooltip&quot;
+            *ngIf&#x3D;&quot;conference.enableApplicantEdit &amp;&amp; showSubmitBtn()&quot;
+            style&#x3D;&quot;margin: 10px&quot;
+        &gt;&lt;/eng-input-tooltip&gt;
+        &lt;eng-button
+            *ngIf&#x3D;&quot;showSubmitBtn()&quot;
+            class&#x3D;&quot;pull-right marginBottom&quot;
+            [title]&#x3D;&quot;&#x27;BUTTON.SAVE&#x27; | translate&quot;
+            (onClick)&#x3D;&quot;save($event)&quot;
+            [disabled]&#x3D;&quot;conference.enableApplicantEdit&quot;
+        &gt;
+        &lt;/eng-button&gt;
+        &lt;app-footer-buttons [groupButtons]&#x3D;&quot;groupButtons&quot;&gt;&lt;/app-footer-buttons&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;pull-right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./summary.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.marginBottom {
+    margin-bottom: 20px;
+}
+
+:host /deep/ .panel-group {
+    margin-bottom: 0 !important;
+}
+
+.summary {
+    margin-top: 30px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="summary">    <eng-accordion id="procedure" [title]="procedureTitle">        <app-conference-procedure [summary]="true"></app-conference-procedure>    </eng-accordion>    <eng-accordion id="definition" [title]="definitionTitle">        <app-conference-definition [summary]="true"></app-conference-definition>    </eng-accordion>    <eng-accordion id="participant" [title]="participantTitle">        <app-conference-participants            [summary]="true"        ></app-conference-participants>    </eng-accordion>    <eng-accordion id="documentation" [title]="documentationTitle">        <app-conference-documentation            [summary]="true"        ></app-conference-documentation>    </eng-accordion>    <div class="pull-right">        <eng-input-tooltip            [tooltip]="tooltip"            *ngIf="conference.enableApplicantEdit && showSubmitBtn()"            style="margin: 10px"        ></eng-input-tooltip>        <eng-button            *ngIf="showSubmitBtn()"            class="pull-right marginBottom"            [title]="\'BUTTON.SAVE\' | translate"            (onClick)="save($event)"            [disabled]="conference.enableApplicantEdit"        >        </eng-button>        <app-footer-buttons [groupButtons]="groupButtons"></app-footer-buttons>    </div>    <div class="pull-right"></div></div></div>'
+    var COMPONENTS = [{'name': 'AccreditationComponent', 'selector': 'app-accreditation'},{'name': 'AccreditationTabComponent', 'selector': 'app-conference-accreditation'},{'name': 'AccreditationTableComponent', 'selector': 'app-accreditation-table'},{'name': 'AlertInfoComponent', 'selector': 'app-alert-info'},{'name': 'AlertWithLinkComponent', 'selector': 'app-form-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'ConferenceComponent', 'selector': ''},{'name': 'ConferenceModalBeforeCreateComponent', 'selector': 'app-conference-modal-before-create'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DefinitionComponent', 'selector': 'app-conference-definition'},{'name': 'DesktopComponent', 'selector': 'app-desktop'},{'name': 'DocumentationComponent', 'selector': 'app-conference-documentation'},{'name': 'EditModalFileComponent', 'selector': 'app-edit-modal-file'},{'name': 'EventsComponent', 'selector': 'app-conference-events'},{'name': 'EventsSearchComponent', 'selector': 'app-events-search'},{'name': 'EventsTableComponent', 'selector': 'app-events-table'},{'name': 'FilePanelComponent', 'selector': 'app-file-panel'},{'name': 'FileTableComponent', 'selector': 'app-file-table'},{'name': 'HeadComponent', 'selector': 'app-conference-head'},{'name': 'MainComponent', 'selector': 'main-root'},{'name': 'MainComponent', 'selector': 'app-dashboard-main'},{'name': 'MediaMainComponent', 'selector': ''},{'name': 'MediaSearchComponent', 'selector': 'search'},{'name': 'MediaTableComponent', 'selector': 'app-media-table'},{'name': 'NotAuthorizedComponent', 'selector': ''},{'name': 'NothingToDoComponent', 'selector': ''},{'name': 'PaleoComponent', 'selector': 'app-paleo'},{'name': 'ParticipantsComponent', 'selector': 'app-conference-participants'},{'name': 'ParticipantsTableComponent', 'selector': 'app-participants-table'},{'name': 'PecComponent', 'selector': 'app-conference-pec'},{'name': 'PecSearchComponent', 'selector': 'app-pec-search'},{'name': 'PendingAccreditationPageComponent', 'selector': 'app-pending-accreditation-page'},{'name': 'PendingListPageComponent', 'selector': ''},{'name': 'PrivateComponent', 'selector': ''},{'name': 'ProcedureComponent', 'selector': 'app-conference-procedure'},{'name': 'PublicComponent', 'selector': ''},{'name': 'RelevantInformationComponent', 'selector': 'app-relevant-information'},{'name': 'ResultTableComponent', 'selector': 'app-result-table'},{'name': 'SearchComponent', 'selector': ''},{'name': 'SearchComponent', 'selector': 'search'},{'name': 'SummaryComponent', 'selector': 'app-conference-summary'}];
+    var DIRECTIVES = [{'name': 'AuthConferenceDirective', 'selector': '[conferenceAuth]'},{'name': 'AuthDirective', 'selector': '[appAuth]'}];
+    var ACTUAL_COMPONENT = {'name': 'SummaryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SummaryComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

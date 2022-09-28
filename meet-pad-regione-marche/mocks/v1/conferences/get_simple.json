@@ -1,0 +1,24 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": "227",
+                "requestReference": "Rif.pratica Suap 347",
+                "type": "simultanea3",
+                "endProcedure": "2018-05-20T10:00:00Z",
+                "state": "In valutazione2",
+                "proceedingAdministration": "REGIONE TOSCANA2",
+                "applicant": "Mario Rossi2",
+                "endIntegration": "2018-05-20T10:00:00Z",
+                "endDetermine": "2018-05-20T10:00:00Z",
+                "endNextSession": "2018-05-20T10:00:00Z"
+            }
+        ],
+        "totalRow": 1
+
+    },
+    "errros": [
+    ]
+}

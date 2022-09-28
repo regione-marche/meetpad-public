@@ -1,0 +1,27 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "accreditation_": {
+            "fiscalCode": "dnlfrc88h21g716u"
+        },
+        "accreditation": {
+            "accreditamentFlag": false,
+            "id": 1,
+            "fiscalCode": "dnlfrc88h21g716u",
+            "surname": "Cognome",
+            "name": "Nome",
+            "profile": null,
+            "email": "s@s.it",
+            "role": {
+                "key": "string",
+                "value": "string"
+            },
+            "idConference": "477",
+            "url": "string",
+            "idParticipant": "string"
+        },
+        "idConference": "477"
+    },
+    "totalRow": 1
+}

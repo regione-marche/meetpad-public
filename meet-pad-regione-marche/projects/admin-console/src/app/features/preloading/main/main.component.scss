@@ -1,0 +1,13 @@
+.all-card {
+    display: grid;
+    grid-template-columns: repeat(minmax(265px, 1fr));
+    margin: 20px;
+}
+h4.centerText {
+    text-align: center;
+}
+.allButtons {
+}
+.actionButton {
+    padding: 10px;
+}

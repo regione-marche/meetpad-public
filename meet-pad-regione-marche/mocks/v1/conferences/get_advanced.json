@@ -1,0 +1,468 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data": {
+        "list": [
+            {
+                "id": 12,
+                "requestReference": "rif test",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "ind",
+                "profile": { "key": "1", "value": "Richiedente" },
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 13,
+                "requestReference": "test indizione",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "",
+                "profile": null,
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 14,
+                "requestReference": "test indizione 2",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "",
+                "profile": { "key": "1", "value": "Richiedente" },
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 15,
+                "requestReference": "test inventory number",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "",
+                "profile": { "key": "1", "value": "Richiedente" },
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 16,
+                "requestReference": "test modale",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "",
+                "profile": { "key": "1", "value": "Richiedente" },
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 17,
+                "requestReference": "test",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "simona",
+                    "surname": "scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "indirizzo online",
+                "profile": { "key": "1", "value": "Richiedente" },
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 19,
+                "requestReference": "test fed ind video conf 34",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "09-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "federico",
+                    "surname": "dainelli",
+                    "fiscalCode": "dnlfrc88h21g716u",
+                    "email": null
+                },
+                "endIntegrationDate": "16-11-2018",
+                "endDeterminesDate": "26-12-2018",
+                "nextSessionDate": "09-02-2019",
+                "address": "https://meet.lync.com/engit-eng/guido.deluca/Z57TY8C0",
+                "profile": null,
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 20,
+                "requestReference": "test federico",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "15-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "Federico",
+                    "surname": "Dainelli",
+                    "fiscalCode": "dnlfrc88h21g716u",
+                    "email": null
+                },
+                "endIntegrationDate": "22-11-2018",
+                "endDeterminesDate": "01-01-2019",
+                "nextSessionDate": "15-02-2019",
+                "address": "",
+                "profile": null,
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 24,
+                "requestReference": "test rif fed",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "17-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "federico",
+                    "surname": "dainelli",
+                    "fiscalCode": "dnlfrc88h21g716u",
+                    "email": null
+                },
+                "endIntegrationDate": "24-11-2018",
+                "endDeterminesDate": "03-01-2019",
+                "nextSessionDate": "17-02-2019",
+                "address": "",
+                "profile": null,
+                "canClone": true,
+
+                "canDelete": true,
+
+                "canEdit": true,
+
+                "canSkype": true
+            },
+            {
+                "id": 34,
+                "requestReference": "rif test",
+                "conferenceType": { "key": "1", "value": "Semplificata" },
+                "endProcedureDate": "22-02-2019",
+                "status": { "key": "3", "value": "Valutazione" },
+                "proceedingCompany": {
+                    "id": 1,
+                    "name": "Regione Marche",
+                    "description": "Regione Marche",
+                    "pec": "andrea.rosina.74@pec.it",
+                    "fiscalCode": "80008630420",
+                    "competence": null,
+                    "role": null,
+                    "flagProsecutingAdministration": true,
+                    "flagPrincipalAdministration": false,
+                    "ipaCode": null,
+                    "officeCode": null,
+                    "area": null,
+                    "province": null,
+                    "city": null,
+                    "cityDescription": null,
+                    "istatType": null,
+                    "administrativeType": null
+                },
+                "applicant": {
+                    "id": null,
+                    "name": "Simona",
+                    "surname": "Scorpioni",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "email": null
+                },
+                "endIntegrationDate": "29-11-2018",
+                "endDeterminesDate": "08-01-2019",
+                "nextSessionDate": "22-02-2019",
+                "address": "",
+                "profile": null,
+                "canClone": false,
+
+                "canDelete": false,
+
+                "canEdit": true,
+
+                "canSkype": false
+            }
+        ],
+        "totalNumber": 186
+    },
+    "errors": [
+        {
+            "fields": ["codiceFiscale", "asd"],
+            "msg": "",
+            "code": "as43",
+            "step": ""
+        }
+    ]
+}

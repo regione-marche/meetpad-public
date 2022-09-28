@@ -1,0 +1,56 @@
+<form class="row col-xs-12 col-sm-12 col-lg-12">
+    <eng-form-group>
+        <div class="row">
+            <eng-input
+                label="CONFERENCE.WIZARD.PEC.SEARCH.SENDER"
+                [formControl]="form.get('sender')"
+                size="12|12|6"
+            ></eng-input>
+            <eng-input
+                label="CONFERENCE.WIZARD.PEC.SEARCH.RECIPIENT"
+                [formControl]="form.get('recipient')"
+                size="12|12|6"
+            ></eng-input>
+            <eng-select
+                label="CONFERENCE.WIZARD.PEC.SEARCH.STATE"
+                [formControl]="form.get('status')"
+                [options]="stateOptions | async"
+                size="12|6|6"
+                placeholder=""
+                field-for-option="value"
+                field-for-id="key"
+            ></eng-select>
+            <eng-select
+                label="CONFERENCE.WIZARD.PEC.SEARCH.EVENT"
+                [formControl]="form.get('event')"
+                [options]="eventOptions | async"
+                size="12|6|6"
+                placeholder=""
+                field-for-option="value"
+                field-for-id="key"
+            ></eng-select>
+        </div>
+    </eng-form-group>
+
+    <div class="col-xs-12">
+        <eng-button
+            class="pull-left"
+            type="reset"
+            (onClick)="reset()"
+            title="SEARCH.RESET_BUTTON"
+            isLink="true"
+        ></eng-button>
+        <div class="pull-right">
+            <eng-input-loading
+                [loading]="advancedSearchLoading$ | async"
+            ></eng-input-loading>
+            <eng-button
+                type="button"
+                (onClick)="search()"
+                title="SEARCH.SEARCH_BUTTON"
+                [disabled]="form.invalid || (searchLoading$ | async)"
+            >
+            </eng-button>
+        </div>
+    </div>
+</form>

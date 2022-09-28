@@ -1,0 +1,55 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #typeTemplate let-model="item">
+    {{ getType(model) }}
+</ng-template>
+<ng-template #subjectTemplate let-model="item">
+    {{ getSubject(model) }}
+</ng-template>
+<ng-template #statusTemplate let-model="item">
+    <span *ngIf="model.statusDocument"  class="label {{ model.statusDocument | lowercase }}"
+    >   
+        {{ getStatus(model) | translate}}
+    </span>
+    <span *ngIf="!model.statusDocument" 
+    >   
+        ---
+    </span>
+</ng-template>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        *ngIf="
+            model.type && model.type.key && store.hasGroupFields(model.type.key)
+        "
+        [action]="actionView"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'CONFERENCE.WIZARD.EVENTS.PANEL.EMPTY_MESSAGE' | translate }}.
+    <a
+        *ngIf="hasCriteria"
+        href="javascript:;"
+        (click)="resetSearch(); refreshSearch(true)"
+        >{{ 'CONFERENCE.WIZARD.EVENTS.PANEL.REFRESH_LIST' | translate }}</a
+    >
+</div>

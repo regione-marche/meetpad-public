@@ -1,0 +1,1257 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ParticipantsTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>AutoUnsubscribe</code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-participants-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./participants-table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./participants-table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actionTemplate">actionTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#authorityTemplate">authorityTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#deleteParticipant">deleteParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#determinationExpressedTemplate">determinationExpressedTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#editParticipant">editParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#integrationRequiredTemplate">integrationRequiredTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#roleTemplate">roleTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#tableStructure">tableStructure</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#utilityService">utilityService</a>
+                            </li>
+                            <li>
+                                <a href="#viewParticipant">viewParticipant</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#defineTableStructure">defineTableStructure</a>
+                            </li>
+                            <li>
+                                <a href="#isReadonly">isReadonly</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#action">action</a>
+                            </li>
+                            <li>
+                                <a href="#list">list</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#edit">edit</a>
+                            </li>
+                            <li>
+                                <a href="#openModalForDelete">openModalForDelete</a>
+                            </li>
+                            <li>
+                                <a href="#view">view</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(i18nService: I18nService, utilityService: <a href="../injectables/UtilityService.html">UtilityService</a>, loggerService: LoggerService, conferenceStoreService: <a href="../injectables/ConferenceStoreService.html">ConferenceStoreService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                    <code>I18nService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>utilityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UtilityService.html" target="_self" >UtilityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loggerService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoggerService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>conferenceStoreService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConferenceStoreService.html" target="_self" >ConferenceStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="action"></a>
+                        <b>action</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ActionForm" target="_self" >ActionForm</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="list"></a>
+                        <b>list</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="edit"></a>
+                        <b>edit</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openModalForDelete"></a>
+                        <b>openModalForDelete</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:42</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="view"></a>
+                        <b>view</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Event.html" target="_self" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:40</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defineTableStructure"></a>
+                    <span class="name">
+                        <b>
+                            defineTableStructure
+                        </b>
+                        <a href="#defineTableStructure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>defineTableStructure(structure: AbstractTableField[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>structure</td>
+                                    <td>
+                                            <code>AbstractTableField[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>AbstractTableField[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isReadonly"></a>
+                    <span class="name">
+                        <b>
+                            isReadonly
+                        </b>
+                        <a href="#isReadonly"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isReadonly()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:184</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="actionTemplate"></a>
+                        <span class="name">
+                            <b>
+                            actionTemplate</b>
+                            <a href="#actionTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;actionTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="authorityTemplate"></a>
+                        <span class="name">
+                            <b>
+                            authorityTemplate</b>
+                            <a href="#authorityTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;authorityTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteParticipant"></a>
+                        <span class="name">
+                            <b>
+                            deleteParticipant</b>
+                            <a href="#deleteParticipant"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="determinationExpressedTemplate"></a>
+                        <span class="name">
+                            <b>
+                            determinationExpressedTemplate</b>
+                            <a href="#determinationExpressedTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;determinationExpressedTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editParticipant"></a>
+                        <span class="name">
+                            <b>
+                            editParticipant</b>
+                            <a href="#editParticipant"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="integrationRequiredTemplate"></a>
+                        <span class="name">
+                            <b>
+                            integrationRequiredTemplate</b>
+                            <a href="#integrationRequiredTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;integrationRequiredTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="roleTemplate"></a>
+                        <span class="name">
+                            <b>
+                            roleTemplate</b>
+                            <a href="#roleTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;roleTemplate&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tableStructure"></a>
+                        <span class="name">
+                            <b>
+                            tableStructure</b>
+                            <a href="#tableStructure"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AbstractTableField[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="utilityService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            utilityService</b>
+                            <a href="#utilityService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/UtilityService.html" target="_self" >UtilityService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewParticipant"></a>
+                        <span class="name">
+                            <b>
+                            viewParticipant</b>
+                            <a href="#viewParticipant"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ActionItem</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/features/private/conference/features/participants/components/participants-table/participants-table.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Component,
+    OnInit,
+    Input,
+    Output,
+    EventEmitter,
+    ViewChild
+} from &#x27;@angular/core&#x27;;
+
+import { takeUntil } from &#x27;rxjs/operators&#x27;;
+
+import {
+    AbstractTableField,
+    ActionItem,
+    TableField,
+    TemplateField
+} from &#x27;@eng-ds/ng-toolkit&#x27;;
+
+import { I18nService, LoggerService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import { ConferenceRole, AutoUnsubscribe } from &#x27;@common&#x27;;
+
+import { ActionForm, UtilityService } from &#x27;@app/core&#x27;;
+
+import {
+    Participant,
+    ConferenceStoreService
+} from &#x27;@features/private/conference/core&#x27;;
+
+@Component({
+    selector: &#x27;app-participants-table&#x27;,
+    templateUrl: &#x27;./participants-table.component.html&#x27;,
+    styleUrls: [&#x27;./participants-table.component.scss&#x27;]
+})
+export class ParticipantsTableComponent extends AutoUnsubscribe
+    implements OnInit {
+    @Input(&#x27;list&#x27;) list &#x3D; [];
+    @Input(&#x27;action&#x27;) action: ActionForm;
+
+    @Output(&#x27;view&#x27;) view &#x3D; new EventEmitter&lt;Participant&gt;();
+    @Output(&#x27;edit&#x27;) edit &#x3D; new EventEmitter&lt;Participant&gt;();
+    @Output(&#x27;openModalForDelete&#x27;) openModalForDelete &#x3D; new EventEmitter&lt;
+        Participant
+    &gt;();
+
+    @ViewChild(&#x27;actionTemplate&#x27;) actionTemplate;
+    @ViewChild(&#x27;authorityTemplate&#x27;) authorityTemplate;
+    @ViewChild(&#x27;roleTemplate&#x27;) roleTemplate;
+    @ViewChild(&#x27;determinationExpressedTemplate&#x27;) determinationExpressedTemplate;
+    @ViewChild(&#x27;integrationRequiredTemplate&#x27;) integrationRequiredTemplate;
+
+    tableStructure: AbstractTableField[] &#x3D; [];
+
+    viewParticipant: ActionItem;
+    editParticipant: ActionItem;
+    deleteParticipant: ActionItem;
+
+    constructor(
+        private i18nService: I18nService,
+        public utilityService: UtilityService,
+        private loggerService: LoggerService,
+        private conferenceStoreService: ConferenceStoreService
+    ) {
+        super();
+    }
+
+    ngOnInit(): void {
+        this.tableStructure &#x3D; this.defineTableStructure(this.tableStructure);
+    }
+
+    defineTableStructure(
+        structure: AbstractTableField[]
+    ): AbstractTableField[] {
+        this.viewParticipant &#x3D; new ActionItem(
+            &#x27;BUTTON.VIEW&#x27;,
+
+            (a, item: Participant) &#x3D;&gt; {
+                this.view.emit(item);
+            },
+            &#x27;eye&#x27;
+        );
+        this.editParticipant &#x3D; new ActionItem(
+            &#x27;BUTTON.UPDATE&#x27;,
+
+            (a, item: Participant) &#x3D;&gt; {
+                this.edit.emit(item);
+            },
+            &#x27;pencil&#x27;
+        );
+        this.deleteParticipant &#x3D; new ActionItem(
+            &#x27;BUTTON.DELETE&#x27;,
+
+            (a, item: Participant) &#x3D;&gt; {
+                this.openModalForDelete.emit(item);
+            },
+            &#x27;trash&#x27;
+        );
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.ACTOR&#x27;
+                ),
+                this.authorityTemplate
+            )
+        );
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.ROLE&#x27;
+                ),
+                this.roleTemplate
+            )
+        );
+        // structure.push(
+        //     new TableField(
+        //         this.i18nService.translate(
+        //             &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.PEC&#x27;
+        //         ),
+        //         &#x27;NORMAL&#x27;,
+        //         &#x27;pec&#x27;,
+        //         false
+        //     )
+        // );
+        // structure.push(
+        //     new TableField(
+        //         this.i18nService.translate(
+        //             &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.FISCALCODE&#x27;
+        //         ),
+        //         &#x27;NORMAL&#x27;,
+        //         &#x27;fiscalCode&#x27;,
+        //         false
+        //     )
+        // );
+        structure.push(
+            new TableField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.DESCRIPTION&#x27;
+                ),
+                &#x27;NORMAL&#x27;,
+                &#x27;description&#x27;,
+                false
+            )
+        );
+        if (this.conferenceStoreService.conference.isIndictionState()) {
+            this.conferenceStoreService.userProfile$
+                .pipe(takeUntil(this.destroy$))
+                .subscribe(user &#x3D;&gt; {
+                    if (
+                        !user ||
+                        user.profile.key &#x3D;&#x3D;&#x3D; ConferenceRole.CONFERENCE_MANAGER
+                    ) {
+                        structure.push(
+                            new TemplateField(
+                                this.i18nService.translate(
+                                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.DETERMINATION_EXPRESSED&#x27;
+                                ),
+                                this.determinationExpressedTemplate
+                            )
+                        );
+                        structure.push(
+                            new TemplateField(
+                                this.i18nService.translate(
+                                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.INTEGRATION_REQUIRED&#x27;
+                                ),
+                                this.integrationRequiredTemplate
+                            )
+                        );
+                    }
+                });
+        }
+
+        structure.push(
+            new TemplateField(
+                this.i18nService.translate(
+                    &#x27;CONFERENCE.WIZARD.PARTICIPANTS.TABLE.ACTIONS&#x27;
+                ),
+                this.actionTemplate
+            )
+        );
+
+        return structure;
+    }
+
+    isReadonly(): boolean {
+        return this.action &#x3D;&#x3D;&#x3D; ActionForm.READONLY;
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding&quot;&gt;
+    &lt;div class&#x3D;&quot;row panel-body body-form-grey&quot;&gt;
+        &lt;eng-table-result
+            [results]&#x3D;&quot;list&quot;
+            [structure]&#x3D;&quot;tableStructure&quot;
+            [showPageSize]&#x3D;&quot;false&quot;
+        &gt;&lt;/eng-table-result&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;ng-template #authorityTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;!-- {{ getAuthorityByKey(model.authority.key) }} --&gt;
+    {{ (model.authority &amp;&amp; model.authority.value) || &#x27;---&#x27; }}
+&lt;/ng-template&gt;
+&lt;ng-template #roleTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;!-- {{ getRoleByKey(model.role.key) }} --&gt;
+    {{ (model.role &amp;&amp; model.role.value) || &#x27;---&#x27; }}
+&lt;/ng-template&gt;
+&lt;ng-template #determinationExpressedTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;i
+        class&#x3D;&quot;fa fa-times-circle unexecuted&quot;
+        *ngIf&#x3D;&quot;!model.determinationExpressed&quot;
+    &gt;&lt;/i&gt;
+    &lt;i
+        class&#x3D;&quot;fa fa-check-circle executed&quot;
+        *ngIf&#x3D;&quot;model.determinationExpressed&quot;
+    &gt;&lt;/i&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #integrationRequiredTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;i
+        class&#x3D;&quot;fa fa-times-circle unexecuted&quot;
+        *ngIf&#x3D;&quot;!model.integrationRequired&quot;
+    &gt;&lt;/i&gt;
+    &lt;i
+        class&#x3D;&quot;fa fa-check-circle executed&quot;
+        *ngIf&#x3D;&quot;model.integrationRequired&quot;
+    &gt;&lt;/i&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #actionTemplate let-model&#x3D;&quot;item&quot;&gt;
+    &lt;eng-action
+        [action]&#x3D;&quot;viewParticipant&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+        *ngIf&#x3D;&quot;model.readonly || isReadonly()&quot;
+    &gt;
+    &lt;/eng-action&gt;
+    &lt;eng-action
+        [action]&#x3D;&quot;editParticipant&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+        *ngIf&#x3D;&quot;!model.readonly &amp;&amp; !isReadonly()&quot;
+    &gt;
+    &lt;/eng-action&gt;
+    &lt;eng-action
+        [action]&#x3D;&quot;deleteParticipant&quot;
+        [model]&#x3D;&quot;model&quot;
+        [onlyIcon]&#x3D;&quot;true&quot;
+        *ngIf&#x3D;&quot;!model.readonly &amp;&amp; !isReadonly()&quot;
+    &gt;
+    &lt;/eng-action&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./participants-table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">i.unexecuted {
+    color: red;
+}
+i.executed {
+    color: green;
+}
+.panel {
+    margin-bottom: 0px !important;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding">    <div class="row panel-body body-form-grey">        <eng-table-result            [results]="list"            [structure]="tableStructure"            [showPageSize]="false"        ></eng-table-result>    </div></div><ng-template #authorityTemplate let-model="item">    <!-- {{ getAuthorityByKey(model.authority.key) }} -->    {{ (model.authority && model.authority.value) || \'---\' }}</ng-template><ng-template #roleTemplate let-model="item">    <!-- {{ getRoleByKey(model.role.key) }} -->    {{ (model.role && model.role.value) || \'---\' }}</ng-template><ng-template #determinationExpressedTemplate let-model="item">    <i        class="fa fa-times-circle unexecuted"        *ngIf="!model.determinationExpressed"    ></i>    <i        class="fa fa-check-circle executed"        *ngIf="model.determinationExpressed"    ></i></ng-template><ng-template #integrationRequiredTemplate let-model="item">    <i        class="fa fa-times-circle unexecuted"        *ngIf="!model.integrationRequired"    ></i>    <i        class="fa fa-check-circle executed"        *ngIf="model.integrationRequired"    ></i></ng-template><ng-template #actionTemplate let-model="item">    <eng-action        [action]="viewParticipant"        [model]="model"        [onlyIcon]="true"        *ngIf="model.readonly || isReadonly()"    >    </eng-action>    <eng-action        [action]="editParticipant"        [model]="model"        [onlyIcon]="true"        *ngIf="!model.readonly && !isReadonly()"    >    </eng-action>    <eng-action        [action]="deleteParticipant"        [model]="model"        [onlyIcon]="true"        *ngIf="!model.readonly && !isReadonly()"    >    </eng-action></ng-template></div>'
+    var COMPONENTS = [{'name': 'AccreditationComponent', 'selector': 'app-accreditation'},{'name': 'AccreditationTabComponent', 'selector': 'app-conference-accreditation'},{'name': 'AccreditationTableComponent', 'selector': 'app-accreditation-table'},{'name': 'AlertInfoComponent', 'selector': 'app-alert-info'},{'name': 'AlertWithLinkComponent', 'selector': 'app-form-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'ConferenceComponent', 'selector': ''},{'name': 'ConferenceModalBeforeCreateComponent', 'selector': 'app-conference-modal-before-create'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DefinitionComponent', 'selector': 'app-conference-definition'},{'name': 'DesktopComponent', 'selector': 'app-desktop'},{'name': 'DocumentationComponent', 'selector': 'app-conference-documentation'},{'name': 'EditModalFileComponent', 'selector': 'app-edit-modal-file'},{'name': 'EventsComponent', 'selector': 'app-conference-events'},{'name': 'EventsSearchComponent', 'selector': 'app-events-search'},{'name': 'EventsTableComponent', 'selector': 'app-events-table'},{'name': 'FilePanelComponent', 'selector': 'app-file-panel'},{'name': 'FileTableComponent', 'selector': 'app-file-table'},{'name': 'HeadComponent', 'selector': 'app-conference-head'},{'name': 'MainComponent', 'selector': 'main-root'},{'name': 'MainComponent', 'selector': 'app-dashboard-main'},{'name': 'MediaMainComponent', 'selector': ''},{'name': 'MediaSearchComponent', 'selector': 'search'},{'name': 'MediaTableComponent', 'selector': 'app-media-table'},{'name': 'NotAuthorizedComponent', 'selector': ''},{'name': 'NothingToDoComponent', 'selector': ''},{'name': 'PaleoComponent', 'selector': 'app-paleo'},{'name': 'ParticipantsComponent', 'selector': 'app-conference-participants'},{'name': 'ParticipantsTableComponent', 'selector': 'app-participants-table'},{'name': 'PecComponent', 'selector': 'app-conference-pec'},{'name': 'PecSearchComponent', 'selector': 'app-pec-search'},{'name': 'PendingAccreditationPageComponent', 'selector': 'app-pending-accreditation-page'},{'name': 'PendingListPageComponent', 'selector': ''},{'name': 'PrivateComponent', 'selector': ''},{'name': 'ProcedureComponent', 'selector': 'app-conference-procedure'},{'name': 'PublicComponent', 'selector': ''},{'name': 'RelevantInformationComponent', 'selector': 'app-relevant-information'},{'name': 'ResultTableComponent', 'selector': 'app-result-table'},{'name': 'SearchComponent', 'selector': ''},{'name': 'SearchComponent', 'selector': 'search'},{'name': 'SummaryComponent', 'selector': 'app-conference-summary'}];
+    var DIRECTIVES = [{'name': 'AuthConferenceDirective', 'selector': '[conferenceAuth]'},{'name': 'AuthDirective', 'selector': '[appAuth]'}];
+    var ACTUAL_COMPONENT = {'name': 'ParticipantsTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ParticipantsTableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

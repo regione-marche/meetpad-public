@@ -1,0 +1,96 @@
+{
+    "code": "string",
+    "data": {
+        "definition": {
+            "determination": {
+                "determinationObject": "string"
+            },
+            "instance": {
+                "address": "https://meet.lync.com/engit-eng/guido.deluca/Z57TY8C0",
+                "conferenceType": {
+                    "key": "1",
+                    "value": "string"
+                },
+                "creationDate": "10/10/2020",
+                "endIntegrationDate": "10/10/2020",
+                "endOpinionDate": "10/10/2020",
+                "expirationDate": "10/10/2020",
+                "firstSessionDate": "10/10/2020",
+                "requestReference": "10/10/2020"
+            }
+        },
+        "documentations": [],
+        "id": 1,
+        "procedure": {
+            "applicant": {
+                "action": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "activity": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "fiscalCode": "string",
+                "name": "string",
+                "pec": "string",
+                "requestReference": "string",
+                "startDate": "string",
+                "surname": "string",
+                "type": {
+                    "key": "string",
+                    "value": "string"
+                }
+            },
+            "company": {
+                "address": "string",
+                "area": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "city": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "denomination": "string",
+                "fiscalCode": "string",
+                "id": 0,
+                "legalForm": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "nome": "string",
+                "province": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "vatNumber": "string"
+            },
+            "localization": {
+                "address": "string",
+                "city": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "province": {
+                    "key": "string",
+                    "value": "string"
+                }
+            }
+        },
+        "step": 1,
+        "state": {
+            "key": "2",
+            "value": "Bozza"
+        }
+    },
+    "errors": [{
+        "code": "string",
+        "fields": [
+            "string"
+        ],
+        "msg": "string",
+        "step": "string"
+    }],
+    "msg": "string"
+}

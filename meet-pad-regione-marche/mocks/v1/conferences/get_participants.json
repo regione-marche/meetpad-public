@@ -1,0 +1,72 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": 10,
+                "authority": {
+                  "key": "0",
+                  "value": "Richiedente"
+                },
+                "role": {
+                  "key": "1",
+                  "value": "Richiedente"
+                },
+                "pec": "",
+                "fiscalCode": "CVDSFM48L69E067W",
+                "description": "----",
+                "competence": null,
+                "determination": false,
+                "users": [
+                  {
+                    "id": 9,
+                    "name": "Mario",
+                    "surname": "Rossi",
+                    "fiscalCode": "CVDSFM48L69E067W",
+                    "email": "",
+                    "profile": {
+                      "key": "1",
+                      "value": "Richiedente"
+                    }
+                  }
+                ],
+                "emails": []
+              },
+              {
+                "id": 11,
+                "authority": {
+                  "key": "1",
+                  "value": "Regione Marche"
+                },
+                "role": {
+                  "key": "2",
+                  "value": "Amministrazione procedente"
+                },
+                "pec": "regione.marche@prova.it",
+                "fiscalCode": "80008630420",
+                "description": "Regione Marche",
+                "competence": null,
+                "determination": false,
+                "users": [
+                  {
+                    "id": 10,
+                    "name": "MARIALAURA",
+                    "surname": "MAGGIULLI",
+                    "fiscalCode": "MGGMLR62M63G479H",
+                    "email": null,
+                    "profile": {
+                      "key": "2",
+                      "value": "Responsabile conferenza"
+                    }
+                  }
+                ],
+                "emails": []
+              }
+        ],
+        "totalRow": 1
+
+    },
+    "errros": [
+    ]
+}

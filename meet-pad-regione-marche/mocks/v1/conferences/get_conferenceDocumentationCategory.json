@@ -1,0 +1,10 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Documentazione a corredo dell'istanza" },
+            { "key": "2", "value": "Istanza" }
+        ]
+    }
+}

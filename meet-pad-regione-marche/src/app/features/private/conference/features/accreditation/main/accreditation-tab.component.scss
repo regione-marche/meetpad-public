@@ -1,0 +1,13 @@
+.contentConfirmAccreditation {
+    margin-bottom: 80px;
+}
+
+.marginAccreditation {
+    margin-bottom: 40px;
+}
+
+:host /deep/ {
+    eng-form-section .panel {
+        margin-bottom: 0 !important;
+    }
+}

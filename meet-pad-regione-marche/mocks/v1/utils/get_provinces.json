@@ -1,0 +1,12 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Terni" },
+            { "key": "2", "value": "Roma" },
+            { "key": "3", "value": "Macerata" },
+            { "key": "4", "value": "Firenze" }
+        ]
+    }
+}

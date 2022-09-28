@@ -1,0 +1,14 @@
+<app-form [groupFields]="groupFields" [footerButtons]="false"></app-form>
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="modalButtons"
+    [title]="'CONFERENCE.UPLOAD.MODAL.TITLE' | translate"
+>
+    <div class="row">
+        <div class="col-xs-12">
+            <p [translate]="'CONFERENCE.UPLOAD.MODAL.TEXT'"></p>
+        </div>
+    </div>
+</eng-modal>

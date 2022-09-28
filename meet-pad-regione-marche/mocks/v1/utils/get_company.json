@@ -1,0 +1,13 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Ente Generico" },
+            { "key": "2", "value": "Ente 2" },
+            { "key": "3", "value": "Ente 3" },
+            { "key": "4", "value": "Ente 4" },
+            { "key": "5", "value": "Privato richiedente" }
+        ]
+    }
+}

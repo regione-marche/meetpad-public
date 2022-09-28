@@ -1,0 +1,12 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "3", "value": "Richiesta integrazioni" },
+            { "key": "4", "value": "Chiusura integrazioni" },
+            { "key": "5", "value": "Richiesta unica integrazioni" },
+            { "key": "6", "value": "Invia integrazioni" }
+        ]
+    }
+}

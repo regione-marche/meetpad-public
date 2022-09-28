@@ -1,0 +1,97 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "flagInviato": "true",
+                "flagAccreditato": true,
+                "user": {
+                    "id": "string",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "surname": "rossi",
+                    "name": "mario",
+                    "profile": {
+                        "key": "string",
+                        "value": "profilo 1"
+                    },
+                    "email": "s@s.it"
+                },
+                "role": {
+                    "key": "string",
+                    "value": "ruolo 1"
+                },
+                "conferenceId": "225",
+                "accreditationFile": "documento"
+            },
+            {
+                "id": "2",
+                "flagInviato": "true",
+                "flagAccreditato": true,
+                "user": {
+                    "id": "string",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "surname": "verdi",
+                    "name": "maria",
+                    "profile": {
+                        "key": "string",
+                        "value": "profilo 2"
+                    },
+                    "email": "s@s.it"
+                },
+                "role": {
+                    "key": "string",
+                    "value": "ruolo 2"
+                },
+                "conferenceId": "225",
+                "accreditationFile": "documento"
+            },
+            {
+                "id": "3",
+                "flagInviato": "true",
+                "flagAccreditato": true,
+                "user": {
+                    "id": "string",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "surname": "verdi",
+                    "name": "alessandro",
+                    "profile": {
+                        "key": "string",
+                        "value": "profilo 3"
+                    },
+                    "email": "s@s.it"
+                },
+                "role": {
+                    "key": "string",
+                    "value": "ruolo 3"
+                },
+                "conferenceId": "225",
+                "accreditationFile": "documento"
+            },
+            {
+                "id": "4",
+                "flagInviato": "true",
+                "flagAccreditato": true,
+                "user": {
+                    "id": "string",
+                    "fiscalCode": "scrsmn91m51c744s",
+                    "surname": "rossi",
+                    "name": "stefano",
+                    "profile": {
+                        "key": "string",
+                        "value": "profilo 4"
+                    },
+                    "email": "s@s.it"
+                },
+                "role": {
+                    "key": "string",
+                    "value": "ruolo 4"
+                },
+                "conferenceId": "225",
+                "accreditationFile": "documento"
+            }
+        ],
+        "totalRow": 1
+    }
+}

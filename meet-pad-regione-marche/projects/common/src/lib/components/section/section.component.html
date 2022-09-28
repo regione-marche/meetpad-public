@@ -1,0 +1,18 @@
+<div *ngFor="let content of (section | getValues)">
+    <div
+        *ngIf="isParagraph(content.val)"
+        [innerHTML]="content.val.value"
+        class="{{ content.val.class }}"
+    ></div>
+    <img
+        ondragstart="return false;"
+        *ngIf="isImage(content.val)"
+        src="{{ content.val.value }}"
+        class="{{ content.val.class }}"
+    />
+    <ul *ngIf="isList(content.val)">
+        <li *ngFor="let li of (content.val.list | getValues)">
+            {{ li.val }}
+        </li>
+    </ul>
+</div>

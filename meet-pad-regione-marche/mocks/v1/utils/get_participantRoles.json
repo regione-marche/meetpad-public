@@ -1,0 +1,21 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "key": "1",
+                "value": "Richiedente"
+            }, {
+                "key": "2",
+                "value": "Amministrazione procedente"
+            }, {
+                "key": "3",
+                "value": "Amministrazione competente"
+            }, {
+                "key": "4",
+                "value": "Amministrazione interessata"
+            }
+        ]
+    }
+}

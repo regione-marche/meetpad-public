@@ -1,0 +1,3185 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>UtilityService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/services/utilities/utility.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>BaseService</code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAccreditationRoles">getAccreditationRoles</a>
+                            </li>
+                            <li>
+                                <a href="#getActorCompetence">getActorCompetence</a>
+                            </li>
+                            <li>
+                                <a href="#getAddressTypes">getAddressTypes</a>
+                            </li>
+                            <li>
+                                <a href="#getAllParticipantRoles">getAllParticipantRoles</a>
+                            </li>
+                            <li>
+                                <a href="#getApplicantActions">getApplicantActions</a>
+                            </li>
+                            <li>
+                                <a href="#getApplicantActivities">getApplicantActivities</a>
+                            </li>
+                            <li>
+                                <a href="#getApplicantList">getApplicantList</a>
+                            </li>
+                            <li>
+                                <a href="#getApplicantTypes">getApplicantTypes</a>
+                            </li>
+                            <li>
+                                <a href="#getAreas">getAreas</a>
+                            </li>
+                            <li>
+                                <a href="#getAreasAutocomplete">getAreasAutocomplete</a>
+                            </li>
+                            <li>
+                                <a href="#getAuthority">getAuthority</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoriesFile">getCategoriesFile</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoriesFileForDocumentType">getCategoriesFileForDocumentType</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryFileByKey">getCategoryFileByKey</a>
+                            </li>
+                            <li>
+                                <a href="#getCities">getCities</a>
+                            </li>
+                            <li>
+                                <a href="#getCitiesAutocomplete">getCitiesAutocomplete</a>
+                            </li>
+                            <li>
+                                <a href="#getCompanyAutocomplete">getCompanyAutocomplete</a>
+                            </li>
+                            <li>
+                                <a href="#getCompanyById">getCompanyById</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceAdministrations">getConferenceAdministrations</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceManagerByKey">getConferenceManagerByKey</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceManagers">getConferenceManagers</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceManagersWithAdmin">getConferenceManagersWithAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceManagersWithAdminByKey">getConferenceManagersWithAdminByKey</a>
+                            </li>
+                            <li>
+                                <a href="#getConferencesResults">getConferencesResults</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceTemplate">getConferenceTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#getConferenceTypes">getConferenceTypes</a>
+                            </li>
+                            <li>
+                                <a href="#getDeterminationType">getDeterminationType</a>
+                            </li>
+                            <li>
+                                <a href="#getDocumentModels">getDocumentModels</a>
+                            </li>
+                            <li>
+                                <a href="#getEventTypes">getEventTypes</a>
+                            </li>
+                            <li>
+                                <a href="#getEventTypesForConference">getEventTypesForConference</a>
+                            </li>
+                            <li>
+                                <a href="#getLegalForms">getLegalForms</a>
+                            </li>
+                            <li>
+                                <a href="#getParticipantRoles">getParticipantRoles</a>
+                            </li>
+                            <li>
+                                <a href="#getPecStatus">getPecStatus</a>
+                            </li>
+                            <li>
+                                <a href="#getPersonRoles">getPersonRoles</a>
+                            </li>
+                            <li>
+                                <a href="#getProvincies">getProvincies</a>
+                            </li>
+                            <li>
+                                <a href="#getProvinciesAutocomplete">getProvinciesAutocomplete</a>
+                            </li>
+                            <li>
+                                <a href="#getStates">getStates</a>
+                            </li>
+                            <li>
+                                <a href="#getSubjectsEvent">getSubjectsEvent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(api: ApiService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/core/services/utilities/utility.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>api</td>
+                                                  
+                                                        <td>
+                                                                    <code>ApiService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAccreditationRoles"></a>
+                    <span class="name">
+                        <b>
+                            getAccreditationRoles
+                        </b>
+                        <a href="#getAccreditationRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAccreditationRoles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="474"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:474</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getActorCompetence"></a>
+                    <span class="name">
+                        <b>
+                            getActorCompetence
+                        </b>
+                        <a href="#getActorCompetence"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getActorCompetence()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="440"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:440</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAddressTypes"></a>
+                    <span class="name">
+                        <b>
+                            getAddressTypes
+                        </b>
+                        <a href="#getAddressTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAddressTypes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllParticipantRoles"></a>
+                    <span class="name">
+                        <b>
+                            getAllParticipantRoles
+                        </b>
+                        <a href="#getAllParticipantRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllParticipantRoles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="377"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:377</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getApplicantActions"></a>
+                    <span class="name">
+                        <b>
+                            getApplicantActions
+                        </b>
+                        <a href="#getApplicantActions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getApplicantActions(applicantActivityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:188</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>applicantActivityId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getApplicantActivities"></a>
+                    <span class="name">
+                        <b>
+                            getApplicantActivities
+                        </b>
+                        <a href="#getApplicantActivities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getApplicantActivities(applicantTypeId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>applicantTypeId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getApplicantList"></a>
+                    <span class="name">
+                        <b>
+                            getApplicantList
+                        </b>
+                        <a href="#getApplicantList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getApplicantList(search: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="260"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:260</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>search</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getApplicantTypes"></a>
+                    <span class="name">
+                        <b>
+                            getApplicantTypes
+                        </b>
+                        <a href="#getApplicantTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getApplicantTypes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAreas"></a>
+                    <span class="name">
+                        <b>
+                            getAreas
+                        </b>
+                        <a href="#getAreas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAreas(search: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>search</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAreasAutocomplete"></a>
+                    <span class="name">
+                        <b>
+                            getAreasAutocomplete
+                        </b>
+                        <a href="#getAreasAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAreasAutocomplete(field: FormField)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>FormField</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAuthority"></a>
+                    <span class="name">
+                        <b>
+                            getAuthority
+                        </b>
+                        <a href="#getAuthority"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAuthority(idAuthority?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="456"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:456</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idAuthority</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Participant.html" target="_self" >Observable&lt;Partial&lt;Participant&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoriesFile"></a>
+                    <span class="name">
+                        <b>
+                            getCategoriesFile
+                        </b>
+                        <a href="#getCategoriesFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoriesFile(conferenceType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, eventType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="233"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:233</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>eventType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoriesFileForDocumentType"></a>
+                    <span class="name">
+                        <b>
+                            getCategoriesFileForDocumentType
+                        </b>
+                        <a href="#getCategoriesFileForDocumentType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoriesFileForDocumentType(conferenceType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, documentType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>documentType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryFileByKey"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryFileByKey
+                        </b>
+                        <a href="#getCategoryFileByKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryFileByKey(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="252"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:252</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCities"></a>
+                    <span class="name">
+                        <b>
+                            getCities
+                        </b>
+                        <a href="#getCities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCities(provinceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, search: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>provinceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>search</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCitiesAutocomplete"></a>
+                    <span class="name">
+                        <b>
+                            getCitiesAutocomplete
+                        </b>
+                        <a href="#getCitiesAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCitiesAutocomplete(provinceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, field: FormField)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>provinceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>FormField</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanyAutocomplete"></a>
+                    <span class="name">
+                        <b>
+                            getCompanyAutocomplete
+                        </b>
+                        <a href="#getCompanyAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanyAutocomplete(field: FormField)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="343"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:343</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>FormField</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanyById"></a>
+                    <span class="name">
+                        <b>
+                            getCompanyById
+                        </b>
+                        <a href="#getCompanyById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanyById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="370"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:370</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceAdministrations"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceAdministrations
+                        </b>
+                        <a href="#getConferenceAdministrations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceAdministrations()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="301"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:301</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceManagerByKey"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceManagerByKey
+                        </b>
+                        <a href="#getConferenceManagerByKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceManagerByKey(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="335"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:335</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceManagers"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceManagers
+                        </b>
+                        <a href="#getConferenceManagers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceManagers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="308"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:308</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceManagersWithAdmin"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceManagersWithAdmin
+                        </b>
+                        <a href="#getConferenceManagersWithAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceManagersWithAdmin(idEnte: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="315"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:315</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idEnte</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceManagersWithAdminByKey"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceManagersWithAdminByKey
+                        </b>
+                        <a href="#getConferenceManagersWithAdminByKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceManagersWithAdminByKey(idEnte: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="324"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:324</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idEnte</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferencesResults"></a>
+                    <span class="name">
+                        <b>
+                            getConferencesResults
+                        </b>
+                        <a href="#getConferencesResults"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferencesResults()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:122</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceTemplate"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceTemplate
+                        </b>
+                        <a href="#getConferenceTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceTemplate(type: <a href="../classes/Conference.html">ConferenceType</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="285"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:285</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../classes/Conference.html" target="_self" >ConferenceType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ConferenceTemplate&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConferenceTypes"></a>
+                    <span class="name">
+                        <b>
+                            getConferenceTypes
+                        </b>
+                        <a href="#getConferenceTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getConferenceTypes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDeterminationType"></a>
+                    <span class="name">
+                        <b>
+                            getDeterminationType
+                        </b>
+                        <a href="#getDeterminationType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDeterminationType()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="498"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:498</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDocumentModels"></a>
+                    <span class="name">
+                        <b>
+                            getDocumentModels
+                        </b>
+                        <a href="#getDocumentModels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDocumentModels(conferenceType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEventTypes"></a>
+                    <span class="name">
+                        <b>
+                            getEventTypes
+                        </b>
+                        <a href="#getEventTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEventTypes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEventTypesForConference"></a>
+                    <span class="name">
+                        <b>
+                            getEventTypesForConference
+                        </b>
+                        <a href="#getEventTypesForConference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEventTypesForConference(idConference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idConference</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLegalForms"></a>
+                    <span class="name">
+                        <b>
+                            getLegalForms
+                        </b>
+                        <a href="#getLegalForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLegalForms()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="197"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:197</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParticipantRoles"></a>
+                    <span class="name">
+                        <b>
+                            getParticipantRoles
+                        </b>
+                        <a href="#getParticipantRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getParticipantRoles(actualRole: ComboBox)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="393"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:393</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Questo metodo ritorna i ruoli del partecipante
+se actualRole non corrisponde al ruolo richiedente,
+allora il ruolo richiedente viene eliminato dalla lista
+Questo perchè il ruolo richiedente non può essere inserito
+manualmente dall&#39;utente creatore
+Stesso discorso per il ruolo Amministrazione procedente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>actualRole</td>
+                                    <td>
+                                            <code>ComboBox</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPecStatus"></a>
+                    <span class="name">
+                        <b>
+                            getPecStatus
+                        </b>
+                        <a href="#getPecStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPecStatus()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="491"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:491</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPersonRoles"></a>
+                    <span class="name">
+                        <b>
+                            getPersonRoles
+                        </b>
+                        <a href="#getPersonRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPersonRoles(participantRoleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="447"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:447</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>participantRoleId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProvincies"></a>
+                    <span class="name">
+                        <b>
+                            getProvincies
+                        </b>
+                        <a href="#getProvincies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProvincies(areaId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, search: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>areaId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>search</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProvinciesAutocomplete"></a>
+                    <span class="name">
+                        <b>
+                            getProvinciesAutocomplete
+                        </b>
+                        <a href="#getProvinciesAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProvinciesAutocomplete(areaId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, field: FormField)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>areaId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                            <code>FormField</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStates"></a>
+                    <span class="name">
+                        <b>
+                            getStates
+                        </b>
+                        <a href="#getStates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getStates()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="204"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:204</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSubjectsEvent"></a>
+                    <span class="name">
+                        <b>
+                            getSubjectsEvent
+                        </b>
+                        <a href="#getSubjectsEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSubjectsEvent(eventYpe: <a href="../classes/Event.html">EventType</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="481"
+                            class="link-to-prism">src/app/core/services/utilities/utility.service.ts:481</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>eventYpe</td>
+                                    <td>
+                                                <code><a href="../classes/Event.html" target="_self" >EventType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpParams } from &#x27;@angular/common/http&#x27;;
+
+import { Observable, Subject, of } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+
+import { ApiService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import { BaseService, ComboBox, WrapperGetData, FormField } from &#x27;@common&#x27;;
+import { environment } from &#x27;@env/environment&#x27;;
+
+import { EventType, ConferenceType } from &#x27;@app/core/enums&#x27;;
+
+import {
+    Participant,
+    ConferenceTemplate
+} from &#x27;@features/private/conference/core&#x27;;
+
+@Injectable()
+export class UtilityService extends BaseService {
+    constructor(protected api: ApiService) {
+        super(api);
+    }
+
+    getAreasAutocomplete(
+        field: FormField
+    ): { options$: Observable&lt;ComboBox[]&gt;; typeahead$: Subject&lt;string&gt; } {
+        const _apiRequest &#x3D; (search: string) &#x3D;&gt; {
+            let params &#x3D; new HttpParams();
+            params &#x3D; params.set(&#x27;search&#x27;, search);
+            return this.comboBoxRequest(&#x27;getAreas&#x27;, params);
+        };
+
+        return this.getAutocomplete(field, _apiRequest);
+    }
+
+    getAreas(search: string &#x3D; &#x27;&#x27;): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;search&#x27;, search);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getAreas&#x27;, params),
+            &#x27;areas&#x27;
+        );
+    }
+
+    /**
+     *
+     * @param areaId
+     * @param search
+     * @deprecated
+     */
+    getProvincies(
+        areaId?: string,
+        search: string &#x3D; &#x27;&#x27;
+    ): Observable&lt;ComboBox[]&gt; {
+        let cacheKey &#x3D; &#x60;provincies&#x60;;
+        let params &#x3D; new HttpParams();
+
+        if (areaId) {
+            params &#x3D; params.set(&#x27;key&#x27;, areaId);
+            cacheKey &#x3D; &#x60;${areaId}.provincies&#x60;;
+        }
+
+        params &#x3D; params.set(&#x27;search&#x27;, search);
+
+        return this.comboBoxRequest(&#x27;getProvincies&#x27;, params);
+    }
+
+    getProvinciesAutocomplete(
+        areaId: string,
+        field: FormField
+    ): { options$: Observable&lt;ComboBox[]&gt;; typeahead$: Subject&lt;string&gt; } {
+        const _apiRequest &#x3D; (search: string) &#x3D;&gt; {
+            let params &#x3D; new HttpParams();
+            if (areaId) {
+                params &#x3D; params.set(&#x27;key&#x27;, areaId);
+            }
+            params &#x3D; params.set(&#x27;search&#x27;, search);
+            return this.comboBoxRequest(&#x27;getProvincies&#x27;, params);
+        };
+
+        return this.getAutocomplete(field, _apiRequest);
+    }
+
+    getCitiesAutocomplete(
+        provinceId: string,
+        field: FormField
+    ): { options$: Observable&lt;ComboBox[]&gt;; typeahead$: Subject&lt;string&gt; } {
+        const _apiRequest &#x3D; (search: string) &#x3D;&gt; {
+            let params &#x3D; new HttpParams();
+            params &#x3D; params.set(&#x27;key&#x27;, provinceId);
+            params &#x3D; params.set(&#x27;search&#x27;, search);
+            return this.comboBoxRequest(&#x27;getCities&#x27;, params);
+        };
+
+        return this.getAutocomplete(field, _apiRequest);
+    }
+
+    getCities(provinceId: string, search: string &#x3D; &#x27;&#x27;): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, provinceId);
+        params &#x3D; params.set(&#x27;search&#x27;, search);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getCities&#x27;, params),
+            &#x60;${provinceId}.cities&#x60;
+        );
+    }
+
+    getEventTypes(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getEventTypes&#x27;),
+            &#x27;eventTypes&#x27;
+        );
+    }
+
+    getEventTypesForConference(idConference: string): Observable&lt;ComboBox[]&gt; {
+        return this.comboBoxRequest(&#x27;getEventTypesForConference&#x27;, null, {
+            idConference
+        });
+    }
+
+    getConferencesResults(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferencesResults&#x27;),
+            &#x27;getConferencesResults&#x27;
+        );
+    }
+
+    getDocumentModels(conferenceType: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;conferenceType&#x27;, conferenceType);
+        // return this.get&lt;ComboBox[]&gt;(
+        //     this.comboBoxRequest(&#x27;getDocModelsForConferenceType&#x27;, params),
+        //     &#x60;${conferenceType}.models&#x60;
+        // );
+        return this.api
+            .request&lt;WrapperGetData&lt;ComboBox[]&gt;&gt;(
+                &#x27;getDocModelsForConferenceType&#x27;,
+                null,
+                params
+            )
+            .pipe(
+                map((result: WrapperGetData&lt;ComboBox[]&gt;) &#x3D;&gt; {
+                    const arr &#x3D; [];
+                    arr.push({ key: &#x27;-1&#x27;, value: &#x27;Scegli modello&#x27; });
+                    if (result &amp;&amp; result.list) {
+                        for (const k in result.list) {
+                            if (result.list[k]) {
+                                arr.push(result.list[k]);
+                            }
+                        }
+                    }
+                    return arr;
+                })
+            );
+    }
+
+    getConferenceTypes(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;conferenceTypes&#x27;),
+            &#x27;conferenceTypes&#x27;
+        );
+    }
+
+    getAddressTypes(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;addressTypes&#x27;),
+            &#x27;addressTypes&#x27;
+        );
+    }
+
+    getApplicantTypes(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getApplicantTypes&#x27;),
+            &#x27;types&#x27;
+        );
+    }
+
+    getApplicantActivities(applicantTypeId: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, applicantTypeId);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceActivities&#x27;, params),
+            &#x60;${applicantTypeId}.activities&#x60;
+        );
+    }
+
+    getApplicantActions(applicantActivityId: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, applicantActivityId);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceActions&#x27;, params),
+            &#x60;${applicantActivityId}.actions&#x60;
+        );
+    }
+
+    getLegalForms(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceLegalForms&#x27;),
+            &#x27;legalForms&#x27;
+        );
+    }
+
+    getStates(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getStates&#x27;),
+            &#x27;states&#x27;
+        );
+    }
+
+    getCategoriesFileForDocumentType(
+        conferenceType: string &#x3D; null,
+        documentType: string &#x3D; null
+    ): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        if (conferenceType) {
+            params &#x3D; params.set(&#x27;conferenceType&#x27;, conferenceType);
+        }
+        if (documentType) {
+            params &#x3D; params.set(&#x27;documentType&#x27;, documentType);
+        }
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(
+                &#x27;getConferenceDocumentationCategoryForDocumentType&#x27;,
+                params
+            ),
+            &#x60;${conferenceType ? conferenceType + &#x27;.&#x27; : &#x27;&#x27;}${
+                documentType ? documentType + &#x27;.&#x27; : &#x27;&#x27;
+            }categoriesFile&#x60;
+        );
+    }
+
+    getCategoriesFile(
+        conferenceType: string &#x3D; null,
+        eventType: string &#x3D; null
+    ): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        if (conferenceType) {
+            params &#x3D; params.set(&#x27;conferenceType&#x27;, conferenceType);
+        }
+        if (eventType) {
+            params &#x3D; params.set(&#x27;eventType&#x27;, eventType);
+        }
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceDocumentationCategory&#x27;, params),
+            &#x60;${conferenceType ? conferenceType + &#x27;.&#x27; : &#x27;&#x27;}${
+                eventType ? eventType + &#x27;.&#x27; : &#x27;&#x27;
+            }categoriesFile&#x60;
+        );
+    }
+
+    getCategoryFileByKey(key: string): Observable&lt;ComboBox&gt; {
+        return this.getCategoriesFile().pipe(
+            map((val: ComboBox[]) &#x3D;&gt;
+                val.find((item: ComboBox) &#x3D;&gt; item.key &#x3D;&#x3D;&#x3D; key)
+            )
+        );
+    }
+
+    getApplicantList(search: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;search&#x27;, search);
+
+        return this.api
+            .request&lt;WrapperGetData&lt;ComboBox[]&gt;&gt;(
+                &#x27;getApplicantList&#x27;,
+                null,
+                params
+            )
+            .pipe(
+                map((result: WrapperGetData&lt;ComboBox[]&gt;) &#x3D;&gt; {
+                    const arr &#x3D; [];
+                    if (result &amp;&amp; result.list) {
+                        for (const k in result.list) {
+                            if (result.list[k]) {
+                                arr.push(result.list[k]);
+                            }
+                        }
+                    }
+                    return arr;
+                })
+            );
+    }
+
+    getConferenceTemplate(
+        type: ConferenceType
+    ): Observable&lt;ConferenceTemplate&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;type&#x27;, type);
+
+        return this.get&lt;ConferenceTemplate&gt;(
+            this.api.request&lt;WrapperGetData&lt;ConferenceTemplate&gt;&gt;(
+                &#x27;getConferenceTemplate&#x27;,
+                null,
+                params
+            ),
+            &#x60;${type}.conferenceTemplate&#x60;
+        );
+    }
+
+    getConferenceAdministrations(): Observable&lt;ComboBox[] &amp; any&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getAuthorities&#x27;),
+            &#x27;authorities&#x27;
+        );
+    }
+
+    getConferenceManagers(): Observable&lt;ComboBox[] &amp; any&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceManagers&#x27;),
+            &#x27;conferenceManagers&#x27;
+        );
+    }
+
+    getConferenceManagersWithAdmin(idEnte: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, idEnte);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getConferenceManagers&#x27;, params),
+            &#x60;${idEnte}.conferenceManagers&#x60;
+        );
+    }
+
+    getConferenceManagersWithAdminByKey(
+        idEnte: string,
+        key: string
+    ): Observable&lt;ComboBox&gt; {
+        return this.getConferenceManagersWithAdmin(idEnte).pipe(
+            map((val: ComboBox[]) &#x3D;&gt;
+                val.find((item: ComboBox) &#x3D;&gt; item.key &#x3D;&#x3D;&#x3D; key)
+            )
+        );
+    }
+
+    getConferenceManagerByKey(key: string): Observable&lt;ComboBox&gt; {
+        return this.getConferenceManagers().pipe(
+            map((val: ComboBox[]) &#x3D;&gt;
+                val.find((item: ComboBox) &#x3D;&gt; item.key &#x3D;&#x3D;&#x3D; key)
+            )
+        );
+    }
+
+    getCompanyAutocomplete(
+        field: FormField
+    ): { options$: Observable&lt;ComboBox[]&gt;; typeahead$: Subject&lt;string&gt; } {
+        const _apiRequest &#x3D; (search: string) &#x3D;&gt; {
+            let params &#x3D; new HttpParams();
+
+            params &#x3D; params.set(&#x27;search&#x27;, search);
+            return this.api
+                .request&lt;WrapperGetData&lt;ComboBox[]&gt;&gt;(&#x27;getCompany&#x27;, null, params)
+                .pipe(
+                    map((result: WrapperGetData&lt;ComboBox[]&gt;) &#x3D;&gt; {
+                        const arr &#x3D; [];
+                        if (result &amp;&amp; result.list) {
+                            for (const k in result.list) {
+                                if (result.list[k]) {
+                                    arr.push(result.list[k]);
+                                }
+                            }
+                        }
+                        return arr;
+                    })
+                );
+        };
+
+        return this.getAutocomplete(field, _apiRequest);
+    }
+
+    getCompanyById(id: string): Observable&lt;any&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.api.request(&#x27;getCompanyById&#x27;, null, null, { id }),
+            &#x60;company.${id}&#x60;
+        );
+    }
+
+    getAllParticipantRoles(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;participantRoles&#x27;),
+            &#x27;participantRoles&#x27;
+        );
+    }
+
+    /**
+     * Questo metodo ritorna i ruoli del partecipante
+     * se actualRole non corrisponde al ruolo richiedente,
+     * allora il ruolo richiedente viene eliminato dalla lista
+     * Questo perchè il ruolo richiedente non può essere inserito
+     * manualmente dall&#x27;utente creatore
+     * Stesso discorso per il ruolo Amministrazione procedente
+     * @param actualRole
+     */
+    getParticipantRoles(actualRole: ComboBox): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;participantRoles&#x27;),
+            &#x27;participantRoles&#x27;
+        ).pipe(
+            // TODO: questi controlli andrebbero centralizzati sul server
+            // espandendo il modello ComboBox così: {key, value, hidden, default}
+            map((combo: ComboBox[]) &#x3D;&gt; {
+                const comboRet &#x3D; Object.assign([], combo);
+                const keyApplicantRole &#x3D;
+                    environment.defaultComboBox.conference.defaultParticipant
+                        .applicant.participantRole.key;
+                const keyPCmpRole &#x3D;
+                    environment.defaultComboBox.conference.defaultParticipant
+                        .administrationProceding.participantRole.key;
+
+                if (actualRole.key !&#x3D;&#x3D; keyApplicantRole) {
+                    comboRet.splice(
+                        comboRet.findIndex(
+                            (c: ComboBox) &#x3D;&gt; c.key &#x3D;&#x3D;&#x3D; keyApplicantRole
+                        ),
+                        1
+                    );
+                }
+
+                if (actualRole.key !&#x3D;&#x3D; keyPCmpRole) {
+                    comboRet.splice(
+                        comboRet.findIndex(
+                            (c: ComboBox) &#x3D;&gt; c.key &#x3D;&#x3D;&#x3D; keyPCmpRole
+                        ),
+                        1
+                    );
+                }
+
+                return comboRet;
+            })
+        );
+    }
+
+    // getParticipantRoleByKey(key: string): Observable&lt;any&gt; {
+    //     return this.getParticipantRoles().pipe(
+    //         map((val: ComboBox[]) &#x3D;&gt;
+    //             val.find((item: ComboBox) &#x3D;&gt; item.key &#x3D;&#x3D;&#x3D; key)
+    //         )
+    //     );
+    // }
+
+    getActorCompetence(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getActorCompetence&#x27;),
+            &#x27;actorCompetence&#x27;
+        );
+    }
+
+    getPersonRoles(participantRoleId: string): Observable&lt;ComboBox[]&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, participantRoleId);
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getPersonRoles&#x27;, params),
+            &#x60;${participantRoleId}.personRoles&#x60;
+        );
+    }
+
+    getAuthority(idAuthority?: string): Observable&lt;Partial&lt;Participant&gt;&gt; {
+        let cacheKey &#x3D; &#x60;authority&#x60;;
+        let params &#x3D; new HttpParams();
+
+        if (idAuthority) {
+            params &#x3D; params.set(&#x27;idAuthority&#x27;, idAuthority);
+            cacheKey &#x3D; &#x60;${idAuthority}.authority&#x60;;
+        }
+
+        return this.get&lt;Partial&lt;Participant&gt;&gt;(
+            this.api.request&lt;WrapperGetData&lt;Partial&lt;Participant&gt;&gt;&gt;(
+                &#x27;getAuthority&#x27;,
+                params
+            ),
+            cacheKey
+        );
+    }
+
+    getAccreditationRoles(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getAccreditationRoles&#x27;),
+            &#x27;accreditationRoles&#x27;
+        );
+    }
+
+    getSubjectsEvent(eventYpe: EventType): Observable&lt;ComboBox&gt; {
+        let params &#x3D; new HttpParams();
+        params &#x3D; params.set(&#x27;key&#x27;, eventYpe);
+        return this.get&lt;ComboBox&gt;(
+            // this.comboBoxRequest(&#x27;getSubjectsEvent&#x27;, params),
+            this.api.request&lt;ComboBox&gt;(&#x27;getSubjectsEvent&#x27;, null, params),
+            &#x60;${eventYpe}.subjectsEvent&#x60;
+        );
+    }
+
+    getPecStatus(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;getPecStatus&#x27;),
+            &#x27;pecStatus&#x27;
+        );
+    }
+
+    getDeterminationType(): Observable&lt;ComboBox[]&gt; {
+        return this.get&lt;ComboBox[]&gt;(
+            this.comboBoxRequest(&#x27;determinationTypes&#x27;),
+            &#x27;determinationTypes&#x27;
+        );
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'UtilityService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

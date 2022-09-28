@@ -1,0 +1,146 @@
+<div
+    class="row form-grey col-xs-12 col-sm-12 col-lg-12"
+    [ngClass]="{ 'mb-30': !summary }"
+>
+    <div class="panel panel-default">
+        <div
+            class="panel-heading custom-panel-title"
+           
+        >
+            <span translate="CONFERENCE.WIZARD.PARTICIPANTS.TITLE"></span>
+            <span
+            *ngIf="!isReadonly()"
+            class="pull-right fa fa-trash mr-10 mt-5"
+            aria-hidden="true"
+            (click)="deleteParticipantsSelected()"
+            [title]="
+                'CONFERENCE.WIZARD.PARTICIPANTS.PANEL.DELETE_SELECTED_LIST_PARTICIPANTS_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+
+        <span
+            *ngIf="!isReadonly()"
+            class="pull-right fa fa-check mr-10 mt-5"
+            aria-hidden="true"
+            (click)="toggleSelection()"
+            [title]="
+                'CONFERENCE.WIZARD.PARTICIPANTS.PANEL.DELETE_LIST_PARTICIPANTS_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+
+            <span
+                *ngIf="!isReadonly()"
+                class="pull-right fa fa-plus mr-10 mt-5"
+                aria-hidden="true"
+                (click)="addParticipant()"
+                [title]="
+                    'CONFERENCE.WIZARD.PARTICIPANTS.PANEL.ADD_APPLICANT_BUTTON'
+                        | translate
+                "
+            ></span>
+
+            
+        </div>
+
+        <div class="panel-body" *ngIf="conference.participants.length">
+            <app-participants-table
+                [listParticipants]="conference.participants"
+                [action]="action"
+                (edit)="editParticipant($event)"
+                (view)="viewParticipant($event)"
+                (openModalForDelete)="openModalForDelete($event)"
+                (deleteParticipantList)="deleteParticipantList($event)"
+            ></app-participants-table>
+        </div>
+    </div>
+    <div class="mt-15 pull-right">
+        <eng-button
+            *ngIf="showFooterBtn()"
+            class="pull-right"
+            color="info"
+            [title]="'BUTTON.NEXT' | translate"
+            (onClick)="onNext()"
+        ></eng-button>
+        <app-footer-buttons [groupButtons]="groupButtons"></app-footer-buttons>
+    </div>
+</div>
+
+<eng-modal
+    #docModal
+    [buttons]="buttons"
+    [title]="'CONFERENCE.WIZARD.PARTICIPANTS.MODAL.TITLE' | translate"
+    (onClose)="resetContext()"
+>
+    <eng-content-loader
+        class="participantModalLoading"
+        [loading]="loading$ | async"
+    ></eng-content-loader>
+    <app-form
+        [groupFields]="groupFields"
+        [formGrey]="false"
+        [footerButtons]="footerButtons"
+        [saveFn]="saveFn"
+        [saveComplete]="saveCompleteFn"
+        [saveError]="saveErrorFn"
+        [extractDataToSubmitFn]="extractDataToSubmit"
+        [footerTextSubmitButton]="footerTextSubmitBtn"
+        (reset)="resetForm()"
+    ></app-form>
+</eng-modal>
+
+<ng-template #actionTemplate let-model="item">
+    <span
+        mwlConfirmationPopover
+        [popoverTitle]="popoverTitle"
+        [popoverMessage]="popoverText"
+        placement="left"
+        (confirm)="confirmClicked(model)"
+        (cancel)="cancelClicked()"
+        [cancelText]="cancelButton"
+        [confirmText]="okButton"
+    >
+        <a>
+            <em
+                role="button"
+                tabindex="0"
+                class="fa fa-trash"
+                aria-label="BUTTON.DELETE"
+                [title]="cancelButtonTable"
+            ></em>
+        </a>
+    </span>
+</ng-template>
+
+<ng-template #personRolesTemplate let-model="item">
+    {{ (model.profile && model.profile.value) || '---' }}
+</ng-template>
+
+<eng-modal
+    #confirmModal
+    class="smallModal"
+    [buttons]="modalButtons"
+    [title]="
+        'CONFERENCE.WIZARD.PARTICIPANTS.CONFIRM_DELETE_MODAL.TITLE' | translate
+    "
+>
+    <p>{{ modalText }}</p>
+</eng-modal>
+
+<eng-modal
+    class="smallModal"
+    #deleteListParticipantsConfirmModal
+    [buttons]="deleteListParticipantsModalButtons"
+    [title]="
+        'CONFERENCE.WIZARD.PARTICIPANTS.CONFIRM_DELETE_LIST_MODAL.TITLE' | translate
+    "
+>
+    <p
+        [translate]="
+            'CONFERENCE.WIZARD.PARTICIPANTS.CONFIRM_DELETE_LIST_MODAL.MESSAGE'
+        "
+    ></p>
+</eng-modal>

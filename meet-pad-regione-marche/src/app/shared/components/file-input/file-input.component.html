@@ -1,0 +1,73 @@
+<div class="row" [id]="id" *ngIf="!readonly">
+    <div class="row form-group uploadFile">
+        <div class="col-xs-12 noPaddingLeft">
+            <eng-input-tooltip
+                *ngIf="!tootlip"
+                [tooltip]="tooltip"
+            ></eng-input-tooltip>
+            <label for="addfile" *ngIf="label">
+                {{ label | translate }}
+            </label>
+            <label for="addfile" *ngIf="!label">Nome del file</label>
+        </div>
+        <div
+            class="col-md-6 col-xs-12 upload-file-button-container noPaddingLeft marginBottom"
+        >
+            <label class="sr-only">Label input</label>
+            <input
+                class="col-xs-12 form-control"
+                readonly
+                title="placeholder"
+                type="text"
+            />
+            <button class="innerx" aria-label="innerx"><span class="reset"></span></button>
+        </div>
+        <div class="col-md-6 col-xs-12 uploadContainer">
+            <div class="fileUpload pull-left noMarginLeft">
+                <div
+                    class="btn btn-primary noMargin col-xs-12 upload-container"
+                    [ngClass]="{ disabled: disabled }"
+                >
+                    <span>Scegli file</span>
+                    <input
+                        [id]="idFile"
+                        class="btn btn-primary upload"
+                        type="file"
+                    />
+                </div>
+            </div>
+            <div class="fileUpload pull-left noMarginLeft">
+                <div class="form-group">
+                    <button
+                        *ngIf="!hideSubmitBtn"
+                        type="button"
+                        class="btn btn-primary add-file"
+                        [ngClass]="{ disabled: 'submitDisabled' }"
+                        disabled
+                        (click)="uploadFile()"
+                    >
+                        aggiungi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="readonly">
+    <div class="form-group {{ _size.toBootstrapClass() }} noPadding">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPaddingLeft">
+            <label class="control-label"> {{ label | translate }} </label>
+            <a
+                *ngIf="file.url"
+                href="javascript:;"
+                class="inputLink colorBlu"
+                (click)="downloadFile()"
+                >{{ file.name }}</a
+            >
+            <span *ngIf="!file.url" class="inputLink">{{
+                'COMPONENT.FILE_INPUT.EMPTY_FILE' | translate
+            }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<eng-form-section>
+  <div class="panel panel-default">
+      <div class="panel-heading custom-panel-title">
+          <span translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.TITLE"></span>
+      </div>
+      <div class="panel-body">
+        <app-accreditation-table (view)="viewAccreditation($event)"></app-accreditation-table>
+      </div>
+  </div>
+  <eng-button
+      *ngIf="showFooterBtn()"
+      class="pull-right"
+      color="info"
+      [title]="'BUTTON.NEXT' | translate"
+      (onClick)="onNext.emit()"
+  ></eng-button>
+</eng-form-section>
+
+<eng-modal
+    #docModal
+    [buttons]="buttons"
+    [title]="'CONFERENCE.WIZARD.ACCREDITATION.MODAL.TITLE' | translate">
+
+    <app-form
+        *ngIf="!accreditationRejected && !confirmAccreditation"
+        [groupFields]="groupFields"
+        [formGrey]="false"
+        [footerButtons]="false"
+    ></app-form>
+
+    <app-form
+        *ngIf="accreditationRejected"
+        [groupFields]="rejectGroupFields"
+        [formGrey]="false"
+        [footerButtons]="true"
+        [showCancelBtn]="false"
+        [saveFn]="rejectSaveFn"
+        [saveComplete]="rejectSaveComplete"
+        footerTextSubmitButton="BUTTON.SAVE"
+    ></app-form>
+
+    <div *ngIf="confirmAccreditation" class="contentConfirmAccreditation">
+        <p [translate]="'CONFERENCE.JOIN.MODAL.CONFIRM_ACCREDITATION'" class="marginAccreditation"></p>
+        <eng-button title="Ok" class="pull-right" (click)="okConfirmAccreditation()">
+            <button type="button" class="btn btn-pimary btn-no-color btn-md" title="Ok" class="marginAccreditation">Ok</button>
+        </eng-button>
+    </div>
+
+</eng-modal>

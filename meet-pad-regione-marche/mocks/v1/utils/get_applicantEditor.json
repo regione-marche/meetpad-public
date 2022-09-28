@@ -1,0 +1,14 @@
+{
+    "code": "200",
+    "msg": null,
+    "errors": [],
+    "data": {
+        "applicantEditor": {
+            "conferenceEditable": true,
+            "enabled": false,
+            "stepList": [
+                1,2,3
+            ]
+        }
+    }
+}

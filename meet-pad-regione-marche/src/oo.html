@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>MeetPAd</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <script
+            type="text/javascript"
+            src="https://oodocserver-test.regione.marche.it/web-apps/apps/api/documents/api.js"
+        ></script>
+        <script type="text/javascript">
+            var oo = (function() {
+                var _docCloudEditor = null;
+                var _data = null;
+
+                _getQueryData = function() {
+                    return window.location.search.replace('?data=', '');
+                };
+
+                _parseData = function(data) {
+                    try {
+                        return JSON.parse(atob(data));
+                    } catch (e) {
+                        _fail();
+                    }
+                };
+
+                _getData = function() {
+                    var _data = _getQueryData();
+                    if (!_data) {
+                        _fail();
+                        return;
+                    }
+
+                    return _parseData(_data);
+                };
+
+                _fail = function() {
+                    alert(
+                        "Non è possibile aprire il file. Contattare l'amministratore di sistema"
+                    );
+                    window.close();
+                };
+
+                return {
+                    replaceUrl: function() {
+                        window.history.replaceState(
+                            {},
+                            document.title,
+                            '/' + 'my-new-url.html'
+                        );
+                    },
+                    setPageTitle: function() {
+                        document.title =
+                            'MeetPAd - Modifica ' + _data.document.title;
+                    },
+                    open: function() {
+                        if (_docCloudEditor) {
+                            _docCloudEditor.destroyEditor();
+                        }
+                        _data = _getData();
+                        _docCloudEditor = new DocsAPI.DocEditor(
+                            'placeholder',
+                            _data
+                        );
+                    }
+                };
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="placeholder"></div>
+        <script type="text/javascript">
+            oo.open();
+            oo.setPageTitle();
+            // oo.replaceUrl();
+        </script>
+    </body>
+</html>

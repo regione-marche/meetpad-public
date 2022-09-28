@@ -1,0 +1,11 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Videconferenza" },
+            { "key": "2", "value": "Riunione" },
+            { "key": "3", "value": "Online" }
+        ]
+    }
+}

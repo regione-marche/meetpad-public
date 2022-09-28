@@ -1,38 +1,61 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+import {
+    defaultComboBox,
+    toastrConf,
+    autocompleteConf,
+    backendApi,
+    customConfigurationConf,
+    loading
+} from '@config';
 
 export const environment = {
     appName: 'APP_NAME',
     production: false,
-    backend: {
-        environment: 'PROD',
-        baseUrl: 'http://localhost:3000',
-        api: [
-            {
-                name: 'getDesktopList',
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                url: '/rest/v1/list'
-            },
-            {
-                name: 'credentials',
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                url: '/authentication/credentials'
+    auth: {
+        enabled: true,
+        discovery: true,
+        logoutUrl: 'http://localhost:4200',
+        defaultLoginRoute: '/',
+        defaultAdminLoginRoute: '/admin',
+        defaultPublicRoute: '/public',
+        oauth2: {
+            issuer: 'https://demo.identityserver.io',
+            redirectUri: window.location.origin + '/auth',
+            clientId: 'implicit',
+            scope: 'openid profile email api',
+            clearHashAfterLogin: false
+        }
+    },
+    dateFormat: {
+        toBe: 'yyyy-MM-dd[T]HH:mm:ss[Z]',
+        toUI: 'dd-MM-yyyy'
+    },
+    defaultComboBox,
+    toastrConf,
+    autocompleteConf,
+    loading,
+    feature: {
+        desktop: {
+            search: {
+                mutexOpen: false,
+                baseInitialOpen: true,
+                advancedInitialOpen: false
             }
-        ]
+        }
+    },
+    backend: {
+        environment: 'MOCKS',
+        baseUrl: 'http://localhost:3000/cdst_be_marche',
+        api: backendApi
     },
     logger: {
         level: 0, // all log
         hasRemote: false,
-        remoteLogUrl: null
+        remoteLogUrl: null,
+        cache: false
     },
-    devMode: false
+    devMode: false,
+    jitsi: 'https://jitsitest.regione.marche.it',
+    customConfigurationConf
 };
 
 /*
@@ -41,4 +64,4 @@ export const environment = {
  * import the following file, but please comment it out in production mode
  * because it will have performance impact when throw error
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+import 'zone.js/dist/zone-error';

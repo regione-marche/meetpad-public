@@ -1,0 +1,18 @@
+<admin-users-search (onNewSearch)="startResearch($event)"></admin-users-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="USERS.LIST.TITLE"></span>
+            <span
+                class="pull-right fa fa-plus"
+                aria-hidden="true"
+                [title]="'USERS.ACTIONS.NEW_MANAGER' | translate"
+                (click)="navigateToCreate()"
+            ></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-users-list [searchQuery]="searchQuery"></admin-users-list>
+        </div>
+    </div>
+</eng-form-section>

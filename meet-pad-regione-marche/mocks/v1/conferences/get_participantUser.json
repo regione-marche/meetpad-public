@@ -1,0 +1,22 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": 10,
+                "fiscalCode": "MGGMLR62M63G479H",
+                "name": "MARIALAURA",
+                "surname": "MAGGIULLI",
+                "email": null,
+                "profile": {
+                  "key": "2",
+                  "value": "Responsabile conferenza"
+                }
+              }
+        ],
+        "totalRow": 1
+    },
+    "errros": [
+    ]
+}

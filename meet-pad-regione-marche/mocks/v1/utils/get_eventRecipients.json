@@ -1,0 +1,17 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "uno" },
+            { "key": "2", "value": "destinatario due" },
+            { "key": "3", "value": "destinatario tre" },
+            { "key": "4", "value": "destinatario quattro" },
+            { "key": "5", "value": "destinatario cinque" },
+            { "key": "6", "value": "destinatario sei" },
+            { "key": "7", "value": "destinatario sette" },
+            { "key": "8", "value": "destinatario otto" },
+            { "key": "9", "value": "destinatario nove" }
+        ]
+    }
+}

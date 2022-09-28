@@ -1,0 +1,13 @@
+<h2 translate="CONFERENCE.JOIN.PENDING_PAGE.TITLE"></h2>
+<div>
+    <p>
+        {{ 'CONFERENCE.JOIN.PENDING_PAGE.TEXT' | translate }}
+        <span *ngIf="showMenu$ | async">
+            {{ 'CONFERENCE.JOIN.PENDING_PAGE.TEXT_GO_TO' | translate }}
+            <a routerLink="/">{{
+                'CONFERENCE.JOIN.PENDING_PAGE.HOME_PAGE' | translate
+            }}</a
+            >.
+        </span>
+    </p>
+</div>

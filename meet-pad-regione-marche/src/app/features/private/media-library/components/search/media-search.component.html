@@ -1,0 +1,28 @@
+<form class="row content col-xs-12 col-sm-12 col-lg-12">
+    <eng-form-group>
+        <div class="col-lg-offset-1 col-lg-10">
+            <eng-input
+                size="12"
+                label="MEDIA_LIBRARY.SEARCH.INPUT_LABEL"
+                required="true"
+                [formControl]="form.get('value')"
+            >
+            </eng-input>
+        </div>
+    </eng-form-group>
+    <div class="col-xs-12 marginTop">
+        <div class="pull-right">
+            <eng-input-loading
+                [loading]="searchLoading$ | async"
+            ></eng-input-loading>
+            <eng-button
+                class="pull-right"
+                type="button"
+                (onClick)="search()"
+                title="MEDIA_LIBRARY.SEARCH.BUTTON"
+                [disabled]="form.invalid || (searchLoading$ | async)"
+            >
+            </eng-button>
+        </div>
+    </div>
+</form>

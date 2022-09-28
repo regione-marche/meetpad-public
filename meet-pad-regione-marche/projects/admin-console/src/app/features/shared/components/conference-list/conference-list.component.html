@@ -1,0 +1,31 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onPageChanged)="changePage($event)"
+            (onSortChange)="changeSort($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        *ngFor="let action of actions"
+        [action]="action"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'AUTHORITIES.MANAGER.LIST.EMPTY_MESSAGE' | translate }}.
+</div>

@@ -1,0 +1,52 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": 2,
+                "domanda": "grazie ",
+                "risposta": "prego ; figurati di nulla ; è stato un dovere"
+            },
+            {
+                "id": 3,
+                "domanda": " tempo oggi",
+                "risposta": "oggi è una bella giornata; il tempo oggi è belllo; oggi è sereno"
+            },
+            {
+                "id": 4,
+                "domanda": "cazzo;coglione;merda;stronzo",
+                "risposta": "non dirmi parole volgari; non insultarmi; non mi pare corretto questo frasario; sei un maleducato; rimaniamo sulla correttezza del linguaggio"
+            },
+            {
+                "id": 5,
+                "domanda": "come stai; come ti senti;  ",
+                "risposta": "bene grazie te ?; mi sento divinamente oggi ; sto alla grande; direi che oggi sto una bomba :-)"
+            },
+            {
+                "id": 6,
+                "domanda": "tempo ieri ",
+                "risposta": "ieri qui pioveva; ieri mi pare piovesse; ieri non ho controllato il cielo"
+            },
+            {
+                "id": 7,
+                "domanda": "tempo domani",
+                "risposta": "domani dovrebbe essere sereno;  non so che tempo farà; parliamo del sito non del tempo"
+            },
+            {
+                "id": 8,
+                "domanda": "iperpan ; chiude ; pan ; ora ; orario ; chiusura;",
+                "risposta": "il pan chiude alle 20; il tuo supermercato chiude di sera alle 20; iper pan chiusura ore 20"
+            },
+            {
+                "id": 14,
+                "domanda": "ciao;buongiorno;salve",
+                "risposta": "ciao a te! ; buongiorno ; benvenuto ! "
+            }
+        ],
+        "totalRow": 8
+
+    },
+    "errros": [
+    ]
+}

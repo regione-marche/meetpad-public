@@ -1,0 +1,50 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "accreditamentFlag": false,
+                "id": "3",
+                "fiscalCode": "dnlfrc88h21g716u",
+                "surname": "Cognome",
+                "name": "Nome",
+                "profile": {
+                    "key": "3",
+                    "value": "Responsabile del procedimento"
+                },
+                "email": "s@s.it",
+                "role": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "idConference": "33",
+                "url": "string",
+                "idParticipant": "string",
+                "creationDate": "10/10/2001"
+            },
+            {
+                "accreditamentFlag": false,
+                "id": "4",
+                "fiscalCode": "dnlfrc88h21g716u",
+                "surname": "Cognome",
+                "name": "Nome",
+                "profile": {
+                    "key": "3",
+                    "value": "Responsabile del procedimento"
+                },
+                "email": "s@s.it",
+                "role": {
+                    "key": "string",
+                    "value": "string"
+                },
+                "idConference": "44",
+                "url": "string",
+                "idParticipant": "string",
+                "creationDate": "10/10/2009"
+            }
+        ],
+        "list_": [],
+        "totalRow": 1
+    }
+}

@@ -1,0 +1,40 @@
+<div class="summary">
+    <eng-accordion id="procedure" [title]="procedureTitle">
+        <app-conference-procedure [summary]="true"></app-conference-procedure>
+    </eng-accordion>
+
+    <eng-accordion id="definition" [title]="definitionTitle">
+        <app-conference-definition [summary]="true"></app-conference-definition>
+    </eng-accordion>
+
+    <eng-accordion id="participant" [title]="participantTitle">
+        <app-conference-participants
+            [summary]="true"
+        ></app-conference-participants>
+    </eng-accordion>
+
+    <eng-accordion id="documentation" [title]="documentationTitle">
+        <app-conference-documentation
+            [summary]="true"
+        ></app-conference-documentation>
+    </eng-accordion>
+
+    <div class="pull-right">
+        <eng-input-tooltip
+            [tooltip]="tooltip"
+            *ngIf="conference.enableApplicantEdit && showSubmitBtn()"
+            style="margin: 10px"
+        ></eng-input-tooltip>
+        <eng-button
+            *ngIf="showSubmitBtn()"
+            class="pull-right marginBottom"
+            [title]="'BUTTON.SAVE' | translate"
+            (onClick)="save($event)"
+            [disabled]="conference.enableApplicantEdit"
+        >
+        </eng-button>
+        <app-footer-buttons [groupButtons]="groupButtons"></app-footer-buttons>
+    </div>
+
+    <div class="pull-right"></div>
+</div>

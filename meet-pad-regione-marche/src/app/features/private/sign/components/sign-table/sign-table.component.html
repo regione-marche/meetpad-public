@@ -1,0 +1,198 @@
+<div
+    class="row panel panel-default form-accordion pd-zero col-xs-12 col-sm-12 col-lg-12"
+    
+>
+
+    
+
+ 
+
+    <div class="row panel-body body-form-grey" [hidden]="results.length === 0" >
+        <eng-content-loader [loading]="loading"></eng-content-loader>
+        <eng-button
+        *ngIf="!disabledSignButton"
+        color="info"
+        [title]="'SIGN.TABLE.ACTIONS_BUTTONS.REJECT' | translate"
+        [disabled]="!selectedFiles"
+        (onClick)="doRejectFilesSelected()"
+    ></eng-button>
+
+    <eng-button
+        *ngIf="!disabledSignButton"
+        color="info"
+        [title]="'SIGN.TABLE.ACTIONS_BUTTONS.SIGN' | translate"
+        [disabled]="!selectedFiles"
+        (onClick)="doSignFilesSelected()"
+    ></eng-button>
+
+    <span
+        *ngIf="!disabledSignButton && !disabled"
+        class="pull-right fa fa-check mr-10 mt-5"
+        aria-hidden="true"
+        (click)="toggleSelection()"
+        [title]="
+            'SIGN.TABLE.ACTIONS_BUTTONS.SELECT_ALL'
+                | translate
+        "
+    ></span>
+
+    <eng-content-loader [loading]="loading"></eng-content-loader>
+        <div class="row panel-heading">
+            <h3 class="title-modulo">{{ title }}</h3>
+        </div>
+        <eng-table-result
+            [results]="results"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [showActions]="true"
+            [totalPages]="totalPages"
+            [accordion]="documentsLookup"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+
+        <ng-template #documentsLookup let-model="item">
+            
+            <form>
+                <div class="row">
+                    <eng-input
+                        [label]="'SIGN.TABLE.USER'"
+                        [value]="model.getUser()"
+                        data-size="12|4|4"
+                    ></eng-input>
+                </div>
+                <div class="row">
+                    <eng-input
+                    [label]="'SIGN.TABLE.PROTOCOL_NUMBER'"
+                    [value]="
+                        (model.protocolNumber ) ||
+                        '----'
+                    "
+                    data-size="12|4|4"
+                >
+                </eng-input>           
+                    <eng-input
+                        [label]="'SIGN.TABLE.DATE'"
+                        [value]="
+                            (model.protocolDate.toDate() | date: dateFormat) ||
+                            '----'
+                        "
+                        data-size="12|4|4"
+                    >
+                    </eng-input>
+                    <eng-input-detail
+                        [label]="'SIGN.TABLE.TYPE'"
+                        [value]='model.type.value'
+                        size="12|4|4"
+                    >
+                    </eng-input-detail>  
+                </div>
+                <div class="row">
+                    <eng-action
+                        [action]="detailConferenceAction"
+                        [model]="model"
+                        [onlyIcon]="false"
+                        size="12|4|4"                        
+                    >
+                    </eng-action>
+                </div>
+                <div class="row">
+                    <eng-textarea
+                        [label]="'SIGN.TABLE.RECIPIENT'"
+                        [value]= "model.recipients || 'SIGN.TABLE.RECIPIENT_ALL'  | translate" 
+                    >    
+                    </eng-textarea>
+                   
+                </div>   
+
+                <fieldset
+                        class="scheduler-border"
+                    >
+                    <legend class="scheduler-border"><h1 class="styleForFile">
+                        {{ ('SIGN.TABLE.FILE'   | translate)   }}
+                    </h1>
+                    </legend>
+                    <div class="row col-xs-12 col-sm-12 col-lg-12 noPadding">
+                        <label class="col-xs-6">{{ model.name }}</label>
+                        <eng-action
+                            [action]="downloadAction"
+                            [model]="model"
+                            [onlyIcon]="false"
+                            size="12|4|4"
+                        >
+                        </eng-action>
+                    </div>
+
+                </fieldset>
+
+                <fieldset
+                    *ngFor="let file of model.documentsAttachment"
+                    class="scheduler-border"
+                >
+                    <legend class="scheduler-border"><h1 class="styleForFile">
+                        {{ ('SIGN.TABLE.ATTACHED_FILE'   | translate)   }}
+                    </h1>
+                    </legend>
+                    <div class="row col-xs-12 col-sm-12 col-lg-12 noPadding">
+                        <label class="col-xs-6">{{ file.name }}</label>
+                        <eng-action
+                        [action]="downloadAction"
+                        [model]="file"
+                        [onlyIcon]="false"
+                        size="12|4|4"
+                    >
+                    </eng-action>
+                    </div>
+
+                </fieldset>
+         
+            </form>
+        </ng-template>
+    </div>
+
+    <div class="row col-xs-12 col-sm-12 col-lg-12 noPadding" *ngIf="!results.length">
+        {{ 'SIGN.TABLE.EMPTY_TABLE' | translate }}.
+    </div>
+</div>
+<eng-modal
+    #confirmModal
+    class="smallModal"
+    [buttons]="modalButtons"
+    [title]="'SEARCH.CONFIRM_DELETE_MODAL.TITLE' | translate"
+>
+    <p>{{ modalText }}</p>
+</eng-modal>
+
+<eng-modal
+    #confirmModalForClone
+    class="smallModal"
+    [buttons]="modalButtonsForClone"
+    [title]="'SEARCH.CONFIRM_CLONE_MODAL.TITLE' | translate"
+>
+    <eng-content-loader
+        class="cloneModalLoading"
+        [loading]="loading$ | async"
+    ></eng-content-loader>
+    <p>{{ modalTextForClone }}</p>
+</eng-modal>
+
+<ng-template #actionTemplate let-model="item">
+    <eng-action
+        *ngIf="selectionEnabled && !model.isSelected()"
+        [action]="selectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+    <eng-action
+        *ngIf="selectionEnabled && model.isSelected()"
+        [action]="unselectAction"
+        [model]="model"
+        [onlyIcon]="true"
+    >
+    </eng-action>
+
+</ng-template>
+    
+

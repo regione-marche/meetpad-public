@@ -1,0 +1,58 @@
+<eng-accordion
+    id="pecForm"
+    title="{{ titleSearch }}"
+    [open]="searchOpen"
+    [initialOpen]="searchInitialOpen"
+    class="searchPec"
+>
+    <app-pec-search (onNewSearch)="onNewPecForm($event)"></app-pec-search>
+</eng-accordion>
+
+<eng-form-section>
+    <!-- <div
+        class="row panel form-accordion panel-default col-xs-12 col-sm-12 col-lg-12 noPadding form-grey"
+        *ngIf="list.length"
+    > -->
+    <div class="panel panel-default">
+        <eng-content-loader [loading]="loading$ | async"></eng-content-loader>
+        <div class="panel-heading custom-panel-title">
+            <span translate="CONFERENCE.WIZARD.PEC.TABLE.TITLE"></span>
+        </div>
+        <div class="panel-body">
+            <eng-table-result
+                *ngIf="list.length"
+                [results]="list"
+                [structure]="tableStructure"
+                [showPageSize]="true"
+                [totalPages]="totalPages"
+                (onSortChange)="changeSort($event)"
+                (onPageChanged)="changePage($event)"
+                (onPageSizeChange)="changePageElementsShowed($event)"
+            ></eng-table-result>
+
+            <span *ngIf="!list.length && !(loading$ | async)">{{
+                emptyMessage
+            }}</span>
+        </div>
+    </div>
+
+    <eng-button
+        *ngIf="showFooterBtn()"
+        class="pull-right"
+        color="info"
+        [title]="'BUTTON.NEXT' | translate"
+        (onClick)="onNext.emit()"
+    ></eng-button>
+</eng-form-section>
+
+<eng-modal
+    #pecModal
+    [buttons]="[]"
+    [title]="'CONFERENCE.WIZARD.PEC.MODAL.TITLE' | translate"
+>
+    <app-form
+        [groupFields]="groupFields"
+        [formGrey]="false"
+        [footerButtons]="false"
+    ></app-form>
+</eng-modal>

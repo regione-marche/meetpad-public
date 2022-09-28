@@ -1,0 +1,28 @@
+<div
+    class="form-group {{ _size.toBootstrapClass() }} {{
+        _offset.toBootstrapClass(true)
+    }} noPadding vertialCenterAlign"
+    [ngClass]="{ 'has-error': !formControl.valid && !formControl.disabled }"
+>
+    <div>
+        <label class="switch" for="input-switch-{{ label + extId }}">
+            <input
+                id="input-switch-{{ label + extId }}"
+                (click)="$event.stopPropagation(); onClick()"
+                [checked]="value === checkedValue"
+                type="checkbox"
+                title="{{ label | translate: i18nExtra }}"
+                [disabled]="disabled"
+                [readonly]="readonly"
+            />
+            <span class="slider" [ngClass]="{ round: round }"></span>
+        </label>
+        <span *ngIf="required">*</span> {{ label | translate: i18nExtra }}
+        <eng-input-error
+            [errors-label]="errorsLabel"
+            [control]="formControl"
+        ></eng-input-error>
+
+        <eng-input-tooltip [tooltip]="tooltip"></eng-input-tooltip>
+    </div>
+</div>

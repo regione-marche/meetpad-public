@@ -1,0 +1,62 @@
+<div class="row text-center">
+    <div class="col-xs-2"></div>
+    <div
+        class="col-xs-2"
+        mwlCalendarPreviousView
+        [view]="view"
+        [(viewDate)]="viewDate"
+        (viewDateChange)="activeDayIsOpen = false"
+    >
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div class="col-xs-6" mwlCalendarToday [(viewDate)]="viewDate">
+        <h3>{{ viewDate | calendarDate: view + 'ViewTitle':'it' }}</h3>
+    </div>
+    <div
+        class="col-xs-2"
+        mwlCalendarNextView
+        [view]="view"
+        [(viewDate)]="viewDate"
+        (viewDateChange)="activeDayIsOpen = false"
+    >
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-2 legend">
+        <div>
+            <span class="legend-symbol event-black"></span>
+            {{ creationDate }}
+        </div>
+        <div>
+            <span class="legend-symbol event-green"></span>
+            {{ firstSessionDate }}
+        </div>
+        <div>
+            <span class="legend-symbol event-yellow"></span>
+            {{ endIntegrationDate }}
+        </div>
+        <div>
+            <span class="legend-symbol event-blue"></span>
+            {{ endOpinionDate }}
+        </div>
+        <div>
+            <span class="legend-symbol event-red"></span>
+            {{ expirationDate }}
+        </div>
+    </div>
+    <div class="col-xs-10" *ngIf="events">
+        <div class="calendar" [ngSwitch]="view">
+            <mwl-calendar-month-view
+                [viewDate]="viewDate"
+                [events]="events"
+                [activeDayIsOpen]="activeDayIsOpen"
+                (dayClicked)="dayClicked($event.day)"
+                (eventTimesChanged)="eventTimesChanged($event)"
+                (eventClicked)="navigateOnConference($event.event)"
+            >
+            </mwl-calendar-month-view>
+        </div>
+    </div>
+</div>

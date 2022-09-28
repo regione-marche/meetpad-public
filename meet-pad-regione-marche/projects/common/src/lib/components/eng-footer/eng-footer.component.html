@@ -1,0 +1,108 @@
+<footer>
+    <nav id="navigazionealternativa" class="row">
+        <h2 class="hidden" translate="FOOTER.ALTERNATIVE_NAVIGATION"></h2>
+        <div class="row">
+            Regione Marche Giunta Regionale (CF 80008630420) via Gentile da
+            Fabriano, 9 - 60125 Ancona - tel. 071.8061 <br />
+            casella p.e.c. istituzionale :
+            <a href="mailto:regione.marche.protocollogiunta@emarche.it"
+                >regione.marche.protocollogiunta@emarche.it</a
+            >
+        </div>
+    </nav>
+
+    <div class="footer-logo">
+        <a href="http://www.regione.marche.it/">
+            <img
+                href="http://www.regione.marche.it/"
+                src="assets/img/logoSmallWhiteText.png"
+                alt="Regione Marche"
+                title="Regione Marche"
+            />
+        </a>
+        <a href="http://www.regione.marche.it/Entra-in-Regione/Fondi-Europei">
+            <img
+                href="http://www.regione.marche.it/"
+                src="assets/img/logo_marche_fsie.png"
+                alt="Fondo Eruropeo"
+                title="Fondo Eruropeo"
+            />
+        </a>
+
+        <img
+            src="assets/img/logo_por_marche_fesr.png"
+            alt="Progetto finanziato dal POR FESR 2014-2020 Obiettivo Tematico 2 Agenda Digitale"
+            title="Progetto finanziato dal POR FESR 2014-2020 Obiettivo Tematico 2 Agenda Digitale"
+        />
+        
+    </div>
+    <p class="hidden">
+        <a
+            href="#navinterna"
+            title="torna alla navigazione interna alla pagina"
+            translate="FOOTER.BACK_TO_INERNAL_NAVIGATION"
+        ></a>
+    </p>
+</footer>
+
+<div id="subfooter" role="region" aria-label="subfooter">
+    <p class="copy">
+        Copyright 2022 by Regione Marche
+       <!-- <span class="version">v{{ version }}</span>-->
+       <span class="version">v(1.21.16)</span>
+       - <a href="https://www.regione.marche.it/Privacy" target="_blank">informativa privacy</a>
+       - <a href="https://cohesion.regione.marche.it/cohesioninformativo/Informativa-Cookie" target="_blank">cookie policy</a>
+       - <a href="https://www.regione.marche.it/Terms" target="_blank">termini di utilizzo</a>
+    </p>
+    <ul id="menuservizio">
+        <li class="">
+            <a
+                href="javascript:;"
+                title="{{ 'FOOTER.PRIVACY' | translate }}"
+                translate="FOOTER.PRIVACY"
+            ></a>
+        </li>
+
+        <li class="">
+            <a
+                href="javascript:;"
+                title="{{ 'FOOTER.TERM_OF_USE' | translate }}"
+                translate="FOOTER.TERM_OF_USE"
+            ></a>
+        </li>
+
+        <li class="last">
+            <a
+                href="javascript:;"
+                title="{{ 'FOOTER.COOKIE_REPORT' | translate }}"
+                translate="FOOTER.COOKIE_REPORT"
+            ></a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<div class="chatbox chatbox--tray chatbox--empty">
+    <div class="chatbox__title" role="region" aria-label="chatCustomerService">
+        <h1><a>Customer Service</a></h1>
+        <button class="chatbox__title__tray">
+            <img src="assets/img/EmptyImage.png" alt="Customer Service chatbot" />
+           <!--<span></span>-->
+        </button>
+    </div>
+    <div class="chatbox__body" id="chatbox__body">
+    </div>
+    <form class="chatbox__credentials">
+        <div class="form-group">
+            <label for="inputName">Digita il tuo nome :</label>
+            <input type="text" class="form-control" id="inputName" required="true"/>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Entra in Chat</button>
+    </form>
+    <div>
+        <label for="domanda"></label><textarea class="chatbox__message" id="domanda" placeholder="scrivi il testo...." maxlength="250"></textarea>
+        <button type="button" class="btn-success invia" id="invia">invia</button>
+    </div>
+</div>

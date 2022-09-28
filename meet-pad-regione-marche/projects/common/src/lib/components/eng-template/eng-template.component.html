@@ -1,0 +1,53 @@
+<eng-content-loader
+    [loading]="allContentLoading$ | async"
+    [style.position]="'fixed'"
+></eng-content-loader>
+
+<div>
+    <eng-header
+        (login)="login($event)"
+        (logout)="logout()"
+        (showMenu)="showMenu()"
+    >
+    </eng-header>
+
+    <eng-breadcrumb [appName]="appName" (click)="hideMenu()"></eng-breadcrumb>
+    <div class="row">
+        <main id="contenutoprincipale" class="col-xs-12 col-sm-12 col-lg-12">
+            <nav
+                id="navigazionesecondaria"
+                [ngClass]="{ 'show-menu': show }"
+                class="col-xs-12 col-sm-4 col-lg-3 slider-menu filtro"
+            >
+                <div class="img-logo">
+                    <img
+                        class="img-meetpad-logo"
+                        src="assets/img/MeetPad.png"
+                        alt="Meetpad"
+                    />
+                </div>
+                <div class="box-menu-contestuale servizi-online-primo-livello">
+                    <button
+                        id="close-slider-menu"
+                        class="pull-right"
+                        aria-label="Chiude il menù laterale"
+                        (click)="hideMenu()"
+                        aria-controls="navigazionesecondaria"
+                    >
+                        <span class="fa fa-close"></span>
+                    </button>
+
+                    <eng-menu *ngIf="menuGuard.show$ | async"></eng-menu>
+                </div>
+            </nav>
+            <!-- <eng-content-loader
+                [loading]="allContentLoading$ | async"
+            ></eng-content-loader> -->
+            <div (click)="hideMenu()">
+                <ng-content></ng-content>
+            </div>
+        </main>
+    </div>
+
+    <eng-footer></eng-footer>
+</div>

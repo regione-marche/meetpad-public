@@ -1,0 +1,52 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="false"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+
+<ng-template #templateAccreditationState let-model="item">
+    <div *ngIf="!model.rejectedFlag && !model.accreditamentFlag">
+        <span
+            class="label label-warning"
+            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.WAITING"
+        ></span>
+    </div>
+    <div *ngIf="model.accreditamentFlag && !model.rejectedFlag">
+        <span
+            class="label label-success"
+            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.OK"
+        ></span>
+    </div>
+    <div *ngIf="model.rejectedFlag">
+        <span
+            class="label label-danger"
+            translate="CONFERENCE.WIZARD.ACCREDITATION.TABLE.STATE.REJECTED"
+        ></span>
+    </div>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'CONFERENCE.WIZARD.ACCREDITATION.TABLE.EMPTY_MESSAGE' | translate }}.
+    <a
+        *ngIf="hasCriteria"
+        href="javascript:;"
+        (click)="resetSearch(); refreshSearch(true)"
+        >{{
+            'CONFERENCE.WIZARD.ACCREDITATION.TABLE.REFRESH_LIST' | translate
+        }}</a
+    >
+</div>

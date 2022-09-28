@@ -1,0 +1,19 @@
+<!-- <h4 class="centerText">{{ descriptionText }}</h4> -->
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+        [results]="list"
+        [structure]="tableStructure"
+        [showPageSize]="false"
+        [showActions]="false"
+        [accordion]="actionsTemplate"
+        [totalPages]="totalPages"
+            ></eng-table-result>
+        <ng-template #actionsTemplate let-model="item">
+            <p class="centerText">{{ descriptionText }}</p>
+        </ng-template>
+    </div>
+</div>

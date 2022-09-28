@@ -1,0 +1,1156 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ParticipantsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/private/conference/core/services/participants/participants.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>BaseService</code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createParticipant">createParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#createUser">createUser</a>
+                            </li>
+                            <li>
+                                <a href="#deleteParticipant">deleteParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#deleteUser">deleteUser</a>
+                            </li>
+                            <li>
+                                <a href="#editParticipant">editParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#editUser">editUser</a>
+                            </li>
+                            <li>
+                                <a href="#getParticipantComboBox">getParticipantComboBox</a>
+                            </li>
+                            <li>
+                                <a href="#getParticipants">getParticipants</a>
+                            </li>
+                            <li>
+                                <a href="#getUsers">getUsers</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(api: ApiService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>api</td>
+                                                  
+                                                        <td>
+                                                                    <code>ApiService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createParticipant"></a>
+                    <span class="name">
+                        <b>
+                            createParticipant
+                        </b>
+                        <a href="#createParticipant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createParticipant(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, participant: <a href="../classes/Participant.html">Participant</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Utilizzata per creare un partecipante e tutti i sui utenti</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>participant</td>
+                                    <td>
+                                                <code><a href="../classes/Participant.html" target="_self" >Participant</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createUser"></a>
+                    <span class="name">
+                        <b>
+                            createUser
+                        </b>
+                        <a href="#createUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createUser(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, participantId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>participantId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteParticipant"></a>
+                    <span class="name">
+                        <b>
+                            deleteParticipant
+                        </b>
+                        <a href="#deleteParticipant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteParticipant(participantId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>participantId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteUser"></a>
+                    <span class="name">
+                        <b>
+                            deleteUser
+                        </b>
+                        <a href="#deleteUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteUser(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperDeleteData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editParticipant"></a>
+                    <span class="name">
+                        <b>
+                            editParticipant
+                        </b>
+                        <a href="#editParticipant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editParticipant(participant: <a href="../classes/Participant.html">Participant</a>, saveUser)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>participant</td>
+                                    <td>
+                                                <code><a href="../classes/Participant.html" target="_self" >Participant</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>saveUser</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editUser"></a>
+                    <span class="name">
+                        <b>
+                            editUser
+                        </b>
+                        <a href="#editUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editUser(user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;WrapperPostPutData&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParticipantComboBox"></a>
+                    <span class="name">
+                        <b>
+                            getParticipantComboBox
+                        </b>
+                        <a href="#getParticipantComboBox"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getParticipantComboBox(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ComboBox[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParticipants"></a>
+                    <span class="name">
+                        <b>
+                            getParticipants
+                        </b>
+                        <a href="#getParticipants"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getParticipants(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Participant.html" target="_self" >Observable&lt;Participant[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUsers"></a>
+                    <span class="name">
+                        <b>
+                            getUsers
+                        </b>
+                        <a href="#getUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUsers(conferenceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, participantId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, refresh: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/features/private/conference/core/services/participants/participants.service.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>conferenceId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>participantId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>refresh</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Observable&lt;User[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+
+import { Observable, forkJoin, of } from &#x27;rxjs&#x27;;
+import { map, mergeMap, catchError } from &#x27;rxjs/operators&#x27;;
+
+import { ApiService } from &#x27;@eng-ds/ng-core&#x27;;
+
+import {
+    BaseService,
+    WrapperGetData,
+    WrapperPostPutData,
+    WrapperDeleteData,
+    ComboBox
+} from &#x27;@common&#x27;;
+
+import { Participant, User } from &#x27;@features/private/conference/core&#x27;;
+
+@Injectable()
+export class ParticipantsService extends BaseService {
+    constructor(protected api: ApiService) {
+        super(api);
+    }
+
+    getUsers(
+        conferenceId: string,
+        participantId: string,
+        refresh: boolean &#x3D; false
+    ): Observable&lt;User[]&gt; {
+        return this.get(
+            this.api
+                .request&lt;WrapperGetData&lt;User&gt;&gt;(
+                    &#x27;getUsersParticipant&#x27;,
+                    null,
+                    null,
+                    {
+                        conferenceId,
+                        participantId
+                    }
+                )
+                .pipe(map(response &#x3D;&gt; response.list)),
+            &#x60;conference.${conferenceId}.participant.${participantId}.users&#x60;,
+            refresh
+        );
+    }
+
+    createUser(
+        conferenceId: string,
+        participantId: string,
+        user: User
+    ): Observable&lt;WrapperPostPutData&gt; {
+        return this.api.request(&#x27;createUserParticipant&#x27;, user, null, {
+            conferenceId,
+            participantId
+        });
+    }
+
+    editUser(user: User): Observable&lt;WrapperPostPutData&gt; {
+        return this.api.request(&#x27;editUserParticipant&#x27;, user, null, {
+            userId: user.id
+        });
+    }
+
+    deleteUser(userId: string): Observable&lt;WrapperDeleteData&gt; {
+        return this.api.request(&#x27;deleteUserParticipant&#x27;, null, null, {
+            userId
+        });
+    }
+
+    getParticipants(conferenceId: string): Observable&lt;Participant[]&gt; {
+        return this.api
+            .request&lt;WrapperGetData&lt;Participant&gt;&gt;(
+                &#x27;getParticipants&#x27;,
+                null,
+                null,
+                {
+                    conferenceId
+                }
+            )
+            .pipe(map(response &#x3D;&gt; response.list));
+    }
+
+    getParticipantComboBox(conferenceId: string): Observable&lt;ComboBox[]&gt; {
+        const comboBox: ComboBox&lt;string&gt;[] &#x3D; [];
+        this.getParticipants(conferenceId).subscribe(participant &#x3D;&gt; {
+            participant.forEach(p &#x3D;&gt;
+                comboBox.push({
+                    key: p.authority.key,
+                    value: p.authority.value
+                })
+            );
+        });
+        return of(comboBox);
+    }
+
+    /**
+     * Utilizzata per creare un partecipante e tutti i sui utenti
+     * @param conferenceId
+     * @param participant
+     */
+    createParticipant(
+        conferenceId: string,
+        participant: Participant
+    ): Observable&lt;WrapperPostPutData&gt; {
+        const users &#x3D; participant.users;
+        delete participant.users;
+
+        return this.api
+            .request&lt;WrapperPostPutData&gt;(
+                &#x27;createParticipant&#x27;,
+                participant,
+                null,
+                {
+                    conferenceId
+                }
+            )
+            .pipe(
+                mergeMap((res: WrapperPostPutData) &#x3D;&gt; {
+                    participant.id &#x3D; res.id;
+
+                    if (users.length) {
+                        const reqs &#x3D; [];
+                        // tslint:disable-next-line:forin
+                        for (const k in users) {
+                            reqs.push(
+                                this.createUser(
+                                    conferenceId,
+                                    res.id,
+                                    users[k]
+                                ).pipe(
+                                    catchError(() &#x3D;&gt; {
+                                        // TODO: gestire specifico errore
+                                        // ovvero caso in qui questo utente non venga inserito
+                                        return of();
+                                    })
+                                )
+                            );
+                        }
+
+                        return forkJoin(reqs).pipe(
+                            map((_res: WrapperPostPutData[]) &#x3D;&gt; {
+                                // mappa gli id degli utenti creati
+                                // tslint:disable-next-line:forin
+                                for (let i &#x3D; 0; i &lt; users.length; i++) {
+                                    if (_res[i].id) {
+                                        users[i].id &#x3D; _res[i].id;
+                                    }
+                                }
+                                // riassegna l&#x27;oggetto user al partecipante
+                                participant.users &#x3D; users;
+                                // l&#x27;id del partecipante creato
+                                return res;
+                            })
+                        );
+                    } else {
+                        participant.users &#x3D; [];
+                        return of(res);
+                    }
+                })
+            );
+    }
+
+    /**
+     *
+     * @param conferenceId
+     * @param participant
+     */
+    // createParticipant(conferenceId: string, participant: Participant): Observable&lt;WrapperPostPutData&gt; {
+    //     return this.api.request&lt;WrapperPostPutData&gt;(&#x27;createParticipant&#x27;, participant, null, {
+    //         conferenceId
+    //     });
+    // }
+
+    editParticipant(
+        participant: Participant,
+        saveUser &#x3D; true
+    ): Observable&lt;WrapperPostPutData&gt; {
+        return this.api.request&lt;WrapperPostPutData&gt;(
+            &#x27;editParticipant&#x27;,
+            participant,
+            null,
+            {
+                participantId: participant.id
+            }
+        );
+    }
+
+    deleteParticipant(participantId: string): Observable&lt;any&gt; {
+        return this.api.request(&#x27;deleteParticipant&#x27;, null, null, {
+            participantId
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ParticipantsService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+<div
+    class="footerButton mr-10"
+    *ngFor="let button of (groupButtons | getValues)"
+>
+    <eng-button [title]="button.val.title" (onClick)="button.val.onClick()">
+    </eng-button>
+</div>

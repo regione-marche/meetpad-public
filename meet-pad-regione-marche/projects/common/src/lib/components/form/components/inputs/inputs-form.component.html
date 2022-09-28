@@ -1,0 +1,239 @@
+<!-- cicla gli input -->
+<div *ngFor="let field of fields | getValues">
+    <!-- input di tipo select -->
+    <!-- [options]="(!field.loading && field.options) | async" -->
+    <eng-select
+        *ngIf="isSelect(field.val)"
+        [label]="field.val.label"
+        [formControl]="form.get(getFieldName(field.key))"
+        [options]="field.val.options | async"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+        [tooltip]="field.val.tooltip"
+        placeholder=""
+        field-for-option="value"
+        field-for-id="key"
+        [errors-label]="getErrorLabel(field.key)"
+    ></eng-select>
+    <!-- input di tipo text -->
+    <eng-input
+        *ngIf="isText(field.val)"
+        [label]="field.val.label"
+        [formControl]="form.get(getFieldName(field.key))"
+        [errors-label]="getErrorLabel(field.key)"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+        [tooltip]="field.val.tooltip"
+        [pattern]="field.val.pattern"
+        [placeholder]="field.val.placeholder"
+    ></eng-input>
+
+    <!-- input di tipo date -->
+    <eng-input-date
+        *ngIf="isDate(field.val)"
+        [label]="field.val.label"
+        [formControl]="form.get(getFieldName(field.key))"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+        [tooltip]="field.val.tooltip"
+        [errors-label]="getErrorLabel(field.key)"
+    ></eng-input-date>
+
+    <!-- input di tipo radio -->
+    <!-- [options]="(!field.loading && field.options) | async" -->
+    <eng-radio
+        *ngIf="isRadio(field.val)"
+        [label]="field.val.label"
+        [formControl]="form.get(getFieldName(field.key))"
+        [options]="field.val.radioOptions | async"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+        field-for-option="value"
+    ></eng-radio>
+
+    <!-- input di tipo text-area -->
+    <div *ngIf="isTextArea(field.val)" class="row eng-textarea">
+        <eng-textarea
+            [label]="field.val.label"
+            [formControl]="form.get(getFieldName(field.key))"
+            [size]="field.val.size"
+            [offset]="field.val.offset"
+            [maxLength]="field.val.maxLength"
+            [rows]="field.val.rows"
+            [errors-label]="getErrorLabel(field.key)"
+        ></eng-textarea>
+    </div>
+
+    <!-- input di tipo single-checkbox -->
+    <eng-single-checkbox
+        *ngIf="isSingleTextbox(field.val)"
+        [label]="field.val.label"
+        [formControl]="form.get(getFieldName(field.key))"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+    ></eng-single-checkbox>
+
+    <!-- input di tipo switch -->
+    <app-bs3-switch
+        *ngIf="isSwitch(field.val)"
+        [label]="field.val.label"
+        [round]="true"
+        [formControl]="form.get(getFieldName(field.key))"
+        [disabled]="field.val.disabled"
+        [size]="field.val.size"
+        [offset]="field.val.offset"
+        [tooltip]="field.val.tooltip"
+    ></app-bs3-switch>
+
+    <!-- input di tipo single-checkbox -->
+    <div
+        *ngIf="isNop(field.val)"
+        class="form-group {{ getBootstrapSizeClass(field.val.size) }} noPadding"
+    ></div>
+
+    <!-- tag input -->
+    <div
+        class="form-group {{ getBootstrapSizeClass(field.val.size) }} noPadding"
+        *ngIf="isTagInput(field.val)"
+    >
+        <div
+            class="col-xs-12 col-sm-12 col-lg-12 noPadding"
+            [formGroup]="form.get(groupName)"
+        >
+            <div class="row">
+                <div class="col-md-12 noPaddingLeft">
+                    <label for="autocomplete">
+                        <span *ngIf="isRequired(field.val)">*</span
+                        >{{ field.val.label | translate }}
+                    </label>
+                    <eng-input-tooltip
+                        [tooltip]="field.val.tooltip"
+                    ></eng-input-tooltip>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 noPaddingLeft">
+                    <ng-select
+                        class="custom"
+                        [formControlName]="field.key"
+                        [items]="[]"
+                        [addTag]="true"
+                        [multiple]="true"
+                        [isOpen]="false"
+                        [placeholder]="field.val.label | translate"
+                    >
+                    </ng-select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- autocomplete input -->
+    <div
+        class="form-group {{ getBootstrapSizeClass(field.val.size) }} noPadding"
+        *ngIf="isAutocomplete(field.val)"
+    >
+        <div
+            class="col-xs-12 col-sm-12 col-lg-12 noPadding"
+            [formGroup]="form.get(groupName)"
+        >
+            <div class="row">
+                <div class="col-md-12 noPaddingLeft">
+                    <label for="autocomplete">
+                        <span
+                            *ngIf="isRequired(field.val) || field.val.required"
+                            >*</span
+                        >{{ field.val.label | translate }}</label
+                    >
+                    <eng-input-tooltip
+                        [tooltip]="field.val.tooltip"
+                    ></eng-input-tooltip>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 noPaddingLeft mh-56">
+                    <ng-select
+                        [formControlName]="field.key"
+                        [items]="field.val.options | async"
+                        [addTag]="false"
+                        [multiple]="false"
+                        [placeholder]="field.val.placeholder | translate"
+                        bindLabel="value"
+                        [required]="isRequired(field.val) || field.val.required"
+                        [typeahead]="field.val.typeahead"
+                        [notFoundText]="field.val.notFoundText | translate"
+                        [loading]="field.val.loading"
+                        (clear)="onClearAutocomplete(field.val)"
+                    >
+                    </ng-select>
+                    <eng-input-error
+                        [errors-label]="getErrorLabel(field.key)"
+                        [control]="form.get(getFieldName(field.key))"
+                    ></eng-input-error>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- select multiple -->
+    <div class="row" *ngIf="isSelectMultiple(field.val)">
+        <div
+            class="form-group col-md-12 col-sm-12 noPaddingLeft"
+            [formGroup]="form.get(groupName)"
+        >
+            <div class="row">
+                <div class="col-12">
+                    <label for="multipleSelect">
+                        <span
+                            *ngIf="isRequired(field.val) || field.val.required"
+                            >*</span
+                        >{{ field.val.label | translate }}</label
+                    >
+                    <eng-input-tooltip
+                        [tooltip]="field.val.tooltip"
+                    ></eng-input-tooltip>
+                </div>
+            </div>
+            <div class="row paddingRight mh-56">
+                <div class="col-12">
+                    <ng-select
+                        [formControlName]="field.key"
+                        [items]="field.val.options | async"
+                        [addTag]="false"
+                        [multiple]="true"
+                        [required]="isRequired(field.val) || field.val.required"
+                        [placeholder]="field.val.placeholder | translate"
+                        bindLabel="value"
+                    >
+                    </ng-select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- file input -->
+    <app-file-input
+        *ngIf="isFile(field.val)"
+        [readonly]="field.val.readonly"
+        [file]="field.val.file"
+        [label]="field.val.label"
+        [size]="field.val.size"
+        [submitDisabled]="submitDisabled"
+        [required]="isRequired(field.val) || field.val.required"
+        [disabled]="field.val.disabled"
+        [hideSubmitBtn]="field.val.hideSubmitBtn"
+        [tooltip]="field.val.tooltip"
+        (onUpload)="onFileUpload(field.val, $event)"
+        (onSelect)="onFileSelect(field.val, $event)"
+        (onDownload)="field.val.onDownload($event)"
+    >
+    </app-file-input>
+
+    <!-- file drag and drop -->
+    <eng-file-drop
+        *ngIf="isDropFile(field.val) && !field.val.disabled"
+        [accept]="field.val.accept || ''"
+        (onMultipleUpload)="onFilesUpload(field.val, $event)"
+    >
+    </eng-file-drop>
+</div>

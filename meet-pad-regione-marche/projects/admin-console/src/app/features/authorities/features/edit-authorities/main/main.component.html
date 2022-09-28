@@ -1,0 +1,16 @@
+<admin-authority-search
+    (onNewSearch)="startResearch($event)"
+></admin-authority-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="AUTHORITIES.PROCEDING.EDIT.LIST.TITLE"></span>
+        </div>
+
+        <div class="panel-body">
+            <admin-authorities-list
+                [searchQuery]="searchQuery"
+            ></admin-authorities-list>
+        </div>
+    </div>
+</eng-form-section>

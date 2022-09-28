@@ -1,0 +1,25 @@
+<admin-protocol-search
+    (onNewSearch)="startResearch($event)"
+></admin-protocol-search>
+<eng-form-section>
+    <div class="panel panel-default">
+        <div class="panel-heading custom-panel-title">
+            <span translate="PROTOCOLS.LIST.TITLE"></span>
+        </div>
+
+    <div class="panel-body">
+        <admin-protocol-list
+            [searchQuery]="searchQuery"
+            (view)="updateProtocolState($event)"
+        ></admin-protocol-list>
+    </div>
+    </div>
+</eng-form-section>
+
+<eng-modal
+    class="smallModal"
+    #confirmModal
+    [buttons]="confirmModalButtons"
+    [title]="confirmModalTitle">
+    <p [translate]="confirmModalText"></p>
+</eng-modal>

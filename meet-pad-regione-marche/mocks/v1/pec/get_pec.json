@@ -1,0 +1,29 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            {
+                "id": "1",
+                "date": "20/12/2018",
+                "event": { "key": "3", "value": "Richiesta integrazioni" },
+                "sender": "Amm. Competente (Comune Senigalia)",
+                "recipient": "Amm. Competente (Comune Senigalia)",
+                "state": { "key": "1", "value": "Richiesta integrazioni" }
+            },
+            {
+                "id": "2",
+                "date": "20/12/2018",
+                "event": { "key": "3", "value": "Richiesta integrazioni" },
+                "sender": "Amm. Competente (Comune Senigalia)",
+                "recipient": "Amm. Competente (Comune Senigalia)",
+                "state": { "key": "1", "value": "Richiesta integrazioni" }
+            }
+            
+        ],
+        "totalRow": 1
+
+    },
+    "errros": [
+    ]
+}

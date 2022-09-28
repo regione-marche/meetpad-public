@@ -1,0 +1,127 @@
+<div class="panel panel-default" [ngClass]="{ 'mt-5': accordionIndex != 0 }">
+    <div class="panel-heading custom-panel-title">
+        <a
+            data-toggle="collapse"
+            data-parent="#panelGroupDocumentation"
+            href="#collapseDocumentation-{{ accordionIndex }}"
+            [translate]="title"
+        >
+        </a>
+
+        <span
+            *ngIf="showSyncronize"
+            class="pull-right fa fa-refresh mr-10 mt-5"
+            aria-hidden="true"
+            (click)="syncronizeFiles.emit($event)"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.SYNCRONIZE_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+        
+        <span
+            *ngIf="!readonly && showDeleteList"
+            class="pull-right fa fa-trash mr-10 mt-5"
+            aria-hidden="true"
+            (click)="deleteFilesSelected()"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DELETE_LIST_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+
+        <span
+            *ngIf="!readonly && showPlusIcon()"
+            class="pull-right fa fa-plus mr-10 mt-5"
+            aria-hidden="true"
+            (click)="toogleForm()"
+            [title]="
+                'CONFERENCE.WIZARD.DOCUMENTATION.PANEL.ADD_FILE_BUTTON'
+                    | translate
+            "
+        >
+        </span>
+        
+    </div>
+
+    <div
+        id="collapseDocumentation-{{ accordionIndex }}"
+        class="panel-collapse collapse"
+    >
+        <div class="panel-body">
+            <app-form-alert
+                *ngIf="showAlert"
+                [type]="typeAlert"
+                [textBeforeLink]="textAlert"
+            ></app-form-alert>
+            <app-form
+                *ngIf="showForm && saveFn"
+                [groupFields]="groupFields"
+                [footerButtons]="true"
+                [saveFn]="saveFn"
+                [saveComplete]="saveComplete"
+                [saveError]="saveError"
+                [footerTextSubmitButton]="saveButtonText"
+                [formClass]="['mt-15']"
+            >
+            </app-form>
+            <app-form
+                *ngIf="showForm && !saveFn"
+                [groupFields]="groupFields"
+                [footerButtons]="false"
+                [formClass]="['mt-15']"
+            >
+            </app-form>
+
+            <div class="mt-15" *ngIf="hasFolders; else noFolders">
+                <fieldset
+                    *ngFor="let folder of folders"
+                    class="scheduler-border"
+                >
+                    <legend class="scheduler-border"> 
+                        {{
+                            folder.name ||
+                                ('CONFERENCE.WIZARD.DOCUMENTATION.PANEL.DEFAULT_FOLDER_NAME'
+                                    | translate)
+                        }}
+                        
+                    </legend>
+                    <app-file-table
+                        [disabled]="readonly"
+                        [files]="folder.files"
+                        [sharedDocumentation]="sharedDocumentation"
+                        [additionalDocumentation]="additionalDocumentation"
+                        [selectionEnabled]="selectionEnabled"
+                        [showSectionDownload]="showSectionDownload"
+                        [showSectionDeleteList]="showSectionDeleteList"
+                        (editFile)="openEditFile.emit($event)"
+                        (deleteFile)="deleteFile.emit($event)"
+                        (editCloud)="openEditCloud.emit($event)"
+                        (downloadFile)="downloadFile.emit($event)"
+                        (downloadPDFFile)="downloadPDFFile.emit($event)"
+                        (downloadSectionFiles)="doDownloadSectionFiles($event, folder)"
+                        (deleteSectionFiles)="deleteSectionFiles.emit($event)"
+                    >
+                    </app-file-table>
+                </fieldset>
+            </div>
+
+            <ng-template #noFolders>
+                <div class="mt-15">
+                    <app-file-table
+                        [disabled]="readonly"
+                        [files]="files"
+                        [statusDocumentation]="statusDocumentation"
+                        (editFile)="openEditFile.emit($event)"
+                        (deleteFile)="deleteFile.emit($event)"
+                        (editCloud)="openEditCloud.emit($event)"
+                        (downloadFile)="downloadFile.emit($event)"
+                    >
+                    </app-file-table>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

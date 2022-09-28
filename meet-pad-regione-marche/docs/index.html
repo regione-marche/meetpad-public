@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>meet-pad-regione-marche documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">meet-pad-regione-marche documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="conferenze-dei-servizi---inail">Conferenze dei Servizi - INAIL</h1>
+<h2 id="tabella-dei-contenuti">Tabella dei contenuti</h2>
+<ul>
+<li><a href="#installazione-dipenendeze">Installazione dipenendeze</a></li>
+<li><a href="#ambienti">Ambienti</a></li>
+<li><a href="#comandi-npm">Comandi NPM</a><ul>
+<li><a href="#development-server">Development server</a></li>
+<li><a href="#release">Release</a></li>
+<li><a href="#distribute">Distribute</a></li>
+<li><a href="#generazione-documentazione">Generazione documentazione</a></li>
+</ul>
+</li>
+<li><a href="#convenzioni">Convenzioni</a><ul>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#commit">Commit</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installazione-dipenendeze">Installazione dipenendeze</h2>
+<p>Il software dipende da un paio di pacchetti npm Enginnering presenti sul Nexus NPM aziendale: seguire le <a href="https://engit-my.sharepoint.com/:w:/g/personal/federico_dainelli_eng_it/ER4rqnFQYSpBiRQ6uo47V1QBk23xJQokQoCL6w0NwGTwfg?e=OpYFXx">istruzioni</a> per ottenere gli accessi al repository.</p>
+<h2 id="ambienti">Ambienti</h2>
+<p>Clienti/ambienti:</p>
+<ul>
+<li>MeetPAp - Regione Marche<ul>
+<li>ambiente di sviluppo:<ul>
+<li>url: https://wso2.meetpad-dev.eng.it/meet-pad-svil/</li>
+<li>host Pont-Saint-Martin: 161.27.206.16</li>
+<li>document_root: /var/www/html/meet-pad</li>
+</ul>
+</li>
+<li>ambiente di staging:<ul>
+<li>url: https://wso2.meetpad-dev.eng.it/meet-pad/</li>
+<li>host Pont-Saint-Martin: 161.27.206.16</li>
+<li>document_root: /var/www/html/meet-pad-svil</li>
+</ul>
+</li>
+<li>ambiente di test (VPN Regione Marche):<ul>
+<li>url: https://meetpad-test.regione.marche.it</li>
+<li>host: 10.101.11.134</li>
+<li>document_root: /var/www/html/meet-pad</li>
+</ul>
+</li>
+<li>ambiente di pre-prod (VPN Regione Marche):<ul>
+<li>url: https://meetpad.regione.marche.it</li>
+<li>host: 10.101.11.120</li>
+<li>document_root: /var/www/html/meet-pad</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Suap - Regione Lazio<ul>
+<li>ambiente di sviluppo:<ul>
+<li>url: https://suaplazio.esf.eng.it/conferenza-suap/</li>
+<li>host Pont-Saint-Martin: 161.27.206.16</li>
+<li>document_root: /var/www/html/drupalcsi/conferenza-suap</li>
+</ul>
+</li>
+<li>ambiente di produzione</li>
+</ul>
+</li>
+</ul>
+<p>Il repository contienete i sorgenti del prodotto suddiviso in branch per cliente:</p>
+<ul>
+<li><strong>master</strong>: branch che contiene il template/layout grafico senza funzionalità specifiche</li>
+<li><strong>marche/develop</strong>: branch che contiene l&#39;ambiente di sviluppo MeetPAd - Regione Marche sul quale è presente l&#39;ultima versione (instabile).</li>
+<li><strong>marche/master</strong>: branch che contiene l&#39;ambiente di produzione MeetPAd - Regione Marche sul quale è presente la versione rilasciata in produzione (stabile).</li>
+<li><strong>marche/develop</strong>: branch che contiene l&#39;ambiente di sviluppo Suap - Regione Lazio sul quale è presente l&#39;ultima versione (instabile).</li>
+<li><strong>marche/master</strong>: branch che contiene l&#39;ambiente di produzione Suap - Regione Lazio sul quale è presente la versione rilasciata in produzione (stabile).</li>
+<li><strong>features/</strong>: cartella di branch per le funzionalità</li>
+</ul>
+<p>Lo sviluppo di nuove funzionalità viene eseguito su nuovi branch, uno per funzionalità, i quali vengono poi riversati sul <strong>develop</strong>.</p>
+<p>Inizialmente gli ambienti Suap e MeetPAd sono stati mantenuti allineati mentre attualmente hanno requisiti e quindi funzionalità diverse. NB.</p>
+<h2 id="comandi-npm">Comandi NPM</h2>
+<p>Sul file <strong><em>package.json</em></strong> sono definiti gli script per la gestione del ciclio di vita del software in funzione degli ambienti/branch:</p>
+<ul>
+<li>sviluppo</li>
+<li>rilascio</li>
+<li>distribuzione</li>
+<li>generazione documentazione navigabile.</li>
+</ul>
+<p>Gli script per eseguire il server di sviluppo in locale e per eseguire il rilascio di una nuova versione hanno un controllo angular envinronment/branch, configurabile; questo è utile ad evitare casi non reali o inconsistenti (es: run suap env on marche-develop/marche-staging branch or run local env on marche-staging/lazio-develop branch).</p>
+<h3 id="development-server">Development server</h3>
+<p>Suddivisione per ambienti (<code>npm run</code> può essere sostituito da <code>yarn</code> se installato):</p>
+<ul>
+<li><code>npm run serve</code>: comando per avviare l&#39;ambiente di sviluppo in locale</li>
+<li><code>npm run release-distribute:env</code>: comando per rilasciare e distribuire l&#39;applicazione sui vari ambienti in base al valore di env:<ul>
+<li>dev</li>
+<li>staging</li>
+<li>test</li>
+<li>pre-prod</li>
+</ul>
+</li>
+</ul>
+<p>Deprecati:</p>
+<ul>
+<li><code>npm run mocks</code>: comando per avviare l server locale che fornisce i mocks delle api</li>
+</ul>
+<p>Sul file <a href="./scripts/serve/conf.ts">scripts/serve/conf.ts</a> è possibile configurare nuovi branch da eseguire su determinati ambienti.</p>
+<h3 id="release">Release</h3>
+<p>I rilasci vengono eseguiti grazie al pacchetto npm <a href="https://www.npmjs.com/package/release-it">release-it</a> il quale automatizza alcuni task:</p>
+<ul>
+<li>gestione della versione da rilasciare</li>
+<li>commitb</li>
+<li>tag</li>
+<li>push</li>
+</ul>
+<p>Task configurabili da <a href="./scripts/release/index.ts">scripts/release/index.ts</a>.</p>
+<h3 id="distribute">Distribute</h3>
+<p>I rilasci vengono eseguiti grazie al pacchetto npm <a href="https://github.com/ruddenchaux/mobile-app-distribution">mobile-app-distribution</a> il quale automatizza alcuni task:</p>
+<ul>
+<li>build</li>
+<li>aggiornamento automatico della versione sul footer dell&#39;app e sulla console</li>
+<li>deploy sul server</li>
+</ul>
+<p>Task configurabili da <a href="./scripts/distribute/index.ts#L26">scripts/distribute/index.ts</a>.</p>
+<p>Le configurazioni di build e di deploy sono presenti nella cartella <a href="./scripts/distribute/environments">scripts/distribute/environments</a>.</p>
+<h3 id="generazione-documentazione">Generazione documentazione</h3>
+<p>E&#39; presente la dipendenza di sviluppo <a href="https://www.npmjs.com/package/@compodoc/compodoc">@compodoc/compodoc</a> per generare la documentazione
+del sorgente come sito navigabile.</p>
+<p>Comandi:</p>
+<ul>
+<li><code>npm run docs:build</code>: crea la documentazione all&#39;interno della cartella <em>doc</em></li>
+<li><code>npm run docs:serve</code>: crea la documentazione e il server per navigarla in locale http://127.0.0.1:8080/</li>
+<li><code>npm run docs:watch</code>: come il comando precedente con l&#39;opzione watch (watch reload)</li>
+</ul>
+<h2 id="convenzioni">Convenzioni</h2>
+<h3 id="versioning">Versioning</h3>
+<p>Il pacchetto <strong>release-it</strong> ad ogni rilascio, attraverso i comandi visti sopra, mostra nella CLI possibili versioni da rilasciare che il programmatore può scegliere: questo progetto usa lo standard <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.</p>
+<h3 id="commit">Commit</h3>
+<p>Nell&#39;ultimo perdiodo è stata adottata la convenzione per i messaggi di commit i modo da avere un semplificazione nella manutenzione del progetto (la convenzione sarebbe utile per automatizzare la generazione dei changelog per ogni versione; attualmente non è presente questo automatismo).</p>
+<p>I rifermimenti per le convenzioni sono:</p>
+<ul>
+<li><a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/">Conventional Commits</a></li>
+<li><a href="https://gist.github.com/stephenparish/9941e89d80e2bc58a153#allowed-type">Angular JS Allowed Type</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

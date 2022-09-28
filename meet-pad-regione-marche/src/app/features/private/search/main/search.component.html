@@ -1,0 +1,22 @@
+<eng-accordion
+    id="el1"
+    [title]="'SEARCH.SEARCH.TITLE' | translate"
+    [open]="true"
+    [initialOpen]="true"
+>
+    <search 
+        [showStatus]="true"
+        [requiredSearch]="false"
+        [stateOptions]="stateOptions"
+        (onNewSearch)="onNewSearch($event)"
+        ></search>
+</eng-accordion>
+
+<app-result-table
+    [appAuth]="appSections.RESULT_TABLE"
+    [searchedValue]="searchedValue"
+    [stateValue]="stateValue"
+    [mode]="resultTableMode.SEARCH"
+    [title]="'SEARCH.RESULT_TABLE.TITLE' | translate"
+>
+</app-result-table>

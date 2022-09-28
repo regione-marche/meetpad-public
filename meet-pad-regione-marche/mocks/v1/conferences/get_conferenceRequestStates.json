@@ -1,0 +1,13 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "In valutazione" },
+            { "key": "2", "value": "Chiusa" },
+            { "key": "3", "value": "Archiviata" },
+            { "key": "4", "value": "In bozza" },
+            { "key": "5", "value": "In compilazione" }
+        ]
+    }
+}

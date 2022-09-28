@@ -1,0 +1,10 @@
+<div class="all-card">
+    <div *ngFor="let item of cards">
+        <eng-card
+            [title]="item.title"
+            [link]="item.link"
+            [relativePath]="true"
+            [textClass]="'main-dashboard'"
+        ></eng-card>
+    </div>
+</div>

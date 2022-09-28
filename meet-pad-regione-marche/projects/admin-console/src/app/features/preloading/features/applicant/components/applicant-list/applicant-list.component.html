@@ -1,0 +1,44 @@
+<div
+    class="row panel panel-default col-xs-12 col-sm-12 col-lg-12 noPadding"
+    [hidden]="!list.length || loading"
+>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="list"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+    </div>
+</div>
+<ng-template #actionsTemplate let-model="item">
+    <eng-action
+        [action]="actionEdit"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+    <eng-action
+        [action]="actionDelete"
+        [model]="model"
+        [onlyIcon]="true"
+    ></eng-action>
+</ng-template>
+
+<div
+    class="row col-xs-12 col-sm-12 col-lg-12 noPadding"
+    *ngIf="!list.length && !loading"
+>
+    {{ 'PRELOADING.APPLICANT.LIST.EMPTY_MESSAGE' | translate }}.
+</div>
+
+<eng-modal
+    #confirmModal
+    class="smallModal"
+    [buttons]="modalButtons"
+    [title]="'PRELOADING.APPLICANT.CONFIRM_DELETE_MODAL.TITLE' | translate"
+>
+    <p>{{ modalText }}</p>
+</eng-modal>

@@ -1,0 +1,30 @@
+<div
+    class="row panel panel-default form-accordion pd-zero col-xs-12 col-sm-12 col-lg-12"
+    [hidden]="results.length === 0"
+>
+    <eng-content-loader [loading]="loading"></eng-content-loader>
+    <div class="row panel-heading">
+        <h3 class="title-modulo">{{ title }}</h3>
+    </div>
+    <div class="row panel-body body-form-grey">
+        <eng-table-result
+            [results]="results"
+            [structure]="tableStructure"
+            [showPageSize]="true"
+            [showActions]="true"
+            [totalPages]="totalPages"
+            (onSortChange)="changeSort($event)"
+            (onPageChanged)="changePage($event)"
+            (onPageSizeChange)="changePageElementsShowed($event)"
+        ></eng-table-result>
+
+        <ng-template #conferenceSubject let-model="item">
+            <a
+                class="link"
+                href="javascript:;"
+                (click)="navigateToConference.emit(model.conferenceId)"
+                >{{ model.conferenceSubject }}</a
+            >
+        </ng-template>
+    </div>
+</div>

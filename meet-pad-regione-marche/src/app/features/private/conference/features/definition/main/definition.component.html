@@ -1,0 +1,69 @@
+<app-form
+    [formClass]="summary ? [] : ['mb-30']"
+    [saveFn]="onNext"
+    [showFooterLoading]="true"
+    [menu]="!summary"
+    [groupFields]="groupFields"
+    [groupButtons]="groupButtons"
+    [footerButtons]="!isReadonly()"
+    [saveComplete]="saveComplete"
+    [saveError]="saveError"
+    [extractDataToSubmitFn]="extractDataToSubmit"
+    [footerTextSubmitButton]="getFooterTextFormButton()"
+></app-form>
+
+<ng-template #actionTemplate let-model="item">
+    <span
+        mwlConfirmationPopover
+        placement="left"
+        [popoverTitle]="
+            'CONFERENCE.WIZARD.DEFINITION.SUPPORT_CONTACT_POPOVER.TITLE'
+                | translate
+        "
+        [popoverMessage]="
+            'CONFERENCE.WIZARD.DEFINITION.SUPPORT_CONTACT_POPOVER.TEXT'
+                | translate
+        "
+        [cancelText]="
+            'CONFERENCE.WIZARD.DEFINITION.SUPPORT_CONTACT_POPOVER.CANCEL_BTN'
+                | translate
+        "
+        [confirmText]="
+            'CONFERENCE.WIZARD.DEFINITION.SUPPORT_CONTACT_POPOVER.OK_BTN'
+                | translate
+        "
+        (confirm)="deleteSupportContact(model)"
+    >
+        <a>
+            <em
+                role="button"
+                tabindex="0"
+                class="fa fa-trash"
+                aria-label="BUTTON.DELETE"
+                [title]="'BUTTON.DELETE' | translate"
+            ></em>
+        </a>
+    </span>
+    <eng-action [action]="editContact" [model]="model" [onlyIcon]="true">
+    </eng-action>
+</ng-template>
+
+<eng-modal
+    #contactModal
+    [buttons]="buttons"
+    [title]="
+        'CONFERENCE.WIZARD.DEFINITION.SUPPORT_CONTACTS.MODAL.TITLE' | translate
+    "
+>
+    <app-form
+        [groupFields]="contactGroupFields"
+        [formGrey]="false"
+        [footerButtons]="footerContactButtons"
+        [saveFn]="updateSupportContact"
+        [saveComplete]="updateContactCompleteFn"
+        [saveError]="updateContactErrorFn"
+        [extractDataToSubmitFn]="extractSupportContact"
+        [footerTextSubmitButton]="footerTextSubmitBtn"
+        [showCancelBtn]="false"
+    ></app-form>
+</eng-modal>

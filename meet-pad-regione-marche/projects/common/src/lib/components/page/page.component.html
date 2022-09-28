@@ -1,0 +1,13 @@
+<div *ngFor="let section of page; let i = index">
+    <eng-accordion
+        *ngIf="isAccordion(section)"
+        title="{{ getTitle(section) }}"
+        [initialOpen]="section.initialOpen"
+        id="{{ i }}"
+    >
+        <app-section [section]="section.content"></app-section>
+    </eng-accordion>
+    <div *ngIf="!isAccordion(section) && !isPanel(section)">
+        <app-section [section]="section.content"></app-section>
+    </div>
+</div>

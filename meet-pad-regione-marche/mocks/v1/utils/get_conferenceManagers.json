@@ -1,0 +1,10 @@
+{
+    "code": 200,
+    "msg": "OK",
+    "data": {
+        "list": [
+            { "key": "1", "value": "Gerolamo abate" },
+            { "key": "2", "value": "Mario verde" }
+        ]
+    }
+}

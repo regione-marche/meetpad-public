@@ -1,0 +1,137 @@
+<div class="row">
+    <div class="col-md-2 col-lg-2" >
+        <ul class="nav nav-pills nav-stacked formNav">
+            <li
+                *ngFor="let item of menuItems; let i = index">
+                <a
+                    data-toggle="collapse"
+                    data-parent="#panelGroupDocumentation"
+                    href="#collapseDocumentation-{{ i }}"
+                    [class.active]="openPanel === 'collapseDocumentation-' + i"
+                    [translate]="item"
+                ></a>
+            </li>
+        </ul>
+    </div>
+
+    <form
+        class="row form-grey col-xs-12 col-sm-12"
+        [ngClass]="{
+            'mb-30': !summary,
+            'col-md-10 col-lg-10': !summary,
+            'col-md-12 col-lg-12': summary
+        }"
+    >
+        <div id="panelGroupDocumentation" class="panel-group" >
+
+            <eng-content-loader
+                class="signatureFileLoading"
+                [loading]="loadingForSignature | async"
+            ></eng-content-loader>
+
+            <div class="row panel-heading">
+                <h3 class="title-modulo"> <span translate="SIGN.TITLE"></span></h3>
+            </div>
+
+            <app-sign-panel
+                #documentToSign
+                accordionIndex="0"
+                [title]="'SIGN.ACTIONS_BUTTONS.SEND' | translate"
+                [files]="result"
+                [readonly]="false"
+                [disabledSignButton]="false"
+                [selectionEnabled]="true"
+                [showAlert]="showConformityAlert"
+                [status]="toSign"
+                [textAlert]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.CONFORMITY_ALERT.TEXT'
+                "
+                typeAlert="danger"
+                (rejectSectionFiles)="rejectSectionFiles($event)"
+                (signSectionFiles)="signSectionFiles($event)"
+            ></app-sign-panel>   
+            <app-sign-panel
+                #documentRejected
+                accordionIndex="1"
+                [title]="'SIGN.ACTIONS_BUTTONS.REJECTED' | translate"
+                [files]="result"
+                [status]="rejected"
+                [readonly]="true"
+                [disabledSignButton]="true"
+                [showAlert]="showConformityAlert"
+                [textAlert]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.CONFORMITY_ALERT.TEXT'
+                "
+                typeAlert="danger"
+            ></app-sign-panel>   
+
+            <app-sign-panel
+                #documentSigned
+                accordionIndex="2"
+                [title]="'SIGN.ACTIONS_BUTTONS.SIGNED' | translate"
+                [files]="result"
+                [status]="signed"
+                [readonly]="isReadonly() || !showIndictionPanel()"
+                [disabledSignButton]="true"
+                [showAlert]="showConformityAlert"
+                [textAlert]="
+                    'CONFERENCE.WIZARD.DOCUMENTATION.ADDITIONAL.CONFORMITY_ALERT.TEXT'
+                "
+                typeAlert="danger"
+            ></app-sign-panel>   
+        </div>
+    </form>
+</div>
+<eng-modal
+    class="smallModal"
+    #rejectListFileConfirmModal
+    [buttons]="rejectListFileModalButtons"
+    [title]="
+        'SIGN.CONFIRM_REJECT_LIST_MODAL.TITLE' | translate
+    "
+>
+    <p
+        [translate]="
+            'SIGN.CONFIRM_REJECT_LIST_MODAL.MESSAGE'
+        "
+    ></p>
+</eng-modal>
+<eng-modal
+    class="smallModal"
+    #signSelectedModal
+    [closeIcon]="!(loadingForSignature | async)"
+    [buttons]="modalFirstUploadRemoteSignatureButtons"
+    [title]="'SIGN.CONFIRM_SIGN_LIST_MODAL.TITLE_REMOTE' | translate"
+>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <p>
+                Per aggiungere la propria firma al file indicare le credenziali e la OTP necessarie per l'autenticazione del server di firma remota.
+            </p>
+            <div>
+                <p><br>Username</p>
+                <input type="text" id="dlgRemoteCalamaioUID">
+            </div>
+            <div>
+                <p><br>Password</p>
+                <input type="text" id="dlgRemoteCalamaioPwd" type="password" value="">
+            </div>
+            <div>
+                <p><br>Dominio</p>
+                <input type="text" id="dlgRemoteCalamaioDomain" value="frRegioneMarche">
+            </div>
+            <div>
+                <p><br>One Time Password</p>
+                <input type="text" id="dlgRemoteCalamaioOTP">
+            </div>
+
+            <div>
+                <br>
+                <input type="checkbox" id="dlgCadesPades" name="dlgCadesPades">
+                <label for="dlgCadesPades"> &nbsp;Firma in formato .pdf (PADES)</label><br>
+            </div>
+        </div>
+    </div>
+</eng-modal>

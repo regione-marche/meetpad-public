@@ -1,0 +1,20 @@
+.all-card {
+    display: grid;
+    margin: 20px 0;
+    gap: 20px;
+}
+@media (min-width: 921px) {
+    .all-card {
+        grid-template-columns: repeat(3, minmax(265px, 1fr));
+    }
+}
+@media (max-width: 920px) {
+    .all-card {
+        grid-template-columns: repeat(2, minmax(265px, 1fr));
+    }
+}
+@media (max-width: 640px) {
+    .all-card {
+        grid-template-columns: repeat(1, minmax(265px, 1fr));
+    }
+}

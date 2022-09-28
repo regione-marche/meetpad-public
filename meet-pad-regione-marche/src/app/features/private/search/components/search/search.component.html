@@ -1,0 +1,41 @@
+<form class="row content col-xs-12 col-sm-12 col-lg-12">
+    <eng-form-group>
+        <div class="col-lg-offset-1 col-lg-10">
+            <eng-input
+                size="12"
+                label="SEARCH.SEARCH.INPUT_LABEL"
+                [required]="requiredSearch"
+                [formControl]="form.get('value')"
+            >
+            </eng-input>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+            <eng-select
+                *ngIf="showStatus"
+                label="CONFERENCE.WIZARD.PEC.SEARCH.STATE"
+                [formControl]="form.get('state')"
+                [options]="stateOptions | async"
+                size="12|6|6"
+                placeholder=""
+                field-for-option="value"
+                field-for-id="key"
+            ></eng-select>
+        </div>
+
+    </eng-form-group>
+    <div class="col-xs-12 marginTop">
+        <div class="pull-right">
+            <eng-input-loading
+                [loading]="searchLoading$ | async"
+            ></eng-input-loading>
+            <eng-button
+                class="pull-right"
+                type="button"
+                (onClick)="search()"
+                title="SEARCH.SEARCH_BUTTON"
+                [disabled]="form.invalid || (searchLoading$ | async)"
+            >
+            </eng-button>
+        </div>
+    </div>
+</form>

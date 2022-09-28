@@ -1,0 +1,38 @@
+<div class="section">
+    <div class="upload-icon">
+        <i class="fa fa-upload fa-3x" *ngIf="status === 0"></i>
+        <i
+            class="fa fa-exclamation-circle fa-3x"
+            *ngIf="status === 1"
+            [style.color]="color"
+        ></i>
+        <i
+            class="fa fa-check-circle fa-3x"
+            *ngIf="status === 2"
+            [style.color]="color"
+        ></i>
+    </div>
+    <div class="upload">
+        <div class="title">
+            <h5 [style.color]="color">{{ name }}</h5>
+
+            <p class="size">{{ size }}</p>
+        </div>
+
+        <div class="progress">
+            <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                [style.width.%]="_progress"
+                [style.backgroundColor]="color"
+                aria-valuenow="_progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            >
+                <span *ngIf="status === 0">{{ _progress }} %</span>
+                <span *ngIf="status === 1">errore </span>
+                <span *ngIf="status === 2">completato</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{
+    "code": "string",
+    "data": {
+        "id": 1
+    },
+    "errors": [{
+        "code": "string",
+        "fields": [
+            "string"
+        ],
+        "msg": "string",
+        "step": "string"
+    }],
+    "msg": "string"
+}
