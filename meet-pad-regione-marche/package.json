@@ -82,7 +82,7 @@
         "ng-packagr": "^4.1.0",
         "patch-package": "^6.4.7",
         "protractor": "~5.3.0",
-        "release-it": "^12.3.0",
+        "release-it": "^15.6.0",
         "showdown": "^1.9.0",
         "ts-node": "~5.0.1",
         "tsickle": "^0.32.1",
