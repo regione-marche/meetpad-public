@@ -1,8 +1,8 @@
-# This repository adheres to the publiccode.yml standard by including this 
+# This repository adheres to the publiccode.yml standard by including this
 # metadata file that makes public software easily discoverable.
-# More info at https://github.com/italia/publiccode.yml
+# More info at https://github.com/publiccodeyml/publiccode.yml
 
-publiccodeYmlVersion: '0.2'
+publiccodeYmlVersion: '0'
 categories:
   - collaboration
 description:
@@ -28,7 +28,6 @@ description:
       - Gestione scadenze tramite un calendario
       - Gestione delle votazioni e delle calendarizzazioni
       - Reportistiche sulle Conferenze dei Servizi
-    genericName: Meetpad
     localisedName: Meetpad
     longDescription: |
       Meetpad è una piattaforma di collaborazione e condivisione documentale per
@@ -73,28 +72,13 @@ description:
 developmentStatus: stable
 intendedAudience:
   countries:
-    - it
+    - IT
   scope:
     - local-authorities
-it:
-  conforme:
-    gdpr: true
-    lineeGuidaDesign: true
-    misureMinimeSicurezza: true
-    modelloInteroperabilita: true
-  countryExtensionVersion: '0.2'
-  piattaforme:
-    anpr: false
-    cie: false
-    pagopa: false
-    spid: true
-  riuso:
-    codiceIPA: r_marche
 landingURL: 'https://meetpad.regione.marche.it/'
 legal:
   license: GPL-3.0
   mainCopyrightOwner: Regione Marche
-  repoOwner: Regione Marche
 localisation:
   availableLanguages:
     - it
@@ -105,12 +89,11 @@ maintenance:
   contacts:
     - email: andrea.sergiacomi@regione.marche.it
       name: Andrea Sergiacomi
-  contractors:
-    - email: meetpad@regione.marche.it
-      name: Engineering
-      until: '2021-07-31'
   type: community
 name: Meetpad
+organisation:
+  name: Regione Marche
+  uri: 'urn:x-italian-pa:r_marche'
 platforms:
   - web
 releaseDate: '2021-06-30'
